@@ -1,0 +1,251 @@
+<h1 class="page-title">
+	Board-Point-Ui 2 <small>CRUD 예제 - point 객체</small>
+</h1>
+
+<div class="col-md-12"  ng-show="displayMode == 'list'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 리스트
+			</h5>
+		</header>
+		<div class="widget-body">
+		
+			<div class="clearfix">
+				<div class="pull-left">
+					
+					<div class="form-group">							
+							<select id="searchType"  name="searchType"  class="form-control col-sm-3 " 
+									ng-model = "searchType">
+								<option value="name">이름</option>
+								<option value="url">주소</option>
+							</select>
+					</div>
+				</div>
+				<div class="pull-left">
+					<div angucomplete-alt
+					  class="form-group"
+					  id="angucomplete-alt"
+					  placeholder="Search..."
+					  pause="100"
+					  selected-object="selectedPoint"
+					  remote-url={{searchUrlFn}}
+					  remote-url-request-formatter="remoteUrlRequestFn"
+					  remote-url-data-field="_embedded.point"
+					  title-field="name"
+					  description-field="description"
+					  minlength="1"
+					  input-class="form-control"
+					  match-class="highlight">
+					</div>
+				</div>
+			
+				<div class="pull-right">
+					<button class="btn btn-info btn-rounded"
+						ng-click="editAction()">NEW</button>
+				</div>
+			</div>
+
+			<table
+				class="table table-bordered table-hover table-lg mt-lg mb-0 margin_top_30">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('id')"  ng-click="sortAction('id')">No</th>
+						<th class="text-center" ng-class="getSortClass('category')"  ng-click="sortAction('category')">카테고리</th>						
+						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">이름</th>
+						<th class="hidden-xs text-center">태그아이디</th>
+						<th class="hidden-xs text-center">타입</th>
+						<th class="hidden-xs text-center">값</th>
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr dir-paginate="point in pointList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="pagination.current">
+						<td class="text-center">{{point.no}}</td>
+						<td class="text-center">{{point.category}}</td>						
+						<td class="text-center"><a href="#" ng-click="viewAction(point)">{{point.name}}</a></td>
+						<td class="text-center">{{point.tagID}}</td>
+						<td class="hidden-xs text-center">{{point.type}}</td>
+						<td class="hidden-xs text-center">{{point.value}}</td>												
+						<td class="hidden-xs text-center">
+							<button class="btn btn-xs btn-primary"
+								ng-click="deleteAction(point.no)">Delete</button>
+							<button class="btn btn-xs btn-primary"
+								ng-click="editAction(point)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearfix text-center">
+				<dir-pagination-controls
+					on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="col-md-12" ng-show="displayMode == 'edit'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 수정 및 작성
+			</h5>
+		</header>
+		<div class="widget-body">
+			<div class="margin_top_50"></div>
+			<form name="editForm"
+				class="form-horizontal board_basic"
+				data-ui-jq="parsley" 
+				data-parsley-priority-enabled="ture"
+				ng-submit="formSubmit(editForm.$valid)">
+				
+				<fieldset>
+
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="catogory">카테고리</label>
+						<div class="col-sm-3">							
+							<select id="catogory"  name="catogory"  class="select2 form-control" 
+								required="required"
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.category">
+								<option value="">선택하세요.</option>
+								<option value="전력">전력</option>
+								<option value="설비">설비</option>
+								<option value="보안">보안</option>
+							</select>
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="name">이름</label>
+						<div class="col-sm-3">
+							<input type="text" id="name" name="name" class="form-control"								
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.name" 
+								required="required"
+								ng-minlength="1">
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="url">주소</label>
+						<div class="col-sm-3">
+							<input type="text" id="url" name="url" class="form-control"								
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.url" 
+								required="required"
+								ng-minlength="1">
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="type">타입</label>
+						<div class="col-sm-3">
+							<select id="type"  name="type"  class="select2 form-control"  								
+								required="required"
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.type">
+								<option value="">선택하세요.</option>
+								<option value="디지털">디지털</option>
+								<option value="아날로그">아날로그</option>
+								<option value="문자">문자</option>
+							</select>
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="value">기본값</label>
+						<div class="col-sm-3">
+							<input type="text" id="type" name="value" class="form-control"								
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.value" 
+								required="required"
+								ng-minlength="1">
+						</div>						
+					</div>
+					
+					
+					
+					<!-- 
+					<tt>editForm.name.$valid = {{editForm.name.$valid}}</tt><br/>
+					<tt>editForm.password.$valid = {{editForm.password.$valid}}</tt><br/>
+					<tt>editForm.password.$valid = {{editForm.password.$valid}}</tt><br/>
+					<tt>editForm.password2.$valid = {{editForm.password2.$valid}}</tt><br/>
+					<tt>editForm.gender.$valid = {{editForm.gender.$valid}}</tt><br/>
+					<tt>editForm.email.$valid = {{editForm.email.$valid}}</tt><br/>
+					<tt>editForm.birth.$valid = {{editForm.birth.$valid}}</tt><br/>
+					<tt>editForm.tel.$valid = {{editForm.tel.$valid}}</tt><br/>
+					 -->	
+
+				</fieldset>
+				<div class="margin_top_50"></div>
+				<div class="clearfix">
+					<div class="pull-right">
+		                <button type="submit" class="btn btn-primary">Save</button>
+			            <span class="btn btn-primary" ng-click="cancelAction()">Cancel</span>
+	                </div>
+				</div>
+				
+			</form>
+			
+		</div>
+	</section>
+</div>
+
+<div class="col-md-12" ng-show="displayMode == 'view'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 상세보기
+			</h5>
+		</header>
+		<div class="widget-body">
+			<div class="margin_top_50"></div>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td class="col-sm-2 text-center fw-bold">ID</td>
+						<td class="col-sm-5">{{currentPoint.no}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">이름</td>
+						<td>{{currentPoint.name}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">카테고리</td>
+						<td>{{currentPoint.category}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">주소</td>
+						<td>{{currentPoint.url}}</td>						
+					</tr>	
+					<tr>
+						<td class="text-center fw-bold">타입</td>
+						<td>{{currentPoint.type}}</td>						
+					</tr>	
+					<tr>
+						<td class="text-center fw-bold">값</td>
+						<td>{{currentPoint.value}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="clearfix">
+				<div class="pull-right">
+	                <button class="btn btn-primary" ng-click="cancelAction()">List</button>
+	                <button class="btn btn-primary" ng-click="displayMode = 'edit'">Edit</button>
+	                <button class="btn btn-primary" ng-click="deleteAction(currentPoint.no)">Delete</button>
+                </div>
+			</div>
+			
+		</div>
+	</section>
+</div>

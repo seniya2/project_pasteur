@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-1">
+		<section class="widget">
+			<header>
+				<h4>
+					<span class="fw-semi-bold">Tag_Value</span> 상세보기
+				</h4>				
+			</header>
+			<div class="widget-body">
+				<form class="form-horizontal form-label-rifht">
+					<fieldset>
+						<legend>
+							<span class="label label-primary  text-gray-dark mr-xs"> 기본 정보 </span>
+						</legend>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="tagID"><strong>태그 아이디</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.tagID}}
+							</div>
+						</div>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="value"><strong>값</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.value}}
+							</div>
+						</div>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="timeStamp"><strong>시간</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.timeStamp}}
+							</div>
+						</div>
+					</fieldset>
+					
+					<div class="form-actions">
+						<span class="btn btn-info btn-rounded pull-right" ng-click="editAction(currentPoint)">Edit</span>
+		                <span class="btn btn-danger btn-rounded pull-right margin_right_10" ng-click="deleteAction(currentPerson.no)" >Delete</span>
+			            <span class="btn btn-default btn-rounded" ng-click="cancelAction()">List</span>			                
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<span ng-init="prepareAction()" us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner-pm" spinner-start-active="true"></span>
+<div class="widget-container">
+	<!-- svg_menu -->
+	<div class="col-md-2 col-sm-2 point_monitor_div" id="point_monitor_div">
+		<section class="widget">
+			<div class="widget-body point-monitor-menu no-padding">
+				<div class="list-group list-group-lg custom_monitor_menu_energy">
+				<div ng-repeat="menu in menuList">
+					<a class="list-group-item" ng-click="svgFileChange(menu.url)" ng-class="svgFileChangeClass2(menu.url)">
+						<i class="fa fa-circle text-default mt-sm" ng-class="svgFileChangeClass(menu.url)"></i> <span class="no-margin">{{menu.name}}</span> 
+					</a>
+				</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!-- svg_render -->
+	<div class="col-md-10 col-sm-10" >
+		<section class="widget">
+			<div class="widget-body text-center no-padding">				
+				<div id="svg_render" class="custom_monitor_menu_energy" ></div>
+			</div>
+		</section>
+	</div>
+
+</div>

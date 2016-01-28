@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title">Item View Detail</h3>
+</div>
+<div class="modal-body">
+    <table class="table table-striped table-bordered">
+        <tbody>
+        <tr>
+            <td>Name</td>
+            <td>{{item.name}}</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>{{item.password}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{item.description}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{item.gender}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{item.email}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="cancel('edit',item)">Edit</button>
+    <button class="btn btn-primary" ng-click="cancel('delete',item)">Delete</button>
+    <button class="btn btn-warning" ng-click="cancel('cancel')">Close</button>
+</div>

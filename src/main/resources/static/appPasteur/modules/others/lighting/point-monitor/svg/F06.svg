@@ -1,0 +1,492 @@
+<svg width="780" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="appPasteur/modules/others/lighting/point-monitor/svg/F06.png" id="TAG_svg_back" height="600" width="780" y="0" x="0"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="TAG_3_7_4">
+   <ellipse id="TAG_svg_1" transform="matrix(1 0 0 1 279.346 33.4929) translate(-252 -13.6) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_2" transform="matrix(1 0 0 1 279.345 64.8262) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_3" transform="matrix(1 0 0 1 293.255 64.8262) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_4" transform="matrix(1 0 0 1 293.255 33.4929) translate(-252 -13.6) translate(-1 0) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_5" transform="matrix(1 0 0 1 307.527 65.008) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_6" transform="matrix(1 0 0 1 307.527 33.6747) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_7" transform="matrix(1 0 0 1 322.345 64.8262) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_8" transform="matrix(1 0 0 1 322.346 33.4929) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_1_1">
+   <ellipse id="TAG_svg_9" transform="matrix(1, 0, 0, 1, 27.346, 4.2263)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_10" transform="matrix(1 0 0 1 279.346 49.1596) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_11" transform="matrix(1 0 0 1 293.255 49.1596) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_12" transform="matrix(1 0 0 1 293.255 17.8263) translate(-252 -13.6) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_13" transform="matrix(1 0 0 1 307.527 49.3414) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_14" transform="matrix(1 0 0 1 307.527 18.0081) translate(-252 -13.6) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 -1) translate(0 1) translate(0 -1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_15" transform="matrix(1 0 0 1 322.346 49.1596) translate(-252 -13.6) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_16" transform="matrix(1 0 0 1 322.346 17.8263) translate(-252 -13.6) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_7_2">
+   <ellipse id="TAG_svg_17" transform="matrix(1 0 0 1 288.917 116.398) translate(-252 -13.6) translate(-4.5 -9)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_18" transform="matrix(1 0 0 1 288.917 92.731) translate(-252 -13.6) translate(-4.25 -6.75)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_13_3">
+   <ellipse id="TAG_svg_19" transform="matrix(1, 0, 0, 1, 700.153, 4.1893)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_20" transform="matrix(1 0 0 1 493.896 -53.144) translate(220 57.3333) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_21" transform="matrix(1 0 0 1 506.639 -53.144) translate(220 57.3333) translate(1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_22" transform="matrix(1 0 0 1 520.382 -53.144) translate(220 57.3333) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_23" transform="matrix(1 0 0 1 480.062 -22.0531) translate(220 57.3333) translate(0 -1) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_24" transform="matrix(1 0 0 1 493.805 -22.0531) translate(220 57.3333) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_25" transform="matrix(1 0 0 1 506.548 -22.0531) translate(220 57.3333) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_26" transform="matrix(1 0 0 1 520.291 -22.0531) translate(220 57.3333) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 1) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_11_1">
+   <ellipse id="TAG_svg_27" transform="matrix(1 0 0 1 479.698 -5.3258) translate(220 57.3333) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_28" transform="matrix(1 0 0 1 700.062 18.9166)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_29" transform="matrix(1 0 0 1 712.805 18.9166)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_30" transform="matrix(1 0 0 1 725.548 18.9166)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_31" transform="matrix(1 0 0 1 739.291 18.9166)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_32" transform="matrix(1 0 0 1 713.441 47.0075)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_33" transform="matrix(1 0 0 1 726.184 47.0075)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_34" transform="matrix(1 0 0 1 739.927 47.0075)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_10_3">
+   <ellipse id="TAG_svg_35" transform="matrix(1 0 0 1 499.74 20.6742) translate(220 57.3333) translate(4 -5.77778) translate(0 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_36" transform="matrix(1 0 0 1 500.073 46.452) translate(220 57.3333) translate(3.11111 -9.55556)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_5_1">
+   <ellipse id="TAG_svg_37" transform="matrix(1 0 0 1 346.342 174.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_38" transform="matrix(1 0 0 1 377.494 174.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_39" transform="matrix(1 0 0 1 407.647 174.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_40" transform="matrix(1 0 0 1 362.751 203.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_41" transform="matrix(1 0 0 1 392.904 203.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_42" transform="matrix(1 0 0 1 362.418 147.856) translate(126.667 -118.667) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_19_3">
+   <ellipse id="TAG_svg_43" transform="matrix(1 0 0 1 346.675 189.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_44" transform="matrix(1 0 0 1 377.827 189.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_45" transform="matrix(1 0 0 1 362.751 218.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_46" transform="matrix(1 0 0 1 392.904 218.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_47" transform="matrix(1 0 0 1 346.675 234.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_48" transform="matrix(1 0 0 1 376.827 234.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_49" transform="matrix(1 0 0 1 362.418 161.523) translate(126.667 -118.667) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_50" transform="matrix(1 0 0 1 362.418 121.189) translate(126.667 -118.667) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_51" transform="matrix(1 0 0 1 376.751 134.189) translate(126.667 -118.667) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 1) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_19_1">
+   <ellipse id="TAG_svg_52" transform="matrix(1 0 0 1 362.751 189.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_53" transform="matrix(1 0 0 1 392.904 189.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_54" transform="matrix(1 0 0 1 346.675 218.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_55" transform="matrix(1 0 0 1 376.827 218.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_56" transform="matrix(1 0 0 1 362.751 234.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_57" transform="matrix(1 0 0 1 392.904 234.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_58" transform="matrix(1 0 0 1 362.418 134.189) translate(126.667 -118.667) translate(0 -1) translate(0 -1) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_59" transform="matrix(1 0 0 1 376.751 161.523) translate(126.667 -118.667) translate(0 -1) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_60" transform="matrix(1 0 0 1 376.751 121.189) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_5_2">
+   <ellipse id="TAG_svg_61" transform="matrix(1, 0, 0, 1, 457.932, 56.189)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_62" transform="matrix(1 0 0 1 362.418 174.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_63" transform="matrix(1 0 0 1 392.571 174.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_64" transform="matrix(1 0 0 1 346.675 203.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_65" transform="matrix(1 0 0 1 377.827 203.856) translate(126.667 -118.667) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_66" transform="matrix(1 0 0 1 376.751 147.856) translate(126.667 -118.667) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 1) translate(-1 0) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_67" transform="matrix(1, 0, 0, 1, 541.743, 56.189)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_6_2">
+   <rect id="TAG_svg_68" transform="matrix(1 0 0 1 346.083 141.256) translate(70 -134.667) translate(1 0) translate(1 0)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_9_1">
+   <rect id="TAG_svg_69" transform="matrix(1 0 0 1 363.638 141.256) translate(70 -134.667) translate(1 0) translate(1 0)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_70" transform="matrix(1 0 0 1 327.805 141.256) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 -0.333333)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_6_1">
+   <ellipse id="TAG_svg_71" transform="matrix(1 0 0 1 377.793 89.6334) translate(70 -134.667) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_72" transform="matrix(1 0 0 1 390.571 89.189) translate(70 -134.667) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_73" transform="matrix(1 0 0 1 403.015 89.189) translate(70 -134.667) translate(1 0) translate(1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_74" transform="matrix(1 0 0 1 415.904 89.4112) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_75" transform="matrix(1 0 0 1 428.571 89.189) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(0 1) translate(0 1)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_8_3">
+   <ellipse id="TAG_svg_76" transform="matrix(1 0 0 1 377.793 103.633) translate(70 -134.667) translate(1.33333 4.88889)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_77" transform="matrix(1 0 0 1 447.793 -56.3663)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_78" transform="matrix(1 0 0 1 460.571 -56.3663)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_79" transform="matrix(1 0 0 1 475.015 -56.3663)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_80" transform="matrix(1 0 0 1 489.904 -56.3663)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_81" transform="matrix(1 0 0 1 503.571 -56.3663)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_5_4">
+   <ellipse id="TAG_svg_82" transform="matrix(1, 0, 0, 1, 447.793, -70.3666)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_83" transform="matrix(1, 0, 0, 1, 460.571, -70.811)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_84" transform="matrix(1 0 0 1 403.015 63.856) translate(70 -134.667) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_85" transform="matrix(1 0 0 1 415.904 64.0782) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_86" transform="matrix(1 0 0 1 428.571 63.856) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_8_1">
+   <ellipse id="TAG_svg_87" transform="matrix(1, 0, 0, 1, 447.793, -83.3666)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_88" transform="matrix(1, 0, 0, 1, 460.571, -83.811)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_89" transform="matrix(1 0 0 1 403.015 50.856) translate(70 -134.667) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_90" transform="matrix(1 0 0 1 415.904 51.0782) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_91" transform="matrix(1 0 0 1 428.571 50.856) translate(70 -134.667) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_10_1">
+   <ellipse id="TAG_svg_92" transform="matrix(1 0 0 1 481.513 -103.233) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_93" transform="matrix(1 0 0 1 480.513 -88.2329) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_94" transform="matrix(1 0 0 1 480.291 -73.1218) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_95" transform="matrix(1 0 0 1 480.513 -57.5662) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_6_3">
+   <ellipse id="TAG_svg_96" transform="matrix(1 0 0 1 495.044 -103.233) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_97" transform="matrix(1 0 0 1 495.044 -88.2329) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_98" transform="matrix(1 0 0 1 494.822 -73.1218) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_99" transform="matrix(1 0 0 1 495.044 -57.5662) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_9_3">
+   <ellipse id="TAG_svg_100" transform="matrix(1 0 0 1 507.575 -103.233) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_101" transform="matrix(1 0 0 1 507.575 -88.2329) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_102" transform="matrix(1 0 0 1 507.353 -73.1218) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+   <ellipse id="TAG_svg_103" transform="matrix(1 0 0 1 507.575 -57.5662) translate(38.6667 24.6667) translate(-1 0)" ry="3" rx="3" cy="113" cx="20" fill="green"/>
+  </g>
+  <g id="TAG_3_16_3">
+   <rect id="TAG_svg_104" transform="matrix(1 0 0 1 456.805 -18.3333) translate(38.6667 24.6667) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_105" transform="matrix(1 0 0 1 467.805 -18.1111) translate(38.6667 24.6667) translate(0 -1) translate(0 -1) translate(0 -1) translate(0 -1)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_6_4">
+   <rect id="TAG_svg_106" transform="matrix(1 0 0 1 456.805 -41.4168) translate(38.6667 24.6667) translate(0 -1) translate(0 -1) translate(0 -1)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_107" transform="matrix(1 0 0 1 467.805 -41.1946) translate(38.6667 24.6667) translate(0 -1) translate(0 -1) translate(0 -1)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_16_1">
+   <rect id="TAG_svg_108" transform="matrix(1 0 0 1 322.805 -149.5) translate(38.6667 24.6667) translate(0 -1) translate(0 -1)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_109" transform="matrix(1 0 0 1 333.805 -149.278) translate(38.6667 24.6667) translate(0 -1) translate(0 -1)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_18_3">
+   <rect id="TAG_svg_110" transform="matrix(1 0 0 1 394.566 -113.051)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_111" transform="matrix(1 0 0 1 528.566 -12.4862)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_112" transform="matrix(1 0 0 1 528.566 3.07839)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_113" transform="matrix(1 0 0 1 528.566 18.643)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_18_2">
+   <rect id="TAG_svg_114" transform="matrix(1 0 0 1 528.576 136.097)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_115" transform="matrix(1 0 0 1 528.576 120.57)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_116" transform="matrix(1 0 0 1 528.576 105.042)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_117" transform="matrix(1 0 0 1 394.576 4.51483)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_12_1">
+   <rect id="TAG_svg_118" transform="matrix(1 0 0 1 562.091 54.0223)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_119" transform="matrix(1 0 0 1 544.758 54.0223)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_120" transform="matrix(1 0 0 1 528.577 54.0223)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_11_3">
+   <rect id="TAG_svg_121" transform="matrix(1 0 0 1 449.728 -45.8791)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_122" transform="matrix(1 0 0 1 470.425 -45.8791)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_14_1">
+   <rect id="TAG_svg_123" transform="matrix(1 0 0 1 584.395 61.8707)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_124" transform="matrix(1 0 0 1 604.758 61.8707)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_4_2">
+   <rect id="TAG_svg_125" transform="matrix(1 0 0 1 486.91 -42.3943)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_126" transform="matrix(1 0 0 1 620.91 58.6889)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_18_1">
+   <rect id="TAG_svg_127" transform="matrix(1, 0, 0, 1, 450.455, -113.384)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_128" transform="matrix(1, 0, 0, 1, 584.455, -12.8195)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_129" transform="matrix(1, 0, 0, 1, 584.455, 2.7451)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_130" transform="matrix(1, 0, 0, 1, 584.455, 18.3097)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_4_3">
+   <rect id="TAG_svg_131" transform="matrix(1 0 0 1 394.577 -49.0608)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_132" transform="matrix(1 0 0 1 428.091 -24.4322) translate(128 92.6667) translate(6 1.33333) translate(-0.333333 4.66667) translate(0.333333 -4.66667)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_133" transform="matrix(1, 0, 0, 1, 422.899, -113.162)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_134" transform="matrix(1, 0, 0, 1, 556.899, -12.5973)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_135" transform="matrix(1, 0, 0, 1, 556.899, 2.9673)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_136" transform="matrix(1, 0, 0, 1, 556.899, 18.5319)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_4_4">
+   <rect id="TAG_svg_137" transform="matrix(1 0 0 1 443.566 -90.051) translate(35.5556 -23.1111) translate(0 0)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_138" transform="matrix(1, 0, 0, 1, 613.122, -12.5973)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_139" transform="matrix(1, 0, 0, 1, 613.122, 2.9673)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_140" transform="matrix(1, 0, 0, 1, 613.122, 18.5319)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_3_4">
+   <rect id="TAG_svg_141" transform="matrix(1, 0, 0, 1, 422.576, 5.1815)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_142" transform="matrix(1, 0, 0, 1, 556.576, 105.709)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_143" transform="matrix(1, 0, 0, 1, 556.576, 121.237)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_144" transform="matrix(1, 0, 0, 1, 556.576, 136.764)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_18_4">
+   <rect id="TAG_svg_145" transform="matrix(1 0 0 1 442.576 -30.4852) translate(8 35.6667) translate(0 0)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_146" transform="matrix(1, 0, 0, 1, 584.576, 105.709)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_147" transform="matrix(1, 0, 0, 1, 584.576, 121.237)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_148" transform="matrix(1, 0, 0, 1, 584.576, 136.764)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_4_1">
+   <rect id="TAG_svg_149" transform="matrix(1, 0, 0, 1, 478.909, 5.1815)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_150" transform="matrix(1, 0, 0, 1, 612.909, 105.709)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_151" transform="matrix(1, 0, 0, 1, 612.909, 121.237)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_152" transform="matrix(1, 0, 0, 1, 612.909, 136.764)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_17_1">
+   <rect id="TAG_svg_153" transform="matrix(1 0 0 1 53.7778 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_154" transform="matrix(1 0 0 1 39.127 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_155" transform="matrix(1 0 0 1 25.7937 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_156" transform="matrix(1 0 0 1 12.4603 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+  </g>
+  <g id="TAG_3_17_3">
+   <rect id="TAG_svg_157" height="5" width="12" y="27.7778" x="604.127" fill="green"/>
+   <rect id="TAG_svg_158" transform="matrix(1 0 0 1 -0.873016 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_159" transform="matrix(1 0 0 1 -14.2063 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_160" transform="matrix(1 0 0 1 -27.5397 -34.2222)" height="5" width="12" y="62" x="645" fill="green"/>
+  </g>
+  <g id="TAG_3_19_2">
+   <rect id="TAG_svg_161" height="5" width="12" y="230.528" x="604.877" fill="green"/>
+   <rect id="TAG_svg_162" transform="matrix(1, 0, 0, 1, -26.7897, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_163" transform="matrix(1, 0, 0, 1, -13.4563, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_164" transform="matrix(1, 0, 0, 1, -0.123001, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+  </g>
+  <g id="TAG_3_19_4">
+   <rect id="TAG_svg_165" transform="matrix(1 0 0 1 46.4603 179.778) translate(-33.25 -11.25) translate(0 0)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_166" transform="matrix(1, 0, 0, 1, 26.5437, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_167" transform="matrix(1, 0, 0, 1, 39.877, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+   <rect id="TAG_svg_168" transform="matrix(1, 0, 0, 1, 54.5278, 168.528)" height="5" width="12" y="62" x="645" fill="green"/>
+  </g>
+  <g id="TAG_3_10_4">
+   <rect id="TAG_svg_169" transform="matrix(1 0 0 1 -111.71 6.08626)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_170" transform="matrix(1 0 0 1 22.2903 105.852)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_171" transform="matrix(1 0 0 1 22.2903 120.617)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_172" transform="matrix(1, 0, 0, 1, 22.2903, 135.383)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_2_3">
+   <rect id="TAG_svg_173" transform="matrix(1, 0, 0, 1, 50.1474, 134.954)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_174" transform="matrix(1, 0, 0, 1, 50.1474, 120.188)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_175" transform="matrix(1, 0, 0, 1, 50.1474, 105.423)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_176" transform="matrix(1, 0, 0, 1, -83.8529, 5.6577)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_11_2">
+   <rect id="TAG_svg_177" transform="matrix(1, 0, 0, 1, 78.1474, 134.954)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_178" transform="matrix(1, 0, 0, 1, 78.1474, 120.188)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_179" transform="matrix(1, 0, 0, 1, 78.1474, 105.423)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_180" transform="matrix(1, 0, 0, 1, -55.8529, 5.6577)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_11_4">
+   <rect id="TAG_svg_181" transform="matrix(1, 0, 0, 1, 106.433, 135.24)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_182" transform="matrix(1, 0, 0, 1, 106.433, 120.474)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_183" transform="matrix(1, 0, 0, 1, 106.433, 105.709)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_184" transform="matrix(1, 0, 0, 1, -27.5671, 5.9434)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_2_4">
+   <rect id="TAG_svg_185" transform="matrix(1, 0, 0, 1, 134.147, 135.526)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_186" transform="matrix(1, 0, 0, 1, 134.147, 120.76)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_187" transform="matrix(1, 0, 0, 1, 134.147, 105.995)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_188" transform="matrix(1, 0, 0, 1, 0.147102, 6.2292)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_13_2">
+   <rect id="TAG_svg_189" transform="matrix(1, 0, 0, 1, 161.861, 134.954)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_190" transform="matrix(1, 0, 0, 1, 161.861, 120.188)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_191" transform="matrix(1, 0, 0, 1, 161.861, 105.423)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_192" transform="matrix(1, 0, 0, 1, 27.8614, 5.6577)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_13_4">
+   <rect id="TAG_svg_193" transform="matrix(1, 0, 0, 1, 190.09, 135.183)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_194" transform="matrix(1, 0, 0, 1, 190.09, 120.417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_195" transform="matrix(1, 0, 0, 1, 190.09, 105.652)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_196" transform="matrix(1, 0, 0, 1, 56.09, 5.88626)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_3_1">
+   <rect id="TAG_svg_197" transform="matrix(1, 0, 0, 1, 217.69, 135.583)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_198" transform="matrix(1, 0, 0, 1, 217.69, 120.817)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_199" transform="matrix(1, 0, 0, 1, 217.69, 106.052)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_200" transform="matrix(1, 0, 0, 1, 83.69, 6.28626)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_15_2">
+   <rect id="TAG_svg_201" transform="matrix(1, 0, 0, 1, 246.09, 135.183)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_202" transform="matrix(1, 0, 0, 1, 246.09, 120.417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_203" transform="matrix(1, 0, 0, 1, 246.09, 105.652)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_204" transform="matrix(1, 0, 0, 1, 112.09, 5.88626)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_15_4">
+   <rect id="TAG_svg_205" transform="matrix(1, 0, 0, 1, 273.69, 135.183)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_206" transform="matrix(1, 0, 0, 1, 273.69, 120.417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_207" transform="matrix(1, 0, 0, 1, 273.69, 105.652)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_208" transform="matrix(1, 0, 0, 1, 139.69, 5.88626)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_3_2">
+   <rect id="TAG_svg_209" transform="matrix(1, 0, 0, 1, 302.09, 135.983)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_210" transform="matrix(1, 0, 0, 1, 302.09, 121.217)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_211" transform="matrix(1, 0, 0, 1, 302.09, 106.452)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_212" transform="matrix(1 0 0 1 139.29 -8.91374) translate(28.8 15.6) translate(0 0)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_3_3">
+   <rect id="TAG_svg_213" transform="matrix(1 0 0 1 273.29 105.617) translate(88.4 15.2) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 0)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_17_4">
+   <rect id="TAG_svg_214" transform="matrix(1 0 0 1 273.29 120.383) translate(88.4 15.2) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_215" transform="matrix(1 0 0 1 273.29 90.852) translate(88.4 15.2) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 0) translate(0 -1) translate(0 0)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_16_2">
+   <rect id="TAG_svg_216" transform="matrix(1 0 0 1 331.29 135.583)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_217" transform="matrix(1 0 0 1 331.29 120.817)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_218" transform="matrix(1 0 0 1 331.29 106.052)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_219" transform="matrix(1 0 0 1 197.29 6.28626)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_220" transform="matrix(1, 0, 0, 1, 227.69, 6.28626)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_1_2">
+   <rect id="TAG_svg_221" transform="matrix(1, 0, 0, 1, 35.3523, 54.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_222" transform="matrix(1, 0, 0, 1, -98.6477, -45.239)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_8_2">
+   <rect id="TAG_svg_223" transform="matrix(1 0 0 1 27.29 -63.9137) translate(-142.771 18.6747) translate(0 0)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_224" transform="matrix(1, 0, 0, 1, 18.519, 54.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_225" transform="matrix(1 0 0 1 161.29 50.617) translate(-142.771 18.6747) translate(0 0)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_226" transform="matrix(1, 0, 0, 1, 53.519, 54.6934)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_227" transform="matrix(1, 0, 0, 1, -80.481, -45.0723)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_1_3">
+   <rect id="TAG_svg_228" transform="matrix(1, 0, 0, 1, 92.8523, 69.36)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_229" transform="matrix(1 0 0 1 -74.481 -35.239) translate(33.3333 4.83333) translate(0 0)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_8_4">
+   <rect id="TAG_svg_230" transform="matrix(1, 0, 0, 1, 111.019, 69.36)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_231" transform="matrix(1, 0, 0, 1, -22.981, -30.4057)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_232" transform="matrix(1, 0, 0, 1, 75.519, 69.125)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_233" transform="matrix(1, 0, 0, 1, 75.519, 54.36)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_234" transform="matrix(1, 0, 0, 1, -58.481, -45.4057)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_10_2">
+   <rect id="TAG_svg_235" transform="matrix(1, 0, 0, 1, 301.519, 69.5417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_236" transform="matrix(1, 0, 0, 1, 301.519, 54.7767)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_237" transform="matrix(1, 0, 0, 1, 167.519, -44.989)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_238" transform="matrix(1, 0, 0, 1, 337.519, 69.5417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_239" transform="matrix(1, 0, 0, 1, 337.519, 54.7767)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_240" transform="matrix(1, 0, 0, 1, 203.519, -44.989)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_2_2">
+   <rect id="TAG_svg_241" transform="matrix(1, 0, 0, 1, 319.019, 69.5417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_242" transform="matrix(1, 0, 0, 1, 319.019, 54.7767)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_243" transform="matrix(1, 0, 0, 1, 185.019, -44.989)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_1_4">
+   <rect id="TAG_svg_244" transform="matrix(1, 0, 0, 1, 205.519, 69.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_245" transform="matrix(1, 0, 0, 1, 71.519, -30.239)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_9_2">
+   <rect id="TAG_svg_246" transform="matrix(1, 0, 0, 1, 187.519, 69.5417)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_247" transform="matrix(1, 0, 0, 1, 187.519, 54.7767)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_248" transform="matrix(1, 0, 0, 1, 53.519, -44.989)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_249" transform="matrix(1, 0, 0, 1, 223.186, 69.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_250" transform="matrix(1, 0, 0, 1, 89.1857, -30.239)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_2_1">
+   <rect id="TAG_svg_251" transform="matrix(1, 0, 0, 1, 262.186, 54.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_252" transform="matrix(1, 0, 0, 1, 128.186, -45.239)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_9_4">
+   <rect id="TAG_svg_253" transform="matrix(1, 0, 0, 1, 244.269, 69.2917)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_254" transform="matrix(1, 0, 0, 1, 244.269, 54.5267)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_255" transform="matrix(1, 0, 0, 1, 110.269, -45.239)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_256" transform="matrix(1 0 0 1 289.519 32.5267) translate(-9.66667 22.3333) translate(0 -1) translate(0 0.666667)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_257" transform="matrix(1 0 0 1 155.519 -67.239) translate(-9.66667 22.3333) translate(0 -1) translate(0 0.666667)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_25_1">
+   <rect id="TAG_svg_258" transform="matrix(1, 0, 0, 1, 82.8523, 11.2917)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_259" transform="matrix(1, 0, 0, 1, -51.1477, -119.239)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_260" transform="matrix(1, 0, 0, 1, 144.852, 10.6251)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_261" transform="matrix(1, 0, 0, 1, 10.8523, -119.906)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_262" transform="matrix(1, 0, 0, 1, 206.519, 10.9584)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_263" transform="matrix(1, 0, 0, 1, 72.5187, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_264" transform="matrix(1, 0, 0, 1, 269.852, 10.9584)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_265" transform="matrix(1, 0, 0, 1, 135.852, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_25_3">
+   <rect id="TAG_svg_266" transform="matrix(1 0 0 1 87.519 24.5267) translate(-35.6667 -44.3333) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_267" transform="matrix(1, 0, 0, 1, 82.8523, -11.4733)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_268" transform="matrix(1, 0, 0, 1, 113.852, -11.8066)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_269" transform="matrix(1, 0, 0, 1, 144.852, -12.1399)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_270" transform="matrix(1, 0, 0, 1, 175.519, -11.4733)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_271" transform="matrix(1, 0, 0, 1, 206.519, -11.8066)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_272" transform="matrix(1, 0, 0, 1, 237.519, -11.8066)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_273" transform="matrix(1, 0, 0, 1, 269.852, -11.8066)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_274" transform="matrix(1, 0, 0, 1, 302.852, -11.8066)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_24_3">
+   <rect id="TAG_svg_275" transform="matrix(1 0 0 1 87.519 39.2917) translate(-35.6667 -44.3333) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 1) translate(0 0)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_276" transform="matrix(1, 0, 0, 1, -82.1477, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_277" transform="matrix(1, 0, 0, 1, 113.852, 10.9584)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_278" transform="matrix(1, 0, 0, 1, -20.1477, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_279" transform="matrix(1, 0, 0, 1, 175.519, 11.2917)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_280" transform="matrix(1, 0, 0, 1, 41.519, -119.239)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_281" transform="matrix(1, 0, 0, 1, 237.519, 10.9584)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_282" transform="matrix(1, 0, 0, 1, 103.519, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_283" transform="matrix(1, 0, 0, 1, 302.852, 10.9584)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_284" transform="matrix(1, 0, 0, 1, 168.852, -119.572)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_5_3">
+   <rect id="TAG_svg_285" transform="matrix(1 0 0 1 328.29 66.583) translate(4.88889 -48.4444) translate(0 -0.666667)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_286" transform="matrix(1 0 0 1 328.29 37.052) translate(4.88889 -48.4444) translate(0 -0.666667)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_287" transform="matrix(1, 0, 0, 1, 360.29, 17.6941)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_288" transform="matrix(1, 0, 0, 1, 360.29, -11.8369)" height="13" width="5" y="71" x="84" fill="green"/>
+  </g>
+  <g id="TAG_3_7_3">
+   <rect id="TAG_svg_289" transform="matrix(1 0 0 1 328.29 51.817) translate(4.88889 -48.4444) translate(0 -0.666667)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_290" transform="matrix(1 0 0 1 194.29 -62.7137) translate(4.88889 -48.4444) translate(0 -0.666667)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_291" transform="matrix(1, 0, 0, 1, 360.29, 2.9281)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_292" transform="matrix(1, 0, 0, 1, 226.29, -111.603)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_3_7_1">
+   <rect id="TAG_svg_293" transform="matrix(1, 0, 0, 1, 368.017, -42.3261)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_294" transform="matrix(1 0 0 1 352.926 -42.3261)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_295" transform="matrix(1 0 0 1 339.472 -42.3261)" height="13" width="5" y="71" x="84" fill="green"/>
+   <rect id="TAG_svg_296" transform="matrix(1 0 0 1 191.29 -127.326)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g transform="translate(0)" id="TAG_3_12_4">
+   <rect id="TAG_svg_297" transform="matrix(1, 0, 0, 1, -27.0833, -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_298" transform="matrix(1, 0, 0, 1, -40.5, -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_299" transform="matrix(1, 0, 0, 1, -53.9167, -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_300" transform="matrix(1, 0, 0, 1, -67.3333, -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+  </g>
+  <g id="TAG_3_12_2">
+   <rect id="TAG_svg_301" height="4" width="12" y="229.667" x="95" fill="green"/>
+   <rect id="TAG_svg_302" transform="matrix(1 0 0 1 -80.75 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_303" transform="matrix(1 0 0 1 -94.1667 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_304" transform="matrix(1 0 0 1 -107.583 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+  </g>
+  <g id="TAG_3_17_2">
+   <rect id="TAG_svg_305" transform="matrix(1 0 0 1 57 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_306" transform="matrix(1 0 0 1 43.5833 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_307" transform="matrix(1, 0, 0, 1, 30.1667, -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_308" transform="matrix(1 0 0 1 16.75 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+  </g>
+  <g id="TAG_3_16_4">
+   <rect id="TAG_svg_309" transform="matrix(1 0 0 1 3.33333 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_310" transform="matrix(1 0 0 1 -10.0833 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_311" transform="matrix(1 0 0 1 -23.5 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_312" transform="matrix(1 0 0 1 -36.9167 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+  </g>
+  <g id="TAG_3_14_2">
+   <rect id="TAG_svg_313" transform="matrix(1 0 0 1 26.5833 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_314" transform="matrix(1 0 0 1 13.1667 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_315" transform="matrix(1 0 0 1 -0.25 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_316" transform="matrix(1 0 0 1 -13.6667 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_317" transform="matrix(1 0 0 1 40 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+  </g>
+  <g id="TAG_3_14_4">
+   <rect id="TAG_svg_318" transform="matrix(1 0 0 1 -50.3333 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_319" transform="matrix(1 0 0 1 53.4167 -50.3333)" height="4" width="12" y="280" x="216" fill="green"/>
+   <rect id="TAG_svg_320" transform="matrix(1 0 0 1 -63.75 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+   <rect id="TAG_svg_321" transform="matrix(1 0 0 1 -77.1667 -50.3333)" height="4" width="12" y="280" x="360" fill="green"/>
+  </g>
+  <g id="TAG_3_24_1">
+   <rect id="TAG_svg_322" transform="matrix(1 0 0 1 1.37614 -45.5604)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_323" transform="matrix(1, 0, 0, 1, 32.519, -45.2747)" height="13" width="5" y="156" x="218" fill="green"/>
+   <rect id="TAG_svg_324" transform="matrix(1 0 0 1 1.37614 -17.5604)" height="13" width="5" y="156" x="218" fill="green"/>
+  </g>
+  <g id="TAG_1_30_1">
+   <ellipse id="TAG_svg_325" ry="3" rx="3" cy="180" cx="81" fill="green"/>
+   <ellipse id="TAG_svg_326" ry="3" rx="3" cy="221" cx="81" fill="green"/>
+  </g>
+  <g id="TAG_1_30_3">
+   <ellipse id="TAG_svg_327" ry="3" rx="3" cy="191" cx="561" fill="green"/>
+   <ellipse id="TAG_svg_328" ry="3" rx="3" cy="231" cx="561" fill="green"/>
+  </g>
+  <text id="TAG_svg_329" font-size="15px" font-weight="bold" y="20" x="10">6층</text>
+ </g>
+</svg>

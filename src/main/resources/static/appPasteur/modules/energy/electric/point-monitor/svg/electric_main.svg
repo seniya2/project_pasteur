@@ -1,0 +1,12 @@
+<svg width="1214" height="902" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/src_electric_main.png" id="TAG_svg_1" height="902" width="1214"/>
+  <rect id="TAG_svg_2" height="40" width="131" y="149" x="1079.69996" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#bfbf00"/>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1117.5" y="174" id="TAG_4560_2_10" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1190.5" y="174.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_3">KW</text>
+  <rect id="TAG_svg_4" height="40" width="74" y="103.5" x="1123.99999" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000"/>
+ </g>
+</svg>

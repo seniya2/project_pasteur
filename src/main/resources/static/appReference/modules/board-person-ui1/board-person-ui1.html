@@ -1,0 +1,64 @@
+<h1 class="page-title">
+	Board-Person-Ui 1 <small>CRUD 예제 - person객체</small>
+</h1>
+
+<div class="col-md-12">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 리스트
+			</h5>
+		</header>
+		<div class="widget-body">
+		
+			<div class="clearfix">
+				<div class="pull-right">
+					<button class="btn btn-info btn-rounded"
+						ng-click="editModalOpen(null,null)">NEW</button>
+				</div>
+			</div>
+
+			<table
+				class="table table-bordered table-hover table-lg mt-lg mb-0 margin_top_30">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('id')"  ng-click="sortAction('id')">ID</th>
+						<th class="text-center" ng-class="getSortClass('name')"  ng-click="sortAction('name')">이름</th>						
+						<th class="text-center" ng-class="getSortClass('gender')" ng-click="sortAction('gender')">성별</th>
+						<th class="hidden-xs text-center">생년월일</th>
+						<th class="hidden-xs text-center">Email</th>
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr dir-paginate="person in people | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="pagination.current">
+						<td class="text-center">{{person.no}}</td>
+						<td class="text-center"><a ng-click="viewModalOpen(null,person)">{{person.name}}</a></td>						
+						<td class="text-center">{{person.gender}}</td>
+						<td class="hidden-xs text-center"><p ng-bind="person.birth | date:'yyyy-MM-dd'"></p></td>
+						<td class="hidden-xs">{{person.email}}</td>												
+						<td class="hidden-xs text-center">
+						<!-- 
+							<button class="btn btn-xs btn-danger"
+								ng-click="deleteAction(person.no)">Delete</button>
+								 -->
+							<button class="btn btn-xs btn-danger"
+								confirmed-click="deleteAction(person.no)" 
+   								 ng-confirm-click="삭제하시겠습니까?">Delete</button>	
+								
+							<button class="btn btn-xs btn-info"
+								ng-click="editModalOpen(null, person)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearfix text-center">
+				<dir-pagination-controls
+					on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+		</div>
+	</section>
+</div>

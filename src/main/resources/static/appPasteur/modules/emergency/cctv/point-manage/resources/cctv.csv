@@ -1,0 +1,82 @@
+﻿tagID,name,tagAddr,animateType,no
+TAG_1_1,F01_로비 주출입구,http://192.168.245.112,popupView,1
+TAG_1_10,F03_연구동 3층 승객용 E/V,http://192.168.245.112,popupView,2
+TAG_1_11,F03_연구동 3층 화물용 E/V,http://192.168.245.112,popupView,3
+TAG_1_12,F03_연구동 3층 전산실,http://192.168.245.112,popupView,4
+TAG_1_13,F03_행정동 3층 E/V,http://192.168.245.112,popupView,5
+TAG_1_14,F04_연구동 4층 승객용 E/V,http://192.168.245.112,popupView,6
+TAG_1_15,F04_연구동 4층 화물용 E/V,http://192.168.245.112,popupView,7
+TAG_1_16,F07_연구동 7층 승객용 E/V,http://192.168.245.112,popupView,8
+TAG_1_2,F01_로비 부출입구1,http://192.168.245.112,popupView,9
+TAG_1_3,F01_로비 부출입구2,http://192.168.245.112,popupView,10
+TAG_1_4,F01_연구동 1층 승객용E/V,http://192.168.245.112,popupView,11
+TAG_1_5,F01_연구동 1층 화물용E/V,http://192.168.245.112,popupView,12
+TAG_1_6,F02_연구동 2층 화물용 E/V,http://192.168.245.112,popupView,13
+TAG_1_7,F02_연구동 2층 승객용 E/V,http://192.168.245.112,popupView,14
+TAG_1_8,F02_연구동 2층 전산실,http://192.168.245.112,popupView,15
+TAG_1_9,F02_행정동 2층 E/V,http://192.168.245.112,popupView,16
+TAG_2_1,F05_연구동 5층 승객용 E/V,http://192.168.245.115,popupView,17
+TAG_2_10,F01_외곽 2번 카메라,http://192.168.245.115,popupView,18
+TAG_2_11,F01_외곽 3번 카메라,http://192.168.245.115,popupView,19
+TAG_2_12,F01_외각 4번 카메라,http://192.168.245.115,popupView,20
+TAG_2_13,F01_외곽뒷편주차장,http://192.168.245.115,popupView,21
+TAG_2_14,F01_외곽주차장1,http://192.168.245.115,popupView,22
+TAG_2_15,F01_외곽주차장2,http://192.168.245.115,popupView,23
+TAG_2_16,F01_외곽주차장3,http://192.168.245.115,popupView,24
+TAG_2_2,F05_연구동 5층 화물용 E/V,http://192.168.245.115,popupView,25
+TAG_2_3,F06_연구동 6층 승객용 E/V,http://192.168.245.115,popupView,26
+TAG_2_4,F06_연구동 6층 화물용 E/V,http://192.168.245.115,popupView,27
+TAG_2_5,F01_CARGO,http://192.168.245.115,popupView,28
+TAG_2_6,F01_1층주차장,http://192.168.245.115,popupView,29
+TAG_2_7,F01_1층주차장1,http://192.168.245.115,popupView,30
+TAG_2_8,F01_실내주차장입구,http://192.168.245.115,popupView,31
+TAG_2_9,F01_외곽 1번 카메라,http://192.168.245.115,popupView,32
+TAG_3_1,F01_실험실 1,http://192.168.245.84,popupView,33
+TAG_3_10,F05_BSL-3 LAB-2(1),http://192.168.245.84,popupView,34
+TAG_3_11,F05_BSL-3 LAB-2(2),http://192.168.245.84,popupView,35
+TAG_3_12,F05_BSL-3 LAB-1,http://192.168.245.84,popupView,36
+TAG_3_13,F05_BSL-3 Work Room,http://192.168.245.84,popupView,37
+TAG_3_14,F05_BSL-3 Screening Room(1),http://192.168.245.84,popupView,38
+TAG_3_15,F05_BSL-3 Screening Room(2),http://192.168.245.84,popupView,39
+TAG_3_16,F05_Anter Room-1,http://192.168.245.84,popupView,40
+TAG_3_2,F01_ABSL-2,http://192.168.245.84,popupView,41
+TAG_3_3,F01_PK 실험실,http://192.168.245.84,popupView,42
+TAG_3_4,F01_실험실 2,http://192.168.245.84,popupView,43
+TAG_3_5,F01_동물실 1,http://192.168.245.84,popupView,44
+TAG_3_6,F01_동물실 2,http://192.168.245.84,popupView,45
+TAG_3_7,F05_ABSL-3 실험실,http://192.168.245.84,popupView,46
+TAG_3_8,F05_ABSL-3 사육실,http://192.168.245.84,popupView,47
+TAG_3_9,F05_BSL-3 LAB-3,http://192.168.245.84,popupView,48
+TAG_4_1,F03_R3.23,http://192.168.245.85,popupView,49
+TAG_4_10,F05_R5.11,http://192.168.245.85,popupView,50
+TAG_4_12,F05_R5.26,http://192.168.245.85,popupView,51
+TAG_4_13,F02_2F 행정동 전산실,http://192.168.245.85,popupView,52
+TAG_4_2,F03_R3.24,http://192.168.245.85,popupView,53
+TAG_4_3,F04_R4.16,http://192.168.245.85,popupView,54
+TAG_4_4,F04_R4.15,http://192.168.245.85,popupView,55
+TAG_4_5,F04_R4.14,http://192.168.245.85,popupView,56
+TAG_4_6,F04_R4.17,http://192.168.245.85,popupView,57
+TAG_4_7,F04_R4.27,http://192.168.245.85,popupView,58
+TAG_4_8,F05_R5.09,http://192.168.245.85,popupView,59
+TAG_4_9,F05_R5.10,http://192.168.245.85,popupView,60
+TAG_5_1,F01_1층외곽휴게실,http://192.168.245.89/web_viewer2.html,popupView,61
+TAG_5_2,F01_1층외곽식당뒷편,http://192.168.245.89/web_viewer2.html,popupView,62
+TAG_5_3,F01_1층외곽후문,http://192.168.245.89/web_viewer2.html,popupView,63
+TAG_5_4,F01_1층내부주차장,http://192.168.245.89/web_viewer2.html,popupView,64
+TAG_5_5,F01_MDF실,http://192.168.245.89/web_viewer2.html,popupView,65
+TAG_5_6,F01_기계실,http://192.168.245.89/web_viewer2.html,popupView,66
+TAG_5_7,F01_전기실,http://192.168.245.89/web_viewer2.html,popupView,67
+TAG_5_8,F02_화물용EV,http://192.168.245.89/web_viewer2.html,popupView,68
+TAG_5_9,F02_승객용EV1,http://192.168.245.89/web_viewer2.html,popupView,69
+TAG_5_10,F02_승객용EV2,http://192.168.245.89/web_viewer2.html,popupView,70
+TAG_5_11,F02_연결브릿지,http://192.168.245.89/web_viewer2.html,popupView,71
+TAG_5_12,F02_EV행정동,http://192.168.245.89/web_viewer2.html,popupView,72
+TAG_6_13,F03_R3.22,http://192.168.245.88/web_viewer2.html,popupView,73
+TAG_6_14,F04_R4.13,http://192.168.245.88/web_viewer2.html,popupView,74
+TAG_6_15,F04_R4.28,http://192.168.245.88/web_viewer2.html,popupView,75
+TAG_5_16,F05_5층중앙감시반출입구,http://192.168.245.89/web_viewer2.html,popupView,76
+TAG_6_17,F05_R5.08,http://192.168.245.88/web_viewer2.html,popupView,77
+TAG_6_18,F05_R5.15,http://192.168.245.88/web_viewer2.html,popupView,78
+TAG_5_19,F06_6층점검실,http://192.168.245.89/web_viewer2.html,popupView,79
+TAG_5_20,F07_옥상외부1,http://192.168.245.89/web_viewer2.html,popupView,80
+TAG_5_21,F07_옥상외부2,http://192.168.245.89/web_viewer2.html,popupView,81

@@ -1,0 +1,31 @@
+<svg width="780" height="620" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>Layer 1</title>
+  <image x="0" y="0" width="780" height="620" id="TAG_svg_back" xlink:href="appPasteur/modules/emergency/cctv/point-monitor/svg/F03.png"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <a target="_blank" id="TAG_1_13" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="536" y="430" width="15" height="15" transform="translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, -1) translate(-1) translate(-1) translate(-1) translate(-1) translate(11, -2) translate(0, 1)" id="TAG_svg_1"/>
+  </a>
+  <a target="_blank" id="TAG_1_11" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="503" y="112" width="15" height="15" transform="translate(0, 5)" id="TAG_svg_2"/>
+  </a>
+  <a target="_blank" id="TAG_1_10" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="504" y="190" width="15" height="15" transform="translate(-3, 5) translate(1) translate(0)" id="TAG_svg_3"/>
+  </a>
+  <a target="_blank" id="TAG_1_12" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="502" y="118" width="15" height="15" transform="matrix(1 0 0 1 -118 178) translate(-204 -178) translate(1 0) translate(0 1) translate(0 1) translate(-1 0)" id="TAG_svg_4"/>
+  </a>
+  <a target="_blank" id="TAG_4_1" xlink:href="http://192.168.245.85">
+   <rect fill="green" x="380" y="130" width="15" height="15" id="TAG_svg_5"/>
+  </a>
+  <a target="_blank" id="TAG_4_2" xlink:href="http://192.168.245.85">
+   <rect fill="green" x="410" y="130" width="15" height="15" id="TAG_svg_6"/>
+  </a>
+  <a target="_blank" id="TAG_6_13" xlink:href="http://192.168.245.88/web_viewer2.html">
+  <rect id="dvr_6_13" fill="green" x="346" y="132.5" width="15" height="15" transform="translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, -1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, 1) translate(0, -1) translate(-1) translate(-1) translate(-1) translate(-1) translate(11, -2) translate(0, 1)"/>
+ </a>
+ </g>
+</svg>

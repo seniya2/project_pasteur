@@ -1,0 +1,62 @@
+<div ng-init="prepareAction()"></div>
+<span us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner-main" spinner-start-active="true"></span>
+<div class="row">
+	<div class="col-md-8" >
+		<section class="widget" style="margin-bottom: 20px;">
+			<div class="widget-body custom_dashboard_main_image" 
+			style="background-image: url('appPasteur/modules/dashboard/resources/login_back2.jpg');
+			background-size: 100% 100%;
+    		background-repeat: no-repeat;">
+				<!-- <img width="100%" src="appPasteur/modules/dashboard/resources/login_back2.jpg"/> -->
+				<!-- <div class="margin_top_300"></div> -->
+				<!-- 
+				<div class="custom_hr"></div>
+				<div class="clearfix">
+				<span class="fw-semi-bold">@ 2015. INSTITUT PASTEUR KOREA</p>
+				</div>
+				 -->
+				<!-- <a data-ui-sref="app.hvac-graph">설비 경향그래프 링크</a> -->
+			</div>
+		</section>
+	</div>
+	<div class="col-md-4" >
+		<section class="widget" style="margin-bottom: 20px;">
+			<!-- <header><h5 class="fw-bold">설비시스템 관제점 리스트</h5></header> -->
+			<div class="widget-body custom_dashboard_hvac">
+				<table
+				class="table table-hover table-lg mt-lg mb-0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('no')" ng-click="sortAction('no')">No</th>					
+						<th class="text-center" ng-class="getSortClass('tagID')" ng-click="sortAction('tagID')">태그 아이디</th>
+						<th class="hidden-xs text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">태그 이름</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="point in dataList | filter:searchText | orderBy:sortAttr:sortOder">
+					<!-- <tr ng-repeat="point in dataList | filter:searchText"> -->
+						<td class="text-center">{{point.no}}</td>		
+						<!-- <td class="text-center"><a href="#/app/energy-hvac-point-manage">{{point.tagID}}</a></td> -->
+						<td class="text-center">{{point.tagID}}</td>
+						<td class="text-center">{{point.name}}</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4" ng-repeat="graphData in graphList">
+		<section class="widget" style="height :340px; margin-bottom: 0px;">			
+			<div class="widget-body"  ng-init="drawCharts($index)">
+				<nvd3 ng-show="graphData.chartEnable" options="graphData.chartOptions" data="graphData.chartData" config="{refreshDataOnly: false}" api="api" objectequality="true"></nvd3>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<h1 class="page-title">
+	Graphic-TagMonitor2 <small>svg 로딩 및 수정 예제 2</small>
+</h1>
+
+<div class="widget-container" ng-init="svgFileChange('graphic-tagMonitor2_sample1.svg')">
+	<div class="col-md-12">
+		<section class="widget">
+			<div class="widget-body">
+
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="form-group">
+							<select id="svgFile" name="svgFile" class="form-control col-sm-3 " ng-model="svgFile"
+								ng-change="svgFileChange(svgFile)">
+								<option value="graphic-tagMonitor2_sample1.svg">graphic-tagMonitor2_sample1.svg</option>
+								<option value="graphic-tagMonitor2_sample2.svg">graphic-tagMonitor2_sample2.svg</option>
+								<option value="graphic-tagMonitor2_sample3.svg">graphic-tagMonitor2_sample3.svg</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- svg_render -->
+				<div id="svg_render"></div>
+			</div>
+		</section>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<div class="col-md-12" ng-init="prepareAction()">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 리스트
+			</h5>
+		</header>
+		<div class="widget-body">
+		
+			<div class="clearfix">
+				<div class="pull-left">
+					<div class="form-group">							
+						<select id="searchType" name="searchType" class="form-control col-sm-3 " 
+								ng-model="searchType" ng-change="searchTypeChange(searchType)">
+							<option value="name">이름</option>
+							<option value="url">주소</option>
+						</select>
+					</div>
+				</div>
+				<div class="pull-left">
+					<div angucomplete-alt
+					  class="form-group"
+					  id="angucomplete-alt"
+					  placeholder="Search..."
+					  pause="100"
+					  selected-object="selectedPoint"
+					  remote-url={{searchUrlFn}}
+					  remote-url-request-formatter="remoteUrlRequestFn"
+					  remote-url-data-field="_embedded.point"
+					  title-field="name"
+					  description-field="description"
+					  minlength="1"
+					  input-class="form-control"
+					  match-class="highlight">
+					</div>
+				</div>	
+				<div class="pull-right">								
+					<button class="btn btn-primary btn-rounded" ng-click="editAction()">NEW</button>
+				</div>
+			</div>
+
+			<table
+				class="table table-hover table-lg mt-lg mb-0 margin_top_30">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('id')"  ng-click="sortAction('id')">No</th>
+						<th class="text-center" ng-class="getSortClass('category')"  ng-click="sortAction('category')">카테고리</th>						
+						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">이름</th>
+						<th class="hidden-xs text-center">태그 아이디</th>
+						<th class="hidden-xs text-center">타입</th>
+						<th class="hidden-xs text-center">값</th>
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr dir-paginate="point in pointList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="pagination.current">
+						<td class="text-center">{{point.no}}</td>
+						<td class="text-center">{{point.category}}</td>						
+						<td class="text-center"><a ng-click="viewAction(point)">{{point.name}}</a></td>
+						<td class="text-center">{{point.tagID}}</td>
+						<td class="hidden-xs text-center">{{point.type}}</td>
+						<td class="hidden-xs text-center">{{point.value}}</td>												
+						<td class="hidden-xs text-center">
+							<button class="btn btn-xs btn-danger"
+								ng-click="deleteAction(point.no)">Delete</button>
+							<button class="btn btn-xs btn-info"
+								ng-click="editAction(point)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearfix text-center">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+		</div>
+	</section>
+</div>

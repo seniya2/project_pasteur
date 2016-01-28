@@ -1,0 +1,24 @@
+﻿no,name,url
+1,전력계통도,appPasteur/modules/energy/electric/point-monitor/svg/electric_main.svg
+2,HV Line,appPasteur/modules/energy/electric/point-monitor/svg/electric_hvLine.svg
+3,HV 5,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv5.svg
+4,HV 6,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv6.svg
+5,HV 7,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv7.svg
+6,HV 8,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv8.svg
+7,HV 9,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv9.svg
+8,HV 10,appPasteur/modules/energy/electric/point-monitor/svg/electric_hv10.svg
+9,LV Line-1,appPasteur/modules/energy/electric/point-monitor/svg/electric_lvLine1.svg
+10,LV Line-2,appPasteur/modules/energy/electric/point-monitor/svg/electric_lvLine2.svg
+11,LV 1,appPasteur/modules/energy/electric/point-monitor/svg/electric_lv1.svg
+12,LV 4,appPasteur/modules/energy/electric/point-monitor/svg/electric_lv4.svg
+13,LV 8,appPasteur/modules/energy/electric/point-monitor/svg/electric_lv8.svg
+14,LV 13,appPasteur/modules/energy/electric/point-monitor/svg/electric_lv13.svg
+15,LV 14,appPasteur/modules/energy/electric/point-monitor/svg/electric_lv14.svg
+16,GENERATOR,appPasteur/modules/energy/electric/point-monitor/svg/electric_generator.svg
+17,GEN 1,appPasteur/modules/energy/electric/point-monitor/svg/electric_gen1.svg
+18,GEN 2-1,appPasteur/modules/energy/electric/point-monitor/svg/electric_gen21.svg
+19,GEN 2-2,appPasteur/modules/energy/electric/point-monitor/svg/electric_gen22.svg
+20,GEN 3-1,appPasteur/modules/energy/electric/point-monitor/svg/electric_gen31.svg
+21,GEN 3-2,appPasteur/modules/energy/electric/point-monitor/svg/electric_gen32.svg
+22,REC,appPasteur/modules/energy/electric/point-monitor/svg/electric_rec.svg
+23,ATS,appPasteur/modules/energy/electric/point-monitor/svg/electric_ats.svg

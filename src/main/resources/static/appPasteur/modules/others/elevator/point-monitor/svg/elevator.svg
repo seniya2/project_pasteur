@@ -1,0 +1,92 @@
+<svg width="1006" height="637" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g id="imageBack">
+  <title>Layer 1</title>
+  <image x="0" y="0" height="637" width="1006" id="TAG_svg_1" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/src_elevator_main.png"/>
+ </g>
+ <g>
+  <title>Layer 2</title>
+  <rect height="52" width="174" y="109" x="293.5" stroke-width="5" stroke="#000000" fill="#000000" id="svg_7"/>
+  <rect height="52" width="174" y="109" x="539.5" stroke-width="5" stroke="#000000" fill="#000000" id="svg_8"/>
+  <rect height="52" width="174" y="109" x="783.5" stroke-width="5" stroke="#000000" fill="#000000" id="svg_9"/>
+  <rect id="svg_6" height="52" width="174" y="109" x="42" stroke-width="5" stroke="#000000" fill="#000000"/>
+  <g id="TAG_1_door">
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_on.png" id="svg_2"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_on.png" id="svg_3"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_on.png" id="svg_4"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_on.png" id="svg_5"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_on.png" id="svg_10"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_on.png" id="svg_11"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_7f_on.png" id="svg_12"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_off.png" id="svg_13"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_off.png" id="svg_14"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_off.png" id="svg_15"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_off.png" id="svg_16"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_off.png" id="svg_17"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_off.png" id="svg_18"/>
+   <image x="88" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_7f_off.png" id="svg_19"/>
+  </g>
+  <g id="TAG_2_door">
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_on_for_6F.png" id="svg_20"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_on_for_6F.png" id="svg_21"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_on_for_6F.png" id="svg_22"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_on_for_6F.png" id="svg_23"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_on_for_6F.png" id="svg_24"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_on_for_6F.png" id="svg_25"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_off_for_6F.png" id="svg_27"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_off_for_6F.png" id="svg_28"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_off_for_6F.png" id="svg_29"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_off_for_6F.png" id="svg_30"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_off_for_6F.png" id="svg_31"/>
+   <image x="333" y="193" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_off_for_6F.png" id="svg_32"/>
+  </g>
+  <g id="TAG_3_door">
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_on_for_3F.png" id="svg_34"/>
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_on_for_3F.png" id="svg_35"/>
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_on_for_3F.png" id="svg_36"/>
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_off_for_3F.png" id="svg_41"/>
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_off_for_3F.png" id="svg_42"/>
+   <image x="581" y="234" height="334" width="50" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_off_for_3F.png" id="svg_43"/>
+  </g>
+  <g id="TAG_4_door">
+   <image id="svg_26" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_on_for_6F.png"/>
+   <image id="svg_33" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_on_for_6F.png"/>
+   <image id="svg_37" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_on_for_6F.png"/>
+   <image id="svg_38" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_on_for_6F.png"/>
+   <image id="svg_39" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_on_for_6F.png"/>
+   <image id="svg_40" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_on_for_6F.png"/>
+   <image id="svg_44" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_1f_off_for_6F.png"/>
+   <image id="svg_45" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_2f_off_for_6F.png"/>
+   <image id="svg_46" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_3f_off_for_6F.png"/>
+   <image id="svg_47" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_4f_off_for_6F.png"/>
+   <image id="svg_48" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_5f_off_for_6F.png"/>
+   <image id="svg_49" x="829" y="194" height="375" width="45" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_6f_off_for_6F.png"/>
+  </g>
+  <g id="TAG_1_axis">
+   <image x="145" y="311" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_down.png" id="TAG_svg_2a"/>
+   <image x="180" y="311" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_up.png" id="TAG_svg_2b"/>
+  </g>
+  <g id="TAG_2_axis">
+   <image x="392.5" y="312" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_down.png" id="TAG_svg_21"/>
+   <image x="427.5" y="312" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_up.png" id="TAG_svg_22"/>
+  </g>
+  <g id="TAG_3_axis">
+   <image x="639.5" y="351" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_down.png" id="TAG_svg_24"/>
+   <image x="674.5" y="351" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_up.png" id="TAG_svg_25"/>
+  </g>
+  <g id="TAG_4_axis">
+   <image x="886.5" y="309" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_down.png" id="TAG_svg_35"/>
+   <image x="921.5" y="309" height="30" width="32" xlink:href="appPasteur/modules/others/elevator/point-monitor/svg/icon/icon_ev_up.png" id="TAG_svg_36"/>
+  </g>
+  <text fill="#FFA500" stroke="#000000" stroke-width="0" x="180" y="287.11538" id="TAG_1_floor" font-size="44" font-family="serif" text-anchor="middle" xml:space="preserve">aa</text>
+  <text id="TAG_2_floor" fill="#FFA500" stroke="#000000" stroke-width="0" x="424" y="284.49999" font-size="44" font-family="serif" text-anchor="middle" xml:space="preserve">aa</text>
+  <text id="TAG_3_floor" fill="#FFA500" stroke="#000000" stroke-width="0" x="674" y="324.49999" font-size="44" font-family="serif" text-anchor="middle" xml:space="preserve">aa</text>
+  <text id="TAG_4_floor" fill="#FFA500" stroke="#000000" stroke-width="0" x="921" y="283.49999" font-size="44" font-family="serif" text-anchor="middle" xml:space="preserve">aa</text>
+  <rect fill="#ffffff" stroke="#ffffff" stroke-width="5" x="858" y="25" width="146" height="27" id="svg_1"/>
+  <text id="TAG_1_mode" fill="#ffa500" stroke="#000000" stroke-width="0" x="129" y="145.50001" font-size="30" font-family="serif" text-anchor="middle" xml:space="preserve">...</text>
+  <text id="TAG_2_mode" fill="#ffa500" stroke="#000000" stroke-width="0" x="380.5" y="145.49999" font-size="30" font-family="serif" text-anchor="middle" xml:space="preserve">...</text>
+  <text id="TAG_3_mode" fill="#ffa500" stroke="#000000" stroke-width="0" x="626.5" y="145.49999" font-size="30" font-family="serif" text-anchor="middle" xml:space="preserve">...</text>
+  <text id="TAG_4_mode" fill="#ffa500" stroke="#000000" stroke-width="0" x="870.5" y="145.49999" font-size="30" font-family="serif" text-anchor="middle" xml:space="preserve">...</text>
+ </g>
+</svg>

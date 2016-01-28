@@ -1,0 +1,166 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<section class="widget">
+			<div class="widget-body">
+				<form name="editForm" class="form-horizontal board_basic" data-ui-jq="parsley" data-parsley-priority-enabled="ture"
+					ng-submit="formSubmit(editForm.$valid)">
+					<!-- 
+					<input type="hidden" name="tagID" ng-model="currentPoint.tagID" value="{{currentPoint.tagID}}">
+					 -->
+					<fieldset>
+						<legend>
+							<span class="label label-default  text-white mr-xs"> 기본 정보 </span> 기본 정보를 입력해 주세요.
+						</legend>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="tagIDs"><strong>관제점</strong></label>
+							<div class="col-sm-9">
+							<select id="country-select"
+									data-ui-jq="select2"									
+									class="select2 form-control"
+									tabindex="-1"
+									data-placeholder="관제점을 선택하세요."
+									ng-model="currentData.tagID"
+									name="tagID">
+									<option value=""></option>
+									<option ng-repeat="point in dataList" value="{{point.name}}:{{point.tagID}}">{{point.name}}</option>
+							</select>								
+								<ul ng-show="tagID_error" class="parsley-errors-list filled" id="parsley-id-multiple-tagID"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+							</div>
+						</div>
+						
+						<!-- <div class="custom_alarm_parent_border"> -->
+						<div>
+						
+							<div class="form-group">
+								<label class="control-label col-sm-3" for="name"><strong>알람 제목</strong></label>
+								<div class="col-sm-9">
+									<input type="text" id="name" name="name" class="form-control"
+										ng-model="currentData.name">
+									<ul ng-show="name_error" class="parsley-errors-list filled" id="parsley-id-name">
+									<li class="parsley-required">필수 입력사항입니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-3" for="condition"> <strong>알람 기준</strong>
+								</label>
+								<div class="col-sm-9">
+									<div class="clearfix">
+									<div class="radio">
+										<input type="radio" name="condition_type" id="condition1"
+										ng-model="currentData.condition_type"
+										value="condition1"> 
+										<label for="condition1">변경</label>
+									</div>
+									</div>
+									
+									<div class="clearfix">
+									<div class="radio pull-left">
+										<input type="radio" name="condition_type" id="condition2"
+										ng-model="currentData.condition_type"
+										value="condition2"> 
+										<label for="condition2">특정값</label>
+									</div>
+									<div ng-show="currentData.condition_type == 'condition2'" class="pull-left margin_left_10">
+										<span class="pull-left fw-bold padding_top_5" style="height: 34px;"> [X] = &nbsp;</span> 
+										<input type="text" id="condition2" name="condition2" 
+										class="form-control pull-left"
+										style="width : 150px" 
+										ng-model="currentData.condition2">										
+									</div>
+										<ul ng-show="condition2_error" class="parsley-errors-list filled" id="parsley-id-condition2">
+										<li class="parsley-required">필수 입력사항입니다.</li>
+										</ul>
+									</div>
+									
+									<div class="clearfix">
+									<div class="radio pull-left">
+										<input type="radio" name="condition_type" id="condition3"
+										ng-model="currentData.condition_type"
+										value="condition3"> 
+										<label for="condition3">범위 값</label>
+									</div>
+									<div ng-show="currentData.condition_type == 'condition3'" class="pull-left margin_left_10">
+										<input type="text" id="condition3_1" name="condition3_1" 
+										class="form-control pull-left"
+										style="width : 150px" 
+										ng-model="currentData.condition3_1">
+										<span class="pull-left fw-bold padding_top_5" style="height: 34px;">&nbsp; < [X] < &nbsp;</span> 
+										<input type="text" id="condition3_2" name="condition3_2" 
+										class="form-control pull-left"
+										style="width : 150px"
+										ng-model="currentData.condition3_2">										
+									</div>
+										<ul ng-show="condition3_error" class="parsley-errors-list filled" id="parsley-id-condition3">
+										<li class="parsley-required">필수 입력사항입니다.</li>
+										</ul>
+									</div>
+									
+									<div class="clearfix">
+									<div class="radio pull-left">
+										<input type="radio" name="condition_type" id="condition4"
+										ng-model="currentData.condition_type"
+										value="condition4"> 
+										<label for="condition4">보다 큼</label>
+									</div>
+									<div ng-show="currentData.condition_type == 'condition4'" class="pull-left margin_left_10">
+										<span class="pull-left fw-bold padding_top_5" style="height: 34px;"> [X] >&nbsp;</span>
+										<input type="text" id="condition4" name="condition4" 
+										class="form-control pull-left"
+										style="width : 150px"
+										ng-model="currentData.condition4">
+									</div>
+										<ul ng-show="condition4_error" class="parsley-errors-list filled" id="parsley-id-condition4">
+										<li class="parsley-required">필수 입력사항입니다.</li>
+										</ul>
+									</div>
+									
+									<div class="clearfix">
+									<div class="radio pull-left">
+										<input type="radio" name="condition_type" id="condition5"
+										ng-model="currentData.condition_type"
+										value="condition5"> 
+										<label for="condition5">보다 작음</label>
+									</div>
+									<div ng-show="currentData.condition_type == 'condition5'" class="pull-left margin_left_10">
+										<span class="pull-left fw-bold padding_top_5" style="height: 34px;"> [X] <&nbsp;</span>
+										<input type="text" id="condition5" name="condition5" 
+										class="form-control pull-left"
+										style="width : 150px"
+										ng-model="currentData.condition5">
+									</div>
+										<ul ng-show="condition5_error" class="parsley-errors-list filled" id="parsley-id-condition5">
+										<li class="parsley-required">필수 입력사항입니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					
+					
+					</fieldset>
+					
+					<!-- 
+					<code>currentData.name = {{currentData.name}}</code><br>
+					<code>currentData.tagID = {{currentData.tagID}}</code><br>
+					<code>currentData.global = {{currentData.global}}</code><br>
+					<code>currentData.condition_type = {{currentData.condition_type}}</code><br>
+					<code>currentData.condition2 = {{currentData.condition2}}</code><br>
+					<code>currentData.condition3_1 = {{currentData.condition3_1}}</code><br>
+					<code>currentData.condition3_2 = {{currentData.condition3_2}}</code><br>
+					<code>currentData.condition4 = {{currentData.condition4}}</code><br>
+					<code>currentData.condition5 = {{currentData.condition5}}</code><br>
+					<code>editForm.$valid = {{editForm.$valid}}</code><br>
+   					 -->
+   					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary btn-rounded pull-right">Save</button>
+						<span class="btn btn-inverse btn-rounded" ng-click="cancelAction()">Cancel</span>
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

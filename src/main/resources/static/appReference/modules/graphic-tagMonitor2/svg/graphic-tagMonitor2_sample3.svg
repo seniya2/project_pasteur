@@ -1,0 +1,19 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g>
+  <title>Layer 1</title>
+  <rect fill="red" stroke="#0000bf" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="228" y="118" width="221" height="164" id="TAG_svg_5656565656" fill-opacity="0"/>
+  <text id="TAG_svg_99999" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="43.5" x="336" stroke-width="0" stroke="#000000" fill="#000000">그림 변환 테스트</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="337.5" x="92" stroke-width="0" stroke="#000000" fill="#000000" id="TAG_svg_565656565">아이디 : svg_3</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="355" x="110" stroke-width="0" stroke="#000000" fill="#000000" id="TAG_svg_56565">animate : changeImage</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="412.5" x="300" stroke-width="0" stroke="#000000" fill="#000000" id="TAG_svg_989898">CRUD-TagMetaModel 과 CRUD-TagValue 메뉴에서 값을 디지털 타입으로 &quot;svg_3&quot; 등록 진행</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="438" x="220" stroke-width="0" stroke="#000000" fill="#000000" id="TAG_svg_65656p">기본 이미지(트위터)가 보인 후 on / off 값에 따라 이미지가 변한다</text>
+ </g>
+ <g id="TAG_svg_3">
+  <title>Layer 2</title>
+  <image x="309.5" y="164.5" width="62" height="64" xlink:href="assets/icon/11.png" id="TAG_svg_3_on"/>
+  <image x="309.5" y="164.5" width="62" height="64" xlink:href="assets/icon/9.png" id="TAG_svg_3_off"/>
+  <image id="TAG_svg_11111" x="309.5" y="164.5" width="62" height="64" xlink:href="assets/icon/10.png"/>
+ </g>
+</svg>

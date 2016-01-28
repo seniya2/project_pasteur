@@ -1,0 +1,32 @@
+<svg width="1242" height="785" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_25_fast_heat.png" id="TAG_svg_1" height="785" width="1242" y="0" x="0"/>
+ </g>
+ <g>
+  <title>Layer 3</title>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="166" x="217.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff" id="TAG_2001_0_15">...</text>
+  <g id="TAG_2001_3_26">
+   <image x="618.5" y="205" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_on.gif" id="TAG_svg_49"/>
+   <image x="618.5" y="205" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_off.png" id="TAG_svg_50"/>
+  </g>
+  <text id="TAG_2001_0_16" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="105.5" x="296.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_1_3" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="164.5" x="459.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_4_19" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="212.5" x="700.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_4_20" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="303.5" x="700.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_17" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="171.5" x="838.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_18" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="285.5" x="839.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <g id="TAG_2001_3_27">
+   <image id="TAG_svg_9" x="620" y="253.5" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_on.gif"/>
+   <image id="TAG_svg_10" x="620" y="253.5" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_off.png"/>
+  </g>
+  <text id="TAG_2001_19_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="766.5" x="169.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_5_16" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="767.5" x="266.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_2_18" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="764.5" x="447.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_0_21" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="764.5" x="1096.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_0_23" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="765.5" x="1190.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_2_19" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="767.5" x="356.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+ </g>
+</svg>

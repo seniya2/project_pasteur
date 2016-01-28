@@ -1,0 +1,43 @@
+<svg width="780" height="620" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>Layer 1</title>
+  <image x="0" y="0" width="780" height="620" id="TAG_svg_back" xlink:href="appPasteur/modules/emergency/cctv/point-monitor/svg/F02.png"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <a target="_blank" id="TAG_1_8" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="218" y="130" width="15" height="15" transform="translate(1) translate(0, -1) translate(0, -1) translate(0, 1) translate(0, 1)" id="TAG_svg_1"/>
+  </a>
+  <a target="_blank" id="TAG_1_7" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="216" y="134" width="15" height="15" transform="matrix(1 0 0 1 168 162) translate(60 -120) translate(-1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(-1 0) translate(0 1) translate(0 1)" id="TAG_svg_2"/>
+  </a>
+  <a target="_blank" id="TAG_1_6" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="442" y="108" width="15" height="15" transform="translate(0, -1) translate(1) translate(-1) translate(-1) translate(-1) translate(-1) translate(1) translate(0, -1) translate(0, -1) translate(1)" id="TAG_svg_3"/>
+  </a>
+  <a target="_blank" id="TAG_1_9" xlink:href="http://192.168.245.112">
+   <rect fill="green" x="216" y="134" width="15" height="15" transform="matrix(1 0 0 1 168 162) translate(88 102) translate(-1 0)" id="TAG_svg_4"/>
+  </a>
+  <a target="_blank" id="TAG_4_13" xlink:href="http://192.168.245.85">
+   <rect fill="green" x="439" y="180" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)" id="TAG_svg_5"/>
+  </a>
+  <a target="_blank" id="TAG_5_9" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="dvr_5_8" fill="green" x="251" y="-148.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+  <a target="_blank" id="TAG_5_9" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="dvr_5_9" fill="green" x="246" y="-82.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+  <a target="_blank" id="TAG_5_10" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="dvr_5_10" fill="green" x="247" y="-62.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+  <a target="_blank" id="TAG_5_11" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="dvr_5_11" fill="green" x="311" y="-24.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+  <a target="_blank" id="TAG_5_9" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="svg_5" fill="green" x="353" y="146.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+  <a target="_blank" id="TAG_5_9" xlink:href="http://192.168.245.89/web_viewer2.html">
+   <rect id="dvr_5_12" fill="green" x="373" y="166.5" width="15" height="15" transform="matrix(1, 0, 0, 1, -55, 187) translate(205, 64) translate(0, 1) translate(-1) translate(0, 1) translate(1)"/>
+  </a>
+ </g>
+</svg>

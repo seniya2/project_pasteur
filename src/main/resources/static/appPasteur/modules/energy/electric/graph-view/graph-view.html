@@ -1,0 +1,84 @@
+<div ng-init="prepareAction()"></div>
+<span us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner-hg" spinner-start-active="true"></span>
+
+<div class="row">
+<div class="col-md-12">
+	<section class="widget">
+		<div class="widget-body">
+		
+			<form name="searchNameForm"					
+					data-ui-jq="parsley" 
+					data-parsley-priority-enabled="ture"
+					ng-submit="searchNameFormSubmit(searchNameForm.$valid)">
+					
+			<div class="clearfix form-group">
+				<div class="pull-left">
+					<h5 class="fw-bold">관제점</h5>
+				</div>
+				<div class="pull-left margin_left_10">
+					<select multiple id="country-select"
+							data-ui-jq="select2"
+							class="select2 form-control"
+							style="width:450px"
+							tabindex="-1"
+							data-placeholder="관제점을 클릭하여 선택하세요."
+							ng-model="searchName"
+							name="searchName"
+							data-ui-options="{minimumResultsForSearch: 1, maximumSelectionSize:1}"
+							data-minimum-results-for-search="1">
+							<option value=""></option>
+							<option ng-repeat="point in dataList" value="{{point.no}}">{{point.subject}} &nbsp;&nbsp; [{{point.tagNames}}]</option>
+					</select>
+					<ul ng-show="searchName_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+				</div>
+				<span class="input-group-btn pull-left">
+					<button type="submit" class="btn btn-default">그래프 보기</button>
+                </span>
+			</div>
+			</form>
+			
+			<div ng-show="chartEnable" class="margin_top_30">
+				<nvd3 options="chartOptions" data="chartData" config="{refreshDataOnly: false}" api="api" objectequality="true"></nvd3>
+			</div>
+		
+		</div>
+	</section>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="clearfix">
+			<ul id="tabs1" class="nav nav-tabs pull-left" >
+				<li ng-repeat="logEntity in logList.values()" id="li_{{logEntity.tagID}}" class="{{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}">
+				<a data-target="#{{logEntity.tagID}}" data-toggle="tab">{{logEntity.tagName}}</a>
+				</li>	
+			</ul>
+		</div>
+		<div id="tabs1c" class="tab-content mb-lg">
+			<div class="tab-pane clearfix {{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}" id="{{logEntity.tagID}}" ng-repeat="logEntity in logList.values()">
+				<div>
+					<table class="table table-hover table-lg mt-lg mb-0">
+						<thead>
+							<tr>
+							<tr>
+								<th class="text-center" ng-class="getSortClass('id',logEntity.tagID)" ng-click="sortAction('id',logEntity.tagID)">변경 시간</th>
+								<th class="text-center" ng-class="getSortClass('value',logEntity.tagID)" ng-click="sortAction('value',logEntity.tagID)">태그 값</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr dir-paginate="point in logEntity.content | itemsPerPage: logEntity.page.size" pagination-id="logEntity.tagID"
+								total-items="logEntity.page.totalElements" current-page="logEntity.page.number">
+								<td class="hidden-xs text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								<td class="text-center">{{point.value}} </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="clearfix text-center">
+					<dir-pagination-controls pagination-id="logEntity.tagID" on-page-change="pageChangeHandler(newPageNumber,logEntity.tagID)"></dir-pagination-controls>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

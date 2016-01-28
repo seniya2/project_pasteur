@@ -1,0 +1,26 @@
+{
+  "name": "jquery.easy-pie-chart",
+  "main": [
+    "dist/jquery.easypiechart.js"
+  ],
+  "ignore": [
+    "demo",
+    ".editorconfig"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  },
+  "devDependencies": {
+    "angular": "~1.2.9",
+    "angular-mocks": "~1.2.9"
+  },
+  "homepage": "https://github.com/rendro/easy-pie-chart",
+  "_release": "97b5824bf4",
+  "_resolution": {
+    "type": "commit",
+    "commit": "97b5824bf423410c3c6a1e971860159f17ee6ee6"
+  },
+  "_source": "https://github.com/rendro/easy-pie-chart.git",
+  "_target": "97b5824bf423410c3c6a1e971860159f17ee6ee6",
+  "_originalSource": "https://github.com/rendro/easy-pie-chart.git"
+}

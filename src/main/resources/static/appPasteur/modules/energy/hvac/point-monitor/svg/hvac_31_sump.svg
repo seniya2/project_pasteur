@@ -1,0 +1,33 @@
+<svg width="1239" height="784" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_31_sump.png" id="TAG_svg_1" height="784" width="1239" y="0" x="0"/>
+ </g>
+ <g>
+  <title>Layer 3</title>
+  <g id="TAG_2001_3_36">
+   <image x="785" y="211" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_49"/>
+   <image x="785" y="211" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_50"/>
+  </g>
+  <g id="TAG_2001_3_37">
+   <image x="785" y="242" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_3"/>
+   <image x="785" y="242" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_4"/>
+  </g>
+  <g id="TAG_2011_3_9">
+   <image x="785" y="270" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_6"/>
+   <image x="785" y="270" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_7"/>
+  </g>
+  <g id="TAG_2011_3_10">
+   <image x="785" y="300" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_9"/>
+   <image x="785" y="300" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_10"/>
+  </g>
+  <g id="TAG_2014_3_7">
+   <image x="785" y="328" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_12"/>
+   <image x="785" y="328" width="17" height="17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_13"/>
+  </g>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="766.5" x="1095.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue" id="TAG_2001_0_21">...</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="765.5" x="1190.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue" id="TAG_2001_0_23">...</text>
+ </g>
+</svg>

@@ -1,0 +1,250 @@
+<h1 class="page-title">
+	Board-Person-Ui 3 <small>CRUD 예제 - person객체</small>
+</h1>
+
+<div class="col-md-12" ng-show="displayMode == 'list'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 리스트
+			</h5>
+		</header>
+		<div class="widget-body">
+		
+			<div class="clearfix">
+				<div class="pull-right">
+					<button class="btn btn-info btn-rounded"
+						ng-click="editAction()">NEW</button>
+				</div>
+			</div>
+
+			<table
+				class="table table-bordered table-hover table-lg mt-lg mb-0 margin_top_30">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('id')"  ng-click="sortAction('id')">ID</th>
+						<th class="text-center" ng-class="getSortClass('name')"  ng-click="sortAction('name')">이름</th>						
+						<th class="text-center" ng-class="getSortClass('gender')" ng-click="sortAction('gender')">성별</th>
+						<th class="hidden-xs text-center">생년월일</th>
+						<th class="hidden-xs text-center">Email</th>
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr dir-paginate="person in people | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="pagination.current">
+						<td class="text-center">{{person.no}}</td>
+						<td class="text-center"><a href="#" ng-click="viewAction(person)">{{person.name}}</a></td>						
+						<td class="text-center">{{person.gender}}</td>
+						<td class="hidden-xs text-center"><p ng-bind="person.birth | date:'yyyy-MM-dd'"></p></td>
+						<td class="hidden-xs">{{person.email}}</td>												
+						<td class="hidden-xs text-center">
+							<button class="btn btn-xs btn-primary"
+								ng-click="deleteAction(person.no)">Delete</button>
+							<button class="btn btn-xs btn-primary"
+								ng-click="editAction(person)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearfix text-center">
+				<dir-pagination-controls
+					on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="col-md-12" ng-show="displayMode == 'edit'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 수정 및 작성
+			</h5>
+		</header>
+		<div class="widget-body">
+			<div class="margin_top_50"></div>
+			<form name="editForm"
+				class="form-horizontal board_basic"
+				data-ui-jq="parsley" 
+				data-parsley-priority-enabled="ture"
+				ng-submit="formSubmit(editForm.$valid)">
+				
+				<fieldset>
+
+					<div class="form-group">						
+						<label class="text-center control-label col-sm-2" for="name">이름</label>
+						<div class="col-sm-2">
+							<input type="text" id="name" name="name" class="form-control"								
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPerson.name" 
+								required="required"
+								ng-minlength="1">
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="password">비밀번호</label>
+						<div class="col-sm-2">
+							<input 
+								type="password" id="password" name="password" class="form-control mb-sm" 
+								data-parsley-trigger="change"
+								data-parsley-minlength="4" 
+								ng-model="currentPerson.password"
+								ng-minlength="4"
+								required="required"> 
+							<input
+								type="password" id="password2" name="password2" class="form-control" 
+								data-parsley-trigger="change"
+								data-parsley-minlength="4"
+								data-parsley-equalto="#password"
+								ng-model="currentPerson.password2"
+								ng-minlength="4"
+								required="required">
+						</div>
+					</div>
+					
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="gender">성별</label>
+						<div class="col-sm-2" ng-init="currentPerson.gender='남'">
+							<div class="radio radio-danger">
+								<input type="radio" name="gender" id="gender1" value="남" 
+									ng-model="currentPerson.gender" checked="checked">
+								<label for="radio3"> 남 </label>
+							</div>
+							<div class="radio radio-danger">
+								<input type="radio" name="gender" id="gender2" value="여"
+									ng-model="currentPerson.gender"> 
+								<label for="radio4"> 여 </label>
+							</div>
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="email">Eamil</label>
+						<div class="col-sm-3">
+							<input type="email" id="email" name="email" class="form-control"
+								data-parsley-trigger="change"
+                       			data-parsley-validation-threshold="1"
+								ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"
+								ng-model="currentPerson.email"
+								ng-minlength="3"
+                       			required>            		    
+						</div>						
+					</div>
+										
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="birth">생년월일</label>
+						<div class="col-sm-3">
+							<input type="date" id="birth" name="birth" class="form-control"								
+								ng-model="currentPerson.birth"
+								placeholder="yyyy-MM-dd" 
+								required />
+						</div>
+					</div>
+					
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="tel">전화번호</label>				
+						<div class="col-sm-2">
+							<input id="tel" type="text" class="form-control" name = "tel"
+								data-ui-jq="inputmask"
+								data-ui-options="{mask: '(999) 9999-9999'}"	
+								data-parsley-trigger="change"
+								ng-model="currentPerson.tel"/>
+						</div>						
+					</div>
+					
+					<div class="form-group">						
+						<label class="control-label col-sm-2" for="description">설명</label>
+						<div class="col-sm-5">
+							<input type="text" id="description" name="description" class="form-control"
+								ng-model="currentPerson.description"/>
+						</div>
+					</div>
+					
+					<!-- 
+					<tt>editForm.name.$valid = {{editForm.name.$valid}}</tt><br/>
+					<tt>editForm.password.$valid = {{editForm.password.$valid}}</tt><br/>
+					<tt>editForm.password.$valid = {{editForm.password.$valid}}</tt><br/>
+					<tt>editForm.password2.$valid = {{editForm.password2.$valid}}</tt><br/>
+					<tt>editForm.gender.$valid = {{editForm.gender.$valid}}</tt><br/>
+					<tt>editForm.email.$valid = {{editForm.email.$valid}}</tt><br/>
+					<tt>editForm.birth.$valid = {{editForm.birth.$valid}}</tt><br/>
+					<tt>editForm.tel.$valid = {{editForm.tel.$valid}}</tt><br/>
+					 -->	
+
+				</fieldset>
+				<div class="margin_top_50"></div>
+				<div class="clearfix">
+					<div class="pull-right">
+		                <button type="submit" class="btn btn-primary">Save</button>
+			            <span class="btn btn-primary" ng-click="cancelAction()">Cancel</span>
+	                </div>
+				</div>
+				
+			</form>
+			
+		</div>
+	</section>
+</div>
+
+<div class="col-md-12" ng-show="displayMode == 'view'">
+	<section class="widget">
+		<header>
+			<h5>
+				<span class="fw-semi-bold">crud</span> 상세보기
+			</h5>
+		</header>
+		<div class="widget-body">
+			<div class="margin_top_50"></div>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td class="col-sm-2 text-center fw-bold">ID</td>
+						<td class="col-sm-5">{{currentPerson.no}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">이름</td>
+						<td>{{currentPerson.name}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">비밀번호</td>
+						<td>{{currentPerson.password}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">설명</td>
+						<td>{{currentPerson.description}}</td>						
+					</tr>	
+					<tr>
+						<td class="text-center fw-bold">성별</td>
+						<td>{{currentPerson.gender}}</td>						
+					</tr>	
+					<tr>
+						<td class="text-center fw-bold">Eamil</td>
+						<td>{{currentPerson.email}}</td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">생년월일</td>
+						<td><p ng-bind="currentPerson.birth | date:'yyyy-MM-dd'"></p></td>						
+					</tr>
+					<tr>
+						<td class="text-center fw-bold">전화번호</td>
+						<td>{{currentPerson.tel}}</td>						
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="clearfix">
+				<div class="pull-right">
+	                <button class="btn btn-primary" ng-click="cancelAction()">List</button>
+	                <button class="btn btn-primary" ng-click="displayMode = 'edit'">Edit</button>
+	                <button class="btn btn-primary" ng-click="deleteAction(currentPerson.no)">Delete</button>
+                </div>
+			</div>
+			
+		</div>
+	</section>
+</div>

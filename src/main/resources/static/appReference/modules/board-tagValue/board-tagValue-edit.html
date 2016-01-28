@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-1">
+		<section class="widget">
+			<header>
+				<h4>
+					<span class="fw-semi-bold">Tag_Value</span> 수정 및 작성
+				</h4>				
+			</header>
+			<div class="widget-body">
+				<form name="editForm"
+					class="form-horizontal board_basic"
+					data-ui-jq="parsley" 
+					data-parsley-priority-enabled="ture"
+					ng-submit="formSubmit(editForm.$valid)">
+					<!-- 
+					<input type="hidden" name="tagID" ng-model="currentPoint.tagID" value="{{currentPoint.tagID}}">
+					 -->
+					<fieldset>
+						<legend>
+							<span class="label label-primary  text-gray-dark mr-xs"> 기본 정보 </span> 기본 정보를 입력해 주세요.
+						</legend>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="tagID">
+								<strong>태그 아이디</strong>								
+							</label>
+							<div class="col-sm-9">
+								<input type="text" id="tagID" name="tagID" class="form-control"								
+								data-parsley-trigger="change"
+								data-parsley-required="true"
+								ng-model="currentPoint.tagID" 
+								required="required"
+								ng-minlength="1">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="value">
+								<strong>값</strong>
+							</label>
+							<div class="col-sm-9">
+								<input type="text" id="type" name="value" class="form-control"								
+									data-parsley-trigger="change"
+									data-parsley-required="true"
+									ng-model="currentPoint.value" 
+									required="required"
+									ng-minlength="1">
+							</div>
+						</div>	
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="timeStamp">
+								<strong>시간</strong>
+							</label>
+							<div class="col-sm-9">
+								<input type="text" id="timeStamp" name="timeStamp" class="form-control"								
+									data-parsley-trigger="change"
+									data-parsley-required="true"
+									ng-model="currentPoint.timeStamp" 
+									required="required"
+									ng-minlength="1">
+							</div>
+						</div>	
+
+					</fieldset>
+					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-danger btn-rounded pull-right">Save</button>
+			            <span class="btn btn-default btn-rounded" ng-click="cancelAction()">Cancel</span>
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

@@ -1,0 +1,90 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-1">
+		<section class="widget">
+			<header>
+				<h4>
+					<span class="fw-semi-bold">태그</span> 상세보기
+				</h4>				
+			</header>
+			<div class="widget-body">
+				<form class="form-horizontal form-label-rifht">
+					<fieldset>
+						<legend>
+							<span class="label label-primary  text-gray-dark mr-xs"> 기본 정보 </span>
+						</legend>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="category"><strong>카테고리</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.category}}
+							</div>
+						</div>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="tagID"><strong>태그 아이디</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.tagID}}
+							</div>
+						</div>
+						<div class="form-group ">
+							<label class="control-label col-sm-3" for="name"><strong>이름</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.name}}
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>
+							<span class="label label-warning  text-gray-dark mr-xs"> 필수정보 </span>
+						</legend>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="url"><strong>주소</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.tagAddr}}
+							</div>						
+						</div>
+					
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="type"><strong>타입</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.type}}
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="birth">
+								<strong>값</strong>
+							</label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.value}}
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>
+							<span class="label btn-info  text-gray-dark mr-xs"> 추가정보 </span>
+						</legend>				
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="description"><strong>설명</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.description}}
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="animateType"><strong>에니메이트</strong></label>
+							<div class="col-sm-9 view_div_height_30">
+								{{currentPoint.animateType}}
+							</div>
+						</div>
+
+					</fieldset>
+					
+					
+					<div class="form-actions">
+						<span class="btn btn-info btn-rounded pull-right" ng-click="editAction(currentPoint)">Edit</span>
+		                <span class="btn btn-danger btn-rounded pull-right margin_right_10" >Delete</span>
+			            <span class="btn btn-default btn-rounded" ng-click="cancelAction()">List</span>			                
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

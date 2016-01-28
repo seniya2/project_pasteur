@@ -1,0 +1,13 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+
+ <g>
+  <title>Layer 1</title>
+  <rect fill-opacity="0" id="TAG_svg_5656565656" height="164" width="221" y="118" x="228" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#0000bf" fill="red"/>
+  <text fill="#000000" stroke="#000000" stroke-width="0" x="335" y="50.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_svg_99999">글자 변환 테스트</text>
+  <text id="TAG_svg_565656565" fill="#000000" stroke="#000000" stroke-width="0" x="94" y="360.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve">아이디 : svg_2</text>
+  <text id="TAG_svg_989898" fill="#000000" stroke="#000000" stroke-width="0" x="295.650002" y="418.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve">CRUD-tagValue 메뉴에서 값을 아날로그 또는 문자 타입으로 &quot;svg_2&quot; 등록 후 테스트 진행</text>
+  <text fill="#000000" stroke="#000000" stroke-width="0" x="340" y="206.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_svg_2">Loding...</text>
+  <text fill="#000000" stroke="#000000" stroke-width="0" x="130" y="445" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_svg_989754">태그의 해당 값이 박스 안에 표시됨</text>
+ </g>
+</svg>

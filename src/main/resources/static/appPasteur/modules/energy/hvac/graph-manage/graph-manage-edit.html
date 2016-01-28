@@ -1,0 +1,139 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<section class="widget">
+			<div class="widget-body">
+				<form name="editForm" class="form-horizontal board_basic" data-ui-jq="parsley" data-parsley-priority-enabled="ture"
+					ng-submit="formSubmit(editForm.$valid)">
+					<!-- 
+					<input type="hidden" name="tagID" ng-model="currentPoint.tagID" value="{{currentPoint.tagID}}">
+					 -->
+					<fieldset>
+						<legend>
+							<span class="label label-default text-white mr-xs"> 기본 정보 </span> 기본 정보를 입력해 주세요.
+						</legend>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="subject"><strong>제목</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="subject" name="subject" class="form-control"
+									ng-model="currentData.subject">
+								<ul ng-show="subject_error" class="parsley-errors-list filled" id="parsley-id-4"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="interval"> <strong>인터벌 기준</strong>
+							</label>
+							<div class="col-sm-9">
+								<div class="radio pull-left">
+									<input type="radio" name="interval" id="interval1"	
+									ng-change="datetimepickerChange('HOUR')"						
+									ng-model="currentData.interval" value="HOUR"> 
+									<label for="interval1">시간별</label>
+								</div>
+								<div class="radio pull-left margin_left_30">
+									<input type="radio" name="interval" id="interval2"	
+									ng-change="datetimepickerChange('DAY')"								
+									ng-model="currentData.interval" value="DAY"> 
+									<label for="interval2">일별</label>
+								</div>
+								<div class="radio pull-left margin_left_30">
+									<input type="radio" name="interval" id="interval3"	
+									ng-change="datetimepickerChange('MONTH')"
+									ng-model="currentData.interval" value="MONTH"> 
+									<label for="interval3">월별</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="dateType"> <strong>날짜 기준</strong>
+							</label>
+							
+							<div class="col-sm-9">
+								
+								<div class="radio pull-left">
+									<input type="radio" name="dateType" id="dateType1" ng-model="currentData.dateType" value="c"> <label
+										for="dateType1">현재</label>
+								</div>
+								<div class="radio pull-left margin_left_30">
+									<input type="radio" name="dateType" id="dateType2" 
+									ng-change="datetimepickerChange(currentData.interval)"
+									ng-model="currentData.dateType" value="s"> <label
+										for="dateType2">특정일</label>
+								</div>
+								
+								<div ng-show="currentData.dateType == 's'" class="pull-left margin_left_10">
+								
+									<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+										ng-show="datetimepickerView1"
+										data-ui-options="{viewMode: 'days', format: 'YYYY-MM-DD'}" type="text" 
+										id="datetimepicker1" name="input1" ng-model="currentData.datetimepicker" 
+										/> 
+									<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+										ng-show="datetimepickerView2"
+										data-ui-options="{viewMode: 'months', format: 'YYYY-MM'}" type="text" 
+										id="datetimepicker2" name="input2" ng-model="currentData.datetimepicker" 
+										/> 
+									<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+										ng-show="datetimepickerView3"
+										data-ui-options="{viewMode: 'years', format: 'YYYY'}" type="text" 
+										id="datetimepicker3" name="input3" ng-model=currentData.datetimepicker 
+										/>								
+									<!-- <code>currentData.datetimepicker : {{currentData.datetimepicker}}</code> -->
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="valueType"> <strong>Value 옵션</strong></label>
+							<div class="col-sm-9">
+								<div class="radio pull-left">
+									<input type="radio" name="valueType" id="valueType1" ng-model="currentData.valueType" value="MIN"> <label
+										for="valueType1">Min</label>
+								</div>
+								<div class="radio pull-left margin_left_30">
+									<input type="radio" name="valueType" id="valueType2" ng-model="currentData.valueType" value="MAX"> <label
+										for="valueType2">Max</label>
+								</div>
+								<div class="radio pull-left margin_left_30">
+									<input type="radio" name="valueType" id="valueType3" ng-model="currentData.valueType" value="AVG"> <label
+										for="valueType3">Average</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="tagIDs"><strong>관제점</strong></label>
+							<div class="col-sm-9">
+								<select multiple class="select2 form-control" id="tagIDs" ng-model="currentData.tagIDs"
+									data-ui-jq="select2" 
+									data-ui-options="{minimumResultsForSearch: 5, maximumSelectionSize:3}"
+									data-placeholder="관제점을 선택하세요." 
+									data-minimum-results-for-search="5"
+									tabindex="-1">
+									<option ng-repeat="point in dataList" value="{{point.name}}:{{point.tagID}}">{{point.name}}</option>
+								</select>
+								<ul ng-show="tagIDs_error" class="parsley-errors-list filled" id="parsley-id-multiple-tagIDs"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+							</div>
+						</div>
+						<div class="form-group col-sm-12">
+							<label class="control-label col-sm-3"><span class="btn btn-default btn-rounded pull-right" ng-click="previewAction()">Preview</span></label>
+							<div class="col-sm-9">
+								<nvd3 style="width:100%" ng-show="chartEnable" options="chartOptions" data="chartData" config="{refreshDataOnly: false}" api="api" objectequality="true"></nvd3>
+							</div>
+						</div>
+					</fieldset>
+					
+					<!-- 
+					<code>editForm.subject.$valid = {{editForm.subject.$valid}}</code><br>
+					<code>editForm.subject.$error = {{editForm.subject.$error}}</code><br>
+					<code>currentData.tagIDs = {{currentData.tagIDs}}</code><br>
+					<code>editForm.$valid = {{editForm.$valid}}</code><br>
+   					-->
+   					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary btn-rounded pull-right">Save</button>
+						<span class="btn btn-default btn-inverse" ng-click="cancelAction()">Cancel</span>
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

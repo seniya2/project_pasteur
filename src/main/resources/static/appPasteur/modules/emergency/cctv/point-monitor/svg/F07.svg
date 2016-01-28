@@ -1,0 +1,22 @@
+<svg width="780" height="620" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="appPasteur/modules/emergency/cctv/point-monitor/svg/F07.png" id="TAG_svg_back" height="620" width="780" y="0" x="0"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <a target="_blank" xlink:href="http://192.168.245.115" id="TAG_2_4">
+   <rect id="TAG_svg_1" transform="translate(-169, -123) translate(72) translate(-70, -3) translate(34, 10) translate(-31, -10) translate(-1, 8) translate(0, -1) translate(0, -1) translate(0, -1)" height="15" width="15" y="235" x="668" fill="green"/>
+  </a>
+  <a target="_blank" xlink:href="http://192.168.245.115" id="TAG_2_3">
+   <rect id="TAG_svg_2" transform="translate(-1) translate(-1) translate(-1) translate(2, -6) translate(55, 32) translate(-55, -30) translate(55, 31) translate(-52, -34) translate(-1, 6)" height="15" width="15" y="190" x="502" fill="green"/>
+  </a>
+  <a target="_blank" xlink:href="http://192.168.245.89/web_viewer2.html" id="TAG_5_20">
+   <rect transform="translate(-1) translate(-1) translate(2, -6) translate(55, 32) translate(-55, -30) translate(55, 31) translate(-52, -34) translate(-1, 6)" height="15" width="15" y="116.5" x="457" fill="green" id="dvr_5_20"/>
+  </a>
+  <a target="_blank" xlink:href="http://192.168.245.89/web_viewer2.html" id="TAG_5_21">
+   <rect transform="translate(-1) translate(-1) translate(2, -6) translate(55, 32) translate(-55, -30) translate(55, 31) translate(-52, -34) translate(-1, 6)" height="15" width="15" y="142.5" x="543" fill="green" id="dvr_5_21"/>
+  </a>
+ </g>
+</svg>
