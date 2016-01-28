@@ -1,11 +1,11 @@
 <span ng-init="prepareAction()" us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner-pm" spinner-start-active="true"></span>
-<div class="widget-container" ng-init="svgFileChange('elevator.svg')">
+<div class="widget-container">
 	<!-- svg_menu -->
 	<div class="col-md-2 col-sm-2">
 		<section class="widget">
 			<div class="widget-body point-monitor-menu no-padding">
 				<div class="list-group list-group-lg custom_monitor_menu_energy">
-					<a class="list-group-item custom_monitor_menu" ng-click="svgFileChange('elevator.svg')" ng-class="svgFileChangeClass2(menu.url)">
+					<a class="list-group-item custom_monitor_menu" ng-class="svgFileChangeClass2(menu.url)">
 						<i class="fa fa-circle text-primary mt-sm" ng-class="svgFileChangeClass('elevator.svg')"></i> <span class="no-margin">E/V 메인</span> 
 					</a>					
 				</div>
