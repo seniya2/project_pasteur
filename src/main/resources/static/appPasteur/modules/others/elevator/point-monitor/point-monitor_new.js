@@ -86,6 +86,79 @@
 				}
 			}
 			
+			/*
+			$scope.httpTestFunction = function() {
+				
+					var now = new Date();                                                  // 현재시간
+				 	var nowTime = now.getHours() + "시" + now.getMinutes() + "분" + now.getSeconds() + "초";
+					console.log("-----------------------------------------");
+					console.log("interval function() start : " + nowTime);
+					console.log("-----------------------------------------");
+					
+					$http({
+						method : 'GET',
+						url : 'http://192.168.245.3:9898/alarm/elevator/1_floor',
+						headers: {'Content-type': 'application/json'},
+						timeout:60000
+							
+					}).success(function(data) {						
+						var now = new Date();                                                  // 현재시간
+					 	var nowTime = now.getHours() + "시" + now.getMinutes() + "분" + now.getSeconds() + "초";					 	
+						console.log("-----------------------------------------");
+						console.log("interval function() end : success : "  + nowTime);
+						console.log(data);
+						console.log("-----------------------------------------");						
+						$timeout(function() {
+							//console.log("$timeout function");
+							$scope.httpTestFunction();
+						}, 1000);
+						
+					}).error(function(error) {						
+						var now = new Date();                                                  // 현재시간
+					 	var nowTime = now.getHours() + "시" + now.getMinutes() + "분" + now.getSeconds() + "초";					 	
+						console.log("-----------------------------------------");
+						console.log("interval function() end : error : " + nowTime);
+						console.log(error);
+						console.log("-----------------------------------------");						
+						$timeout(function() {
+							//console.log("$timeout function");
+							$scope.httpTestFunction();
+						}, 1000);						
+						
+					});
+										
+
+					
+					$interval(function(){ 
+						
+						console.log("interval function() start ");
+						
+						$http({
+							method : 'GET',
+							url : 'http://192.168.245.3:9898/alarm/elevator/1_floor',
+							headers: {'Content-type': 'application/json'},
+							timeout:6000
+								
+						}).success(function(data) {
+							
+							console.log("-----------------------------------------");
+							console.log("interval function() end : success");
+							console.log(data);
+							console.log("-----------------------------------------");
+							
+						}).error(function(error) {
+							
+							console.log("-----------------------------------------");
+							console.log("interval function() end : end");
+							console.log(error);
+							console.log("-----------------------------------------");
+						});
+						
+					}, 1000);
+					
+			}
+			*/
+			
 			$scope.svgFileChange = function(file) {
 				
 				$scope.point = new Array();
@@ -94,7 +167,6 @@
 				
 				d3.xml($scope.svgFile, function(error, documentFragment) {
 
-					//console.log("$scope.svgFile : " + $scope.svgFile);					
 				    if (error) {console.log(error); return;}
 				    $scope.point = new Array();
 				    //console.log(documentFragment);
@@ -127,9 +199,16 @@
 			}
 			
 			
+
 			$scope.requestAction = function(async, tagID) {
 				
-				if ($location.path() != $scope.currentPath) {					
+				console.log("----------------------------------------------");
+				console.log("$scope.requestAction start");
+				console.log("$scope.currentPath : " + $scope.currentPath);
+				console.log("$location.path() : " + $location.path());
+				console.log("----------------------------------------------");
+				
+				if ($location.path() != $scope.currentPath) {
 					return;
 				}
 				//console.log("tagID : " + tagID);
@@ -145,47 +224,29 @@
 				}
 				
 				if (async) {
-					
-					var longPollingUrl = String(tagAddr).replace("monitor", "alarm");
-					
-					$timeout(function(){						
-												
-						$http({
-							method : 'GET',
-							url : longPollingUrl,
-							headers: {'Content-type': 'application/json'},
-							cache: false,
-							timeout:60000
-						
-						}).success(function(data) {		
-							console.log("async success");
-							$scope.responseAction(true, data, tagID, async);
-						}).error(function(error) {
-							console.log("async error");
-							$scope.responseAction(false, data, tagID, async);
-						});						
-					}, 1000);
-					
-				} else {
-					
-					$http({
-						method : 'GET',
-						url : tagAddr,
-						headers: {'Content-type': 'application/json'},
-						cache: false
-					}).success(function(data) {						
-						$scope.responseAction(true, data, tagID, async);	
-						console.log("sync success !!");	
-					}).error(function(error) {
-						$scope.responseAction(false, data, tagID, async);
-						console.log("sync success !!");	
-					});
-					
+					tagAddr = String(tagAddr).replace("monitor", "alarm");
 				}
+				
+				$http({
+					method : 'GET',
+					url : tagAddr,
+					headers: {'Content-type': 'application/json'},
+					cache: false,
+					timeout:60000
+				}).success(function(data) {
+					//console.log("success async : " + async);
+					$scope.responseAction(true, data, tagID, async);
+				}).error(function(error) {
+					//console.log("error async : " + async);	
+					$scope.responseAction(false, error, tagID, async);
+				});
 				
 			}
 						
 			$scope.responseAction = function(success, data, tagID, async) {
+				
+				//console.log("$scope.responseAction success : " + success);
+				//console.log("$scope.responseAction async : " + async);
 				
 				var point = $scope.tagList.get(tagID);
 				
@@ -197,12 +258,7 @@
 											
 					if (animateType != null){
 						//console.log("animateType :" + animateType + ":");
-						try {
-							eval("$scope.animateTag."+animateType+"(selectedD3, point.value, tagID);");
-						}
-						catch(err) {
-						   //console.log(err);
-						}							
+						eval("$scope.animateTag."+animateType+"(selectedD3, point.value, tagID);");
 					}
 					
 				} else {
@@ -210,12 +266,71 @@
 				}
 				
 				if (async) {
-					$scope.requestAction(async, tagID)
+					$timeout(function(){
+						//console.log("$timeout function() async : " + async);
+						$scope.requestAction(async, tagID)
+					}, 1000);
+					
 				}
 				
 			}
 			
 			
+			$scope.animateApply = function(tagID) {
+
+				try {
+					$scope.point[tagID] = $scope.tagList.get(tagID);
+					//console.log($scope.point[tagID]);			
+					var point = $scope.point[tagID];
+					//var tagType = point.type;
+					//var cateURL = point.categoryAddr;
+					var tagAddr = point.tagAddr;
+				}
+				catch(err) {
+				   //console.log(err);
+				   return;
+				}
+				
+				if (angular.isUndefined(tagAddr)) {
+					return;
+				}
+				
+				//console.log("tagAddr : " + tagAddr);
+				
+				$http({
+							method : 'GET',
+							url : tagAddr,
+							headers: {'Content-type': 'application/json'}
+								
+						}).success(function(data) {
+							
+							point.value = data.value;
+							//$scope.alarmFilter(tagID, point.old_val, data.value);
+							point.old_val = data.value;
+							
+							
+							var tagValue = point.value;						
+							var selectedD3 = d3.select("#"+tagID);
+							var animateType = point.animateType;						
+													
+							if (animateType != null){
+								//console.log("animateType :" + animateType + ":");
+								try {
+									eval("$scope.animateTag."+animateType+"(selectedD3, tagValue, tagID);");
+								}
+								catch(err) {
+								   //console.log(err);
+								}							
+							} else {
+								//selectedD3.text(tagValue);
+							}
+							
+						}).error(function(error) {
+							// $scope.widgetsError = error;
+						});
+				
+			}
+						
 			$scope.animateTag = {
 				
 				// changeText : 태그값 출력하기
