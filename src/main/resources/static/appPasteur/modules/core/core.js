@@ -100,9 +100,8 @@
     	
     	for (var key in $scope.alarmEntity) {
     		var entity = $scope.alarmEntity[key];
-    		$scope.getGlobalAlarm(entity, key);
+    		//$scope.getGlobalAlarm(entity, key);
     	}
-    	
     }
     
     $scope.getGlobalAlarm = function(entityName, idx) {
