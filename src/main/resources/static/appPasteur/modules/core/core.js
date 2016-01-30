@@ -56,9 +56,9 @@
     	} else if ($scope.currentPath == "/app/electric-monitor") {
     		$scope.menu = { main : "전력시스템", sub : "상태감시"}
     	} else if ($scope.currentPath == "/app/electric-history") {
-    		$scope.menu = { main : "전력시스템", sub : "알람이력 설정"}
-    	} else if ($scope.currentPath == "/app/electric-alarm") {
     		$scope.menu = { main : "전력시스템", sub : "알람이력 보기"}
+    	} else if ($scope.currentPath == "/app/electric-alarm") {
+    		$scope.menu = { main : "전력시스템", sub : "알람이력 설정"}
     	} else if ($scope.currentPath == "/app/electric-graph-manage") {
     		$scope.menu = { main : "전력시스템", sub : "경향그래프 설정"}
     	} else if ($scope.currentPath == "/app/electric-graph-view") {

@@ -16,7 +16,8 @@
 				<div class="pull-left">
 					<h5 class="fw-bold">관제점</h5>
 				</div>
-				<div class="pull-left col-sm-5">
+				<div class="pull-left col-sm-2">
+					<!-- 
 					<select multiple id="country-select"
 							data-ui-jq="select2"
 							class="select2 form-control"
@@ -30,6 +31,8 @@
 							<option ng-repeat="point in alarmList.values()" value="{{point.alarmNo}}">{{point.alarmName}} &nbsp;&nbsp; [{{point.tagName}}]</option>
 					</select>
 					<ul ng-show="searchNo_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+					 -->
+					<h5>화재정보 수신[화재정보]</h5>
 				</div>
 				<div class="pull-left">
 					<h5 class="fw-bold">기간</h5>
@@ -92,6 +95,25 @@
 			</table>			
 			</div>
 			
+			<div class="margin_top_30" ng-show="dataList.length == 0">
+			<table
+				class="table table-hover table-lg mt-lg mb-0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center">변경 시간</th>
+						<th class="text-center">태그 값</th>
+						<th class="text-center">알람 내역</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-center" colspan="3">해당 데이터가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<!-- <code>dataList.length : {{dataList.length}}</code> -->
 		</div>
 	</section>
 </div>

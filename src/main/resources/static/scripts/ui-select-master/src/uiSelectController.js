@@ -5,8 +5,8 @@
  * put as much logic in the controller (instead of the link functions) as possible so it can be easily tested.
  */
 uis.controller('uiSelectCtrl',
-  ['$scope', '$element', '$timeout', '$filter', 'uisRepeatParser', 'uiSelectMinErr', 'uiSelectConfig', '$parse',
-  function($scope, $element, $timeout, $filter, RepeatParser, uiSelectMinErr, uiSelectConfig, $parse) {
+  ['$scope', '$element', '$timeout', '$filter', 'uisRepeatParser', 'uiSelectMinErr', 'uiSelectConfig', '$parse', '$injector',
+  function($scope, $element, $timeout, $filter, RepeatParser, uiSelectMinErr, uiSelectConfig, $parse, $injector) {
 
   var ctrl = this;
 
@@ -41,13 +41,23 @@ uis.controller('uiSelectCtrl',
   ctrl.clickTriggeredSelect = false;
   ctrl.$filter = $filter;
 
+  // Use $injector to check for $animate and store a reference to it
+  ctrl.$animate = (function () {
+    try {
+      return $injector.get('$animate');
+    } catch (err) {
+      // $animate does not exist
+      return null;
+    }
+  })();
+
   ctrl.searchInput = $element.querySelectorAll('input.ui-select-search');
   if (ctrl.searchInput.length !== 1) {
     throw uiSelectMinErr('searchInput', "Expected 1 input.ui-select-search but got '{0}'.", ctrl.searchInput.length);
   }
-  
+
   ctrl.isEmpty = function() {
-    return angular.isUndefined(ctrl.selected) || ctrl.selected === null || ctrl.selected === '';
+    return angular.isUndefined(ctrl.selected) || ctrl.selected === null || ctrl.selected === '' || (ctrl.multiple && ctrl.selected.length === 0);
   };
 
   // Most of the time the user does not want to empty the search input when in typeahead mode
@@ -56,7 +66,9 @@ uis.controller('uiSelectCtrl',
       ctrl.search = EMPTY_SEARCH;
       //reset activeIndex
       if (ctrl.selected && ctrl.items.length && !ctrl.multiple) {
-        ctrl.activeIndex = ctrl.items.indexOf(ctrl.selected);
+        ctrl.activeIndex = ctrl.items.findIndex(function(item){
+          return angular.equals(this, item);
+        }, ctrl.selected);
       }
     }
   }
@@ -90,14 +102,29 @@ uis.controller('uiSelectCtrl',
         ctrl.activeIndex = 0;
       }
 
-      // Give it time to appear before focus
-      $timeout(function() {
-        ctrl.search = initSearchValue || ctrl.search;
-        ctrl.searchInput[0].focus();
-        if(!ctrl.tagging.isActivated && ctrl.items.length > 1) {
-          _ensureHighlightVisible();
-        }
-      });
+      var container = $element.querySelectorAll('.ui-select-choices-content');
+      if (ctrl.$animate && ctrl.$animate.enabled(container[0])) {
+        ctrl.$animate.on('enter', container[0], function (elem, phase) {
+          if (phase === 'close') {
+            // Only focus input after the animation has finished
+            $timeout(function () {
+              ctrl.focusSearchInput(initSearchValue);
+            });
+          }
+        });
+      } else {
+        $timeout(function () {
+          ctrl.focusSearchInput(initSearchValue);
+        });
+      }
+    }
+  };
+
+  ctrl.focusSearchInput = function (initSearchValue) {
+    ctrl.search = initSearchValue || ctrl.search;
+    ctrl.searchInput[0].focus();
+    if(!ctrl.tagging.isActivated && ctrl.items.length > 1) {
+     _ensureHighlightVisible();
     }
   };
 
@@ -149,7 +176,7 @@ uis.controller('uiSelectCtrl',
     //If collection is an Object, convert it to Array
 
     var originalSource = ctrl.parserResult.source;
-    
+
     //When an object is used as source, we better create an array and use it as 'source'
     var createArrayFromObject = function(){
       var origSrc = originalSource($scope);
@@ -195,7 +222,7 @@ uis.controller('uiSelectCtrl',
         ctrl.items = [];
       } else {
         if (!angular.isArray(items)) {
-          throw uiSelectMinErr('items', "Expected an array but got '{0}'.", items);          
+          throw uiSelectMinErr('items', "Expected an array but got '{0}'.", items);
         } else {
           //Remove already selected items (ex: while searching)
           //TODO Should add a test
@@ -234,7 +261,7 @@ uis.controller('uiSelectCtrl',
       return false;
     }
     var itemIndex = ctrl.items.indexOf(itemScope[ctrl.itemProperty]);
-    var isActive =  itemIndex === ctrl.activeIndex;
+    var isActive =  itemIndex == ctrl.activeIndex;
 
     if ( !isActive || ( itemIndex < 0 && ctrl.taggingLabel !== false ) ||( itemIndex < 0 && ctrl.taggingLabel === false) ) {
       return false;
@@ -269,7 +296,7 @@ uis.controller('uiSelectCtrl',
   ctrl.select = function(item, skipFocusser, $event) {
     if (item === undefined || !item._uiSelectChoiceDisabled) {
 
-      if ( ! ctrl.items && ! ctrl.search ) return;
+      if ( ! ctrl.items && ! ctrl.search && ! ctrl.tagging.isActivated) return;
 
       if (!item || !item._uiSelectChoiceDisabled) {
         if(ctrl.tagging.isActivated) {
@@ -494,15 +521,17 @@ uis.controller('uiSelectCtrl',
   // If tagging try to split by tokens and add items
   ctrl.searchInput.on('paste', function (e) {
     var data = e.originalEvent.clipboardData.getData('text/plain');
-    if (data && data.length > 0 && ctrl.taggingTokens.isActivated && ctrl.tagging.fct) {
-      var items = data.split(ctrl.taggingTokens.tokens[0]); // split by first token only
+    if (data && data.length > 0 && ctrl.taggingTokens.isActivated) {
+      // split by first token only
+      var separator = KEY.toSeparator(ctrl.taggingTokens.tokens[0]);
+      var items = data.split(separator); 
       if (items && items.length > 0) {
+        var oldsearch = ctrl.search;
         angular.forEach(items, function (item) {
-          var newItem = ctrl.tagging.fct(item);
-          if (newItem) {
-            ctrl.select(newItem, true);
-          }
+          ctrl.search = item;
+          ctrl.select(item, true);
         });
+        ctrl.search = oldsearch;
         e.preventDefault();
         e.stopPropagation();
       }
@@ -546,3 +575,27 @@ uis.controller('uiSelectCtrl',
   });
 
 }]);
+
+// Array findIndex polyfill (source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex#Polyfill)
+if (!Array.prototype.findIndex) {
+  Array.prototype.findIndex = function(predicate) {
+    if (this === null) {
+      throw new TypeError('Array.prototype.findIndex called on null or undefined');
+    }
+    if (typeof predicate !== 'function') {
+      throw new TypeError('predicate must be a function');
+    }
+    var list = Object(this);
+    var length = list.length >>> 0;
+    var thisArg = arguments[1];
+    var value;
+
+    for (var i = 0; i < length; i++) {
+      value = list[i];
+      if (predicate.call(thisArg, value, i, list)) {
+        return i;
+      }
+    }
+    return -1;
+  };
+}

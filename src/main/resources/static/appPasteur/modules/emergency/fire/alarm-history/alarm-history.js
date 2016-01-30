@@ -34,14 +34,14 @@
 		$scope.alarmList = new HashMap();
 		$scope.alarmEventLog = new HashMap();
 		
-		$scope.searchNo = "";
 		$scope.searchName = "";
 		$scope.searchDate1 = "";
 		$scope.searchDate2 = "";
 		
-		$scope.searchNo_error = false;
 		$scope.searchDate1_error = false;
 		$scope.searchDate2_error = false;
+		
+		$scope.listShow = false;
 		
 		
 		Messenger.options = {
@@ -50,11 +50,6 @@
 		}
 		
 
-		$scope.$watch('searchNo', function() {	
-			if ($scope.searchNo.length > 0){				
-				$scope.searchNo_error = false;
-			}
-		});		
 		$scope.$watch('searchDate1', function() {		
 			if ($scope.searchDate1.length > 0){				
 				$scope.searchDate1_error = false;
@@ -119,7 +114,6 @@
 			
 			//console.log($scope.alarmList.get("TAG_2001_0_21"));
 			
-			
 			$("#searchDate1").on("dp.change", function (e) {
 	            $('#searchDate2').data("DateTimePicker").minDate(e.date);
 	        });
@@ -144,10 +138,6 @@
 			
 			var errCnt = 0;	
 			
-			if (angular.isUndefined($scope.searchNo) || $scope.searchNo == "" || $scope.searchNo.length == 0) {
-				$scope.searchNo_error=true;
-				errCnt++;
-			}
 			if (angular.isUndefined($scope.searchDate1) || $scope.searchDate1 == "") {
 				$scope.searchDate1_error=true;
 				errCnt++;
@@ -161,7 +151,7 @@
 				return;
 			}
 			
-			$scope.searchName = $scope.alarmList.get(parseInt($scope.searchNo[0])).tagID;
+			$scope.searchName = $scope.alarmList.get(1).tagID;
 			$scope.searchDate1 = String($scope.searchDate1).substring(0, 10);
 			$scope.searchDate2 = String($scope.searchDate2).substring(0, 10);
 			$scope.searchDate1 = $scope.searchDate1 + " 00:00:01";
@@ -180,7 +170,7 @@
 						+ '&min='+$scope.searchDate1 + '&max='+$scope.searchDate2 
 			
 			
-			//console.log("sort : " + sort);
+			console.log("listUrl : " + listUrl);
 
 			$http(
 					{
@@ -188,6 +178,8 @@
 						url : listUrl
 					}).success(function(data) {
 
+						console.log(data);
+						
 				var newData = {
 						'id' : null,
 						'value' : null,
@@ -195,7 +187,7 @@
 						'alarmName' : null
 				};
 				var dataList = new Array();
-				var alarm = $scope.alarmList.get(parseInt($scope.searchNo[0]));
+				var alarm = $scope.alarmList.get(1);
 				var alarmName = alarm.alarmName;
 				var condition = alarm.condition;
 				var old_val = undefined;
@@ -209,7 +201,7 @@
 						old_val = data.content[key-1].value;
 					}
 					
-					eval("if ("+condition+") {dataList.push(newData);}");					
+					eval("if ("+condition+") {dataList.push(newData);}");	
 				}
 				
 				$scope.dataList = dataList;
@@ -224,7 +216,14 @@
 				
 				$scope.page = page;
 				
-				//console.log($scope.page);
+				
+				console.log("data.totalElements : " + data.totalElements);
+				
+				if (data.totalElements == 0) {
+					$scope.dataList = new Array();
+				}
+				
+				console.log("$scope.dataList.length : " + $scope.dataList.length);
 				// $scope.widgets = data.content;
 				// $scope.page = data.page;
 				// $scope.sort = sort;

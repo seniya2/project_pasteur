@@ -12,52 +12,46 @@
 							<span class="label label-default  text-white mr-xs"> 기본 정보 </span> 기본 정보를 입력해 주세요.
 						</legend>
 						<div class="form-group">
+							<label class="control-label col-sm-3" for="name"><strong>알람 제목</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="name" name="name" class="form-control"
+									ng-model="currentData.name">
+								<ul ng-show="name_error" class="parsley-errors-list filled" id="parsley-id-name">
+								<li class="parsley-required">필수 입력사항입니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-group">
 							<label class="control-label col-sm-3" for="tagIDs"><strong>관제점</strong></label>
 							<div class="col-sm-9">
-							<select id="country-select"
-									data-ui-jq="select2"									
-									class="select2 form-control"
-									tabindex="-1"
-									data-placeholder="관제점을 선택하세요."
-									ng-model="currentData.tagID"
-									name="tagID">
-									<option value=""></option>
+							
+								<select multiple class="select2 form-control" id="tagID" ng-model="currentData.tagID"
+									data-ui-jq="select2" 
+									data-ui-options="{minimumResultsForSearch: 1, maximumSelectionSize:1}"
+									data-placeholder="관제점을 선택하세요." 
+									data-minimum-results-for-search="1"
+									tabindex="-1">
 									<option ng-repeat="point in dataList" value="{{point.name}}:{{point.tagID}}">{{point.name}}</option>
-							</select>								
+								</select>
+											
 								<ul ng-show="tagID_error" class="parsley-errors-list filled" id="parsley-id-multiple-tagID"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 							</div>
 						</div>
 						
-						<!-- <div class="custom_alarm_parent_border"> -->
+						
 						<div>
 						
-							<div class="form-group">
-								<label class="control-label col-sm-3" for="name"><strong>알람 제목</strong></label>
-								<div class="col-sm-9">
-									<input type="text" id="name" name="name" class="form-control"
-										ng-model="currentData.name">
-									<ul ng-show="name_error" class="parsley-errors-list filled" id="parsley-id-name">
-									<li class="parsley-required">필수 입력사항입니다.</li>
-									</ul>
-								</div>
-							</div>
+							
 							<div class="form-group">
 								<label class="control-label col-sm-3" for="condition"> <strong>알람 기준</strong>
 								</label>
 								<div class="col-sm-9">
-									<div class="clearfix">
-									<div class="radio">
-										<input type="radio" name="condition_type" id="condition1"
-										ng-model="currentData.condition_type"
-										value="condition1"> 
-										<label for="condition1">변경</label>
-									</div>
-									</div>
 									
 									<div class="clearfix">
 									<div class="radio pull-left">
 										<input type="radio" name="condition_type" id="condition2"
 										ng-model="currentData.condition_type"
+										ng-click="conditionTypeChange()"
 										value="condition2"> 
 										<label for="condition2">특정값</label>
 									</div>
@@ -77,6 +71,7 @@
 									<div class="radio pull-left">
 										<input type="radio" name="condition_type" id="condition3"
 										ng-model="currentData.condition_type"
+										ng-click="conditionTypeChange()"
 										value="condition3"> 
 										<label for="condition3">범위 값</label>
 									</div>
@@ -100,6 +95,7 @@
 									<div class="radio pull-left">
 										<input type="radio" name="condition_type" id="condition4"
 										ng-model="currentData.condition_type"
+										ng-click="conditionTypeChange()"
 										value="condition4"> 
 										<label for="condition4">보다 큼</label>
 									</div>
@@ -119,6 +115,7 @@
 									<div class="radio pull-left">
 										<input type="radio" name="condition_type" id="condition5"
 										ng-model="currentData.condition_type"
+										ng-click="conditionTypeChange()"
 										value="condition5"> 
 										<label for="condition5">보다 작음</label>
 									</div>

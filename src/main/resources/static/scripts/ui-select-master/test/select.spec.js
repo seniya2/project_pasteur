@@ -1398,6 +1398,37 @@ describe('ui-select tests', function() {
 
   });
 
+  it('should call refresh function respecting minimum input length option', function () {
+
+    var el = compileTemplate(
+      '<ui-select ng-model="selection.selected"> \
+        <ui-select-match> \
+        </ui-select-match> \
+        <ui-select-choices repeat="person in people | filter: $select.search" \
+          refresh="fetchFromServer($select.search)" refresh-delay="0" minimum-input-length="3"> \
+          <div ng-bind-html="person.name | highlight: $select.search"></div> \
+          <div ng-if="person.name==\'Wladimir\'"> \
+            <span class="only-once">I should appear only once</span>\
+          </div> \
+        </ui-select-choices> \
+      </ui-select>'
+    );
+
+    scope.fetchFromServer = function(){};
+
+    spyOn(scope, 'fetchFromServer');
+
+    el.scope().$select.search = 'r';
+    scope.$digest();
+    $timeout.flush();
+    expect(scope.fetchFromServer).not.toHaveBeenCalledWith('r');
+
+    el.scope().$select.search = 'red';
+    scope.$digest();
+    $timeout.flush();
+    expect(scope.fetchFromServer).toHaveBeenCalledWith('red');
+  });
+
   it('should format view value correctly when using single property binding and refresh function', function () {
 
     var el = compileTemplate(
@@ -2096,6 +2127,22 @@ describe('ui-select tests', function() {
       expect($(el).scope().$select.selected.length).toBe(5);
     });
 
+    it('should split pastes on ENTER (and with undefined tagging function)', function() {
+      var el = createUiSelectMultiple({tagging: true, taggingTokens: "ENTER|,"});
+      clickMatch(el);
+      triggerPaste(el.find('input'), "tag1\ntag2\ntag3");
+
+      expect($(el).scope().$select.selected.length).toBe(3);
+    });
+
+    it('should split pastes on TAB', function() {
+      var el = createUiSelectMultiple({tagging: true, taggingTokens: "TAB|,"});
+      clickMatch(el);
+      triggerPaste(el.find('input'), "tag1\ttag2\ttag3");
+
+      expect($(el).scope().$select.selected.length).toBe(3);
+    });
+
     it('should add an id to the search input field', function () {
       var el = createUiSelectMultiple({inputId: 'inid'});
       var searchEl = $(el).find('input.ui-select-search');
@@ -2277,6 +2324,13 @@ describe('ui-select tests', function() {
 
     it('properly highlights numeric items', function() {
       var query = '15';
+      var item = 2015;
+
+      expect(highlight(item, query)).toBe('20<span class="ui-select-highlight">15</span>');
+    });
+
+    it('properly works with numeric queries', function() {
+      var query = 15;
       var item = 2015;
 
       expect(highlight(item, query)).toBe('20<span class="ui-select-highlight">15</span>');

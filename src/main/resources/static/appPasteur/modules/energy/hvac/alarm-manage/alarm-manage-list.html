@@ -22,7 +22,7 @@
                 </span>
 				</div>
 				<div class="pull-right">								
-					<span class="btn btn-primary btn-rounded" ng-click="editAction()">NEW</span>
+					<span class="btn btn-primary btn-rounded" ng-click="editAction(null)">NEW</span>
 				</div>
 			</div>
 			</form>			
@@ -36,7 +36,7 @@
 						<th class="hidden-xs text-center">알람 제목</th>
 						<th class="text-center">관제점</th>						
 						<th class="hidden-xs text-center">조건</th>
-						<th class="hidden-xs text-center">삭제</th>
+						<th class="hidden-xs text-center">편집</th>
 					</tr>
 
 				</thead>
@@ -50,13 +50,17 @@
 						<td class="hidden-xs text-center">
 							<button
 									class="btn btn-xs btn-primary"
+									ng-click="editAction(point)">
+									수정</button>
+							<button
+									class="btn btn-xs btn-primary"
 									mwl-confirm
 									title="삭제 확인"
 									message="삭제하시겠습니까?"
 									confirm-text="예"
 									cancel-text="아니오"
 									placement="top"
-									on-confirm="deleteAction(point.no)"
+									on-confirm="resetXdRequest(point.tagID,'deleteAction', point.no)"
 									on-cancel=""
 									confirm-button-type="primary"
 									cancel-button-type="inverse">
@@ -78,6 +82,26 @@
 			<div class="clearfix text-center" ng-show="paginationDisplay">
 				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
 			</div>	
+			
+			<table
+				class="table table-hover table-lg mt-lg mb-0 margin_top_30"  ng-show="alarmList.length==0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center">SEQ</th>
+						<th class="hidden-xs text-center">알람 제목</th>
+						<th class="text-center">관제점</th>						
+						<th class="hidden-xs text-center">조건</th>
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-center" colspan="5">해당 데이터가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</section>
 </div>
