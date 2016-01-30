@@ -232,12 +232,23 @@
 		$scope.animateTag = {
 			
 			// changeText : 태그값 출력하기
+			// changeTextFloor : 소수점 버림, 정수형 반환
 			// changeColor : 디지털 색 변경
 			// changeImage : 디지털 이미지 변경
 				
 			onValues : ["Active", "true", "on", "1", "1.0", "ON"],
 			
 			changeText : function(selectedObject, tagValue) {
+				selectedObject.text(tagValue);
+				return;
+			},
+			
+			changeTextFloor_1 : function(selectedObject, tagValue) {
+				selectedObject.text(tagValue);
+				return;
+			},
+			
+			changeTextFloor_ALL : function(selectedObject, tagValue) {
 				selectedObject.text(tagValue);
 				return;
 			},
