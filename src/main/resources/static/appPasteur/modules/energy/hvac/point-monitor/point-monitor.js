@@ -199,18 +199,16 @@
 						point.value = data.value;
 						//$scope.alarmFilter(tagID, point.old_val, data.value);
 						point.old_val = data.value;
-												
-						if (!isNaN(point.value)){
-							point.value = parseFloat(data.value).toFixed(1);
-							//console.log(parseInt(point.value).toFixed(1));
-						} else {
-							point.value = data.value;
-						}
-												
+						
 						var tagValue = point.value;						
 						var selectedD3 = d3.select("#"+tagID);
 						var animateType = point.animateType;						
 												
+						if (tagID == "TAG_2001_5_53"){
+							console.log("tagID : " + tagID);
+							console.log("tagValue : " + tagValue);
+						}
+						
 						if (animateType != null){
 							//console.log("animateType :" + animateType + ":");
 							try {
@@ -232,9 +230,12 @@
 		$scope.animateTag = {
 			
 			// changeText : 태그값 출력하기
-			// changeTextFloor : 소수점 버림, 정수형 반환
+			// changeTextFloor_0 : 소수점 버림, 정수형 반환
+			// changeTextFloor_1 : 소수점 첫째자리까지 표시. 이하 버림
+			// changeTextFloor_2 : 소수점 둘째자리까지 표시. 이하 버림
 			// changeColor : 디지털 색 변경
 			// changeImage : 디지털 이미지 변경
+			// changeImage1to2 : 아날로그 이미지 변경(1-2)
 				
 			onValues : ["Active", "true", "on", "1", "1.0", "ON"],
 			
@@ -243,12 +244,35 @@
 				return;
 			},
 			
-			changeTextFloor_1 : function(selectedObject, tagValue) {
+			changeTextFloor_0 : function(selectedObject, tagValue) {
+				
+				if (!isNaN(tagValue)){
+					tagValue = Math.floor(tagValue);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				
 				selectedObject.text(tagValue);
 				return;
 			},
 			
-			changeTextFloor_ALL : function(selectedObject, tagValue) {
+			changeTextFloor_1 : function(selectedObject, tagValue) {
+				
+				if (!isNaN(tagValue)){
+					tagValue = Math.floor(tagValue*10) / 10;
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				
+				selectedObject.text(tagValue);
+				return;
+			},
+			
+			changeTextFloor_2 : function(selectedObject, tagValue) {
+				
+				if (!isNaN(tagValue)){
+					tagValue = Math.floor(tagValue*100) / 100;
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				
 				selectedObject.text(tagValue);
 				return;
 			},
@@ -282,6 +306,64 @@
 					imageObject[0].style("visibility", "hidden");
 					imageObject[1].style("visibility", "visible");
 					//imageObject[2].style("visibility", "hidden");
+				}
+				
+				return;
+			},
+			
+			changeImage1to2 : function(selectedObject, tagValue) {
+				
+				//console.log("changeImage : " + changeImage);
+				
+				var imageObject = [];				
+				selectedObject.selectAll("image").each(function() {						
+					//console.log(d3.select(this));
+					imageObject.push(d3.select(this));					
+				});
+				
+				if (tagValue == 1) {
+					imageObject[0].style("visibility", "visible");
+					imageObject[1].style("visibility", "hidden");
+					//imageObject[2].style("visibility", "hidden");					
+				} else {					
+					imageObject[0].style("visibility", "hidden");
+					imageObject[1].style("visibility", "visible");
+					//imageObject[2].style("visibility", "hidden");
+				}
+				
+				return;
+			},
+			
+			changeImage1to4 : function(selectedObject, tagValue) {
+				
+				//console.log("changeImage : " + changeImage);
+				
+				var imageObject = [];				
+				selectedObject.selectAll("image").each(function() {						
+					//console.log(d3.select(this));
+					imageObject.push(d3.select(this));					
+				});
+				
+				if (tagValue == 1) {
+					imageObject[0].style("visibility", "visible");
+					imageObject[1].style("visibility", "hidden");
+					imageObject[2].style("visibility", "hidden");
+					imageObject[3].style("visibility", "hidden");				
+				} else if (tagValue == 2) {
+					imageObject[0].style("visibility", "hidden");
+					imageObject[1].style("visibility", "visible");
+					imageObject[2].style("visibility", "hidden");
+					imageObject[3].style("visibility", "hidden");
+				} else if (tagValue == 3) {
+					imageObject[0].style("visibility", "hidden");
+					imageObject[1].style("visibility", "hidden");
+					imageObject[2].style("visibility", "visible");
+					imageObject[3].style("visibility", "hidden");
+				} else {
+					imageObject[0].style("visibility", "hidden");
+					imageObject[1].style("visibility", "hidden");
+					imageObject[2].style("visibility", "hidden");
+					imageObject[3].style("visibility", "visible");
 				}
 				
 				return;
