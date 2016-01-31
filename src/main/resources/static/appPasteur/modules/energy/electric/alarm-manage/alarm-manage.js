@@ -302,7 +302,7 @@
 				condition_sub = "old_val != val";
 			}			
 			if ($scope.currentData.condition_type == "condition2"){				
-				condition_sub = "val != " + $scope.currentData.condition2;
+				condition_sub = "val == " + $scope.currentData.condition2;
 			}
 			if ($scope.currentData.condition_type == "condition3"){				
 				condition_sub =  $scope.currentData.condition3_1 + " < val < " + $scope.currentData.condition3_2;
@@ -433,9 +433,9 @@
 				var condition4 = "";
 				var condition5 = "";
 				
-				if (condition.indexOf("val != ") > -1) {
+				if (condition.indexOf("val == ") > -1) {
 					condition_type = "condition2";
-					condition2 = (condition.split("val != "))[1];
+					condition2 = (condition.split("val == "))[1];
 					console.log("condition2 : " + condition2);
 				} else if (condition.indexOf(" < val < ") > -1) {
 					condition_type = "condition3";
