@@ -3,7 +3,7 @@
 
  <g>
   <title>Layer 1</title>
-  <image x="0" y="0" width="1244" height="784" id="TAG_svg_1" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_21_ct.png"/>
+  <image x="0" y="0" width="1244" height="784" id="TAG_svg_1" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_21_ct.png"/>
  </g>
  <g>
   <title>Layer 3</title>
@@ -78,80 +78,80 @@
    <image id="TAG_svg_92" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" height="20" width="20" y="534.5" x="658.5"/>
   </g>
   <g id="TAG_2008_5_3">
-   <image id="svg_5" x="232.5" y="750" width="68" height="20" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_on.png"/>
-   <image id="svg_6" x="232.5" y="750" width="68" height="20" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_off.png"/>
+   <image id="svg_5" x="232.5" y="750" width="68" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_on.png"/>
+   <image id="svg_6" x="232.5" y="750" width="68" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_off.png"/>
   </g>
   <g id="TAG_2010_4_5">
-   <image id="svg_14" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="31" x="126.5"/>
-   <image id="svg_15" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="31" x="126.5"/>
+   <image id="svg_14" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="31" x="126.5"/>
+   <image id="svg_15" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="31" x="126.5"/>
   </g>
   <g id="TAG_2010_4_8">
-   <image id="svg_2" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="232"/>
-   <image id="svg_3" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="232"/>
+   <image id="svg_2" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="232"/>
+   <image id="svg_3" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="232"/>
   </g>
   <g id="TAG_2010_4_9">
-   <image id="svg_7" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="33.5" x="287"/>
-   <image id="svg_8" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="33.5" x="287"/>
+   <image id="svg_7" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="33.5" x="287"/>
+   <image id="svg_8" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="33.5" x="287"/>
   </g>
   <g id="TAG_2010_4_6">
-   <image id="svg_10" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="349"/>
-   <image id="svg_11" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="349"/>
+   <image id="svg_10" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="349"/>
+   <image id="svg_11" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="349"/>
   </g>
   <g id="TAG_2010_4_7">
-   <image id="svg_13" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="401"/>
-   <image id="svg_16" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="401"/>
+   <image id="svg_13" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="32.5" x="401"/>
+   <image id="svg_16" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="32.5" x="401"/>
   </g>
   <g id="TAG_2001_4_6">
-   <image id="svg_18" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="364.5" x="457"/>
-   <image id="svg_19" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="364.5" x="457"/>
+   <image id="svg_18" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="364.5" x="457"/>
+   <image id="svg_19" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="364.5" x="457"/>
   </g>
   <g id="TAG_2001_4_8">
-   <image id="svg_21" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="423.5" x="459"/>
-   <image id="svg_22" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="423.5" x="459"/>
+   <image id="svg_21" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="423.5" x="459"/>
+   <image id="svg_22" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="423.5" x="459"/>
   </g>
   <g id="TAG_2001_4_7">
-   <image id="svg_24" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="494.5" x="457"/>
-   <image id="svg_25" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="494.5" x="457"/>
+   <image id="svg_24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="494.5" x="457"/>
+   <image id="svg_25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="494.5" x="457"/>
   </g>
   <g id="TAG_2001_4_12">
-   <image id="svg_27" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="580.5" x="456"/>
-   <image id="svg_28" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="580.5" x="456"/>
+   <image id="svg_27" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="580.5" x="456"/>
+   <image id="svg_28" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="580.5" x="456"/>
   </g>
   <g id="TAG_2001_4_13">
-   <image id="svg_30" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="651.5" x="455"/>
-   <image id="svg_31" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="651.5" x="455"/>
+   <image id="svg_30" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="651.5" x="455"/>
+   <image id="svg_31" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="651.5" x="455"/>
   </g>
   <g id="TAG_2001_4_1">
-   <image id="svg_33" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="354.5" x="646"/>
-   <image id="svg_34" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="354.5" x="646"/>
+   <image id="svg_33" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="354.5" x="646"/>
+   <image id="svg_34" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="354.5" x="646"/>
   </g>
   <g id="TAG_2001_4_2">
-   <image id="svg_36" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="502.5" x="652"/>
-   <image id="svg_37" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="502.5" x="652"/>
+   <image id="svg_36" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="502.5" x="652"/>
+   <image id="svg_37" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="502.5" x="652"/>
   </g>
   <g id="TAG_2001_4_9">
-   <image id="svg_39" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="649.5" x="650"/>
-   <image id="svg_40" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="649.5" x="650"/>
+   <image id="svg_39" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="649.5" x="650"/>
+   <image id="svg_40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="649.5" x="650"/>
   </g>
   <g id="TAG_2001_4_3">
-   <image id="svg_42" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="299.5" x="993"/>
-   <image id="svg_43" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="299.5" x="993"/>
+   <image id="svg_42" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="299.5" x="993"/>
+   <image id="svg_43" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="299.5" x="993"/>
   </g>
   <g id="TAG_2001_4_5">
-   <image id="svg_45" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="368.5" x="993"/>
-   <image id="svg_46" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="368.5" x="993"/>
+   <image id="svg_45" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="368.5" x="993"/>
+   <image id="svg_46" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="368.5" x="993"/>
   </g>
   <g id="TAG_2001_4_4">
-   <image id="svg_48" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="455.5" x="992"/>
-   <image id="svg_49" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="455.5" x="992"/>
+   <image id="svg_48" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="455.5" x="992"/>
+   <image id="svg_49" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="455.5" x="992"/>
   </g>
   <g id="TAG_2001_4_10">
-   <image id="svg_51" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="600.5" x="992"/>
-   <image id="svg_52" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="600.5" x="992"/>
+   <image id="svg_51" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="600.5" x="992"/>
+   <image id="svg_52" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="600.5" x="992"/>
   </g>
   <g id="TAG_2001_4_11">
-   <image id="svg_54" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="647.5" x="994"/>
-   <image id="svg_55" xlink:href="http://localhost:8090/appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="647.5" x="994"/>
+   <image id="svg_54" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="647.5" x="994"/>
+   <image id="svg_55" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png" height="25" width="45" y="647.5" x="994"/>
   </g>
  </g>
 </svg>
