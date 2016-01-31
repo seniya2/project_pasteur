@@ -3,22 +3,43 @@
 
  <g>
   <title>Layer 1</title>
-  <image xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/src_electric_ats.png" id="TAG_svg_1" height="565" width="777"/>
-  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="112.5" y="141" id="TAG_svg_2" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">ON</text>
-  <text id="TAG_svg_3" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="113.5" y="165.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">OFF</text>
-  <text id="TAG_svg_4" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="306" y="140.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">ON</text>
-  <text id="TAG_svg_5" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="307" y="166.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">OFF</text>
-  <text id="TAG_svg_6" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="497" y="140.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">ON</text>
-  <text id="TAG_svg_7" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="498" y="166.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">OFF</text>
-  <text id="TAG_svg_8" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="688" y="139.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">ON</text>
-  <text id="TAG_svg_9" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="691" y="167.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">OFF</text>
-  <text id="TAG_4560_5_252" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="133.75" y="502" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_svg10b" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="134.75" y="528.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">Inactive</text>
-  <text id="TAG_4560_5_254" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="328.25" y="500.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_4560_5_255" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="328.25" y="529.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_4560_5_256" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="519.25" y="500.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_4560_5_257" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="519.25" y="527.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_4560_5_250" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="712.25" y="499.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
-  <text id="TAG_4560_5_251" fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="712.25" y="527.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
+  <image width="777" height="565" id="TAG_svg_1" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/src_electric_ats.png"/>
+  <image x="83.25" y="122" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png" id="svg_64"/>
+  <image x="82.25" y="150" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png" id="svg_64"/>
+  <g id="TAG_4560_5_252">
+   <image x="104.25" y="482" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png" id="svg_64"/>
+   <image x="104.25" y="482" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png" id="svg_65"/>
+  </g>
+  <image id="svg_1" x="274.5" y="122" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+  <image id="svg_2" x="466.5" y="122" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+  <image id="svg_3" x="658.5" y="122" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+  <image id="svg_4" x="274.5" y="150" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  <image id="svg_5" x="466.5" y="151" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  <image id="svg_6" x="658.5" y="150" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  <image id="svg_7" x="103.5" y="511" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  <g id="TAG_4560_5_254">
+   <image id="svg_9" x="294.5" y="483" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_10" x="294.5" y="483" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
+  <g id="TAG_4560_5_255">
+   <image id="svg_12" x="294.5" y="511" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_13" x="294.5" y="511" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
+  <g id="TAG_4560_5_257">
+   <image id="svg_15" x="486.5" y="511" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_16" x="486.5" y="511" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
+  <g id="TAG_4560_5_256">
+   <image id="svg_18" x="486.5" y="484" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_19" x="486.5" y="484" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
+  <g id="TAG_4560_5_251">
+   <image id="svg_21" x="678.5" y="510" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_22" x="678.5" y="510" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
+  <g id="TAG_4560_5_250">
+   <image id="svg_24" x="678.5" y="484" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_on.png"/>
+   <image id="svg_25" x="678.5" y="484" width="62" height="24" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_ats_off.png"/>
+  </g>
  </g>
 </svg>

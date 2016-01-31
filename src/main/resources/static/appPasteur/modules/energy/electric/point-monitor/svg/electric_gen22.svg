@@ -3,40 +3,46 @@
 
  <g>
   <title>Layer 1</title>
-  <image width="943" height="748" id="TAG_svg_1" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/src_electric_gen22.png"/>
-  <text font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" id="TAG_4560_2_239" y="178" x="522" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_240" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="177.5" x="647" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_241" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="177.5" x="777" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_235" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="219.5" x="522" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_236" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="220.5" x="647" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_237" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="219.5" x="777" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_238" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="598.5" x="206" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_2_242" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="298.5" x="542" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_5_302" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="138.5" x="95" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_5_303" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="138.5" x="252" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+  <image xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/src_electric_gen22.png" id="TAG_svg_1" height="748" width="943"/>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="522" y="178" id="TAG_4560_2_239" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="647" y="177.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_240">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="777" y="177.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_241">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="522" y="219.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_235">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="647" y="220.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_236">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="777" y="219.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_237">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="206" y="598.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_238">...</text>
+  <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="542" y="298.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_4560_2_242">...</text>
   <g id="TAG_4560_2_355">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="404.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_2">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="404.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_2a">...</text>
+   <text id="TAG_svg_2" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="404.5" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_2a" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="404.5" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   </g>
   <g id="TAG_4560_2_352">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="436" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_4">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="436" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_5">...</text>
+   <text id="TAG_svg_4" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="436" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_5" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="436" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   </g>
   <g id="TAG_4560_2_351">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="465" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_8">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="465" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_9">...</text>
+   <text id="TAG_svg_8" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="465" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_9" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="465" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   </g>
   <g id="TAG_4560_2_353">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="496" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_12">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="496" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_13">...</text>
+   <text id="TAG_svg_12" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="496" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_13" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="496" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   </g>
   <g id="TAG_4560_2_356">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="523" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_16">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="523" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_17">...</text>
+   <text id="TAG_svg_16" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="523" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_17" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="523" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   </g>
   <g id="TAG_4560_2_354">
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="499" y="553" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_20">...</text>
-   <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="553" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_21">...</text>
+   <text id="TAG_svg_20" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="553" x="499" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+   <text id="TAG_svg_21" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="553" x="740" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
+  </g>
+  <g id="TAG_4560_5_303">
+   <image x="205.25" y="118" width="100" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_mode_remote.png" id="svg_64"/>
+   <image x="205.25" y="118" width="100" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_mode_local.png" id="svg_65"/>
+  </g>
+  <g id="TAG_4560_5_302">
+   <image x="66.25" y="117" width="65" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_normal_on.png" id="svg_64"/>
+   <image x="66.25" y="117" width="65" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_normal_off.png" id="svg_65"/>
   </g>
  </g>
 </svg>

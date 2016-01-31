@@ -20,10 +20,7 @@
   <text id="TAG_4560_2_197" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="669.5" x="726" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   <text id="TAG_4560_2_203" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="668.5" x="856" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   <text id="TAG_4560_2_201" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="702.5" x="855" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_5_226" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="146.5" x="90" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
-  <text id="TAG_4560_5_229" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="144.5" x="250" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf">...</text>
   <text font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="619.5" x="591" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#0000bf" id="TAG_4560_2_190">...</text>
-  <rect fill="blue" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="169" y="459" width="30" height="30" id="TAG_svg_999"/>
   <g id="TAG_4560_2_331">
    <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="502.25" y="406.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_2">...</text>
    <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="406.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_2a">...</text>
@@ -47,6 +44,18 @@
   <g id="TAG_4560_2_330">
    <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="502.25" y="554" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_20">...</text>
    <text fill="#0000bf" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="740" y="554" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" font-weight="bold" id="TAG_svg_21">...</text>
+  </g>
+  <g id="TAG_4560_5_235">
+   <image x="170.25" y="457" width="27" height="27" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_red_small_on.gif" id="svg_64"/>
+   <image x="170.25" y="457" width="27" height="27" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_red_small_off.gif" id="svg_65"/>
+  </g>
+  <g id="TAG_4560_5_229">
+   <image x="200.25" y="121" width="100" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_mode_remote.png" id="svg_64"/>
+   <image x="200.25" y="121" width="100" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_mode_local.png" id="svg_65"/>
+  </g>
+  <g id="TAG_4560_5_226">
+   <image x="61.25" y="120" width="65" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_normal_on.png" id="svg_64"/>
+   <image x="61.25" y="120" width="65" height="35" xlink:href="appPasteur/modules/energy/electric/point-monitor/svg/icon/icon_electric_normal_off.png" id="svg_65"/>
   </g>
  </g>
 </svg>

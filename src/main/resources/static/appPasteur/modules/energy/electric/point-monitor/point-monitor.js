@@ -199,15 +199,7 @@
 							point.value = data.value;
 							//$scope.alarmFilter(tagID, point.old_val, data.value);
 							point.old_val = data.value;
-													
-							if (!isNaN(point.value)){
-								point.value = parseFloat(data.value).toFixed(1);
-								//console.log(parseInt(point.value).toFixed(1));
-							} else {
-								point.value = data.value;
-							}
-							
-							
+											
 							var tagValue = point.value;						
 							var selectedD3 = d3.select("#"+tagID);
 							var animateType = point.animateType;
@@ -234,6 +226,8 @@
 		$scope.animateTag = {
 			
 			// changeText : 태그값 출력하기
+			// changeTextRound_0 : 소수점 첫째 반올림, 정수형 반환
+			// changeTextRound_1 : 소수점 둘째 반올림
 			// changeColor : 디지털 색 변경
 			// changeImage : 디지털 이미지 변경
 			// changeTextWithTime : 태그값, 시간 출력하기
@@ -241,6 +235,26 @@
 			onValues : ["Active", "true", "on", "1", "1.0", "ON"],
 			
 			changeText : function(selectedObject, tagValue, tagTime) {
+				if (!isNaN(tagValue)){
+					tagValue = parseFloat(tagValue).toFixed(1);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				selectedObject.text(tagValue);
+				return;
+			},
+			changeTextRound_0 : function(selectedObject, tagValue, tagTime) {
+				if (!isNaN(tagValue)){
+					tagValue = parseFloat(tagValue).toFixed(0);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				selectedObject.text(tagValue);
+				return;
+			},
+			changeTextRound_1 : function(selectedObject, tagValue, tagTime) {
+				if (!isNaN(tagValue)){
+					tagValue = parseFloat(tagValue).toFixed(1);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
 				selectedObject.text(tagValue);
 				return;
 			},
@@ -282,7 +296,10 @@
 			changeTextWithTime : function(selectedObject, tagValue, tagTime) {
 				
 				//console.log("changeTextWithTime tagTime : " + tagTime);
-				
+				if (!isNaN(tagValue)){
+					tagValue = parseFloat(tagValue).toFixed(1);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
 				var textObject = [];				
 				selectedObject.selectAll("text").each(function() {						
 					//console.log(d3.select(this));
