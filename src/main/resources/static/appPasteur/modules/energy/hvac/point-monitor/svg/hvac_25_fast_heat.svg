@@ -20,7 +20,7 @@
    <image id="TAG_svg_9" x="620" y="253.5" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_on.gif"/>
    <image id="TAG_svg_10" x="620" y="253.5" width="37" height="40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_pump_off.png"/>
   </g>
-  <text id="TAG_2001_2_18" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="764.5" x="445.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
+  <text id="TAG_2001_2_18" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="761.5" x="440.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
   <text id="TAG_2001_0_21" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="764.5" x="1096.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
   <text id="TAG_2001_0_23" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="765.5" x="1190.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
   <text id="TAG_2001_2_19" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="767.5" x="348.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="blue">...</text>
@@ -42,5 +42,7 @@
    <image id="svg_4" x="679" y="284.5" width="45" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png"/>
    <image id="svg_9" x="679" y="284.5" width="45" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_off.png"/>
   </g>
+  <rect fill="#e5e5e5" stroke="#000000" stroke-width="5" stroke-opacity="0" x="470" y="749" width="16" height="17" id="svg_1"/>
+  <text fill="#000000" stroke="#000000" stroke-width="0" stroke-opacity="0" x="471" y="764" id="svg_2" font-size="12" font-family="serif" text-anchor="middle" xml:space="preserve">DEG</text>
  </g>
 </svg>

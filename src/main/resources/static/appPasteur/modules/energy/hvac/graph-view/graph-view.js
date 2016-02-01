@@ -156,6 +156,13 @@
 			
 			var subTitle = $scope.getPointDate($scope.currentPoint.dateType, $scope.currentPoint.dateTime);
 			
+			var datetime = $scope.currentPoint.dateTime;
+			if ($scope.currentPoint.dateType == "c") {
+				datetime = $scope.getCurrentDate();
+			}
+			
+			console.log("datetime : " + datetime);
+			
 			$scope.chartOptions.title.text = $scope.currentPoint.subject;
 			$scope.chartOptions.caption.html = 
 				'<small class="fw-bold">시간 단위 : '+$scope.currentPoint.interval
@@ -164,7 +171,7 @@
 			
 			var urlQurey = "?interval="+$scope.currentPoint.interval
 							+"&calculation="+$scope.currentPoint.valueType
-							+"&datetime="+$scope.currentPoint.dateTime;
+							+"&datetime="+datetime;
 			var tagIDs = $scope.currentPoint.tagIDs.split(",");
 			
 			
@@ -213,6 +220,9 @@
 			var size = $scope.logList.get(tagIDReplace).page.size;
 			var interval = $scope.currentPoint.interval;
 			var datetime = $scope.currentPoint.dateTime;
+			if ($scope.currentPoint.dateType == "c") {
+				datetime = $scope.getCurrentDate();
+			}
 			
 			var listUrl = $scope.logUrl + tagIDReplace + '?page=' + pageNumber + '&size=' + size +"&sort="+sort
 						+ '&interval='+interval + '&datetime='+datetime 

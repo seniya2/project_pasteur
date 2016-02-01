@@ -231,11 +231,11 @@
 			
 			// changeText : 태그값 출력하기
 			// changeTextFloor_0 : 소수점 버림, 정수형 반환
-			// changeTextFloor_1 : 소수점 첫째자리까지 표시. 이하 버림
-			// changeTextFloor_2 : 소수점 둘째자리까지 표시. 이하 버림
+			// changeTextFloor_1 : 소수점 첫째자리까지 표시. 반올림
+			// changeTextFloor_2 : 소수점 둘째자리까지 표시. 반올림
 			// changeColor : 디지털 색 변경
 			// changeImage : 디지털 이미지 변경
-			// changeImage1to2 : 아날로그 이미지 변경(1-2)
+			// changeImage1to3 : 아날로그 이미지 변경(1-3)
 				
 			onValues : ["Active", "true", "on", "1", "1.0", "ON"],
 			
@@ -258,7 +258,10 @@
 			changeTextFloor_1 : function(selectedObject, tagValue) {
 				
 				if (!isNaN(tagValue)){
-					tagValue = Math.floor(tagValue*10) / 10;
+					
+					//tagValue = Math.floor(tagValue*100) / 100;
+					tagValue = parseFloat(tagValue).toFixed(1);
+					tagValue = (tagValue*10) / 10;
 					//console.log(parseInt(point.value).toFixed(1));
 				}
 				
@@ -269,7 +272,9 @@
 			changeTextFloor_2 : function(selectedObject, tagValue) {
 				
 				if (!isNaN(tagValue)){
-					tagValue = Math.floor(tagValue*100) / 100;
+					tagValue = parseFloat(tagValue).toFixed(2);
+					tagValue = (tagValue*100) / 100;
+					//tagValue = Math.floor(tagValue*100) / 100;
 					//console.log(parseInt(point.value).toFixed(1));
 				}
 				
@@ -311,7 +316,7 @@
 				return;
 			},
 			
-			changeImage1to2 : function(selectedObject, tagValue) {
+			changeImage1to3 : function(selectedObject, tagValue) {
 				
 				//console.log("changeImage : " + changeImage);
 				
@@ -324,11 +329,15 @@
 				if (tagValue == 1) {
 					imageObject[0].style("visibility", "visible");
 					imageObject[1].style("visibility", "hidden");
-					//imageObject[2].style("visibility", "hidden");					
-				} else {					
+					imageObject[2].style("visibility", "hidden");					
+				} else if (tagValue == 2) {
 					imageObject[0].style("visibility", "hidden");
 					imageObject[1].style("visibility", "visible");
-					//imageObject[2].style("visibility", "hidden");
+					imageObject[2].style("visibility", "hidden");					
+				} else {					
+					imageObject[0].style("visibility", "hidden");
+					imageObject[1].style("visibility", "hidden");
+					imageObject[2].style("visibility", "visible");
 				}
 				
 				return;

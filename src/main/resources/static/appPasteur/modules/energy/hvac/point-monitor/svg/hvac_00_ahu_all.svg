@@ -3,352 +3,352 @@
 
  <g>
   <title>Layer 1</title>
-  <image x="0" y="0" width="1240" height="790" id="TAG_svg_1" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_00_ahu_all.png"/>
+  <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/src_hvac_00_ahu_all.png" id="TAG_svg_1" height="790" width="1240" y="0" x="0"/>
  </g>
  <g>
   <title>Layer 3</title>
   <g id="TAG_2013_3_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="439" x="663.25" id="TAG_svg_130"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="437" x="662.25" id="TAG_svg_131"/>
+   <image id="TAG_svg_130" x="663.25" y="439" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_131" x="662.25" y="437" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2006_3_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="258" x="609.5" id="TAG_svg_132"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="256" x="608.5" id="TAG_svg_133"/>
+   <image id="TAG_svg_132" x="609.5" y="258" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_133" x="608.5" y="256" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2007_3_3">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="289" x="609.5" id="TAG_svg_134"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="287" x="608.5" id="TAG_svg_135"/>
+   <image id="TAG_svg_134" x="609.5" y="289" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_135" x="608.5" y="287" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2008_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="318" x="609.5" id="TAG_svg_136"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="316" x="608.5" id="TAG_svg_137"/>
+   <image id="TAG_svg_136" x="609.5" y="318" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_137" x="608.5" y="316" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2009_3_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="348" x="609.5" id="TAG_svg_138"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="346" x="608.5" id="TAG_svg_139"/>
+   <image id="TAG_svg_138" x="609.5" y="348" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_139" x="608.5" y="346" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2010_3_29">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="379" x="609.5" id="TAG_svg_140"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="377" x="608.5" id="TAG_svg_141"/>
+   <image id="TAG_svg_140" x="609.5" y="379" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_141" x="608.5" y="377" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2011_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="408" x="609.5" id="TAG_svg_142"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="406" x="608.5" id="TAG_svg_143"/>
+   <image id="TAG_svg_142" x="609.5" y="408" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_143" x="608.5" y="406" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2013_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="437" x="609.5" id="TAG_svg_144"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="435" x="608.5" id="TAG_svg_145"/>
+   <image id="TAG_svg_144" x="609.5" y="437" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_145" x="608.5" y="435" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2012_3_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="468" x="609.5" id="TAG_svg_146"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="466" x="608.5" id="TAG_svg_147"/>
+   <image id="TAG_svg_146" x="609.5" y="468" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_147" x="608.5" y="466" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2011_3_4">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="499" x="609.5" id="TAG_svg_148"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="497" x="608.5" id="TAG_svg_149"/>
+   <image id="TAG_svg_148" x="609.5" y="499" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_149" x="608.5" y="497" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2012_3_3">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="470" x="663.25" id="TAG_svg_150"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="468" x="662.25" id="TAG_svg_151"/>
+   <image id="TAG_svg_150" x="663.25" y="470" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_151" x="662.25" y="468" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2010_3_3">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="380" x="663.25" id="TAG_svg_152"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="378" x="662.25" id="TAG_svg_153"/>
+   <image id="TAG_svg_152" x="663.25" y="380" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_153" x="662.25" y="378" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2002_3_9">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="106" x="609.5" id="TAG_svg_154"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="104" x="608.5" id="TAG_svg_155"/>
+   <image id="TAG_svg_154" x="609.5" y="106" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_155" x="608.5" y="104" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2001_3_34">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="138" x="609.5" id="TAG_svg_156"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="136" x="608.5" id="TAG_svg_157"/>
+   <image id="TAG_svg_156" x="609.5" y="138" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_157" x="608.5" y="136" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2003_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="169" x="609.5" id="TAG_svg_158"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="167" x="608.5" id="TAG_svg_159"/>
+   <image id="TAG_svg_158" x="609.5" y="169" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_159" x="608.5" y="167" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2004_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="199" x="609.5" id="TAG_svg_160"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="197" x="608.5" id="TAG_svg_161"/>
+   <image id="TAG_svg_160" x="609.5" y="199" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_161" x="608.5" y="197" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2005_3_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="228" x="609.5" id="TAG_svg_162"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="226" x="608.5" id="TAG_svg_163"/>
+   <image id="TAG_svg_162" x="609.5" y="228" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_163" x="608.5" y="226" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2009_3_4">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="349" x="663.25" id="TAG_svg_164"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="347" x="662.25" id="TAG_svg_165"/>
+   <image id="TAG_svg_164" x="663.25" y="349" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_165" x="662.25" y="347" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2007_3_5">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="288" x="663.25" id="TAG_svg_166"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="286" x="662.25" id="TAG_svg_167"/>
+   <image id="TAG_svg_166" x="663.25" y="288" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_167" x="662.25" y="286" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2005_3_4">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="227" x="663.25" id="TAG_svg_168"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="225" x="662.25" id="TAG_svg_169"/>
+   <image id="TAG_svg_168" x="663.25" y="227" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_169" x="662.25" y="225" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2004_3_3">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="199.5" x="663.25" id="TAG_svg_170"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="197.5" x="662.25" id="TAG_svg_171"/>
+   <image id="TAG_svg_170" x="663.25" y="199.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_171" x="662.25" y="197.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2003_3_3">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="169.5" x="663.25" id="TAG_svg_172"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="167.5" x="662.25" id="TAG_svg_173"/>
+   <image id="TAG_svg_172" x="663.25" y="169.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_173" x="662.25" y="167.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2001_3_35">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="139.5" x="663.25" id="TAG_svg_174"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="137.5" x="662.25" id="TAG_svg_175"/>
+   <image id="TAG_svg_174" x="663.25" y="139.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_175" x="662.25" y="137.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
   <g id="TAG_2002_3_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif" height="24" width="24" y="107.5" x="663.25" id="TAG_svg_176"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif" height="24" width="24" y="105.5" x="662.25" id="TAG_svg_177"/>
+   <image id="TAG_svg_176" x="663.25" y="107.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_on.gif"/>
+   <image id="TAG_svg_177" x="662.25" y="105.5" width="24" height="24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_off.gif"/>
   </g>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="124.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_2_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="152.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_2_40">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="184.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="245.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="303.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="362.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="393.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="453.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735" y="483.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="121.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="149.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_2_38">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="181.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="210.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2004_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="242.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="270.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2006_2_6">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="302.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="331.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2008_2_6">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="359.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="390.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="420.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="450.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="480.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_2_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="873" y="511.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_2_13">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="122.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2002_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="150.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_1_14">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="182.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="211.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2004_1_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="243.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="271.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2006_1_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="303.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_1_3">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="332.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2008_1_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="360.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="391.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="421.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_1_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="451.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_1_6">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="481.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_1_6">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="944" y="512.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="122.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2002_0_14">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="150.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_0_25">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="182.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="211.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2004_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="243.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="271.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2006_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="303.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_0_3">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="332.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2008_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="360.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="391.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="421.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="451.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="481.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1012" y="512.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_0_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="120.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2002_0_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="148.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_0_27">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="180.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="209.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2004_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="241.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="301.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_0_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="358.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="389.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="419.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="449.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1081" y="479.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_0_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="122.25" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2002_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="150.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_1_15">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="182.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2003_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="211.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2004_1_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="243.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2005_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="271.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2006_1_3">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="303.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2007_1_4">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="332.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2008_1_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="360.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2009_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="391.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2010_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="421.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_1_2">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="451.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2013_2_10">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="481.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2012_1_7">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1151" y="512.75" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_1_5">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="735.5" y="424" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2011_2_1">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1036" y="47.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_0_21">...</text>
-  <text fill="#ffffff" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0" x="1171" y="48.5" font-size="13" font-family="serif" text-anchor="middle" xml:space="preserve" id="TAG_2001_0_23">...</text>
+  <text id="TAG_2001_2_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="124.25" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_2_40" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="152.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="184.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="245.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="303.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="362.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="393.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="453.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="483.75" x="735" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="121.25" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_2_38" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="149.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="181.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2004_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="210.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="242.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2006_2_6" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="270.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="302.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2008_2_6" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="331.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="359.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="390.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="420.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="450.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_2_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="480.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_2_13" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="511.75" x="873" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2002_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="122.25" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_1_14" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="150.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="182.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2004_1_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="211.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="243.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2006_1_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="271.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_1_3" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="303.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2008_1_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="332.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="360.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="391.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_1_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="421.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_1_6" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="451.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_1_6" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="481.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="512.75" x="944" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2002_0_14" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="122.25" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_25" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="150.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="182.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2004_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="211.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="243.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2006_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="271.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_0_3" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="303.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2008_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="332.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="360.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="391.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="421.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="451.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="481.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_0_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="512.75" x="1012" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2002_0_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="120.25" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_27" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="148.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="180.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2004_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="209.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="241.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_0_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="301.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="358.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="389.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="419.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="449.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_0_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="479.75" x="1081" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2002_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="122.25" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_1_15" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="150.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2003_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="182.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2004_1_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="211.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2005_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="243.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2006_1_3" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="271.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2007_1_4" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="303.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2008_1_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="332.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2009_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="360.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2010_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="391.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_1_2" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="421.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2013_1_6_clone" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="451.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2012_1_7" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="481.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_1_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="512.75" x="1151" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2011_2_1" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="424" x="735.5" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_21" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="47.5" x="1036" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
+  <text id="TAG_2001_0_23" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="13" y="48.5" x="1171" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#ffffff">...</text>
   <g id="TAG_2001_5_5">
-   <image id="svg_2" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="110" x="528"/>
-   <image id="svg_3" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="108" x="527"/>
+   <image x="528" y="110" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_2"/>
+   <image x="527" y="108" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_3"/>
   </g>
   <g id="TAG_2001_5_38">
-   <image id="svg_5" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="138.5" x="526"/>
-   <image id="svg_6" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="136.5" x="525"/>
+   <image x="526" y="138.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_5"/>
+   <image x="525" y="136.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_6"/>
   </g>
   <g id="TAG_2003_5_4">
-   <image id="svg_8" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="168.5" x="526"/>
-   <image id="svg_9" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="166.5" x="525"/>
+   <image x="526" y="168.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_8"/>
+   <image x="525" y="166.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_9"/>
   </g>
   <g id="TAG_2004_5_4">
-   <image id="svg_11" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="197.5" x="526"/>
-   <image id="svg_12" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="195.5" x="525"/>
+   <image x="526" y="197.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_11"/>
+   <image x="525" y="195.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_12"/>
   </g>
   <g id="TAG_2005_5_4">
-   <image id="svg_14" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="227.5" x="525"/>
-   <image id="svg_15" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="225.5" x="524"/>
+   <image x="525" y="227.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_14"/>
+   <image x="524" y="225.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_15"/>
   </g>
   <g id="TAG_2006_5_4">
-   <image id="svg_17" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="255.5" x="526"/>
-   <image id="svg_18" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="253.5" x="525"/>
+   <image x="526" y="255.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_17"/>
+   <image x="525" y="253.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_18"/>
   </g>
   <g id="TAG_2007_5_4">
-   <image id="svg_20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="287.5" x="526"/>
-   <image id="svg_21" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="285.5" x="525"/>
+   <image x="526" y="287.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_20"/>
+   <image x="525" y="285.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_21"/>
   </g>
   <g id="TAG_2008_5_4">
-   <image id="svg_23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="317.5" x="526"/>
-   <image id="svg_24" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="315.5" x="525"/>
+   <image x="526" y="317.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_23"/>
+   <image x="525" y="315.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_24"/>
   </g>
   <g id="TAG_2009_5_4">
-   <image id="svg_26" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="345.5" x="526"/>
-   <image id="svg_27" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="343.5" x="525"/>
+   <image x="526" y="345.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_26"/>
+   <image x="525" y="343.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_27"/>
   </g>
   <g id="TAG_2010_5_4">
-   <image id="svg_29" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="377.5" x="528"/>
-   <image id="svg_30" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="375.5" x="527"/>
+   <image x="528" y="377.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_29"/>
+   <image x="527" y="375.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_30"/>
   </g>
   <g id="TAG_2011_5_5">
-   <image id="svg_32" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="406.5" x="527"/>
-   <image id="svg_33" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="404.5" x="526"/>
+   <image x="527" y="406.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_32"/>
+   <image x="526" y="404.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_33"/>
   </g>
   <g id="TAG_2013_5_5">
-   <image id="svg_35" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="437.5" x="526"/>
-   <image id="svg_36" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="435.5" x="525"/>
+   <image x="526" y="437.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_35"/>
+   <image x="525" y="435.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_36"/>
   </g>
   <g id="TAG_2012_5_5">
-   <image id="svg_38" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="466.5" x="526"/>
-   <image id="svg_39" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="464.5" x="525"/>
+   <image x="526" y="466.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_38"/>
+   <image x="525" y="464.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_39"/>
   </g>
   <g id="TAG_2011_5_14">
-   <image id="svg_41" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" height="23" width="63" y="498.5" x="526"/>
-   <image id="svg_42" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" height="25" width="65" y="496.5" x="525"/>
+   <image x="526" y="498.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_on.png" id="svg_41"/>
+   <image x="525" y="496.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_run_off.png" id="svg_42"/>
   </g>
   <g id="TAG_2001_5_4">
-   <image id="svg_44" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="107.5" x="774"/>
-   <image id="svg_45" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="105.5" x="773"/>
+   <image x="774" y="107.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_44"/>
+   <image x="773" y="105.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_45"/>
   </g>
   <g id="TAG_2001_5_54">
-   <image id="svg_4" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="137.5" x="776"/>
-   <image id="svg_7" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="135.5" x="775"/>
+   <image x="776" y="137.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_4"/>
+   <image x="775" y="135.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_7"/>
   </g>
   <g id="TAG_2003_5_3">
-   <image id="svg_13" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="167.5" x="774"/>
-   <image id="svg_16" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="165.5" x="773"/>
+   <image x="774" y="167.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_13"/>
+   <image x="773" y="165.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_16"/>
   </g>
   <g id="TAG_2004_5_3">
-   <image id="svg_22" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="197.5" x="774"/>
-   <image id="svg_25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="195.5" x="773"/>
+   <image x="774" y="197.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_22"/>
+   <image x="773" y="195.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_25"/>
   </g>
   <g id="TAG_2005_5_3">
-   <image id="svg_31" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="226.5" x="775"/>
-   <image id="svg_34" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="224.5" x="774"/>
+   <image x="775" y="226.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_31"/>
+   <image x="774" y="224.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_34"/>
   </g>
   <g id="TAG_2006_5_3">
-   <image id="svg_40" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="258.5" x="774"/>
-   <image id="svg_46" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="256.5" x="773"/>
+   <image x="774" y="258.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_40"/>
+   <image x="773" y="256.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_46"/>
   </g>
   <g id="TAG_2007_5_3">
-   <image id="svg_48" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="287" x="775"/>
-   <image id="svg_49" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="285" x="774"/>
+   <image x="775" y="287" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_48"/>
+   <image x="774" y="285" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_49"/>
   </g>
   <g id="TAG_2008_5_3">
-   <image id="svg_51" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="317" x="775"/>
-   <image id="svg_52" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="315" x="774"/>
+   <image x="775" y="317" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_51"/>
+   <image x="774" y="315" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_52"/>
   </g>
   <g id="TAG_2009_5_3">
-   <image id="svg_54" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="347" x="775"/>
-   <image id="svg_55" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="345" x="774"/>
+   <image x="775" y="347" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_54"/>
+   <image x="774" y="345" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_55"/>
   </g>
   <g id="TAG_2010_5_3">
-   <image id="svg_57" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="378" x="775"/>
-   <image id="svg_58" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="376" x="774"/>
+   <image x="775" y="378" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_57"/>
+   <image x="774" y="376" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_58"/>
   </g>
   <g id="TAG_2011_5_4">
-   <image id="svg_60" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="407" x="775"/>
-   <image id="svg_61" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="405" x="774"/>
+   <image x="775" y="407" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_60"/>
+   <image x="774" y="405" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_61"/>
   </g>
   <g id="TAG_2013_5_4">
-   <image id="svg_63" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="436" x="775"/>
-   <image id="svg_64" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="434" x="774"/>
+   <image x="775" y="436" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_63"/>
+   <image x="774" y="434" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_64"/>
   </g>
   <g id="TAG_2012_5_4">
-   <image id="svg_66" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="467.5" x="776"/>
-   <image id="svg_67" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="465.5" x="775"/>
+   <image x="776" y="467.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_66"/>
+   <image x="775" y="465.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_67"/>
   </g>
   <g id="TAG_2011_5_13">
-   <image id="svg_69" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_auto.png" height="23" width="63" y="496.5" x="775"/>
-   <image id="svg_70" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_manual.png" height="25" width="65" y="494.5" x="774"/>
+   <image x="775" y="496.5" width="63" height="23" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_on.png" id="svg_69"/>
+   <image x="774" y="494.5" width="65" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_level_off.png" id="svg_70"/>
   </g>
   <g id="TAG_2001_5_3">
-   <image id="svg_72" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="106.5" x="1190"/>
-   <image id="svg_73" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="106.5" x="1190"/>
+   <image x="1190" y="106.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" id="svg_72"/>
+   <image x="1190" y="106.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" id="svg_73"/>
   </g>
   <g id="TAG_2001_5_55">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="132.5" x="1189.5" id="svg_10"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="132.5" x="1189.5" id="svg_19"/>
+   <image id="svg_10" x="1189.5" y="132.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_19" x="1189.5" y="132.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2003_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="167" x="1188.75" id="svg_37"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="167" x="1188.75" id="svg_43"/>
+   <image id="svg_37" x="1188.75" y="167" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_43" x="1188.75" y="167" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2004_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="198" x="1188.25" id="svg_50"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="198" x="1188.25" id="svg_53"/>
+   <image id="svg_50" x="1188.25" y="198" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_53" x="1188.25" y="198" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2005_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="226.75" x="1190.375" id="svg_59"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="226.75" x="1190.375" id="svg_62"/>
+   <image id="svg_59" x="1190.375" y="226.75" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_62" x="1190.375" y="226.75" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2006_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="256.75" x="1189.875" id="svg_68"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="256.75" x="1189.875" id="svg_74"/>
+   <image id="svg_68" x="1189.875" y="256.75" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_74" x="1189.875" y="256.75" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2007_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="283.25" x="1189.125" id="svg_76"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="283.25" x="1189.125" id="svg_77"/>
+   <image id="svg_76" x="1189.125" y="283.25" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_77" x="1189.125" y="283.25" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2008_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="313.25" x="1188.625" id="svg_79"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="313.25" x="1188.625" id="svg_80"/>
+   <image id="svg_79" x="1188.625" y="313.25" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_80" x="1188.625" y="313.25" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2009_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="344.875" x="1188.4375" id="svg_82"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="344.875" x="1188.4375" id="svg_83"/>
+   <image id="svg_82" x="1188.4375" y="344.875" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_83" x="1188.4375" y="344.875" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2010_5_1">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="374.625" x="1188.5625" id="svg_85"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="374.625" x="1188.5625" id="svg_86"/>
+   <image id="svg_85" x="1188.5625" y="374.625" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_86" x="1188.5625" y="374.625" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2011_5_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="405.625" x="1188.0625" id="svg_88"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="405.625" x="1188.0625" id="svg_89"/>
+   <image id="svg_88" x="1188.0625" y="405.625" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_89" x="1188.0625" y="405.625" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2013_5_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="433.125" x="1188.3125" id="svg_91"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="433.125" x="1188.3125" id="svg_92"/>
+   <image id="svg_91" x="1188.3125" y="433.125" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_92" x="1188.3125" y="433.125" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2012_5_2">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="466.125" x="1189.8125" id="svg_94"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="466.125" x="1189.8125" id="svg_95"/>
+   <image id="svg_94" x="1189.8125" y="466.125" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_95" x="1189.8125" y="466.125" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
   <g id="TAG_2011_5_12">
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png" height="25" width="50" y="494.5" x="1189.5" id="svg_97"/>
-   <image xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png" height="25" width="50" y="494.5" x="1189.5" id="svg_98"/>
+   <image id="svg_97" x="1189.5" y="494.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_on.png"/>
+   <image id="svg_98" x="1189.5" y="494.5" width="50" height="25" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_heat_off.png"/>
   </g>
  </g>
 </svg>

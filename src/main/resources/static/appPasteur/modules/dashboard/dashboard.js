@@ -33,6 +33,14 @@
 		
 		$scope.graphList = new Array();
 		
+		$scope.getCurrentDate = function() {
+			var nowDate = new Date();			
+			var nowDateStr = nowDate.toISOString();
+			nowDateStr = nowDateStr.substr(0,19);
+			nowDateStr = nowDateStr.replace("T"," ");
+			return nowDateStr;			
+		}
+		
 		$scope.csvConfig = {
 				delimiter: ",",	// auto-detect
 				newline: "",	// auto-detect
@@ -189,6 +197,11 @@
 			
 			var subTitle = $scope.getPointDate($scope.graphList[idx].dateType, $scope.graphList[idx].dateTime);
 			//chartOptions.title.html = "<a href="+chartURL+">"+$scope.graphList[idx].subject+"</a>";
+			var datetime = $scope.graphList[idx].dateTime;
+			if ($scope.graphList[idx].dateType == "c") {
+				datetime = $scope.getCurrentDate();
+			}
+			
 			chartOptions.title.html = $scope.graphList[idx].subject;
 			
 			chartOptions.caption.html = 
@@ -204,7 +217,7 @@
 						
 			var urlQurey = "?interval="+$scope.graphList[idx].interval
 							+"&calculation="+$scope.graphList[idx].valueType
-							+"&datetime="+$scope.graphList[idx].dateTime;
+							+"&datetime="+datetime;
 			var tagIDs = $scope.graphList[idx].tagIDs.split(",");
 			
 			angular.forEach(tagIDs, function(value, key) {				

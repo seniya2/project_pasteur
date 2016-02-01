@@ -262,6 +262,7 @@
 			
 		}
 		
+		
     }
 
     angular.module('singApp.fire-history').controller('fireHistoryModelController', fireHistoryModelController);
