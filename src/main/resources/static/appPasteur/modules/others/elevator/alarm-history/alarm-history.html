@@ -16,18 +16,18 @@
 				<div class="pull-left">
 					<h5 class="fw-bold">관제점</h5>
 				</div>
-				<div class="pull-left col-sm-5">
+				<div class="pull-left col-sm-4">
 					<select multiple id="country-select"
 							data-ui-jq="select2"
 							class="select2 form-control"
 							tabindex="-1"
-							data-placeholder="알람 제목 또는 관제점을 클릭하여 선택하세요."
+							data-placeholder="관제점을 클릭하여 선택하세요."
 							ng-model="searchNo"
 							name="searchNo"
 							data-ui-options="{minimumResultsForSearch: 1, maximumSelectionSize:1}"
 							data-minimum-results-for-search="1">
 							<option value=""></option>
-							<option ng-repeat="point in alarmList.values()" value="{{point.alarmNo}}">{{point.alarmName}} &nbsp;&nbsp; [{{point.tagName}}]</option>
+							<option ng-repeat="point in alarmList.values()" value="{{point.tagID}}">{{point.tagName}}</option>
 					</select>
 					<ul ng-show="searchNo_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 				</div>
@@ -82,14 +82,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="point in dataList"
+					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
 						total-items="page.totalElements" current-page="pagination.current">
 						<td class="text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
 						<td class="text-center">{{point.value}} </td>
 						<td class="text-center"><span class="label label-danger">{{point.alarmName}}</span></td>
 					</tr>
 				</tbody>
-			</table>			
+			</table>	
+			
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>	
+					
 			</div>
 			
 			<div class="margin_top_30" ng-show="dataList.length == 0">

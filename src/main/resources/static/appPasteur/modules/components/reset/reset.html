@@ -1,0 +1,47 @@
+<div ng-init="prepareAction()"></div>
+<span us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner" spinner-start-active="true"></span>
+
+<div class="row">
+<div class="col-md-12">
+	<section class="widget">
+		<div class="widget-body">
+		
+			
+			<!-- 
+				<div class="pull-left margin_left_10">
+					<button type="button" class="btn btn-default" ng-click="alarmCheck(-1)">alarmCheck</button>
+				</div>
+			 -->
+			 						
+			<table
+				class="table table-hover table-lg mt-lg mb-0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center">시스템</th>
+						<th class="text-center">리셋</th>
+						<th class="text-center">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-center">설비 시스템</td>
+						<td class="text-center">
+							<button type="button" class="btn btn-default" ng-click="xdReset('hvac')">Reset</button>
+						</td>
+						<td class="text-center"></td>
+					</tr>
+					<tr>
+						<td class="text-center">전력 시스템</td>
+						<td class="text-center">
+							<button type="button" class="btn btn-default" ng-click="xdReset('electric')">Reset</button>
+						</td>
+						<td class="text-center"></td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+	</section>
+</div>
+</div>

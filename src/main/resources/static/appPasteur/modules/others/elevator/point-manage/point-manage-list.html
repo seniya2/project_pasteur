@@ -32,7 +32,7 @@
 						<th class="text-center" ng-class="getSortClass('tagID')" ng-click="sortAction('tagID')">아이디</th>
 						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
 						<th class="hidden-xs text-center" ng-class="getSortClass('tagAddr')" ng-click="sortAction('tagAddr')">주소</th>
-						<th class="hidden-xs text-center" ng-class="getSortClass('animateType')" ng-click="sortAction('animateType')">에니메이트</th>
+						<th class="hidden-xs text-center" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -42,7 +42,7 @@
 						<td class="text-center">{{point.tagID}}</td>
 						<td class="text-center">{{point.name}}</td>
 						<td class="hidden-xs text-center">{{point.tagAddr | limitTo:55}}</td>
-						<td class="hidden-xs text-center">{{point.animateType}}</td>
+						<td class="hidden-xs text-center"><span class="label label-info">{{point.dataType}}</span></td>
 					</tr>
 				</tbody>
 			</table>

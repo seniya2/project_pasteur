@@ -326,6 +326,7 @@
 			newData.tagIDs = newTagIDS;
 			//console.log("newData.tagIDs2 : " + newData.tagIDs);
 			
+			$scope.disableScreen(true);
 			if (angular.isDefined($scope.currentData.no)) {	
 				//$scope.resetXdRequest(newTagIDS, "updateAction", newData);
 				$scope.updateAction(newData);
@@ -392,6 +393,7 @@
 		
 				
 		$scope.deleteAction = function(id) {
+			$scope.disableScreen(true);
 			$http({
 				method : 'DELETE',
 				url : $scope.baseRestUrl + $scope.entityName+'/' + id
@@ -418,7 +420,7 @@
 						subject : "",
 						interval : "HOUR",
 						dateType : "c",
-						valueType : "MIN",
+						valueType : "LAST",
 						dateTime : $scope.currentDate,
 						datetimepicker : $scope.currentDate,
 						tagIDs : []

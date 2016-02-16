@@ -40,7 +40,7 @@
 						} else if (results.data[key].interval > 0) {
 							dataType = "이력포인트";
 						} else {
-							dataType = "";
+							dataType = "일반포인트";
 						}
 						
 						results.data[key].dataType = dataType;

@@ -39,6 +39,8 @@
 		'singApp.ev-alarm',
 		'singApp.ev-history',
 		
+		'singApp.components-reset',
+		
         'mwl.confirm',
         'angularSpinner'
 		

@@ -141,13 +141,13 @@
 					  }
 				});
 			    
-			    $scope.requestAction("http://192.168.245.3:9898/monitor/hvac?size=2000");
+			    $scope.requestAction("http://localhost:9898/monitor/hvac?size=2000", file);
 			    
 			});
 			
 		}
 		
-		$scope.requestAction = function(dataUrl) {
+		$scope.requestAction = function(dataUrl, currentFile) {
 
 			$http({
 				method : 'GET',
@@ -163,10 +163,13 @@
 					$scope.responseAction(contents[i]);
 				}
 
-				if ($location.path() == $scope.currentPath) {
+				if ($location.path() == $scope.currentPath && currentFile == $scope.svgFile) {
+					
+					//console.log("$location.path() == $scope.currentPath : " + ($location.path() == $scope.currentPath));
+					//console.log("currentFile == $scope.svgFile : " + (currentFile == $scope.svgFile));
 					
 					$timeout(function(){
-						$scope.requestAction(dataUrl)
+						$scope.requestAction(dataUrl, currentFile)
 					}, 5000);
 					
 				}
@@ -191,6 +194,7 @@
 			
 			try {
 				var tagID = "TAG_"+data.id;
+				//tagID = tagID.replace("_clone","");
 				var point = $scope.tagList.get(tagID);
 				var selectedD3 = d3.select("#"+tagID);
 				var tagValue = data.value;
@@ -235,6 +239,25 @@
 				}
 				
 				selectedObject.text(tagValue);
+				return;
+			},
+			
+			changeTextFloor_0_clone : function(selectedObject, tagValue) {
+				
+				if (!isNaN(tagValue)){
+					tagValue = Math.floor(tagValue);
+					//console.log(parseInt(point.value).toFixed(1));
+				}
+				
+				var textObject = [];				
+				selectedObject.selectAll("text").each(function() {						
+					//console.log(d3.select(this));
+					textObject.push(d3.select(this));					
+				});
+				
+				textObject[0].text(tagValue);
+				textObject[1].text(tagValue);
+				
 				return;
 			},
 			

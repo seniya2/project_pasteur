@@ -89,14 +89,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="point in dataList"
-						total-items="page.totalElements" current-page="pagination.current">	
+					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="pagination.current">						
 						<td class="text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>	
 						<td class="text-center">{{point.value}} </td>
 						<td class="text-center"><span class="label label-danger">{{point.alarmName}}</span></td>
 					</tr>
 				</tbody>
-			</table>			
+			</table>		
+			
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+				
 			</div>
 			
 			<div class="margin_top_30" ng-show="dataList.length == 0">

@@ -114,13 +114,13 @@
 						  }
 					});
 				    
-				    $scope.requestAction("http://192.168.245.3:9898/monitor/elevator?size=2000");
+				    $scope.requestAction("http://localhost:9898/monitor/elevator?size=2000", file);
 				    
 				});
 				
 			}
 			
-			$scope.requestAction = function(dataUrl) {
+			$scope.requestAction = function(dataUrl, currentFile) {
 
 				$http({
 					method : 'GET',
@@ -136,7 +136,7 @@
 						$scope.responseAction(contents[i]);
 					}
 
-					if ($location.path() == $scope.currentPath) {
+					if ($location.path() == $scope.currentPath && currentFile == $scope.svgFile) {
 						
 						$timeout(function(){
 							$scope.requestAction(dataUrl)

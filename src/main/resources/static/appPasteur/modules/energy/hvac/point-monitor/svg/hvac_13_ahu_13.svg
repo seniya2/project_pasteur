@@ -38,7 +38,7 @@
    <image x="552.5" y="349.5" width="20" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_0070a"/>
    <image x="552.5" y="349.5" width="20" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_0070b"/>
   </g>
-  <g id="TAG_2012_3_6_clone">
+  <g id="TAG_2012_3_6">
    <image x="895" y="75.5" width="20" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" id="TAG_svg_5"/>
    <image x="895" y="75.5" width="20" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" id="TAG_svg_6"/>
   </g>

@@ -225,7 +225,7 @@
 								"size" : data.size,
 								"totalPage" : data.totalPages,
 								"totalElements" : data.totalElements,
-								"number" : data.page.number+1
+								"number" : data.number+1
 						}
 						
 						

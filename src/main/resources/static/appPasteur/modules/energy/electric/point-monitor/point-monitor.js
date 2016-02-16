@@ -141,13 +141,13 @@
 						  }
 					});
 				    
-				    $scope.requestAction("http://192.168.245.3:9898/monitor/electric?size=2000");
+				    $scope.requestAction("http://localhost:9898/monitor/electric?size=2000", file);
 				    
 				});
 				
 			}
 			
-			$scope.requestAction = function(dataUrl) {
+			$scope.requestAction = function(dataUrl, currentFile) {
 
 				$http({
 					method : 'GET',
@@ -163,10 +163,13 @@
 						$scope.responseAction(contents[i]);
 					}
 
-					if ($location.path() == $scope.currentPath) {
+					if ($location.path() == $scope.currentPath && currentFile == $scope.svgFile) {
+						
+						//console.log("$location.path() == $scope.currentPath : " + ($location.path() == $scope.currentPath));
+						//console.log("currentFile == $scope.svgFile : " + (currentFile == $scope.svgFile));
 						
 						$timeout(function(){
-							$scope.requestAction(dataUrl)
+							$scope.requestAction(dataUrl, currentFile)
 						}, 5000);
 						
 					}
@@ -241,6 +244,26 @@
 					//console.log(parseInt(point.value).toFixed(1));
 				}
 				selectedObject.text(tagValue);
+				return;
+			},
+			
+			changeTextRound_1_clone : function(selectedObject, tagValue) {
+				
+				if (!isNaN(tagValue)){
+					tagValue = parseFloat(tagValue).toFixed(1);
+				}
+				
+				var elementCnt = 0;
+				selectedObject.selectAll("text").each(function() {						
+					//console.log(d3.select(this));
+					d3.select(this).text(tagValue);
+					elementCnt++;
+				});
+				
+				if (elementCnt == 0) {
+					selectedObject.text(tagValue);
+				}				
+				
 				return;
 			},
 			

@@ -12,7 +12,7 @@
     /**
      * Whether to print and alert some log information
      */
-    debug: false,
+    debug: true,
     /**
      * In-app constants
      */
@@ -45,8 +45,8 @@
       
       network : {
 		'ui' : 'http://localhost:8090/',
-		'rest' : 'http://192.168.245.3:8091/',
-		'xd' : 'http://192.168.245.3:9898/'
+		'rest' : 'http://localhost:8091/',
+		'xd' : 'http://localhost:9898/'
       },
       
       globalDisable : false

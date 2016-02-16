@@ -301,6 +301,8 @@
 			//console.log("newData : -------");			
 			//console.log(newData);
 			
+			$scope.disableScreen(true);
+			
 			if (angular.isDefined($scope.currentData.no)) {				
 				//$scope.resetXdRequest((String(tagID).split(":"))[1], "updateAction", newData);
 				$scope.updateAction(newData);
@@ -308,6 +310,8 @@
 				//$scope.resetXdRequest((String(tagID).split(":"))[1], "createAction", newData);
 				$scope.createAction(newData);
 			}
+			
+			
 		}
 		
 		$scope.createAction = function(point) {
@@ -366,6 +370,7 @@
 				
 		$scope.deleteAction = function(id) {		
 			console.log("--> deleteAction");
+			$scope.disableScreen(true);
 			
 			$http({
 				method : 'DELETE',
@@ -417,7 +422,7 @@
 				
 				if (condition.indexOf("val == ") > -1) {
 					condition_type = "condition2";
-					condition2 = (condition.split("val != "))[1];
+					condition2 = (condition.split("val == "))[1];
 					console.log("condition2 : " + condition2);
 				} else if (condition.indexOf(" < val < ") > -1) {
 					condition_type = "condition3";
