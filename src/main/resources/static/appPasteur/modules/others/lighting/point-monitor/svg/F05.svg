@@ -542,6 +542,14 @@
    <ellipse id="TAG_svg_366" ry="3" rx="3" cy="188" cx="556" fill="green"/>
    <ellipse id="TAG_svg_367" ry="3" rx="3" cy="228" cx="556" fill="green"/>
   </g>
+    <g id="TAG_3_38_3">
+   <rect id="TAG_svg_3582" transform="matrix(1, 0, 0, 1, -87, 69.6667)" height="13" width="5" y="46.3333" x="751.16666" fill="green"/>
+   <rect id="TAG_svg_3591" transform="matrix(1, 0, 0, 1, -68.3333, 69.6667)" height="13" width="5" y="46.3333" x="751.16666" fill="green"/>
+  </g>
+  <g id="TAG_3_29_2">
+   <rect id="TAG_svg_3613" transform="matrix(1, 0, 0, 1, -87, 69.6667)" height="13" width="5" y="66.3333" x="752.16669" fill="green"/>
+   <rect id="TAG_svg_3624" transform="matrix(1, 0, 0, 1, -68.3333, 69.6667)" height="13" width="5" y="66.3333" x="752.16669" fill="green"/>
+  </g>
   <text id="TAG_svg_368" font-size="15px" font-weight="bold" y="20" x="10">5층</text>
  </g>
 </svg>

@@ -65,51 +65,6 @@
 			});
 		}
 		
-		$scope.resetXdRequest = function(tagIDs, action, data) {
-			console.log("----> resetXdRequest");
-			$scope.disableScreen(true);
-			//console.log("tagIDs : " + tagIDs)
-			var nameNidsArray = String(tagIDs).split(",");			
-			for (var key in nameNidsArray) {
-				//console.log("id : " + (nameNidsArray[key].split(":"))[1]);				
-				var id = (nameNidsArray[key].split(":"))[1];
-				id = id.replace("TAG_","");
-				id = id.replace("_clone","");
-				var url = $scope.xdResetUrl + id;				
-				//console.log("id : " + id);
-				//console.log("key : " + key);				
-				//console.log("url : " + url);
-				
-				if (key == nameNidsArray.length-1) {
-					console.log("xd reset last workd url : " + url);
-					$http({
-						method : 'GET',
-						url : url
-					}).success(function(xdData) {				
-						if (action == "createAction") {
-							$scope.createAction(data);
-						} else if (action == "updateAction") {
-							$scope.updateAction(data);
-						} else if (action == "deleteAction") {
-							$scope.deleteAction(data);
-						}				
-					}).error(function(error) {				
-						$scope.disableScreen(false);
-						$scope.massagePopup("resetXdRequest 실패", "error");				
-					});
-				} else {
-					$http({
-						method : 'GET',
-						url : url
-					}).success(function(xdData) {				
-						console.log("xd reset ing url : " + url);
-					}).error(function(error) {				
-						console.log("xd reset ing url : " + url);
-					});
-				}
-			}
-		}
-		
 		$scope.currentDate = "";
 		
 		$scope.getCurrentDate = function() {
@@ -130,7 +85,7 @@
 				subject : "",
 				interval : "HOUR",
 				dateType : "c",
-				valueType : "MIN",
+				valueType : "LAST",
 				dateTime : $scope.currentDate,
 				datetimepicker : $scope.currentDate,
 				tagIDs : []
@@ -149,7 +104,24 @@
 				complete: function(results, file) {					
 					//$scope.tagList = results.data;
 					//console.log($scope.tagList);
-					$scope.dataList = results.data;						
+					//$scope.dataList = results.data;		
+					
+					$scope.dataList = [];
+					for (var key in results.data) {
+						//console.log("data : " + results.data[key]);
+						//results.data[key].no = parseInt(results.data[key].no);
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						
+						if (interval > 0) {
+							$scope.dataList.push(results.data[key]);
+						}
+						
+					}
+					
+					
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
 					
 				},
@@ -354,12 +326,12 @@
 			newData.tagIDs = newTagIDS;
 			//console.log("newData.tagIDs2 : " + newData.tagIDs);
 			
-			if (angular.isDefined($scope.currentData.no)) {				
-				$scope.resetXdRequest(newTagIDS, "updateAction", newData);
-				//$scope.updateAction(newData);
+			if (angular.isDefined($scope.currentData.no)) {	
+				//$scope.resetXdRequest(newTagIDS, "updateAction", newData);
+				$scope.updateAction(newData);
 			}else {
-				$scope.resetXdRequest(newTagIDS, "createAction", newData);
-				//$scope.createAction(newData);
+				//$scope.resetXdRequest(newTagIDS, "createAction", newData);
+				$scope.createAction(newData);
 			}
 			//$scope.createAction($scope.currentData);
 			

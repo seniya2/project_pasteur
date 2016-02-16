@@ -114,95 +114,74 @@
 						  }
 					});
 				    
-				    $scope.callAtInterval();
-				    $scope.asyncStartAction();
+				    $scope.requestAction("http://192.168.245.3:9898/monitor/elevator?size=2000");
 				    
 				});
 				
 			}
 			
-			$scope.asyncStartAction = function() {
-				$scope.intervalJob = $interval(function(){ $scope.callAtInterval(); }, 10000);
-			}
-			
-			$scope.asyncStopAction = function() {
-				 $interval.cancel($scope.intervalJob);
-			}
-			
-			$scope.callAtInterval = function() {			
-				if ($location.path() != $scope.currentPath){
-					$scope.asyncStopAction();
-					return;
-				}
-				//console.log("$scope.callAtInterval ------------------");
-				//console.log($scope.point);
-				for (var key in $scope.point) {
-					try {
-						$scope.animateApply(key);
-					}
-					catch(err) {
-					   console.log(err);
-					}
-	        	}
-	        }
+			$scope.requestAction = function(dataUrl) {
 
-			$scope.animateApply = function(tagID) {
-
-				try {
-					$scope.point[tagID] = $scope.tagList.get(tagID);
-					//console.log($scope.point[tagID]);			
-					var point = $scope.point[tagID];
-					//var tagType = point.type;
-					//var cateURL = point.categoryAddr;
-					var tagAddr = point.tagAddr;
-				}
-				catch(err) {
-				   //console.log(err);
-				   return;
-				}
-				
-				if (angular.isUndefined(tagAddr)) {
-					return;
-				}
-				
-				//console.log("tagAddr : " + tagAddr);
-				
 				$http({
-							method : 'GET',
-							url : tagAddr,
-							headers: {'Content-type': 'application/json'}
-								
-						}).success(function(data) {
-							
-							point.value = data.value;
-							//$scope.alarmFilter(tagID, point.old_val, data.value);
-							point.old_val = data.value;
-							
-							
-							var tagValue = point.value;						
-							var selectedD3 = d3.select("#"+tagID);
-							var animateType = point.animateType;						
-													
-							if (animateType != null){
-								//console.log("animateType :" + animateType + ":");
-								try {
-									eval("$scope.animateTag."+animateType+"(selectedD3, tagValue, tagID);");
-								}
-								catch(err) {
-								   //console.log(err);
-								}							
-							} else {
-								//selectedD3.text(tagValue);
-							}
-							
-						}).error(function(error) {
-							// $scope.widgetsError = error;
-						});
+					method : 'GET',
+					url : dataUrl,
+					headers: {'Content-type': 'application/json'},
+					cache: false,
+					timeout:60000
+				}).success(function(data) {
+					
+					var contents = data.content;
+					for (var i=0; i<contents.length; i++) {
+						//console.log("contents["+i+"] : " + contents[i].id);
+						$scope.responseAction(contents[i]);
+					}
+
+					if ($location.path() == $scope.currentPath) {
+						
+						$timeout(function(){
+							$scope.requestAction(dataUrl)
+						}, 5000);
+						
+					}
+					//$scope.responseAction(true, data, tagID, async);
+				}).error(function(error) {
+					console.log($scope.svgFile + " ! " + error);
+					// XD 데이터를 가지고 오지 못함 알랏. 사용자 확인 후 재시도
+					/*
+					if ($location.path() == $scope.currentPath) {
+						$scope.requestAction(dataUrl);
+					}
+					*/
+				});
+
+			}
+			
+		
+			$scope.responseAction = function(data) {
+				
+				//console.log("$scope.responseAction success : " + success);
+				//console.log("$scope.responseAction async : " + async);
+				
+				try {
+					var tagID = "TAG_"+data.id;
+					var point = $scope.tagList.get(tagID);
+					var selectedD3 = d3.select("#"+tagID);
+					var tagValue = data.value;
+					var animateType = point.animateType;
+					var tagTime = data.datetime;
+					
+					//console.log("animateType :" + animateType + ":");
+					//console.log("data.value :" + data.value + ":");
+					eval("$scope.animateTag."+animateType+"(selectedD3, tagValue, tagID);");
+					
+				} catch(e) {
+					console.log("$scope.responseAction error : " + e);
+				}
 				
 			}
-						
+			
 			$scope.animateTag = {
-				
+					
 				// changeText : 태그값 출력하기
 				// changeColor : 디지털 색 변경
 				// changeImage : 디지털 이미지 변경

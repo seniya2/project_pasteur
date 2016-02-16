@@ -6,7 +6,7 @@
     	
     	var search = $location.search();
     	var s_page = search.page || 0;
-		var s_size = search.size || 9999;
+		var s_size = search.size || 12;
 		var s_sort = search.sort || 'id,desc';
 		
 		$scope.template_base = "appPasteur/modules/energy/hvac/alarm-history/";
@@ -19,12 +19,18 @@
 		$scope.alarmUrl = $scope.baseRestUrl + $scope.alarmEntity;
 		$scope.listUrl = config.settings.network.rest+$scope.alarmEntity;
 		$scope.listUrlXd = $scope.baseXdUrl+"history/"+$scope.categoryName+"/";
+		$scope.csvFileUrl = $scope.baseUiUrl + $scope.resources_base + $scope.categoryName + ".csv";
 		
 		//console.log("listUrl : " + $scope.listUrl);		
 		
 		$scope.pointList = null;
 		$scope.dataList = new Array();
-		$scope.page = null;
+		$scope.page = {
+				"size" : 12,
+				"totalPage" : 0,
+				"totalElements" : 0,
+				"number" : 0
+			};
 		$scope.pageLinks = null;
 		$scope.sortAttr = "id";
 		$scope.sortOder = "desc";
@@ -67,57 +73,56 @@
 		});
 		
 		
+		
+		$scope.csvConfig = {
+				delimiter: ",",	// auto-detect
+				newline: "",	// auto-detect
+				header: true,
+				dynamicTyping: false,
+				preview: 0,
+				encoding: "",
+				worker: false,
+				comments: false,
+				step: undefined,
+				complete: function(results, file) {				
+					
+					for (var key in results.data) {
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						
+						if (interval == 0) {
+							$scope.alarmList.set(tagID,
+									{"tagID" : tagID, 
+									"tagName" : tagName,
+									"interval" : interval}
+							);
+						}
+					}
+					//console.log("$scope.alarmList : " + $scope.alarmList);
+					$timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);
+				},
+				error: undefined,
+				download: true,
+				skipEmptyLines: false,
+				chunk: undefined,
+				fastMode: undefined,
+				beforeFirstChunk: undefined,
+				withCredentials: undefined
+		};
+		
 	    $scope.prepareAction = function() {
 	    	
 	    	$scope.searchNo_error = false;
 			$scope.searchDate1_error = false;
 			$scope.searchDate2_error = false;
-			
-			usSpinnerService.spin('app-spinner-hah');
 			$scope.dataList = {};
 			$scope.page = null;
 			$scope.alarmEventLog = "";
 			
-			$http({
-				method : 'GET',
-				url : $scope.alarmUrl+"/search/findByTagIDContains?tagID=",
-				headers: {'Content-type': 'application/json'}					
-			}).success(function(data) {
-				var dataList = null;
-				eval("dataList = data._embedded."+$scope.alarmEntity);
-				
-				var tagID = "";
-				var tagName = "";
-				var alarmName = "";
-				var condition = "";
-				var alarmNo = 0;
-				
-				for (var key in dataList) {
-					//console.log(dataList[key]);
-					alarmNo=dataList[key].no;
-					tagName=dataList[key].tagID.split(":")[0];
-					tagID=dataList[key].tagID.split(":")[1];
-					alarmName=dataList[key].condition.split(":")[0];
-					condition=dataList[key].condition.split(":")[1];
-					
-					$scope.alarmList.set(alarmNo, {
-						"alarmNo" : alarmNo,
-						"tagID" : tagID,
-						"tagName" : tagName,
-						"alarmName" :alarmName,
-						"condition" :condition
-					}); 
-				}				
-				$timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);				
-				console.log($scope.alarmList);
-				//console.log($scope.alarmList.values());
-				
-			}).error(function(error) {
-				// $scope.widgetsError = error;
-			});
-			
-			//console.log($scope.alarmList.get("TAG_2001_0_21"));
-			
+			usSpinnerService.spin('app-spinner-hah');
+			Papa.parse($scope.csvFileUrl, $scope.csvConfig);
 			
 			$("#searchDate1").on("dp.change", function (e) {
 	            $('#searchDate2').data("DateTimePicker").minDate(e.date);
@@ -147,6 +152,8 @@
 				$scope.searchNo_error=true;
 				errCnt++;
 			}
+			
+			/*
 			if (angular.isUndefined($scope.searchDate1) || $scope.searchDate1 == "") {
 				$scope.searchDate1_error=true;
 				errCnt++;
@@ -155,16 +162,21 @@
 				$scope.searchDate2_error=true;
 				errCnt++;
 			}
+			*/
 			
 			if (errCnt>0) {
 				return;
 			}
 			
-			$scope.searchName = $scope.alarmList.get(parseInt($scope.searchNo[0])).tagID;
-			$scope.searchDate1 = String($scope.searchDate1).substring(0, 10);
-			$scope.searchDate2 = String($scope.searchDate2).substring(0, 10);
-			$scope.searchDate1 = $scope.searchDate1 + " 00:00:01";
-			$scope.searchDate2 = $scope.searchDate2 + " 23:59:59";
+			//console.log("$scope.searchNo : " + $scope.searchNo);
+			//console.log("errCnt : " + errCnt);
+			
+			if (!(angular.isUndefined($scope.searchDate1) || $scope.searchDate1 == "") && !(angular.isUndefined($scope.searchDate2) || $scope.searchDate2 == "")){
+				$scope.searchDate1 = String($scope.searchDate1).substring(0, 10);
+				$scope.searchDate2 = String($scope.searchDate2).substring(0, 10);
+				$scope.searchDate1 = $scope.searchDate1 + " 00:00:01";
+				$scope.searchDate2 = $scope.searchDate2 + " 23:59:59";
+			}
 			
 			$scope.listAction(0);
 		}
@@ -173,13 +185,14 @@
 		
 		$scope.listAction = function(pageNumber) {
 
-			var tagID = String($scope.searchName).replace("TAG_", "");	
+			var tagID = String($scope.searchNo).replace("TAG_", "");	
 			var sort = $scope.sortAttr + "," + $scope.sortOder;
-			var listUrl = $scope.listUrlXd + tagID + '?page=' + pageNumber + '&size=' + s_size +"&sort="+sort
-						+ '&min='+$scope.searchDate1 + '&max='+$scope.searchDate2 
+			var listUrl = $scope.listUrlXd + tagID + '?page=' + pageNumber + '&size=' + s_size +"&sort="+sort;
+			if (!(angular.isUndefined($scope.searchDate1) || $scope.searchDate1 == "") && !(angular.isUndefined($scope.searchDate2) || $scope.searchDate2 == "")){
+				listUrl = listUrl + '&min='+$scope.searchDate1 + '&max='+$scope.searchDate2 ;
+			}
 			
-			
-			//console.log("sort : " + sort);
+			//console.log("listUrl : " + listUrl);
 
 			$http(
 					{
@@ -187,46 +200,39 @@
 						url : listUrl
 					}).success(function(data) {
 
-				var newData = {
-						'id' : null,
-						'value' : null,
-						'datatime' : null,
-						'alarmName' : null
-				};
-				var dataList = new Array();
-				var alarm = $scope.alarmList.get(parseInt($scope.searchNo[0]));
-				var alarmName = alarm.alarmName;
-				var condition = alarm.condition;
-				var old_val = undefined;
-				
-				for (var key in data.content) {
-					
-					newData = data.content[key];
-					newData.alarmName = alarmName;
-					var val = data.content[key].value;
-					if (key != 0) {
-						old_val = data.content[key-1].value;
-					}
-					
-					eval("if ("+condition+") {dataList.push(newData);}");					
-				}
-				
-				$scope.dataList = dataList;
-				//console.log($scope.dataList);
-								
-				var page = {
-						size : data.size,
-						totalPage : data.totalPages,
-						totalElements : data.totalElements,
-						number : data.number
-				}
-				
-				$scope.page = page;
-				
-				//console.log($scope.page);
-				// $scope.widgets = data.content;
-				// $scope.page = data.page;
-				// $scope.sort = sort;
+						var newData = {
+								'id' : null,
+								'value' : null,
+								'datatime' : null,
+								'alarmName' : null
+						};
+						var dataList = new Array();
+
+						for (var key in data.content) {
+							
+							newData = data.content[key];
+							newData.alarmName = ("Active" == data.value) ? "알람발생" : "정상";
+							dataList.push(newData);
+							
+							//eval("if ("+condition+") {dataList.push(newData);}");					
+						}
+						
+						$scope.dataList = dataList;
+						//console.log($scope.dataList);
+						
+						$scope.paginationDisplay = true;
+						$scope.page = {
+								"size" : data.size,
+								"totalPage" : data.totalPages,
+								"totalElements" : data.totalElements,
+								"number" : data.page.number+1
+						}
+						
+						
+						//console.log($scope.page);
+						// $scope.widgets = data.content;
+						// $scope.page = data.page;
+						// $scope.sort = sort;
 			}).error(function(error) {
 				// $scope.widgetsError = error;
 			});
@@ -260,6 +266,13 @@
 			
 			$scope.listAction($scope.page.number, $scope.page.size);
 			
+		}
+		
+		$scope.pageChangeHandler = function(num) {
+			if ($scope.page != null) {
+				$scope.page.number = num;
+				$scope.listAction(num - 1);
+			}
 		}
 		
     }

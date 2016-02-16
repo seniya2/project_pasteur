@@ -1,0 +1,5 @@
+﻿id,condition,no,tagid
+1,EV 1호기 운행모드 변경:old_val != val,1,1호기_운행모드:TAG_1_mode
+2,EV 2호기 운행모드 변경:old_val != val,2,2호기_운행모드:TAG_2_mode
+3,EV 3호기 운행모드 변경:old_val != val,3,3호기_운행모드:TAG_3_mode
+4,EV 4호기 운행모드 변경:old_val != val,4,4호기_운행모드:TAG_4_mode

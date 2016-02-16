@@ -59,35 +59,6 @@
 			});
 		}
 		
-		$scope.resetXdRequest = function(tagID, action, data) {
-			
-			$scope.disableScreen(true);
-			
-			var id = "";
-			id = tagID.replace("TAG_","");
-			id = id.replace("_clone","");	
-			var url = $scope.xdResetUrl + id;
-			
-			console.log("----> resetXdRequest");
-			console.log("url : " + url);
-			
-			$http({
-				method : 'GET',
-				url : url
-			}).success(function(xdData) {				
-				if (action == "createAction") {
-					$scope.createAction(data);
-				} else if (action == "updateAction") {
-					$scope.updateAction(data);
-				} else if (action == "deleteAction") {
-					$scope.deleteAction(data);
-				}				
-			}).error(function(error) {				
-				$scope.disableScreen(false);
-				$scope.massagePopup("resetXdRequest 실패", "error");				
-			});
-		}
-		
 		$scope.currentData = {
 				'name' : undefined,
 				'tagID' : undefined,
@@ -114,9 +85,18 @@
 					$scope.dataList = [];
 					for (var key in results.data) {
 						//console.log("data : " + results.data[key]);
-						results.data[key].no = parseInt(results.data[key].no);
+						//results.data[key].no = parseInt(results.data[key].no);
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						
+						if (interval != "NULL") {
+							$scope.dataList.push(results.data[key]);
+						}
+						
 					}
-					$scope.dataList = results.data;
+					//$scope.dataList = results.data;
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
 				},
 				error: undefined,
@@ -322,11 +302,11 @@
 			//console.log(newData);
 			
 			if (angular.isDefined($scope.currentData.no)) {				
-				$scope.resetXdRequest((String(tagID).split(":"))[1], "updateAction", newData);
-				//$scope.updateAction(newData);
+				//$scope.resetXdRequest((String(tagID).split(":"))[1], "updateAction", newData);
+				$scope.updateAction(newData);
 			}else {
-				$scope.resetXdRequest((String(tagID).split(":"))[1], "createAction", newData);
-				//$scope.createAction(newData);
+				//$scope.resetXdRequest((String(tagID).split(":"))[1], "createAction", newData);
+				$scope.createAction(newData);
 			}
 		}
 		
