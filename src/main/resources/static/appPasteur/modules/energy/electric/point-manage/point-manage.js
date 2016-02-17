@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  	electricPMModelController.$inject = ['config', '$scope', '$resource', '$http', '$location', '$filter', 'usSpinnerService', '$timeout' ];
-    function electricPMModelController (config, $scope, $resource, $http, $location, $filter, usSpinnerService, $timeout) {
+  	electricPMModelController.$inject = ['config', '$scope', '$resource', '$http', '$location', '$filter', 'usSpinnerService', '$timeout', '$compile','$sce' ];
+    function electricPMModelController (config, $scope, $resource, $http, $location, $filter, usSpinnerService, $timeout, $compile, $sce) {
     	
     	$scope.categoryName = "electric";
 		$scope.template_base = "appPasteur/modules/energy/electric/point-manage/";
@@ -34,16 +34,14 @@
 					for (var key in results.data) {
 						//console.log("data : " + results.data[key]);
 						results.data[key].no = parseInt(results.data[key].no);
-						
 						if (results.data[key].interval == 0) {
-							dataType = "알람포인트";
+							dataType = '<span class="label label-warning">'+"알람포인트"+'</span>';
 						} else if (results.data[key].interval > 0) {
-							dataType = "이력포인트";
+							dataType = '<span class="label label-info">'+"이력포인트"+'</span>';
 						} else {
-							dataType = "일반포인트";
+							dataType = '<span class="label label-default">'+"일반포인트"+'</span>';
 						}
-						
-						results.data[key].dataType = dataType;
+						results.data[key].dataType = $sce.trustAsHtml(dataType);
 					}
 					$scope.dataList = results.data;
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);

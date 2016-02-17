@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  	hvacPMModelController.$inject = ['config', '$scope', '$resource', '$filter', 'usSpinnerService', '$timeout'];
-    function hvacPMModelController (config, $scope, $resource, $filter, usSpinnerService, $timeout) {
+  	hvacPMModelController.$inject = ['config', '$scope', '$resource', '$filter', 'usSpinnerService', '$timeout', '$compile','$sce'];
+    function hvacPMModelController (config, $scope, $resource, $filter, usSpinnerService, $timeout, $compile, $sce) {
     	    	
 		$scope.categoryName = "hvac";
 		$scope.template_base = "appPasteur/modules/energy/hvac/point-manage/";
@@ -34,16 +34,14 @@
 					for (var key in results.data) {
 						//console.log("data : " + results.data[key]);
 						results.data[key].no = parseInt(results.data[key].no);
-						
 						if (results.data[key].interval == 0) {
-							dataType = "알람포인트";
+							dataType = '<span class="label label-warning">'+"알람포인트"+'</span>';
 						} else if (results.data[key].interval > 0) {
-							dataType = "이력포인트";
+							dataType = '<span class="label label-info">'+"이력포인트"+'</span>';
 						} else {
-							dataType = "일반포인트";
+							dataType = '<span class="label label-default">'+"일반포인트"+'</span>';
 						}
-						
-						results.data[key].dataType = dataType;
+						results.data[key].dataType = $sce.trustAsHtml(dataType);
 					}
 					$scope.dataList = results.data;
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
@@ -56,6 +54,11 @@
 				beforeFirstChunk: undefined,
 				withCredentials: undefined
 		};
+		
+		$scope.getTypeElement = function(key) {
+			var elementRaw = $scope.dataList[key].dataType;
+			return $sce.trustAsHtml(elementRaw);
+		}
 		
 		Messenger.options = {
     		    extraClasses: 'messenger-fixed messenger-on-top',

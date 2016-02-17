@@ -42,7 +42,7 @@
 						<td class="text-center">{{point.tagID}}</td>
 						<td class="text-center">{{point.name}}</td>
 						<td class="hidden-xs text-center">{{point.tagAddr | limitTo:55}}</td>
-						<td class="hidden-xs text-center"><span class="label label-info">{{point.dataType}}</span></td>
+						<td class="hidden-xs text-center"><div ng-bind-html="point.dataType"></div></td>
 					</tr>
 				</tbody>
 			</table>

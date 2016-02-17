@@ -209,12 +209,15 @@
 						var dataList = new Array();
 
 						for (var key in data.content) {
-							
 							newData = data.content[key];
-							newData.alarmName = ("Active" == data.value) ? "알람발생" : "정상";
-							dataList.push(newData);
-							
-							//eval("if ("+condition+") {dataList.push(newData);}");					
+							var dataType = "";
+							if (2 != newData.value) {
+								dataType = '<span class="label label-danger">'+"알람발생"+'</span>';
+							} else {
+								dataType = '<span class="label label-info">'+"정상"+'</span>';
+							}
+							newData.alarmName = $sce.trustAsHtml(dataType);
+							dataList.push(newData);			
 						}
 						
 						$scope.dataList = dataList;
