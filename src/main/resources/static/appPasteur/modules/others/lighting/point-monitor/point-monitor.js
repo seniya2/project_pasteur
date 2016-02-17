@@ -136,7 +136,7 @@
 					  }
 				});
 			    
-			    $scope.requestAction("http://localhost:9898/monitor/lighting?size=2000", file);	
+			    $scope.requestAction("http://192.168.245.3:9898/monitor/lighting?size=2000", file);	
 			    
 			});
 			
@@ -161,7 +161,7 @@
 				if ($location.path() == $scope.currentPath && currentFile == $scope.svgFile) {
 					
 					$timeout(function(){
-						$scope.requestAction(dataUrl)
+						$scope.requestAction(dataUrl, currentFile)
 					}, 5000);
 					
 				}

@@ -141,7 +141,7 @@
 					  }
 				});
 			    
-			    $scope.requestAction("http://localhost:9898/monitor/hvac?size=2000", file);
+			    $scope.requestAction("http://192.168.245.3:9898/monitor/hvac?size=2000", file);
 			    
 			});
 			
@@ -249,14 +249,16 @@
 					//console.log(parseInt(point.value).toFixed(1));
 				}
 				
-				var textObject = [];				
+				var elementCnt = 0;			
 				selectedObject.selectAll("text").each(function() {						
 					//console.log(d3.select(this));
-					textObject.push(d3.select(this));					
+					d3.select(this).text(tagValue);
+					elementCnt++;
 				});
 				
-				textObject[0].text(tagValue);
-				textObject[1].text(tagValue);
+				if (elementCnt == 0) {
+					selectedObject.text(tagValue);
+				}
 				
 				return;
 			},
