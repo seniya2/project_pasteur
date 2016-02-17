@@ -6,7 +6,7 @@
     	
     	var search = $location.search();
     	var s_page = search.page || 0;
-		var s_size = search.size || 9999;
+		var s_size = search.size || 12;
 		var s_sort = search.sort || 'id,desc';
 		
 		$scope.template_base = "appPasteur/modules/others/elevator/alarm-history/alarm-history.html";
