@@ -1,0 +1,528 @@
+<table class="table table-bordered table-hover table-report">
+	<caption>기본정보</caption>
+	<thead>
+	<tr>
+		<th>날짜</th>
+		<th>날씨</th>
+		<th>최고온도</th>
+		<th>최저온도</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{{reportEntity.daily}}</td>
+		<td>{{reportEntity.d1012}}></td>
+		<td>{{reportEntity.d1013}}></td>
+		<td>{{reportEntity.d1014}}></td>
+	</tr>			
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>근 무 현 황 </caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th class="col-md-1">정원</th>
+		<th class="col-md-1">현재원</th>
+		<th class="col-md-1">비번</th>
+		<th class="col-md-1">휴무</th>
+		<th class="col-md-1">휴가 </th>
+		<th class="col-md-1">결원 </th>
+		<th class="col-md-5">비고(결원내용)</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th>시 설</th>
+		<td>{{reportEntity.d2011}}></td>
+		<td>{{reportEntity.d2012}}></td>
+		<td>{{reportEntity.d2013}}></td>
+		<td>{{reportEntity.d2014}}></td>
+		<td>{{reportEntity.d2015}}></td>
+		<td>{{reportEntity.d2016}}></td>
+		<td>{{reportEntity.d2017}}></td>
+	</tr>
+	<tr>
+		<th>보 안</th>
+		<td>{{entity.d2021}}</td>
+		<td>{{entity.d2022}}</td>
+		<td>{{entity.d2023}}</td>
+		<td>{{entity.d2024}}</td>
+		<td>{{entity.d2025}}</td>
+		<td>{{entity.d2026}}</td>
+		<td>{{entity.d2027}}</td>
+	</tr>
+	<tr>
+		<th>미 화</th>
+		<td>{{entity.d2031}}</td>
+		<td>{{entity.d2032}}</td>
+		<td>{{entity.d2033}}</td>
+		<td>{{entity.d2034}}</td>
+		<td>{{entity.d2035}}</td>
+		<td>{{entity.d2036}}</td>
+		<td>{{entity.d2037}}</td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>에너지 사용량 및 장비 가동 현황</caption>
+	<thead>
+	<tr>
+		<th colspan="3">구 분</th>
+		<th class="col-md-1">전일 누계</th>
+		<th class="col-md-1">금일 사용</th>
+		<th class="col-md-1">사용 누계</th>
+		<th class="col-md-5">비고</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="9">기 계</th>
+		<th class="col-md-3" colspan="2">상수도(ton)</th>
+		<td>{{entity.waterSum}}</td>
+		<td>{{entity.waterToday}}</td>
+		<td>{{entity.waterTotal}}</td>
+		<td>{{entity.d3021}}</td>
+	</tr>
+	<tr>
+	<tr>
+		<th rowspan="2">가스<br/>(m3)</th>
+		<th>보일러(1)</th>
+		<td>{{entity.boiler1Sum}}</td>
+		<td>{{entity.boiler1Today}}</td>
+		<td>{{entity.boiler1Total}}</td>
+		<td>{{entity.d3031}}</td>
+	</tr>
+	</tr>
+	<tr>
+		<th>보일러(2)</th>
+		<td>{{entity.boiler2Sum}}</td>
+		<td>{{entity.boiler2Today}}</td>
+		<td>{{entity.boiler2Total}}</td>
+		<td>{{entity.d3041}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">폐수배출량(m3)</th>
+		<td>{{entity.wastesSum}}</td>
+		<td>{{entity.wastesToday}}</td>
+		<td>{{entity.wastesTotal}}</td>
+		<td>{{entity.d3051}}</td>
+	</tr>
+	<tr>
+		<th rowspan="2">지역난방<br/>(Gcal)</th>
+		<th>열량계(1)</th>
+		<td>{{entity.heat1Sum}}</td>
+		<td>{{entity.heat1Today}}</td>
+		<td>{{entity.heat1Total}}</td>
+		<td>{{entity.d3061}}</td>
+	</tr>
+	<tr>
+		<th>열량계(2)</th>
+		<td>{{entity.heat2Sum}}</td>
+		<td>{{entity.heat2Today}}</td>
+		<td>{{entity.heat2Total}}</td>
+		<td>{{entity.d3071}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">경유</th>
+		<td>{{entity.oilSum}}</td>
+		<td>{{entity.oilToday}}</td>
+		<td>{{entity.oilTotal}}</td>
+		<td>{{entity.d3081}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">냉동기운전시간(흡수식) </th>
+		<td>{{entity.freeze1Sum}}</td>
+		<td>{{entity.freeze1Today}}</td>
+		<td>{{entity.freeze1Total}}</td>
+		<td>{{entity.d3091}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">냉동기운전시간(스크류)</th>
+		<td>{{entity.freeze2Sum}}</td>
+		<td>{{entity.freeze2Today}}</td>
+		<td>{{entity.freeze2Total}}</td>
+		<td>{{entity.d3101}}</td>
+	</tr>
+	<tr>
+		<th rowspan="2">전 기</th>
+		<th colspan="2">전력량(kWh)</th>
+		<td>{{entity.wattSum}}</td>
+		<td>{{entity.wattToday}}</td>
+		<td>{{entity.wattTotal}}</td>
+		<td>전월누계  {{entity.powerMonth}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">피크치(kWh)</th>
+		<td>-</td>
+		<td>{{entity.powerToday}}</td>
+		<td>-</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<th rowspan="5">환 경</th>
+		<th colspan="2">보일러(1)(2) 탄소배출량(toe)</th>
+		<td>{{entity.co21SumText}}</td>
+		<td>{{entity.co21TodayText}}</td>
+		<td>{{entity.co21TotalText}}</td>
+		<td>1(toe) = 0.001043(Nm3) </td>
+	</tr>
+	<tr>
+		<th colspan="2">열량계(1)(2) 탄소배출량(toe)</th>
+		<td>{{entity.co22SumText}}</td>
+		<td>{{entity.co22TodayText}}</td>
+		<td>{{entity.co22TotalText}}</td>
+		<td>1(toe) = 10(Gcal)</td>
+	</tr>
+	<tr>
+		<th colspan="2">경유 탄소배출량(toe)</th>
+		<td>{{entity.co23SumText}}</td>
+		<td>{{entity.co23TodayText}}</td>
+		<td>{{entity.co23TotalText}}</td>
+		<td>1(toe) = 0.000901(l)</td>
+	</tr>
+	<tr>
+		<th colspan="2">전력량 탄소배출량(toe)</th>
+		<td>{{entity.co24SumText}}</td>
+		<td>{{entity.co24TodayText}}</td>
+		<td>{{entity.co24TotalText}}</td>
+		<td>1(toe) = 0.00023(Kwh) </td>
+	</tr>
+	<tr>
+		<th colspan="2">총 합</th>
+		<td>{{entity.co20SumText}}</td>
+		<td>{{entity.co20TodayText}}</td>
+		<td>{{entity.co20TotalText}}</td>
+		<td>-</td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>A/S, 유지보수업체 및 주요 방문자현황 (전일)</caption>
+	<thead>
+	<tr>
+		<th>구 분</th>
+		<th>방문업체</th>
+		<th>점검자</th>
+		<th>작업시간</th>
+		<th>점검항목</th>
+		<th class="col-md-5">조치사항</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{{entity.d4011}}</td>
+		<td>{{entity.d4012}}</td>
+		<td>{{entity.d4013}}</td>
+		<td>{{entity.d4014}}</td>
+		<td>{{entity.d4015}}</td>
+		<td>{{entity.d4016}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d4021}}</td>
+		<td>{{entity.d4022}}</td>
+		<td>{{entity.d4023}}</td>
+		<td>{{entity.d4024}}</td>
+		<td>{{entity.d4025}}</td>
+		<td>{{entity.d4026}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d4031}}</td>
+		<td>{{entity.d4032}}</td>
+		<td>{{entity.d4033}}</td>
+		<td>{{entity.d4034}}</td>
+		<td>{{entity.d4035}}</td>
+		<td>{{entity.d4036}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d4041}}</td>
+		<td>{{entity.d4042}}</td>
+		<td>{{entity.d4043}}</td>
+		<td>{{entity.d4044}}</td>
+		<td>{{entity.d4045}}</td>
+		<td>{{entity.d4046}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d4051}}</td>
+		<td>{{entity.d4052}}</td>
+		<td>{{entity.d4053}}</td>
+		<td>{{entity.d4054}}</td>
+		<td>{{entity.d4055}}</td>
+		<td>{{entity.d4056}}</td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>업 무 보 고</caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th colspan="3">전 일 완 료 업 무</th>
+		<th colspan="2">업 무 계 획</th>
+		<th>완료예정일</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="10">기계</th>
+		<td colspan="3">{{entity.d5011}}</td>
+		<td colspan="2">{{entity.d5012}}</td>
+		<td>{{entity.d5013}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5021}}</td>
+		<td colspan="2">{{entity.d5022}}</td>
+		<td>{{entity.d5023}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5031}}</td>
+		<td colspan="2">{{entity.d5032}}</td>
+		<td>{{entity.d5033}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5041}}</td>
+		<td colspan="2">{{entity.d5042}}</td>
+		<td>{{entity.d5043}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5051}}</td>
+		<td colspan="2">{{entity.d5052}}</td>
+		<td>{{entity.d5053}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5061}}</td>
+		<td colspan="2">{{entity.d5062}}</td>
+		<td>{{entity.d5063}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5071}}</td>
+		<td colspan="2">{{entity.d5072}}</td>
+		<td>{{entity.d5073}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5081}}</td>
+		<td colspan="2">{{entity.d5082}}</td>
+		<td>{{entity.d5083}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5091}}</td>
+		<td colspan="2">{{entity.d5092}}</td>
+		<td>{{entity.d5093}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5101}}</td>
+		<td colspan="2">{{entity.d5102}}</td>
+		<td>{{entity.d5103}}</td>
+	</tr>
+	<tr>
+		<th rowspan="10">전기</th>
+		<td colspan="3">{{entity.d5111}}</td>
+		<td colspan="2">{{entity.d5112}}</td>
+		<td>{{entity.d5113}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5121}}</td>
+		<td colspan="2">{{entity.d5122}}</td>
+		<td>{{entity.d5123}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5131}}</td>
+		<td colspan="2">{{entity.d5132}}</td>
+		<td>{{entity.d5133}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5141}}</td>
+		<td colspan="2">{{entity.d5142}}</td>
+		<td>{{entity.d5143}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5151}}</td>
+		<td colspan="2">{{entity.d5152}}</td>
+		<td>{{entity.d5153}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5161}}</td>
+		<td colspan="2">{{entity.d5162}}</td>
+		<td>{{entity.d5163}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5171}}</td>
+		<td colspan="2">{{entity.d5172}}</td>
+		<td>{{entity.d5173}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5181}}</td>
+		<td colspan="2">{{entity.d5182}}</td>
+		<td>{{entity.d5183}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5191}}</td>
+		<td colspan="2">{{entity.d5192}}</td>
+		<td>{{entity.d5193}}</td>
+	</tr>
+	<tr>
+		<td colspan="3">{{entity.d5201}}</td>
+		<td colspan="2">{{entity.d5202}}</td>
+		<td>{{entity.d5203}}</td>
+	</tr>
+	<tr>
+		<th rowspan="11">자재<br/>사용<br/>현황</th>
+		<th>품명</th>
+		<th>규격</th>
+		<th>수량</th>
+		<th>단위</th>
+		<th>내역</th>
+		<th>비고</th>
+	</tr>
+	<tr>
+		<td>{{entity.d5211}}</td>
+		<td>{{entity.d5212}}</td>
+		<td>{{entity.d5213}}</td>
+		<td>{{entity.d5214}}</td>
+		<td>{{entity.d5215}}</td>
+		<td>{{entity.d5216}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5221}}</td>
+		<td>{{entity.d5222}}</td>
+		<td>{{entity.d5223}}</td>
+		<td>{{entity.d5224}}</td>
+		<td>{{entity.d5225}}</td>
+		<td>{{entity.d5226}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5231}}</td>
+		<td>{{entity.d5232}}</td>
+		<td>{{entity.d5233}}</td>
+		<td>{{entity.d5234}}</td>
+		<td>{{entity.d5235}}</td>
+		<td>{{entity.d5236}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5241}}</td>
+		<td>{{entity.d5242}}</td>
+		<td>{{entity.d5243}}</td>
+		<td>{{entity.d5244}}</td>
+		<td>{{entity.d5245}}</td>
+		<td>{{entity.d5246}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5251}}</td>
+		<td>{{entity.d5252}}</td>
+		<td>{{entity.d5253}}</td>
+		<td>{{entity.d5254}}</td>
+		<td>{{entity.d5255}}</td>
+		<td>{{entity.d5256}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5261}}</td>
+		<td>{{entity.d5262}}</td>
+		<td>{{entity.d5263}}</td>
+		<td>{{entity.d5264}}</td>
+		<td>{{entity.d5265}}</td>
+		<td>{{entity.d5266}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5271}}</td>
+		<td>{{entity.d5272}}</td>
+		<td>{{entity.d5273}}</td>
+		<td>{{entity.d5274}}</td>
+		<td>{{entity.d5275}}</td>
+		<td>{{entity.d5276}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5281}}</td>
+		<td>{{entity.d5282}}</td>
+		<td>{{entity.d5283}}</td>
+		<td>{{entity.d5284}}</td>
+		<td>{{entity.d5285}}</td>
+		<td>{{entity.d5286}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5291}}</td>
+		<td>{{entity.d5292}}</td>
+		<td>{{entity.d5293}}</td>
+		<td>{{entity.d5294}}</td>
+		<td>{{entity.d5295}}</td>
+		<td>{{entity.d5296}}</td>
+	</tr>
+	<tr>
+		<td>{{entity.d5301}}</td>
+		<td>{{entity.d5302}}</td>
+		<td>{{entity.d5303}}</td>
+		<td>{{entity.d5304}}</td>
+		<td>{{entity.d5305}}</td>
+		<td>{{entity.d5306}}</td>
+	</tr>	
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>특 기 사 항</caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th class="col-md-6" colspan="4">비 고</th>
+		<th>지시사항</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="3">기 계</th>
+		<td colspan="4">{{reportEntity.d6011}}></td>
+		<td>{{reportEntity.d6012}}></td>
+	</tr>
+	<tr>
+		<td colspan="4">{{reportEntity.d6021}}></td>
+		<td>{{reportEntity.d6022}}></td>
+	</tr>
+	<tr>
+		<td colspan="4">{{reportEntity.d6031}}></td>
+		<td>{{reportEntity.d6032}}></td>
+	</tr>
+	<tr>
+		<th rowspan="3">전 기</th>
+		<td colspan="4">{{reportEntity.d6041}}></td>
+		<td>{{reportEntity.d6042}}></td>
+	</tr>
+	<tr>
+		<td colspan="4">{{reportEntity.d6051}}></td>
+		<td>{{reportEntity.d6052}}></td>
+	</tr>
+	<tr>
+		<td colspan="4">{{entity.d6061}}</td>
+		<td>{{entity.d6062}}</td>
+	</tr>
+	<tr>
+		<th rowspan="3">미 화</th>
+		<th class="col-md-1">구분 </th>
+		<th>전일재고</th>
+		<th>사용량</th>
+		<th>현재고</th>
+		<td><f:input path="d6071" class="span12" /></td>
+	</tr>
+	<tr>
+		<th>종량제 </th>
+		<td>{{entity.item1Sum}}</td>
+		<td>{{entity.item1Today}}</td>
+		<td>{{entity.item1Total}}</td>
+		<td>{{entity.d6081}}</td>
+	</tr>
+	<tr>
+		<th>마대 </th>
+		<td>{{entity.item2Sum}}</td>
+		<td>{{entity.item2Today}}</td>
+		<td>{{entity.item2Total}}</td>
+		<td>{{entity.d6091}}</td>
+	</tr>
+	</tbody>
+</table>
+
+<div class="form-actions">
+	<span class="btn btn-primary btn-rounded pull-right">Edit</span>
+	<span class="btn btn-default btn-inverse" ng-click="cancelAction()">Cancel</span>
+</div>

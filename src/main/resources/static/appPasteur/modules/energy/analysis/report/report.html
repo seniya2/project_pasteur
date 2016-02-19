@@ -19,15 +19,17 @@
 					<div class="pull-left margin_left_10">	
 						<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
 							data-ui-options="{viewMode: 'days', format: 'YYYY-MM-DD', useCurrent: false}" type="text" 
-							id="daily" name="daily" ng-model="daily"/>
+							id="searchDate" name="searchDate" ng-model="searchDate"/>
 					</div>
-					<ul ng-show="daily_error = true" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
+					<ul ng-show="searchDate_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 				</div>
 				<span class="input-group-btn pull-left">
 					<button type="submit" class="btn btn-default">선택</button>
                 </span>
 			</div>
 			</form>
+			
+			<ng-include src="template"></ng-include>
 			
 		</div>
 	</section>

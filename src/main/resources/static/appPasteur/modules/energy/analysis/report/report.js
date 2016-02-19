@@ -5,12 +5,14 @@
 	function energyReportController (config, $scope, $resource, $http, $location, $timeout, usSpinnerService) {
 		
 		var search = $location.search();
+		$scope.entityName = "energyReport";
 		$scope.template_base = "appPasteur/modules/energy/analysis/report/";
-		$scope.template = $scope.template_base + "report-edit.html";
+		$scope.template = "";
 		$scope.baseUiUrl = config.settings.network.ui;
 		$scope.baseRestUrl = config.settings.network.rest;
-		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByDaily";		
-		$scope.entityName = "energyReport";
+		$scope.reportUrl = config.settings.network.rest+$scope.entityName+"/";
+		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByDaily";
+		$scope.reportEntity = new Object();
 		
 		$scope.disableScreen = function(enable) {			
 			if (enable) {
@@ -36,6 +38,7 @@
 		}
 		
 		$scope.currentDate = "";
+		$scope.searchDate = "";
 		
 		$scope.getCurrentDate = function() {
 			var nowDate = new Date();			
@@ -52,6 +55,7 @@
 		
 		$scope.prepareAction = function() {
 			
+			$scope.reportEntity = new Object();
 			$timeout(function () {				
 				usSpinnerService.stop('app-spinner');
 			}, 1000 , true );
@@ -59,8 +63,144 @@
 		}
 		
 		$scope.searchDayFormSubmit = function() {
-			console.log("searchDayFormSubmit -->");
+			console.log("searchDayFormSubmit -->");			
+			
+			var searchDate = document.getElementById("searchDate");
+			$scope.searchDate = searchDate.value;
+			
+			var errCnt = 0;
+			if (angular.isUndefined($scope.searchDate) || $scope.searchDate == "") {
+				$scope.searchDate_error=true;
+				errCnt++;
+			}
+			
+			if (errCnt>0) {
+				return;
+			}
+			
+			$scope.searchDate_error=false;
+			//console.log("searchDate : " + $scope.searchDate);
+						
+			$scope.searchAction($scope.searchDate, "viewOrEdit");
+			
 		}
+		
+		$scope.editFormSubmit = function() {
+			console.log("editFormSubmitSubmit -->");
+			console.log($scope.reportEntity);
+			
+			$scope.disableScreen(true);
+			$scope.searchAction($scope.searchDate, "createOrUpdate");
+			
+		}
+		
+		
+		$scope.readAction = function(id) {			
+			var reportUrl = $scope.reportUrl + day;
+			console.log("reportUrl : " + reportUrl);
+			
+			$http({
+				method : 'GET',
+				url : reportUrl,
+				headers: {'Content-type': 'application/json'}					
+			}).success(function(data) {
+				
+				console.log(data);
+				
+				
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+		}
+		
+		
+		$scope.searchAction = function(day, mode) {
+			
+			var qurey = "?daily="+day;
+			var searchUrl = $scope.searchUrl + qurey;
+			
+			console.log("searchUrl : " + searchUrl);
+			
+			$http({
+				method : 'GET',
+				url : searchUrl,
+				headers: {'Content-type': 'application/json'}					
+			}).success(function(data) {
+				
+				console.log(data.energyReport);
+				
+				var energyReportArray = data._embedded.energyReport;
+				
+				if ("viewOrEdit" == mode) {
+					
+					if (energyReportArray.length == 0) {
+						$scope.editAction(null);
+					}
+					
+				}else if ("createOrUpdate" == mode) {
+					
+					if (energyReportArray.length == 0) {
+						$scope.createAction();
+					}
+					
+				}
+				
+				console.log(data);
+				
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+			
+		}
+		
+		
+		$scope.editAction = function(reportEntity) {
+			
+			if (reportEntity == null) {
+				$scope.reportEntity = new Object();
+				$scope.reportEntity.daily = $scope.searchDate;
+			}
+			
+			$scope.template = $scope.template_base + "report-edit.html";
+			
+		}
+		
+		$scope.createAction = function() {
+			console.log("createAction -->");
+			console.log($scope.reportEntity);
+			
+			$http({
+				method : 'POST',
+				url : $scope.baseRestUrl + $scope.entityName,
+				headers : {
+					'Content-Type' : 'application/json; charset=UTF-8'
+				},
+				data : $scope.reportEntity
+			}).success(function(data) {
+				$scope.disableScreen(false);
+				
+				$scope.massagePopup("저장 되었습니다.", "success");
+				
+			}).error(function(error) {
+				$scope.disableScreen(false);
+				
+				$scope.massagePopup("저장 실패", "error");
+				// $scope.widgetsError = error;
+			});
+			
+		}
+		
+		$scope.updateAction = function() {
+			console.log("createAction -->");
+			console.log($scope.reportEntity);
+			
+			
+			
+		}
+		
+		
+		
+		
 		
 	
 	}
