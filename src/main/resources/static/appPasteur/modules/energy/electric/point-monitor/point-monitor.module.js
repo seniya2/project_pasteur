@@ -2,7 +2,8 @@
   'use strict';
 
   var module = angular.module('singApp.electric-monitor', [
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap'
   ]);
 
   module.config(appConfig);

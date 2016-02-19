@@ -58,6 +58,7 @@
 		<div id="tabs1c" class="tab-content mb-lg">
 			<div class="tab-pane clearfix {{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}" id="{{logEntity.tagID}}" ng-repeat="logEntity in logList.values()">
 				<div>
+					<span>총 {{logEntity.page.totalElements}}개의 이력이 있습니다.</span>
 					<table class="table table-hover table-lg mt-lg mb-0">
 						<thead>
 							<tr>

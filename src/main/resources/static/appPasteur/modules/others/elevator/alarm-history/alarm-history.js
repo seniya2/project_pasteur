@@ -192,7 +192,7 @@
 				listUrl = listUrl + '&min='+$scope.searchDate1 + '&max='+$scope.searchDate2 ;
 			}
 			
-			//console.log("listUrl : " + listUrl);
+			console.log("listUrl : " + listUrl);
 
 			$http(
 					{

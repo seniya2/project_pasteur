@@ -26,9 +26,10 @@
 				</div>
 			</div>
 			</form>			
-
-			<table
-				class="table table-hover table-lg mt-lg mb-0 margin_top_30"  ng-show="alarmList.length>0">
+			
+			<span>총 {{page.totalElements}}개의 알람 설정이 있습니다.</span>
+		
+			<table class="table table-hover table-lg mt-lg mb-0 margin_top_30" ng-show="alarmList.length>0">
 				<thead>
 					<tr>
 					<tr>
@@ -71,6 +72,13 @@
 					</tr>
 				</tbody>
 			</table>
+			
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>	
+			
+			
+			
 			<!-- 
 			<div>
 				<code>page.size : {{page.size}}</code>
@@ -79,9 +87,7 @@
 				<code>paginationDisplay : {{paginationDisplay}}</code>
 			</div>
 			 -->
-			<div class="clearfix text-center" ng-show="paginationDisplay">
-				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
-			</div>	
+			
 			
 			<table
 				class="table table-hover table-lg mt-lg mb-0 margin_top_30"  ng-show="alarmList.length==0">
@@ -102,6 +108,7 @@
 					</tr>
 				</tbody>
 			</table>
+			
 		</div>
 	</section>
 </div>

@@ -28,6 +28,10 @@ table thead .sorting_desc_disabled {
   background-image: url("../assets/datatables/sort_desc_disabled.png");
 }
 
+.table-report th {
+    background-color: #fff
+}
+
 
 .padding_top_5 {
 	padding-top: 5px;

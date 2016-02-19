@@ -1,0 +1,486 @@
+<table class="table table-bordered table-hover table-report">
+	<caption>기본정보</caption>
+	<thead>
+	<tr>
+		<th>날짜</th>
+		<th>날씨</th>
+		<th>최고온도</th>
+		<th>최저온도</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><input type="text" class="form-control" id="daily" name="daily" ng-model="daily" readonly="true"></td>
+		<td><input type="text" class="form-control" id="d1012" name="d1012" ng-model="d1012"></td>
+		<td><input type="text" class="form-control" id="d1013" name="d1013" ng-model="d1013"></td>
+		<td><input type="text" class="form-control" id="d1014" name="d1014" ng-model="d1014"></td>
+	</tr>			
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>근 무 현 황 </caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th class="col-md-1">정원</th>
+		<th class="col-md-1">현재원</th>
+		<th class="col-md-1">비번</th>
+		<th class="col-md-1">휴무</th>
+		<th class="col-md-1">휴가 </th>
+		<th class="col-md-1">결원 </th>
+		<th class="col-md-5">비고(결원내용)</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th>시 설</th>
+		<td><input type="text" class="form-control" id="d2011" name="d2011" ng-model="d2011"></td>
+		<td><input type="text" class="form-control" id="d2012" name="d2012" ng-model="d2012"></td>
+		<td><input type="text" class="form-control" id="d2013" name="d2013" ng-model="d2013"></td>
+		<td><input type="text" class="form-control" id="d2014" name="d2014" ng-model="d2014"></td>
+		<td><input type="text" class="form-control" id="d2015" name="d2015" ng-model="d2015"></td>
+		<td><input type="text" class="form-control" id="d2016" name="d2016" ng-model="d2016"></td>
+		<td><input type="text" class="form-control" id="d2017" name="d2017" ng-model="d2017"></td>
+	</tr>
+	<tr>
+		<th>보 안</th>
+		<td><input type="text" class="form-control" id="d2021" name="d2021" ng-model="d2021"></td>
+		<td><input type="text" class="form-control" id="d2022" name="d2022" ng-model="d2022"></td>
+		<td><input type="text" class="form-control" id="d2023" name="d2023" ng-model="d2023"></td>
+		<td><input type="text" class="form-control" id="d2024" name="d2024" ng-model="d2024"></td>
+		<td><input type="text" class="form-control" id="d2025" name="d2025" ng-model="d2025"></td>
+		<td><input type="text" class="form-control" id="d2026" name="d2026" ng-model="d2026"></td>
+		<td><input type="text" class="form-control" id="d2027" name="d2027" ng-model="d2027"></td>
+	</tr>
+	<tr>
+		<th>미 화</th>
+		<td><input type="text" class="form-control" id="d2031" name="d2031" ng-model="d2031"></td>
+		<td><input type="text" class="form-control" id="d2032" name="d2032" ng-model="d2032"></td>
+		<td><input type="text" class="form-control" id="d2033" name="d2033" ng-model="d2033"></td>
+		<td><input type="text" class="form-control" id="d2034" name="d2034" ng-model="d2034"></td>
+		<td><input type="text" class="form-control" id="d2035" name="d2035" ng-model="d2035"></td>
+		<td><input type="text" class="form-control" id="d2036" name="d2036" ng-model="d2036"></td>
+		<td><input type="text" class="form-control" id="d2037" name="d2037" ng-model="d2037"></td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>에너지 사용량 및 장비 가동 현황</caption>
+	<thead>
+	<tr>
+		<th colspan="3">구 분</th>
+		<th class="col-md-1">전일 누계</th>
+		<th class="col-md-1">금일 사용</th>
+		<th class="col-md-1">사용 누계</th>
+		<th class="col-md-5">비고</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="9">기 계</th>
+		<th class="col-md-3" colspan="2">상수도(ton)</th>
+		<td><input type="text" class="form-control" id="waterSum" name="waterSum" ng-model="waterSum"></td>
+		<td><input type="text" class="form-control" id="waterToday" name="waterToday" ng-model="waterToday"></td>
+		<td><input type="text" class="form-control" id="waterTotal" name="waterTotal" ng-model="waterTotal"></td>
+		<td><input type="text" class="form-control" id="d3021" name="d3021" ng-model="d3021"></td>
+	</tr>
+	<tr>
+		<th rowspan="2">가스<br/>(m3)</th>
+		<th>보일러(1)</th>
+		<td><input type="text" class="form-control" id="boiler1Sum" name="boiler1Sum" ng-model="boiler1Sum"></td>
+		<td><input type="text" class="form-control" id="boiler1Today" name="boiler1Today" ng-model="boiler1Today"></td>
+		<td><input type="text" class="form-control" id="boiler1Total" name="boiler1Total" ng-model="boiler1Total"></td>
+		<td><input type="text" class="form-control" id="d3031" name="d3031" ng-model="d3031"></td>
+	</tr>
+	<tr>
+		<th>보일러(2)</th>
+		<td><input type="text" class="form-control" id="boiler2Sum" name="boiler2Sum" ng-model="boiler2Sum"></td>
+		<td><input type="text" class="form-control" id="boiler2Today" name="boiler2Today" ng-model="boiler2Today"></td>
+		<td><input type="text" class="form-control" id="boiler2Total" name="boiler2Total" ng-model="boiler2Total"></td>
+		<td><input type="text" class="form-control" id="d3041" name="d3041" ng-model="d3041"></td>
+	</tr>
+	<tr>
+		<th colspan="2">폐수배출량(m3)</th>
+		<td><input type="text" class="form-control" id="wastesSum" name="wastesSum" ng-model="wastesSum"></td>
+		<td><input type="text" class="form-control" id="wastesToday" name="wastesToday" ng-model="wastesToday"></td>
+		<td><input type="text" class="form-control" id="wastesTotal" name="wastesTotal" ng-model="wastesTotal"></td>
+		<td><input type="text" class="form-control" id="d3051" name="d3051" ng-model="d3051"></td>
+	</tr>
+	<tr>
+		<th rowspan="2">지역난방<br/>(Gcal) </th>
+		<th>열량계(1)</th>
+		<td><input type="text" class="form-control" id="heat1Sum" name="heat1Sum" ng-model="heat1Sum"></td>
+		<td><input type="text" class="form-control" id="heat1Today" name="heat1Today" ng-model="heat1Today"></td>
+		<td><input type="text" class="form-control" id="heat1Total" name="heat1Total" ng-model="heat1Total"></td>
+		<td><input type="text" class="form-control" id="d3061" name="d3061" ng-model="d3061"></td>
+	</tr>
+	<tr>
+		<th>열량계(2)</th>
+		<td><input type="text" class="form-control" id="heat2Sum" name="heat2Sum" ng-model="heat2Sum"></td>
+		<td><input type="text" class="form-control" id="heat2Today" name="heat2Today" ng-model="heat2Today"></td>
+		<td><input type="text" class="form-control" id="heat2Total" name="heat2Total" ng-model="heat2Total"></td>
+		<td><input type="text" class="form-control" id="d3071" name="d3071" ng-model="d3071"></td>
+	</tr>
+	<tr>
+		<th colspan="2">경유(l)</th>
+		<td><input type="text" class="form-control" id="oilSum" name="oilSum" ng-model="oilSum"></td>
+		<td><input type="text" class="form-control" id="oilToday" name="oilToday" ng-model="oilToday"></td>
+		<td><input type="text" class="form-control" id="oilTotal" name="oilTotal" ng-model="oilTotal"></td>
+		<td><input type="text" class="form-control" id="d3081" name="d3081" ng-model="d3081"></td>
+	</tr>
+	<tr>
+		<th colspan="2">냉동기운전시간(흡수식) </th>
+		<td><input type="text" class="form-control" id="freeze1Sum" name="freeze1Sum" ng-model="freeze1Sum"></td>
+		<td><input type="text" class="form-control" id="freeze1Today" name="freeze1Today" ng-model="freeze1Today"></td>
+		<td><input type="text" class="form-control" id="freeze1Total" name="freeze1Total" ng-model="freeze1Total"></td>
+		<td><input type="text" class="form-control" id="d3091" name="d3091" ng-model="d3091"></td>
+	</tr>
+	<tr>
+		<th colspan="2">냉동기운전시간(스크류)</th>
+		<td><input type="text" class="form-control" id="freeze2Sum" name="freeze2Sum" ng-model="freeze2Sum"></td>
+		<td><input type="text" class="form-control" id="freeze2Today" name="freeze2Today" ng-model="freeze2Today"></td>
+		<td><input type="text" class="form-control" id="freeze2Total" name="freeze2Total" ng-model="freeze2Total"></td>
+		<td><input type="text" class="form-control" id="d3101" name="d3101" ng-model="d3101"></td>
+	</tr>
+	<tr>
+		<th rowspan="2">전 기</th>
+		<th colspan="2">전력량(kWh)</th>
+		<td><input type="text" class="form-control" id="wattSum" name="wattSum" ng-model="wattSum"></td>
+		<td><input type="text" class="form-control" id="wattToday" name="wattToday" ng-model="wattToday"></td>
+		<td><input type="text" class="form-control" id="wattTotal" name="wattTotal" ng-model="wattTotal"></td>
+		<td>전월누계  {{powerMonth}}</td>
+	</tr>
+	<tr>
+		<th colspan="2">피크치(kWh)</th>
+		<td>-</td>
+		<td><input type="text" class="form-control" id="powerToday" name="powerToday" ng-model="powerToday"></td>
+		<td>-</td>
+		<td>-</td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>A/S, 유지보수업체 및 주요 방문자현황 (전일)</caption>
+	<thead>
+	<tr>
+		<th>구 분</th>
+		<th>방문업체</th>
+		<th>점검자</th>
+		<th>작업시간</th>
+		<th>점검항목</th>
+		<th class="col-md-5">조치사항</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><input type="text" class="form-control" id="d4011" name="d4011" ng-model="d4011"></td>
+		<td><input type="text" class="form-control" id="d4012" name="d4012" ng-model="d4012"></td>
+		<td><input type="text" class="form-control" id="d4013" name="d4013" ng-model="d4013"></td>
+		<td><input type="text" class="form-control" id="d4014" name="d4014" ng-model="d4014"></td>
+		<td><input type="text" class="form-control" id="d4015" name="d4015" ng-model="d4015"></td>
+		<td><input type="text" class="form-control" id="d4016" name="d4016" ng-model="d4016"></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d4021" name="d4021" ng-model="d4021"></td>
+		<td><input type="text" class="form-control" id="d4022" name="d4022" ng-model="d4022"></td>
+		<td><input type="text" class="form-control" id="d4023" name="d4023" ng-model="d4023"></td>
+		<td><input type="text" class="form-control" id="d4024" name="d4024" ng-model="d4024"></td>
+		<td><input type="text" class="form-control" id="d4025" name="d4025" ng-model="d4025"></td>
+		<td><input type="text" class="form-control" id="d4026" name="d4026" ng-model="d4026"></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d4031" name="d4031" ng-model="d4031"></td>
+		<td><input type="text" class="form-control" id="d4032" name="d4032" ng-model="d4032"></td>
+		<td><input type="text" class="form-control" id="d4033" name="d4033" ng-model="d4033"></td>
+		<td><input type="text" class="form-control" id="d4034" name="d4034" ng-model="d4034"></td>
+		<td><input type="text" class="form-control" id="d4035" name="d4035" ng-model="d4035"></td>
+		<td><input type="text" class="form-control" id="d4036" name="d4036" ng-model="d4036"></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d4041" name="d4041" ng-model="d4041"></td>
+		<td><input type="text" class="form-control" id="d4042" name="d4042" ng-model="d4042"></td>
+		<td><input type="text" class="form-control" id="d4043" name="d4043" ng-model="d4043"></td>
+		<td><input type="text" class="form-control" id="d4044" name="d4044" ng-model="d4044"></td>
+		<td><input type="text" class="form-control" id="d4045" name="d4045" ng-model="d4045"></td>
+		<td><input type="text" class="form-control" id="d4046" name="d4046" ng-model="d4046"></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d4051" name="d4051" ng-model="d4051"></td>
+		<td><input type="text" class="form-control" id="d4052" name="d4052" ng-model="d4052"></td>
+		<td><input type="text" class="form-control" id="d4053" name="d4053" ng-model="d4053"></td>
+		<td><input type="text" class="form-control" id="d4054" name="d4054" ng-model="d4054"></td>
+		<td><input type="text" class="form-control" id="d4055" name="d4055" ng-model="d4055"></td>
+		<td><input type="text" class="form-control" id="d4056" name="d4056" ng-model="d4056"></td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>업 무 보 고</caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th colspan="3">전 일 완 료 업 무</th>
+		<th colspan="2">업 무 계 획</th>
+		<th>완료예정일</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="10">기계</th>
+		<td colspan="3"><input type="text" class="form-control" id="d5011" name="d5011" ng-model="d5011"></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5012" name="d5012" ng-model="d5012"></td>
+		<td><input type="text" class="form-control" id="d5013" name="d5013" ng-model="d5013"></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5021" name="d5021" ng-model="d5021"><f:input path="d5021" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5022" name="d5022" ng-model="d5022"><f:input path="d5022" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5023" name="d5023" ng-model="d5023"><f:input path="d5023" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5031" name="d5031" ng-model="d5031"><f:input path="d5031" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5032" name="d5032" ng-model="d5032"><f:input path="d5032" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5033" name="d5033" ng-model="d5033"><f:input path="d5033" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5041" name="d5041" ng-model="d5041"><f:input path="d5041" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5042" name="d5042" ng-model="d5042"><f:input path="d5042" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5043" name="d5043" ng-model="d5043"><f:input path="d5043" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5051" name="d5051" ng-model="d5051"><f:input path="d5051" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5052" name="d5052" ng-model="d5052"><f:input path="d5052" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5053" name="d5053" ng-model="d5053"><f:input path="d5053" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5061" name="d5061" ng-model="d5061"><f:input path="d5061" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5062" name="d5062" ng-model="d5062"><f:input path="d5062" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5063" name="d5063" ng-model="d5063"><f:input path="d5063" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5071" name="d5071" ng-model="d5071"><f:input path="d5071" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5072" name="d5072" ng-model="d5072"><f:input path="d5072" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5073" name="d5073" ng-model="d5073"><f:input path="d5073" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5081" name="d5081" ng-model="d5081"><f:input path="d5081" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5082" name="d5082" ng-model="d5082"><f:input path="d5082" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5083" name="d5083" ng-model="d5083"><f:input path="d5083" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5091" name="d5091" ng-model="d5091"><f:input path="d5091" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5092" name="d5092" ng-model="d5092"><f:input path="d5092" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5093" name="d5093" ng-model="d5093"><f:input path="d5093" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5101" name="d5101" ng-model="d5101"><f:input path="d5101" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5102" name="d5102" ng-model="d5102"><f:input path="d5102" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5103" name="d5103" ng-model="d5103"><f:input path="d5103" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<th rowspan="10">전기</th>
+		<td colspan="3"><input type="text" class="form-control" id="d5111" name="d5111" ng-model="d5111"><f:input path="d5111" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5112" name="d5112" ng-model="d5112"><f:input path="d5112" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5113" name="d5113" ng-model="d5113"><f:input path="d5113" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5121" name="d5121" ng-model="d5121"><f:input path="d5121" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5122" name="d5122" ng-model="d5122"><f:input path="d5122" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5123" name="d5123" ng-model="d5123"><f:input path="d5123" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5131" name="d5131" ng-model="d5131"><f:input path="d5131" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5132" name="d5132" ng-model="d5132"><f:input path="d5132" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5133" name="d5133" ng-model="d5133"><f:input path="d5133" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5141" name="d5141" ng-model="d5141"><f:input path="d5141" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5142" name="d5142" ng-model="d5142"><f:input path="d5142" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5143" name="d5143" ng-model="d5143"><f:input path="d5143" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5151" name="d5151" ng-model="d5151"><f:input path="d5151" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5152" name="d5152" ng-model="d5152"><f:input path="d5152" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5153" name="d5153" ng-model="d5153"><f:input path="d5153" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5161" name="d5161" ng-model="d5161"><f:input path="d5161" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5162" name="d5162" ng-model="d5162"><f:input path="d5162" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5163" name="d5163" ng-model="d5163"><f:input path="d5163" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5171" name="d5171" ng-model="d5171"><f:input path="d5171" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5172" name="d5172" ng-model="d5172"><f:input path="d5172" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5173" name="d5173" ng-model="d5173"><f:input path="d5173" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5181" name="d5181" ng-model="d5181"><f:input path="d5181" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5182" name="d5182" ng-model="d5182"><f:input path="d5182" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5183" name="d5183" ng-model="d5183"><f:input path="d5183" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5191" name="d5191" ng-model="d5191"><f:input path="d5191" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5192" name="d5192" ng-model="d5192"><f:input path="d5192" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5193" name="d5193" ng-model="d5193"><f:input path="d5193" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="3"><input type="text" class="form-control" id="d5201" name="d5201" ng-model="d5201"><f:input path="d5201" class="span12"/></td>
+		<td colspan="2"><input type="text" class="form-control" id="d5202" name="d5202" ng-model="d5202"><f:input path="d5202" class="span12"/></td>
+		<td><input type="text" class="form-control" id="d5203" name="d5203" ng-model="d5203"><f:input path="d5203" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<th rowspan="11">자재<br/>사용<br/>현황</th>
+		<th>품명</th>
+		<th>규격</th>
+		<th>수량</th>
+		<th>단위</th>
+		<th>내역</th>
+		<th>비고</th>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5211" name="d5211" ng-model="d5211"><f:input path="d5211" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5212" name="d5212" ng-model="d5212"><f:input path="d5212" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5213" name="d5213" ng-model="d5213"><f:input path="d5213" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5214" name="d5214" ng-model="d5214"><f:input path="d5214" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5215" name="d5215" ng-model="d5215"><f:input path="d5215" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5216" name="d5216" ng-model="d5216"><f:input path="d5216" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5221" name="d5221" ng-model="d5221"><f:input path="d5221" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5222" name="d5222" ng-model="d5222"><f:input path="d5222" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5223" name="d5223" ng-model="d5223"><f:input path="d5223" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5224" name="d5224" ng-model="d5224"><f:input path="d5224" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5225" name="d5225" ng-model="d5225"><f:input path="d5225" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5226" name="d5226" ng-model="d5226"><f:input path="d5226" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5231" name="d5231" ng-model="d5231"><f:input path="d5231" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5232" name="d5232" ng-model="d5232"><f:input path="d5232" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5233" name="d5233" ng-model="d5233"><f:input path="d5233" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5234" name="d5234" ng-model="d5234"><f:input path="d5234" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5235" name="d5235" ng-model="d5235"><f:input path="d5235" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5236" name="d5236" ng-model="d5236"><f:input path="d5236" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5241" name="d5241" ng-model="d5241"><f:input path="d5241" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5242" name="d5242" ng-model="d5242"><f:input path="d5242" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5243" name="d5243" ng-model="d5243"><f:input path="d5243" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5244" name="d5244" ng-model="d5244"><f:input path="d5244" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5245" name="d5245" ng-model="d5245"><f:input path="d5245" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5246" name="d5246" ng-model="d5246"><f:input path="d5246" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5251" name="d5251" ng-model="d5251"><f:input path="d5251" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5252" name="d5252" ng-model="d5252"><f:input path="d5252" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5253" name="d5253" ng-model="d5253"><f:input path="d5253" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5254" name="d5254" ng-model="d5254"><f:input path="d5254" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5255" name="d5255" ng-model="d5255"><f:input path="d5255" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5256" name="d5256" ng-model="d5256"><f:input path="d5256" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5261" name="d5261" ng-model="d5261"><f:input path="d5261" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5262" name="d5262" ng-model="d5262"><f:input path="d5262" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5263" name="d5263" ng-model="d5263"><f:input path="d5263" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5264" name="d5264" ng-model="d5264"><f:input path="d5264" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5265" name="d5265" ng-model="d5265"><f:input path="d5265" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5266" name="d5266" ng-model="d5266"><f:input path="d5266" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5271" name="d5271" ng-model="d5271"><f:input path="d5271" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5272" name="d5272" ng-model="d5272"><f:input path="d5272" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5273" name="d5273" ng-model="d5273"><f:input path="d5273" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5274" name="d5274" ng-model="d5274"><f:input path="d5274" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5275" name="d5275" ng-model="d5275"><f:input path="d5275" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5276" name="d5276" ng-model="d5276"><f:input path="d5276" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5281" name="d5281" ng-model="d5281"><f:input path="d5281" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5282" name="d5282" ng-model="d5282"><f:input path="d5282" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5283" name="d5283" ng-model="d5283"><f:input path="d5283" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5284" name="d5284" ng-model="d5284"><f:input path="d5284" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5285" name="d5285" ng-model="d5285"><f:input path="d5285" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5286" name="d5286" ng-model="d5286"><f:input path="d5286" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5291" name="d5291" ng-model="d5291"><f:input path="d5291" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5292" name="d5292" ng-model="d5292"><f:input path="d5292" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5293" name="d5293" ng-model="d5293"><f:input path="d5293" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5294" name="d5294" ng-model="d5294"><f:input path="d5294" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5295" name="d5295" ng-model="d5295"><f:input path="d5295" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5296" name="d5296" ng-model="d5296"><f:input path="d5296" class="span12" size="1"/></td>
+	</tr>
+	<tr>
+		<td><input type="text" class="form-control" id="d5301" name="d5301" ng-model="d5301"><f:input path="d5301" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5302" name="d5302" ng-model="d5302"><f:input path="d5302" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5303" name="d5303" ng-model="d5303"><f:input path="d5303" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5304" name="d5304" ng-model="d5304"><f:input path="d5304" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5305" name="d5305" ng-model="d5305"><f:input path="d5305" class="span12" size="1"/></td>
+		<td><input type="text" class="form-control" id="d5306" name="d5306" ng-model="d5306"><f:input path="d5306" class="span12" size="1"/></td>
+	</tr>
+	
+	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-report">
+	<caption>특 기 사 항</caption>
+	<thead>
+	<tr>
+		<th class="col-md-1">구 분</th>
+		<th class="col-md-6" colspan="4">비 고</th>
+		<th>지시사항</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th rowspan="3">기 계</th>
+		<td colspan="4"><input type="text" class="form-control" id="d6011" name="d6011" ng-model="d6011"><f:input path="d6011" class="span12" htmlEscape="true"/></td>
+		<td><input type="text" class="form-control" id="d6012" name="d6012" ng-model="d6012"><f:input path="d6012" class="span12" /></td>
+	</tr>
+	<tr>
+		<td colspan="4"><input type="text" class="form-control" id="d6021" name="d6021" ng-model="d6021"><f:input path="d6021" class="span12" /></td>
+		<td><input type="text" class="form-control" id="d6022" name="d6022" ng-model="d6022"><f:input path="d6022" class="span12" /></td>
+	</tr>
+	<tr>
+		<td colspan="4"><input type="text" class="form-control" id="d6031" name="d6031" ng-model="d6031"><f:input path="d6031" class="span12" /></td>
+		<td><input type="text" class="form-control" id="d6032" name="d6032" ng-model="d6032"><f:input path="d6032" class="span12" /></td>
+	</tr>
+	<tr>
+		<th rowspan="3">전 기</th>
+		<td colspan="4"><input type="text" class="form-control" id="d6041" name="d6041" ng-model="d6041"><f:input path="d6041" class="span12" /></td>
+		<td><input type="text" class="form-control" id="d6042" name="d6042" ng-model="d6042"><f:input path="d6042" class="span12" /></td>
+	</tr>
+	<tr>
+		<td colspan="4"><input type="text" class="form-control" id="d6051" name="d6051" ng-model="d6051"><f:input path="d6051" class="span12" /></td>
+		<td><input type="text" class="form-control" id="d6052" name="d6052" ng-model="d6052"><f:input path="d6052" class="span12" /></td>
+	</tr>
+	<tr>
+		<td colspan="4"><input type="text" class="form-control" id="d6061" name="d6061" ng-model="d6061"><f:input path="d6061" class="span12" /></td>
+		<td><input type="text" class="form-control" id="d6062" name="d6062" ng-model="d6062"><f:input path="d6062" class="span12" /></td>
+	</tr>
+	<tr>
+		<th rowspan="3">미 화</th>
+		<th class="col-md-1">구분 </th>
+		<th>전일재고</th>
+		<th>사용량</th>
+		<th>현재고</th>
+		<td><f:input path="d6071" class="span12" /></td>
+	</tr>
+	<tr>
+		<th>종량제 </th>
+		<td><input type="text" class="form-control" id="item1Sum" name="item1Sum" ng-model="item1Sum"></td>
+		<td><input type="text" class="form-control" id="item1Today" name="item1Today" ng-model="item1Today"></td>
+		<td><input type="text" class="form-control" id="item1Total" name="item1Total" ng-model="item1Total"></td>
+		<td><input type="text" class="form-control" id="d6081" name="d6081" ng-model="d6081"></td>
+	</tr>
+	<tr>
+		<th>마대 </th>
+		<td><input type="text" class="form-control" id="item2Sum" name="item2Sum" ng-model="item2Sum"></td>
+		<td><input type="text" class="form-control" id="item2Today" name="item2Today" ng-model="item2Today"></td>
+		<td><input type="text" class="form-control" id="item2Total" name="item2Total" ng-model="item2Total"></td>
+		<td><input type="text" class="form-control" id="d6091" name="d6091" ng-model="d6091"></td>
+	</tr>
+	</tbody>
+</table>		

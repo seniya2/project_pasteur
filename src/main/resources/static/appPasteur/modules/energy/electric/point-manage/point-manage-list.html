@@ -23,8 +23,9 @@
 			</div>
 			</form>
 
+			<span>총 {{filtered.length}}개의 관제점이 있습니다.</span>
 			<table
-				class="table table-hover table-lg mt-lg mb-0 margin_top_30">
+				class="table table-hover table-lg mt-lg mb-0">
 				<thead>
 					<tr>
 					<tr>
@@ -36,9 +37,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="point in dataList | filter:searchText | orderBy:sortAttr:sortOder">
+					<tr ng-repeat="point in filtered = (dataList | filter:searchText | orderBy:sortAttr:sortOder)">
 					<!-- <tr ng-repeat="point in dataList | filter:searchText"> -->
-						<td class="text-center">{{point.no}}</td>		
+						<td class="text-center">{{point.no}}</td>
 						<td class="text-center">{{point.tagID}}</td>
 						<td class="text-center">{{point.name}}</td>
 						<td class="hidden-xs text-center">{{point.tagAddr | limitTo:55}}</td>

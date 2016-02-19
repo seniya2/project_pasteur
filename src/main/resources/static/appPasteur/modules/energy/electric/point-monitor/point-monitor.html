@@ -4,6 +4,9 @@
 	<div class="col-md-2 col-sm-2 point_monitor_div" id="point_monitor_div">
 		<section class="widget">
 			<div class="widget-body point-monitor-menu no-padding">
+				
+				<button type="button" ng-click="modalTest()" >popuptest</button>
+			
 				<div class="list-group list-group-lg custom_monitor_menu_energy">
 				<div ng-repeat="menu in menuList">
 					<a class="list-group-item" ng-click="svgFileChange(menu.url)" ng-class="svgFileChangeClass2(menu.url)">
@@ -25,3 +28,23 @@
 	</div>
 
 </div>
+
+
+<script type="text/ng-template" id="network-confirm-content.html">
+	<div class="modal-header">
+		<h4 class="modal-title text-align-center fw-bold mt" id="myModalLabel18">연결 오류</h4>
+	</div>
+	<div class="modal-body">	
+		<div class="row">
+			<div class="col-md-12">
+			<p class="text-align-center fs-mini text-muted mt-sm">
+			데이터 서버와의 연결이 중지되었습니다. 네트워크 환경을 확인해 주십시오.
+			</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default btn-inverse" data-ng-click="cancel()">중지</button>
+		<button type="button" class="btn btn-primary btn-rounded" data-ng-click="ok()">연결 재시도</button>
+	</div>
+</script>
