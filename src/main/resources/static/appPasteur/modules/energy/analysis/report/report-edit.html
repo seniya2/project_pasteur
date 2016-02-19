@@ -1,4 +1,5 @@
-<form name="editForm"  class="form-horizontal board_basic" ng-submit="editFormSubmit(editForm.$valid)">					
+<form name="editForm"  class="form-horizontal board_basic" ng-submit="editFormSubmit(editForm.$valid)">
+<input type="hidden" id="no" name="no" ng-model="reportEntity.no">
 <table class="table table-bordered table-hover table-report">
 	<caption>기본정보</caption>
 	<thead>
@@ -488,6 +489,7 @@
 
 <div class="form-actions">
 	<button type="submit" class="btn btn-primary btn-rounded pull-right">Save</button>
-	<span class="btn btn-default btn-inverse" ng-click="cancelAction()">Cancel</span>
+	<span class="btn btn-default btn-inverse" ng-show="reportEntity.no > 0" ng-click="viewAction(reportEntity)">Cancel</span>
+	<span class="btn btn-default btn-inverse" ng-show="reportEntity.no == undefined" ng-click="cancelAction()">Cancel</span>
 </div>
 </form>

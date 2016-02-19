@@ -88,9 +88,16 @@
 		$scope.editFormSubmit = function() {
 			console.log("editFormSubmitSubmit -->");
 			console.log($scope.reportEntity);
+			console.log("$scope.reportEntity.no : " + $scope.reportEntity.no);
 			
 			$scope.disableScreen(true);
-			$scope.searchAction($scope.searchDate, "createOrUpdate");
+			
+			if ($scope.reportEntity.no == undefined) {
+				$scope.createAction();
+			} else {
+				$scope.updateAction();
+			}
+			
 			
 		}
 		
@@ -106,7 +113,6 @@
 			}).success(function(data) {
 				
 				console.log(data);
-				
 				
 			}).error(function(error) {
 				// $scope.widgetsError = error;
@@ -135,12 +141,8 @@
 					
 					if (energyReportArray.length == 0) {
 						$scope.editAction(null);
-					}
-					
-				}else if ("createOrUpdate" == mode) {
-					
-					if (energyReportArray.length == 0) {
-						$scope.createAction();
+					} else {
+						$scope.viewAction(energyReportArray[0]);
 					}
 					
 				}
@@ -165,6 +167,13 @@
 			
 		}
 		
+		$scope.viewAction = function(reportEntity) {
+			
+			$scope.reportEntity = reportEntity;			
+			$scope.template = $scope.template_base + "report-view.html";
+			
+		}
+		
 		$scope.createAction = function() {
 			console.log("createAction -->");
 			console.log($scope.reportEntity);
@@ -177,9 +186,9 @@
 				},
 				data : $scope.reportEntity
 			}).success(function(data) {
-				$scope.disableScreen(false);
-				
+				$scope.disableScreen(false);				
 				$scope.massagePopup("저장 되었습니다.", "success");
+				$scope.searchAction($scope.searchDate, "viewOrEdit");
 				
 			}).error(function(error) {
 				$scope.disableScreen(false);
@@ -191,9 +200,26 @@
 		}
 		
 		$scope.updateAction = function() {
-			console.log("createAction -->");
+			console.log("updateAction -->");
 			console.log($scope.reportEntity);
 			
+			$http({
+				method : 'PUT',
+				url : $scope.baseRestUrl + $scope.entityName + "/" + $scope.reportEntity.no,
+				headers : {
+					'Content-Type' : 'application/json; charset=UTF-8'
+				},
+				data : $scope.reportEntity
+			}).success(function(data) {
+				$scope.disableScreen(false);
+				$scope.massagePopup("저장 되었습니다.", "success");
+				$scope.searchAction($scope.searchDate, "viewOrEdit");
+				
+			}).error(function(error) {
+				$scope.disableScreen(false);				
+				$scope.massagePopup("저장 실패", "error");
+				// $scope.widgetsError = error;
+			});
 			
 			
 		}
