@@ -12,6 +12,9 @@
 		$scope.baseRestUrl = config.settings.network.rest;
 		$scope.reportUrl = config.settings.network.rest+$scope.entityName+"/";
 		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByDaily";
+		$scope.searchMonthUrl = config.settings.network.rest+$scope.entityName+"/search/findByDailyContains";
+		
+		
 		$scope.reportEntity = new Object();
 		
 		$scope.disableScreen = function(enable) {			
@@ -119,6 +122,73 @@
 			});
 		}
 		
+		$scope.searchPreDataAction_day = function(day) {
+			
+			var newDay = day.substring(0, 7);			
+			var qurey = "?daily="+newDay+"&size=50&sort=daily,asc";
+			var searchUrl = $scope.searchMonthUrl + qurey;
+			console.log("searchUrl : " + searchUrl);
+			
+			$http({
+				method : 'GET',
+				url : searchUrl,
+				headers: {'Content-type': 'application/json'}					
+			}).success(function(data) {
+				
+				var energyReportArray = data._embedded.energyReport;
+				var preDataArray = new Array();
+				
+				for (var key in energyReportArray) {					
+					if (day == energyReportArray[key].daily) {
+						return;
+					}
+					console.log("energyReportArray[key].daily : " + energyReportArray[key].daily);
+				}								
+				//console.log(data);		
+				
+				$scope.searchPreDataAction_month(day);
+				
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+			
+		}
+		
+		$scope.searchPreDataAction_month = function(day) {
+			
+			var currentDate = new Date(day);
+			currentDate.setMonth(currentDate.getMonth()-1); 
+			var nowDateStr = currentDate.toISOString();
+			nowDateStr = nowDateStr.substr(0,7);
+			console.log("nowDateStr : " + nowDateStr);
+			
+			/*
+			var newDay = day.substring(0, 7);			
+			var qurey = "?daily="+newDay+"&size=50&sort=daily,asc";
+			var searchUrl = $scope.searchMonthUrl + qurey;
+			console.log("searchUrl : " + searchUrl);
+			
+			$http({
+				method : 'GET',
+				url : searchUrl,
+				headers: {'Content-type': 'application/json'}					
+			}).success(function(data) {
+				
+				var energyReportArray = data._embedded.energyReport;
+				var preDataArray = new Array();
+				
+				for (var key in energyReportArray) {					
+					if (day == energyReportArray[key].daily) {
+						return;
+					}
+					console.log("energyReportArray[key].daily : " + energyReportArray[key].daily);
+				}								
+				//console.log(data);				
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+			*/
+		}
 		
 		$scope.searchAction = function(day, mode) {
 			
@@ -133,16 +203,16 @@
 				headers: {'Content-type': 'application/json'}					
 			}).success(function(data) {
 				
-				console.log(data.energyReport);
-				
 				var energyReportArray = data._embedded.energyReport;
 				
 				if ("viewOrEdit" == mode) {
 					
 					if (energyReportArray.length == 0) {
 						$scope.editAction(null);
+						$scope.searchPreDataAction(day);
 					} else {
 						$scope.viewAction(energyReportArray[0]);
+						$scope.searchPreDataAction(day);
 					}
 					
 				}
