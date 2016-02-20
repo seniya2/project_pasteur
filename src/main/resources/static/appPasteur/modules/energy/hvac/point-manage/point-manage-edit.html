@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<section class="widget">
+			<div class="widget-body">
+				<form name="editForm" class="form-horizontal board_basic" 
+					data-ui-jq="parsley" 
+					data-parsley-priority-enabled="ture"
+					ng-submit="formSubmit(editForm.$valid)">
+					<fieldset>
+						<legend>
+							<span class="label label-default text-white mr-xs"> 기본 정보 </span> 기본 정보를 입력해 주세요.
+						</legend>
+						<div class="form-group">
+							<label class="control-label col-sm-3"><strong>아이디</strong></label>
+							<div class="col-sm-3 padding_top_5 margin_left_10"><strong>{{currentData.id}}</strong></div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="name"><strong>관제점</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="name" name="name" class="form-control" ng-model="currentData.name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="interval"><strong>저장주기</strong></label>
+							<div class="col-sm-9">
+								<div class="pull-left">
+									<input type="number" id="interval" name="interval" class="form-control" 
+									ng-model="currentData.interval" 
+									string-to-number
+									min="0"
+									style="width:100px">
+								</div>
+								<div class="pull-left padding_top_10 margin_left_10"> ms</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="criteria"><strong>알람조건식</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="criteria" name="criteria" class="form-control" ng-model="currentData.criteria">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="name"></label>
+							<div class="col-sm-9">
+								<pre><code>알람조건식 예시<br>1) value == "Active"<br>2) value > 570 <br>3) value > 100 && value < 200</code></pre>
+							</div>
+						</div>						
+					</fieldset>
+					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary btn-rounded pull-right">Save</button>
+						<span class="btn btn-default btn-inverse" ng-click="cancelAction()">Cancel</span>
+					</div>
+					
+				</form>
+			</div>
+		</section>
+	</div>
+</div>

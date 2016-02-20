@@ -11,8 +11,8 @@
 		$scope.baseUiUrl = config.settings.network.ui;
 		$scope.baseRestUrl = config.settings.network.rest;
 		$scope.baseXdUrl = config.settings.network.xd;
-		$scope.chartUrl = $scope.baseXdUrl+"chart/"+$scope.categoryName+"/";
-		$scope.logUrl = $scope.baseXdUrl+"history/"+$scope.categoryName+"/";
+		$scope.chartUrl = $scope.baseXdUrl+"recordChart/"+$scope.categoryName+"/";
+		$scope.logUrl = $scope.baseXdUrl+"record/"+$scope.categoryName+"/";
 		$scope.listUrl = config.settings.network.rest+$scope.entityName;
 		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByTagIDsContains";
 		

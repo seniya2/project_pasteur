@@ -2,7 +2,8 @@
 	'use strict';
 
 	var module = angular.module('singApp.energy-electric-point-manage', [ 
-	                                                      'ui.router']);
+	                                                      'ui.router',
+	                                                      'angularUtils.directives.dirPagination']);
 
 	module.config(appConfig);
 

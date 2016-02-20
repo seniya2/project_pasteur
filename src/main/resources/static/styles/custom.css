@@ -41,6 +41,14 @@ table thead .sorting_desc_disabled {
 	padding-top: 10px;
 }
 
+.padding_left_10 {
+	padding-left: 10px;
+}
+
+.padding_right_10 {
+	padding-right: 10px;
+}
+
 .margin_top_20 {
 	margin-top: 20px;
 }

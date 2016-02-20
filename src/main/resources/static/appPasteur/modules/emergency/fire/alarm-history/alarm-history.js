@@ -18,7 +18,7 @@
 		$scope.baseXdUrl = config.settings.network.xd;
 		$scope.alarmUrl = $scope.baseRestUrl + $scope.alarmEntity;
 		$scope.listUrl = config.settings.network.rest+$scope.alarmEntity;
-		$scope.listUrlXd = $scope.baseXdUrl+"history/"+$scope.categoryName+"/";
+		$scope.listUrlXd = $scope.baseXdUrl+"record/"+$scope.categoryName+"/";
 		$scope.csvFileUrl = $scope.baseUiUrl + $scope.resources_base + $scope.categoryName + ".csv";
 		
 		//console.log("listUrl : " + $scope.listUrl);		

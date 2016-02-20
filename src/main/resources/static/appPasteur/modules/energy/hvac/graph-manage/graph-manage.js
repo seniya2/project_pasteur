@@ -6,7 +6,7 @@
 	
 		var search = $location.search();
 		var s_page = search.page || 0;
-		var s_size = search.size || 2000;
+		var s_size = search.size || 12;
 		var s_sort = search.sort || 'id,desc';
 		
 		$scope.template_base = "appPasteur/modules/energy/hvac/graph-manage/";
@@ -22,8 +22,8 @@
 		$scope.tagCsvUrl = $scope.baseUiUrl + $scope.resources_base_point + $scope.categoryName + ".csv";
 		$scope.listUrlForPoint = config.settings.network.rest+$scope.entityNameForPoint;
 		$scope.listUrl = config.settings.network.rest+$scope.entityName;
-		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByTagIDsContains";
-		$scope.xdResetUrl = $scope.baseXdUrl+"reset/"+$scope.categoryName+"/";
+		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByTagIDsContains";		
+		$scope.xdListUrl = $scope.baseXdUrl+"current/"+$scope.categoryName+"/";
 				
 		//console.log("listUrl : " + $scope.listUrl);		
 		
@@ -90,50 +90,7 @@
 				datetimepicker : $scope.currentDate,
 				tagIDs : []
 		};
-		
-		$scope.tagCsvConfig = {
-				delimiter: ",",	// auto-detect
-				newline: "",	// auto-detect
-				header: true,
-				dynamicTyping: false,
-				preview: 0,
-				encoding: "",
-				worker: false,
-				comments: false,
-				step: undefined,
-				complete: function(results, file) {					
-					//$scope.tagList = results.data;
-					//console.log($scope.tagList);
-					//$scope.dataList = results.data;		
-					
-					$scope.dataList = [];
-					for (var key in results.data) {
-						//console.log("data : " + results.data[key]);
-						//results.data[key].no = parseInt(results.data[key].no);
-						
-						var tagID = results.data[key].tagID;
-						var interval = results.data[key].interval;
-						var tagName = results.data[key].name;
-						
-						if (interval > 0) {
-							$scope.dataList.push(results.data[key]);
-						}
-						
-					}
-					
-					
-					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
-					
-				},
-				error: undefined,
-				download: true,
-				skipEmptyLines: false,
-				chunk: undefined,
-				fastMode: undefined,
-				beforeFirstChunk: undefined,
-				withCredentials: undefined
-		};
-		
+				
 		$scope.$watch('currentData.subject', function() {
 			//console.log("watch : " + $scope.currentData.subject);
 			//console.log("watch : " + $scope.currentData.subject.length);			
@@ -223,10 +180,9 @@
 		
 		$scope.prepareAction = function() {
 			
-			usSpinnerService.spin("app-spinner");
-			Papa.parse($scope.tagCsvUrl, $scope.tagCsvConfig);
+			usSpinnerService.spin("app-spinner");			
+			$scope.xdListAction();
 			$scope.page = null;
-			
 		}
 		
 		
@@ -241,8 +197,30 @@
 					}).success(function(data) {
 						eval("$scope.graphList = data._embedded."+$scope.entityName);
 						$scope.page = null;
+						//$scope.page.totalElements = $scope.graphList.length;
 				//$scope.graphList = data._embedded.graphHvac;
 						$scope.paginationDisplay = false;
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+		}
+		
+		$scope.xdListAction = function() {
+			$http(
+					{
+						method : 'GET',
+						url : $scope.xdListUrl + '?size=2000'
+					}).success(function(data) {
+						$scope.dataList = [];
+						for (var key in data.content) {							
+							var tagID = data.content[key].id;
+							var interval = data.content[key].interval;
+							var tagName = data.content[key].name;							
+							if (interval > 0) {
+								$scope.dataList.push(data.content[key]);
+							}
+						}
+						$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
 			}).error(function(error) {
 				// $scope.widgetsError = error;
 			});
@@ -485,8 +463,7 @@
 				$scope.page.number = num;
 				$scope.listAction(num - 1, $scope.page.size);
 			}
-		}
-		
+		}		
 		
     }
     

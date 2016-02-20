@@ -2,7 +2,8 @@
 	'use strict';
 
 	var module = angular.module('singApp.lighting-point-manage', [ 
-	                                                      'ui.router']);
+	                                                      'ui.router',
+	                                                      'angularUtils.directives.dirPagination']);
 
 	module.config(appConfig);
 

@@ -1,6 +1,6 @@
 <div class="col-md-12">
 	<section class="widget">
-		<div class="widget-body custom_list_div_height">
+		<div class="widget-body">
 		
 			<form name="searchForm" ng-submit="searchClickFn(searchForm.$valid)">
 			<div class="clearfix form-group">
@@ -23,30 +23,49 @@
 			</div>
 			</form>
 	
-			<span>총 {{filtered.length}}개의 관제점이 있습니다.</span>
+			<span>총 {{page.totalElements}}개의 관제점이 있습니다.</span>
 			<table
 				class="table table-hover table-lg mt-lg mb-0">
 				<thead>
 					<tr>
-					<tr>
-						<th class="text-center" ng-class="getSortClass('no')" ng-click="sortAction('no')">SEQ</th>					
-						<th class="text-center" ng-class="getSortClass('tagID')" ng-click="sortAction('tagID')">아이디</th>
+					<tr>										
+						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">아이디</th>
 						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
-						<th class="hidden-xs text-center" ng-class="getSortClass('tagAddr')" ng-click="sortAction('tagAddr')">주소</th>
+						<th class="text-center col-md-2">값</th>
+						<th class="text-center" ng-class="getSortClass('status')" ng-click="sortAction('status')">상태</th>
+						<th class="hidden-xs text-center">알람조건</th>
 						<th class="hidden-xs text-center" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
+						<th class="text-center">편집</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="point in filtered = (dataList | filter:searchText | orderBy:sortAttr:sortOder)">
-					<!-- <tr ng-repeat="point in dataList | filter:searchText"> -->
-						<td class="text-center">{{point.no}}</td>		
-						<td class="text-center">{{point.tagID}}</td>
+					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="page.number">						
+						<td class="text-center">{{point.id}}</td>
 						<td class="text-center">{{point.name}}</td>
-						<td class="hidden-xs text-center">{{point.tagAddr | limitTo:55}}</td>
+						<td class="text-center">
+							<div class="pull-left text-center padding_left_10">{{point.value}}</div>
+							 <div class="pull-right text-center padding_right_10">
+								 <button
+									class="btn btn-xs btn-primary"
+									ng-click="updateValue(point.id, $index)">Last Value</button>
+							</div>							
+						</td>
+						<td class="text-center">{{point.status}}</td>
+						<td class="hidden-xs text-center">{{point.criteria}}</td>
 						<td class="hidden-xs text-center"><div ng-bind-html="point.dataType"></div></td>
+						<td class="text-center">
+								<button
+									class="btn btn-xs btn-primary"
+									ng-click="editAction(point)">
+									Edit</button>									
+						</td>
 					</tr>
-				</tbody>
+				</tbody>				
 			</table>
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
 		</div>
 	</section>
 </div>

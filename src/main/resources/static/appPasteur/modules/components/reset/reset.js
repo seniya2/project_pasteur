@@ -10,7 +10,7 @@
 		$scope.resources_base_hvac = "appPasteur/modules/energy/hvac/point-manage/resources/";		
 		$scope.baseUiUrl = config.settings.network.ui;	
 		$scope.baseXdUrl = config.settings.network.xd;
-		$scope.resetUrl = $scope.baseXdUrl+"monitor/";
+		$scope.resetUrl = $scope.baseXdUrl+"setting/";
 		$scope.csvFileUrl_electric = $scope.baseUiUrl + $scope.resources_base_electric + "electric.csv";
 		$scope.csvFileUrl_hvac = $scope.baseUiUrl + $scope.resources_base_hvac + "hvac.csv";
 		$scope.xdResetRunning = false;
@@ -49,14 +49,20 @@
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
 						
+						$scope.alarmList.set(tagID,
+								{"tagID" : tagID, 
+								"tagName" : tagName,
+								"interval" : interval,
+								"category" : "electric"});
+						/*
 						if (interval != "NULL") {
 							$scope.alarmList.set(tagID,
 									{"tagID" : tagID, 
 									"tagName" : tagName,
 									"interval" : interval,
-									"category" : "electric"}
-							);
+									"category" : "electric"});
 						}
+						*/
 					}
 					//console.log("$scope.alarmList : " + $scope.alarmList);
 					$timeout(function(){
@@ -90,6 +96,12 @@
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
 						
+						$scope.alarmList.set(tagID,
+								{"tagID" : tagID, 
+								"tagName" : tagName,
+								"interval" : interval,
+								"category" : "hvac"});
+						/*
 						if (interval != "NULL") {
 							$scope.alarmList.set(tagID,
 									{"tagID" : tagID, 
@@ -98,6 +110,7 @@
 									"category" : "hvac"}
 							);
 						}
+						*/
 					}
 					console.log($scope.alarmList);
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
@@ -129,6 +142,7 @@
 	    	
 	    	var tagUrlArray = new Array();
 	    	var intervalArray = new Array();
+	    	var nameArray = new Array();
 	    	
 	    	$scope.alarmList.forEach(function(value, key) {
 	    		//console.log("value : key" + value + " : " + key);
@@ -136,6 +150,7 @@
 	    		var alarmList_category = value.category;
 	    		var alarmList_tagID = value.tagID;
 	    		var alarmList_interval = value.interval;
+	    		var alarmList_name = value.tagName;
 	    		
 	    		alarmList_tagID = alarmList_tagID.replace("TAG_","");
 	    		var tagUrl = $scope.resetUrl + category + "/" + alarmList_tagID;
@@ -145,19 +160,29 @@
 		    		//console.log("alarmList_interval : " + alarmList_interval);		    		
 	    			tagUrlArray.push(tagUrl);
 		    		intervalArray.push(alarmList_interval);
+		    		nameArray.push(alarmList_name);
 	    		}
 	    		
 			});
 	    	
 	    	console.log(tagUrlArray.length);
     		console.log(intervalArray.length);
+    		console.log(nameArray.length);
+    		
+    		//console.log(tagUrlArray);
+    		//console.log(intervalArray);
+    		//console.log(nameArray);
+    		//console.log(nameArray[0]);
+    		//console.log(nameArray[1]);
+    		//console.log(nameArray[2]);
+    		//console.log(nameArray[3]);
 	    	
 	    	$scope.disableScreen(true);
-	    	$scope.xdResetAction(0,tagUrlArray, intervalArray);
+	    	$scope.xdResetAction(-1,tagUrlArray, intervalArray, nameArray);
 	    	
 	    }
 		
-		$scope.xdResetAction = function(key, tagUrlArray, intervalArray) {
+		$scope.xdResetAction = function(key, tagUrlArray, intervalArray, nameArray) {
 			
 			var key = key+1;
 			
@@ -166,6 +191,15 @@
 				
 				var tagUrl = tagUrlArray[key];
 				var intervalValue = intervalArray[key];
+				var nameValue = nameArray[key];
+				
+				var postData = "name="+nameValue+"&interval="+intervalValue;
+				if (intervalValue == "NULL") {
+					postData = "name="+nameValue+"&interval=";
+				}
+				
+				console.log("postData : " + postData);
+				
 				
 				$http(
 						{
@@ -173,21 +207,21 @@
 							headers: {
 							    'Content-Type': 'application/x-www-form-urlencoded'},
 							url : tagUrl,
-							data : "interval="+intervalValue
+							data : postData
 							
 						}).success(function(data) {
 							
 							console.log(key + " : tagUrl success : "+ tagUrl + " : " + intervalValue);
 							
 							$timeout(function(){
-								$scope.xdResetAction(key, tagUrlArray, intervalArray);
+								$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray);
 							}, 200);
 							
 				}).error(function(error) {
 					console.log("tagUrl error : "+ tagUrl);
 					
 					$timeout(function(){
-						$scope.xdResetAction(key, tagUrlArray, intervalArray);
+						$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray);
 					}, 200);
 				});
 					

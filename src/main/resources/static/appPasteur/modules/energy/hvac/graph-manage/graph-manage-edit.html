@@ -28,7 +28,7 @@
 									data-placeholder="관제점을 선택하세요." 
 									data-minimum-results-for-search="5"
 									tabindex="-1">
-									<option ng-repeat="point in dataList" value="{{point.name}}:{{point.tagID}}">{{point.name}}</option>
+									<option ng-repeat="point in dataList" value="{{point.name}}:{{point.id}}">{{point.name}}</option>
 								</select>
 								<ul ng-show="tagIDs_error" class="parsley-errors-list filled" id="parsley-id-multiple-tagIDs"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 							</div>

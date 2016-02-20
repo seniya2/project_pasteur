@@ -141,7 +141,7 @@
 					  }
 				});
 			    
-			    $scope.requestAction("http://192.168.245.3:9898/monitor/hvac?size=2000", file);
+			    $scope.requestAction("http://192.168.245.3:9898/current/hvac?size=2000", file);
 			    
 			});
 			

@@ -18,8 +18,9 @@
 		$scope.baseXdUrl = config.settings.network.xd;
 		$scope.alarmUrl = $scope.baseRestUrl + $scope.alarmEntity;
 		$scope.listUrl = config.settings.network.rest+$scope.alarmEntity;
-		$scope.listUrlXd = $scope.baseXdUrl+"history/"+$scope.categoryName+"/";
+		$scope.listUrlXd = $scope.baseXdUrl+"record/"+$scope.categoryName+"/";
 		$scope.csvFileUrl = $scope.baseUiUrl + $scope.resources_base + $scope.categoryName + ".csv";
+		$scope.xdListUrl = $scope.baseXdUrl+"current/"+$scope.categoryName+"/";
 		
 		//console.log("listUrl : " + $scope.listUrl);		
 		
@@ -122,7 +123,7 @@
 			$scope.alarmEventLog = "";
 			
 			usSpinnerService.spin('app-spinner-hah');
-			Papa.parse($scope.csvFileUrl, $scope.csvConfig);
+			$scope.xdListAction();
 			
 			$("#searchDate1").on("dp.change", function (e) {
 	            $('#searchDate2').data("DateTimePicker").minDate(e.date);
@@ -181,6 +182,30 @@
 			$scope.listAction(0);
 		}
 		
+		$scope.xdListAction = function() {
+			$http(
+					{
+						method : 'GET',
+						url : $scope.xdListUrl + '?size=2000'
+					}).success(function(data) {
+						
+						for (var key in data.content) {							
+							var tagID = data.content[key].id;
+							var criteria = data.content[key].criteria;
+							var tagName = data.content[key].name;
+							if (criteria != null && criteria != "") {								
+								$scope.alarmList.set(tagID,
+										{"tagID" : tagID, 
+										"tagName" : tagName,
+										"criteria" : criteria}
+								);
+							}
+						}
+						$timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+		}
 		
 		
 		$scope.listAction = function(pageNumber) {
