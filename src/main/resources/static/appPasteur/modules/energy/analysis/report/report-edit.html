@@ -83,82 +83,162 @@
 	<tr>
 		<th rowspan="9">기 계</th>
 		<th class="col-md-3" colspan="2">상수도(ton)</th>
-		<td><input type="text" class="form-control" id="waterSum" name="waterSum" ng-model="reportEntity.waterSum"></td>
-		<td><input type="text" class="form-control" id="waterToday" name="waterToday" ng-model="reportEntity.waterToday"></td>
-		<td><input type="text" class="form-control" id="waterTotal" name="waterTotal" ng-model="reportEntity.waterTotal"></td>
+		<td><input type="text" class="form-control" id="waterSum" name="waterSum" ng-model="reportEntity.waterSum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="waterToday" name="waterToday" ng-model="reportEntity.waterToday" required="required">
+			<ul ng-show="editForm.waterToday.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.waterToday.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="waterTotal" name="waterTotal" ng-model="reportEntity.waterTotal" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3021" name="d3021" ng-model="reportEntity.d3021"></td>
 	</tr>
 	<tr>
 		<th rowspan="2">가스<br/>(m3)</th>
 		<th>보일러(1)</th>
-		<td><input type="text" class="form-control" id="boiler1Sum" name="boiler1Sum" ng-model="reportEntity.boiler1Sum"></td>
-		<td><input type="text" class="form-control" id="boiler1Today" name="boiler1Today" ng-model="reportEntity.boiler1Today"></td>
-		<td><input type="text" class="form-control" id="boiler1Total" name="boiler1Total" ng-model="reportEntity.boiler1Total"></td>
+		<td><input type="text" class="form-control" id="boiler1Sum" name="boiler1Sum" ng-model="reportEntity.boiler1Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="boiler1Today" name="boiler1Today" ng-model="reportEntity.boiler1Today" required="required">
+			<ul ng-show="editForm.boiler1Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.boiler1Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="boiler1Total" name="boiler1Total" ng-model="reportEntity.boiler1Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3031" name="d3031" ng-model="reportEntity.d3031"></td>
 	</tr>
 	<tr>
 		<th>보일러(2)</th>
-		<td><input type="text" class="form-control" id="boiler2Sum" name="boiler2Sum" ng-model="reportEntity.boiler2Sum"></td>
-		<td><input type="text" class="form-control" id="boiler2Today" name="boiler2Today" ng-model="reportEntity.boiler2Today"></td>
-		<td><input type="text" class="form-control" id="boiler2Total" name="boiler2Total" ng-model="reportEntity.boiler2Total"></td>
+		<td><input type="text" class="form-control" id="boiler2Sum" name="boiler2Sum" ng-model="reportEntity.boiler2Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="boiler2Today" name="boiler2Today" ng-model="reportEntity.boiler2Today" required="required">
+			<ul ng-show="editForm.boiler2Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.boiler2Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="boiler2Total" name="boiler2Total" ng-model="reportEntity.boiler2Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3041" name="d3041" ng-model="reportEntity.d3041"></td>
 	</tr>
 	<tr>
 		<th colspan="2">폐수배출량(m3)</th>
-		<td><input type="text" class="form-control" id="wastesSum" name="wastesSum" ng-model="reportEntity.wastesSum"></td>
-		<td><input type="text" class="form-control" id="wastesToday" name="wastesToday" ng-model="reportEntity.wastesToday"></td>
-		<td><input type="text" class="form-control" id="wastesTotal" name="wastesTotal" ng-model="reportEntity.wastesTotal"></td>
+		<td><input type="text" class="form-control" id="wastesSum" name="wastesSum" ng-model="reportEntity.wastesSum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="wastesToday" name="wastesToday" ng-model="reportEntity.wastesToday" required="required">
+			<ul ng-show="editForm.wastesToday.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.wastesToday.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="wastesTotal" name="wastesTotal" ng-model="reportEntity.wastesTotal" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3051" name="d3051" ng-model="reportEntity.d3051"></td>
 	</tr>
 	<tr>
 		<th rowspan="2">지역난방<br/>(Gcal) </th>
 		<th>열량계(1)</th>
-		<td><input type="text" class="form-control" id="heat1Sum" name="heat1Sum" ng-model="reportEntity.heat1Sum"></td>
-		<td><input type="text" class="form-control" id="heat1Today" name="heat1Today" ng-model="reportEntity.heat1Today"></td>
-		<td><input type="text" class="form-control" id="heat1Total" name="heat1Total" ng-model="reportEntity.heat1Total"></td>
+		<td><input type="text" class="form-control" id="heat1Sum" name="heat1Sum" ng-model="reportEntity.heat1Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="heat1Today" name="heat1Today" ng-model="reportEntity.heat1Today" required="required">
+			<ul ng-show="editForm.heat1Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.heat1Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="heat1Total" name="heat1Total" ng-model="reportEntity.heat1Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3061" name="d3061" ng-model="reportEntity.d3061"></td>
 	</tr>
 	<tr>
 		<th>열량계(2)</th>
-		<td><input type="text" class="form-control" id="heat2Sum" name="heat2Sum" ng-model="reportEntity.heat2Sum"></td>
-		<td><input type="text" class="form-control" id="heat2Today" name="heat2Today" ng-model="reportEntity.heat2Today"></td>
-		<td><input type="text" class="form-control" id="heat2Total" name="heat2Total" ng-model="reportEntity.heat2Total"></td>
+		<td><input type="text" class="form-control" id="heat2Sum" name="heat2Sum" ng-model="reportEntity.heat2Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="heat2Today" name="heat2Today" ng-model="reportEntity.heat2Today" required="required">
+			<ul ng-show="editForm.heat2Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.heat2Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="heat2Total" name="heat2Total" ng-model="reportEntity.heat2Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3071" name="d3071" ng-model="reportEntity.d3071"></td>
 	</tr>
 	<tr>
 		<th colspan="2">경유(l)</th>
-		<td><input type="text" class="form-control" id="oilSum" name="oilSum" ng-model="reportEntity.oilSum"></td>
-		<td><input type="text" class="form-control" id="oilToday" name="oilToday" ng-model="reportEntity.oilToday"></td>
-		<td><input type="text" class="form-control" id="oilTotal" name="oilTotal" ng-model="reportEntity.oilTotal"></td>
+		<td><input type="text" class="form-control" id="oilSum" name="oilSum" ng-model="reportEntity.oilSum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="oilToday" name="oilToday" ng-model="reportEntity.oilToday" required="required">
+			<ul ng-show="editForm.oilToday.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.oilToday.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="oilTotal" name="oilTotal" ng-model="reportEntity.oilTotal" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3081" name="d3081" ng-model="reportEntity.d3081"></td>
 	</tr>
 	<tr>
 		<th colspan="2">냉동기운전시간(흡수식) </th>
-		<td><input type="text" class="form-control" id="freeze1Sum" name="freeze1Sum" ng-model="reportEntity.freeze1Sum"></td>
-		<td><input type="text" class="form-control" id="freeze1Today" name="freeze1Today" ng-model="reportEntity.freeze1Today"></td>
-		<td><input type="text" class="form-control" id="freeze1Total" name="freeze1Total" ng-model="reportEntity.freeze1Total"></td>
+		<td><input type="text" class="form-control" id="freeze1Sum" name="freeze1Sum" ng-model="reportEntity.freeze1Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="freeze1Today" name="freeze1Today" ng-model="reportEntity.freeze1Today" required="required">
+			<ul ng-show="editForm.freeze1Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.freeze1Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="freeze1Total" name="freeze1Total" ng-model="reportEntity.freeze1Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3091" name="d3091" ng-model="reportEntity.d3091"></td>
 	</tr>
 	<tr>
 		<th colspan="2">냉동기운전시간(스크류)</th>
-		<td><input type="text" class="form-control" id="freeze2Sum" name="freeze2Sum" ng-model="reportEntity.freeze2Sum"></td>
-		<td><input type="text" class="form-control" id="freeze2Today" name="freeze2Today" ng-model="reportEntity.freeze2Today"></td>
-		<td><input type="text" class="form-control" id="freeze2Total" name="freeze2Total" ng-model="reportEntity.freeze2Total"></td>
+		<td><input type="text" class="form-control" id="freeze2Sum" name="freeze2Sum" ng-model="reportEntity.freeze2Sum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="freeze2Today" name="freeze2Today" ng-model="reportEntity.freeze2Today" required="required">
+			<ul ng-show="editForm.freeze2Today.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.freeze2Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="freeze2Total" name="freeze2Total" ng-model="reportEntity.freeze2Total" readonly="true"></td>
 		<td><input type="text" class="form-control" id="d3101" name="d3101" ng-model="reportEntity.d3101"></td>
 	</tr>
 	<tr>
 		<th rowspan="2">전 기</th>
 		<th colspan="2">전력량(kWh)</th>
-		<td><input type="text" class="form-control" id="wattSum" name="wattSum" ng-model="reportEntity.wattSum"></td>
-		<td><input type="text" class="form-control" id="wattToday" name="wattToday" ng-model="reportEntity.wattToday"></td>
-		<td><input type="text" class="form-control" id="wattTotal" name="wattTotal" ng-model="reportEntity.wattTotal"></td>
-		<td>전월누계  {{powerMonth}}</td>
+		<td><input type="text" class="form-control" id="wattSum" name="wattSum" ng-model="reportEntity.wattSum" readonly="true"></td>
+		<td>
+			<input type="number" class="form-control" id="wattToday" name="wattToday" ng-model="reportEntity.wattToday" required="required">
+			<ul ng-show="editForm.wattToday.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.wattToday.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="wattTotal" name="wattTotal" ng-model="reportEntity.wattTotal" readonly="true"></td>
+		<td> 전월누계  {{reportEntity.powerMonth}}<input type="hidden" id="powerMonth" name="powerMonth" ng-model="reportEntity.powerMonth"></td>
 	</tr>
 	<tr>
 		<th colspan="2">피크치(kWh)</th>
 		<td>-</td>
-		<td><input type="text" class="form-control" id="powerToday" name="powerToday" ng-model="reportEntity.powerToday"></td>
+		<td>
+			<input type="number" class="form-control" id="powerToday" name="powerToday" ng-model="reportEntity.powerToday" required="required">
+			<ul ng-show="editForm.powerToday.$error.required" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항 입니다.</li></ul>
+			<ul ng-show="editForm.powerToday.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
 		<td>-</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<th rowspan="5">환 경</th>
+		<th colspan="2">보일러(1)(2) 탄소배출량(toe)</th>
+		<td>&nbsp;{{reportEntity.co21Sum | number:6}}<input type="hidden" id="co21Sum" name="co21Sum" ng-model="reportEntity.co21Sum"></td>
+		<td>&nbsp;{{reportEntity.co21Today | number:6}}<input type="hidden" id="co21Today" name="co21Today" ng-model="reportEntity.co21Today"></td>
+		<td>&nbsp;{{reportEntity.co21Total | number:6}}<input type="hidden" id="co21Total" name="co21Total" ng-model="reportEntity.co21Total"></td>
+		<td>1(toe) = 0.001043(Nm3) </td>
+	</tr>
+	<tr>
+		<th colspan="2">열량계(1)(2) 탄소배출량(toe)</th>
+		<td>&nbsp;{{reportEntity.co22Sum | number:6}}<input type="hidden" id="co22Sum" name="co22Sum" ng-model="reportEntity.co22Sum"></td>
+		<td>&nbsp;{{reportEntity.co22Today | number:6}}<input type="hidden" id="co22Today" name="co22Today" ng-model="reportEntity.co22Today"></td>
+		<td>&nbsp;{{reportEntity.co22Total | number:6}}<input type="hidden" id="co22Total" name="co22Total" ng-model="reportEntity.co22Total"></td>
+		<td>1(toe) = 10(Gcal)</td>
+	</tr>
+	<tr>
+		<th colspan="2">경유 탄소배출량(toe)</th>
+		<td>&nbsp;{{reportEntity.co23Sum | number:6}}<input type="hidden" id="co23Sum" name="co23Sum" ng-model="reportEntity.co23Sum"></td>
+		<td>&nbsp;{{reportEntity.co23Today | number:6}}<input type="hidden" id="co23Today" name="co23Today" ng-model="reportEntity.co23Today"></td>
+		<td>&nbsp;{{reportEntity.co23Total | number:6}}<input type="hidden" id="co23Total" name="co23Total" ng-model="reportEntity.co23Total"></td>
+		<td>1(toe) = 0.000901(l)</td>
+	</tr>
+	<tr>
+		<th colspan="2">전력량 탄소배출량(toe)</th>
+		<td>&nbsp;{{reportEntity.co24Sum | number:6}}<input type="hidden" id="co24Sum" name="co24Sum" ng-model="reportEntity.co24Sum"></td>
+		<td>&nbsp;{{reportEntity.co24Today | number:6}}<input type="hidden" id="co24Today" name="co24Today" ng-model="reportEntity.co24Today"></td>
+		<td>&nbsp;{{reportEntity.co24Total | number:6}}<input type="hidden" id="co24Total" name="co24Total" ng-model="reportEntity.co24Total"></td>
+		<td>1(toe) = 0.00023(Kwh) </td>
+	</tr>
+	<tr>
+		<th colspan="2">총 합</th>
+		<td>&nbsp;{{reportEntity.co20Sum | number:6}}<input type="hidden" id="co20Sum" name="co20Sum" ng-model="reportEntity.co20Sum"></td>
+		<td>&nbsp;{{reportEntity.co20Today | number:6}}<input type="hidden" id="co20Today" name="co20Today" ng-model="reportEntity.co20Today"></td>
+		<td>&nbsp;{{reportEntity.co20Total | number:6}}<input type="hidden" id="co20Total" name="co20Total" ng-model="reportEntity.co20Total"></td>
 		<td>-</td>
 	</tr>
 	</tbody>
@@ -472,16 +552,22 @@
 	</tr>
 	<tr>
 		<th>종량제 </th>
-		<td><input type="text" class="form-control" id="item1Sum" name="item1Sum" ng-model="reportEntity.item1Sum"></td>
-		<td><input type="text" class="form-control" id="item1Today" name="item1Today" ng-model="reportEntity.item1Today"></td>
-		<td><input type="text" class="form-control" id="item1Total" name="item1Total" ng-model="reportEntity.item1Total"></td>
+		<td><input type="text" class="form-control" id="item1Sum" name="item1Sum" ng-model="reportEntity.item1Sum" readonly="readonly"></td>
+		<td>
+			<input type="number" class="form-control" id="item1Today" name="item1Today" ng-model="reportEntity.item1Today">
+			<ul ng-show="editForm.item1Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="item1Total" name="item1Total" ng-model="reportEntity.item1Total" readonly="readonly"></td>
 		<td><input type="text" class="form-control" id="d6081" name="d6081" ng-model="reportEntity.d6081"></td>
-	</tr>
+	</tr>	
 	<tr>
 		<th>마대 </th>
-		<td><input type="text" class="form-control" id="item2Sum" name="item2Sum" ng-model="reportEntity.item2Sum"></td>
-		<td><input type="text" class="form-control" id="item2Today" name="item2Today" ng-model="reportEntity.item2Today"></td>
-		<td><input type="text" class="form-control" id="item2Total" name="item2Total" ng-model="reportEntity.item2Total"></td>
+		<td><input type="text" class="form-control" id="item2Sum" name="item2Sum" ng-model="reportEntity.item2Sum" readonly="readonly"></td>
+		<td>
+			<input type="number" class="form-control" id="item2Today" name="item2Today" ng-model="reportEntity.item2Today">
+			<ul ng-show="editForm.item2Today.$error.number" class="parsley-errors-list filled"><li class="parsley-required">숫자만 입력하세요.</li></ul>
+		</td>
+		<td><input type="text" class="form-control" id="item2Total" name="item2Total" ng-model="reportEntity.item2Total" readonly="readonly"></td>
 		<td><input type="text" class="form-control" id="d6091" name="d6091" ng-model="reportEntity.d6091"></td>
 	</tr>
 	</tbody>
