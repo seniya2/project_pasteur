@@ -8,11 +8,18 @@
     	
 		$scope.resources_base_electric = "appPasteur/modules/energy/electric/point-manage/resources/";
 		$scope.resources_base_hvac = "appPasteur/modules/energy/hvac/point-manage/resources/";		
+		$scope.resources_base_lighting = "appPasteur/modules/others/lighting/point-manage/resources/";
+		$scope.resources_base_elevator = "appPasteur/modules/others/elevator/point-manage/resources/";
 		$scope.baseUiUrl = config.settings.network.ui;	
 		$scope.baseXdUrl = config.settings.network.xd;
 		$scope.resetUrl = $scope.baseXdUrl+"setting/";
 		$scope.csvFileUrl_electric = $scope.baseUiUrl + $scope.resources_base_electric + "electric.csv";
 		$scope.csvFileUrl_hvac = $scope.baseUiUrl + $scope.resources_base_hvac + "hvac.csv";
+		$scope.csvFileUrl_lighting = $scope.baseUiUrl + $scope.resources_base_lighting + "lighting.csv";
+		$scope.csvFileUrl_elevator = $scope.baseUiUrl + $scope.resources_base_elevator + "elevator.csv";
+		
+		
+		
 		$scope.xdResetRunning = false;
 		//console.log("listUrl : " + $scope.listUrl);		
 		
@@ -29,6 +36,7 @@
 				}, 500);
 			}
 		};
+		
 		
 		
 		$scope.csvConfig_electric = {
@@ -53,21 +61,12 @@
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
-								"category" : "electric"});
-						/*
-						if (interval != "NULL") {
-							$scope.alarmList.set(tagID,
-									{"tagID" : tagID, 
-									"tagName" : tagName,
-									"interval" : interval,
-									"category" : "electric"});
-						}
-						*/
+								"category" : "electric"});					
 					}
 					//console.log("$scope.alarmList : " + $scope.alarmList);
 					$timeout(function(){
 						Papa.parse($scope.csvFileUrl_hvac, $scope.csvConfig_hvac);
-					}, 3000);
+					}, 500);
 				},
 				error: undefined,
 				download: true,
@@ -100,20 +99,12 @@
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
-								"category" : "hvac"});
-						/*
-						if (interval != "NULL") {
-							$scope.alarmList.set(tagID,
-									{"tagID" : tagID, 
-									"tagName" : tagName,
-									"interval" : interval,
-									"category" : "hvac"}
-							);
-						}
-						*/
+								"category" : "hvac"});						
 					}
-					console.log($scope.alarmList);
-					$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
+					//console.log($scope.alarmList);
+					$timeout(function(){
+						Papa.parse($scope.csvFileUrl_lighting, $scope.csvConfig_lighting);
+					}, 500);
 				},
 				error: undefined,
 				download: true,
@@ -123,6 +114,80 @@
 				beforeFirstChunk: undefined,
 				withCredentials: undefined
 		};
+		
+		
+		$scope.csvConfig_lighting = {
+				delimiter: ",",	// auto-detect
+				newline: "",	// auto-detect
+				header: true,
+				dynamicTyping: false,
+				preview: 0,
+				encoding: "",
+				worker: false,
+				comments: false,
+				step: undefined,
+				complete: function(results, file) {				
+					
+					for (var key in results.data) {
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						
+						$scope.alarmList.set(tagID,
+								{"tagID" : tagID, 
+								"tagName" : tagName,
+								"interval" : interval,
+								"category" : "lighting"});						
+					}
+					$timeout(function(){
+						Papa.parse($scope.csvFileUrl_elevator, $scope.csvConfig_elevator);
+					}, 500);
+				},
+				error: undefined,
+				download: true,
+				skipEmptyLines: false,
+				chunk: undefined,
+				fastMode: undefined,
+				beforeFirstChunk: undefined,
+				withCredentials: undefined
+		};
+		
+		$scope.csvConfig_elevator = {
+				delimiter: ",",	// auto-detect
+				newline: "",	// auto-detect
+				header: true,
+				dynamicTyping: false,
+				preview: 0,
+				encoding: "",
+				worker: false,
+				comments: false,
+				step: undefined,
+				complete: function(results, file) {				
+					
+					for (var key in results.data) {
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						
+						$scope.alarmList.set(tagID,
+								{"tagID" : tagID, 
+								"tagName" : tagName,
+								"interval" : interval,
+								"category" : "elevator"});						
+					}
+					$timeout(function(){usSpinnerService.stop('app-spinner')}, 500);
+				},
+				error: undefined,
+				download: true,
+				skipEmptyLines: false,
+				chunk: undefined,
+				fastMode: undefined,
+				beforeFirstChunk: undefined,
+				withCredentials: undefined
+		};
+		
 		
 		
 	    $scope.prepareAction = function() {	    	

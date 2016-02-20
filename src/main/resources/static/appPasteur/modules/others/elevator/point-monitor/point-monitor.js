@@ -114,7 +114,7 @@
 						  }
 					});
 				    
-				    $scope.requestAction("http://192.168.245.3:9898/monitor/elevator?size=2000");
+				    $scope.requestAction("http://192.168.245.3:9898/current/elevator?size=2000");
 				    
 				});
 				
