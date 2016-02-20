@@ -81,81 +81,81 @@
 	<tr>
 		<th rowspan="9">기 계</th>
 		<th class="col-md-3" colspan="2">상수도(ton)</th>
-		<td>&nbsp;{{reportEntity.waterSum}}</td>
-		<td>&nbsp;{{reportEntity.waterToday}}</td>
-		<td>&nbsp;{{reportEntity.waterTotal}}</td>
+		<td>&nbsp;{{reportEntity.waterSum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.waterToday | number:1}}</td>
+		<td>&nbsp;{{reportEntity.waterTotal | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3021}}</td>
 	</tr>
 	<tr>
 		<th rowspan="2">가스<br/>(m3)</th>
 		<th>보일러(1)</th>
-		<td>&nbsp;{{reportEntity.boiler1Sum}}</td>
-		<td>&nbsp;{{reportEntity.boiler1Today}}</td>
-		<td>&nbsp;{{reportEntity.boiler1Total}}</td>
+		<td>&nbsp;{{reportEntity.boiler1Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.boiler1Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.boiler1Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3031}}</td>
 	</tr>	
 	<tr>
 		<th>보일러(2)</th>
-		<td>&nbsp;{{reportEntity.boiler2Sum}}</td>
-		<td>&nbsp;{{reportEntity.boiler2Today}}</td>
-		<td>&nbsp;{{reportEntity.boiler2Total}}</td>
+		<td>&nbsp;{{reportEntity.boiler2Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.boiler2Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.boiler2Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3041}}</td>
 	</tr>
 	<tr>
 		<th colspan="2">폐수배출량(m3)</th>
-		<td>&nbsp;{{reportEntity.wastesSum}}</td>
-		<td>&nbsp;{{reportEntity.wastesToday}}</td>
-		<td>&nbsp;{{reportEntity.wastesTotal}}</td>
+		<td>&nbsp;{{reportEntity.wastesSum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.wastesToday | number:1}}</td>
+		<td>&nbsp;{{reportEntity.wastesTotal | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3051}}</td>
 	</tr>
 	<tr>
 		<th rowspan="2">지역난방<br/>(Gcal)</th>
 		<th>열량계(1)</th>
-		<td>&nbsp;{{reportEntity.heat1Sum}}</td>
-		<td>&nbsp;{{reportEntity.heat1Today}}</td>
-		<td>&nbsp;{{reportEntity.heat1Total}}</td>
+		<td>&nbsp;{{reportEntity.heat1Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.heat1Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.heat1Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3061}}</td>
 	</tr>
 	<tr>
 		<th>열량계(2)</th>
-		<td>&nbsp;{{reportEntity.heat2Sum}}</td>
-		<td>&nbsp;{{reportEntity.heat2Today}}</td>
-		<td>&nbsp;{{reportEntity.heat2Total}}</td>
+		<td>&nbsp;{{reportEntity.heat2Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.heat2Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.heat2Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3071}}</td>
 	</tr>
 	<tr>
 		<th colspan="2">경유</th>
-		<td>&nbsp;{{reportEntity.oilSum}}</td>
-		<td>&nbsp;{{reportEntity.oilToday}}</td>
-		<td>&nbsp;{{reportEntity.oilTotal}}</td>
+		<td>&nbsp;{{reportEntity.oilSum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.oilToday | number:1}}</td>
+		<td>&nbsp;{{reportEntity.oilTotal | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3081}}</td>
 	</tr>
 	<tr>
 		<th colspan="2">냉동기운전시간(흡수식) </th>
-		<td>&nbsp;{{reportEntity.freeze1Sum}}</td>
-		<td>&nbsp;{{reportEntity.freeze1Today}}</td>
-		<td>&nbsp;{{reportEntity.freeze1Total}}</td>
+		<td>&nbsp;{{reportEntity.freeze1Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.freeze1Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.freeze1Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3091}}</td>
 	</tr>
 	<tr>
 		<th colspan="2">냉동기운전시간(스크류)</th>
-		<td>&nbsp;{{reportEntity.freeze2Sum}}</td>
-		<td>&nbsp;{{reportEntity.freeze2Today}}</td>
-		<td>&nbsp;{{reportEntity.freeze2Total}}</td>
+		<td>&nbsp;{{reportEntity.freeze2Sum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.freeze2Today | number:1}}</td>
+		<td>&nbsp;{{reportEntity.freeze2Total | number:1}}</td>
 		<td>&nbsp;{{reportEntity.d3101}}</td>
 	</tr>
 	<tr>
 		<th rowspan="2">전 기</th>
 		<th colspan="2">전력량(kWh)</th>
-		<td>&nbsp;{{reportEntity.wattSum}}</td>
-		<td>&nbsp;{{reportEntity.wattToday}}</td>
-		<td>&nbsp;{{reportEntity.wattTotal}}</td>
-		<td>전월누계  &nbsp;{{reportEntity.powerMonth}}</td>
+		<td>&nbsp;{{reportEntity.wattSum | number:1}}</td>
+		<td>&nbsp;{{reportEntity.wattToday | number:1}}</td>
+		<td>&nbsp;{{reportEntity.wattTotal | number:1}}</td>
+		<td>전월누계  &nbsp;{{reportEntity.powerMonth | number:1}}</td>
 	</tr>
 	<tr>
 		<th colspan="2">피크치(kWh)</th>
 		<td>-</td>
-		<td>&nbsp;{{reportEntity.powerToday}}</td>
+		<td>&nbsp;{{reportEntity.powerToday | number:1}}</td>
 		<td>-</td>
 		<td>-</td>
 	</tr>

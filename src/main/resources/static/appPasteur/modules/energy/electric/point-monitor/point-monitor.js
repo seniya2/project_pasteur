@@ -4,9 +4,11 @@
 	ModalInstanceCtrl.$inject = ['$scope', '$modalInstance'];
 	function ModalInstanceCtrl ($scope, $modalInstance) {
 		$scope.ok = function () {
-			$modalInstance.close();
+			$modalInstance.close("retry");
+			$modalInstance.dismiss('cancel');
 		};	
 		$scope.cancel = function () {
+			$modalInstance.close("cancel");
 			$modalInstance.dismiss('cancel');
 		};
 	}
@@ -34,22 +36,45 @@
 		
 		$scope.svgFile = "";
 		$scope.menuList = null;
-		$scope.tagList = new HashMap();
+		$scope.tagList = new HashMap();		
 		
-		
-		$scope.modalTest = function () {
-
-		      $modal.open({
-		        templateUrl: 'network-confirm-content.html',
-		        controller: 'ModalInstanceCtrl'
-		      });
+		$scope.disableScreen = function(enable) {			
+			if (enable) {
+				config.globalDisable = true;
+				usSpinnerService.spin('app-spinner-pm');					
+			} else {
+				$timeout(function(){
+					config.globalDisable = false;					
+					usSpinnerService.stop('app-spinner-pm');
+				}, 500);
+			}
 		};
 		
-		/*    
-		$scope.modalTest = function() {
-			ngDialog.open({ template: 'popupTmpl', className: 'ngdialog-theme-default' });
-		}
-		*/
+		$scope.entryModalOpen = function (entry) {
+
+		      $scope.modalInstance = $modal.open({
+					animation : true,
+					templateUrl: 'network-confirm-content.html',
+			        controller: 'ModalInstanceCtrl',
+					resolve : {
+						item : function() {
+							return entry;
+						}
+					}
+				});
+
+				$scope.modalInstance.result.then(function(result) {
+					console.log(result);
+					if (result == "retry") {
+						$scope.prepareAction();
+					} else {
+						$scope.disableScreen(false);
+					}
+				}, function() {					
+					$scope.modalInstance = null;
+				});
+		};
+		
 		$scope.menuCsvConfig = {
 				delimiter: ",",	// auto-detect
 				newline: "",	// auto-detect
@@ -117,7 +142,9 @@
 		
 		$scope.prepareAction = function() {
 			
-			usSpinnerService.spin("app-spinner-pm");				
+			//usSpinnerService.spin("app-spinner-pm");	
+			$scope.modalInstance = null;
+			$scope.disableScreen(true);
 			Papa.parse($scope.tagCsvUrl, $scope.tagCsvConfig);
 		}
 		
@@ -177,7 +204,7 @@
 				url : dataUrl,
 				headers: {'Content-type': 'application/json'},
 				cache: false,
-				timeout:60000
+				timeout:20000
 			}).success(function(data) {
 				
 				var contents = data.content;
@@ -185,7 +212,8 @@
 					//console.log("contents["+i+"] : " + contents[i].id);
 					$scope.responseAction(contents[i]);
 				}
-
+				$scope.disableScreen(false);
+				
 				if ($location.path() == $scope.currentPath && currentFile == $scope.svgFile) {
 					
 					//console.log("$location.path() == $scope.currentPath : " + ($location.path() == $scope.currentPath));
@@ -198,13 +226,13 @@
 				}
 				//$scope.responseAction(true, data, tagID, async);
 			}).error(function(error) {
-				//console.log($scope.svgFile + " ! " + error);
-				// XD 데이터를 가지고 오지 못함 알랏. 사용자 확인 후 재시도
-				/*
+				console.log($scope.svgFile + " ! " + error);
 				if ($location.path() == $scope.currentPath) {
-					$scope.requestAction(dataUrl);
+					if ($scope.modalInstance == null) {
+						$scope.disableScreen(false);
+						$scope.entryModalOpen(error);
+					}
 				}
-				*/
 			});
 
 		}
