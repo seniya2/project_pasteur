@@ -49,6 +49,7 @@
 		$scope.searchNo_error = false;
 		$scope.searchDate1_error = false;
 		$scope.searchDate2_error = false;
+		$scope.searchStatus = "";
 		
 		
 		Messenger.options = {
@@ -73,45 +74,6 @@
 			}
 		});
 		
-		
-		
-		$scope.csvConfig = {
-				delimiter: ",",	// auto-detect
-				newline: "",	// auto-detect
-				header: true,
-				dynamicTyping: false,
-				preview: 0,
-				encoding: "",
-				worker: false,
-				comments: false,
-				step: undefined,
-				complete: function(results, file) {				
-					
-					for (var key in results.data) {
-						
-						var tagID = results.data[key].tagID;
-						var interval = results.data[key].interval;
-						var tagName = results.data[key].name;
-						
-						if (interval == 0) {
-							$scope.alarmList.set(tagID,
-									{"tagID" : tagID, 
-									"tagName" : tagName,
-									"interval" : interval}
-							);
-						}
-					}
-					//console.log("$scope.alarmList : " + $scope.alarmList);
-					$timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);
-				},
-				error: undefined,
-				download: true,
-				skipEmptyLines: false,
-				chunk: undefined,
-				fastMode: undefined,
-				beforeFirstChunk: undefined,
-				withCredentials: undefined
-		};
 		
 	    $scope.prepareAction = function() {
 	    	
@@ -186,7 +148,7 @@
 			$http(
 					{
 						method : 'GET',
-						url : $scope.xdListUrl + '?size=2000'
+						url : $scope.xdListUrl + '?size=2000&status=criteria'
 					}).success(function(data) {
 						
 						for (var key in data.content) {							
@@ -218,6 +180,10 @@
 			}
 			
 			//console.log("listUrl : " + listUrl);
+			
+			if ($scope.searchStatus != "") {
+				listUrl += "&status=criteria";
+			}
 
 			$http(
 					{
@@ -236,10 +202,11 @@
 						for (var key in data.content) {
 							newData = data.content[key];
 							var dataType = "";
-							if ("Active" == newData.value) {
-								dataType = '<span class="label label-danger">'+"알람발생"+'</span>';
+							if ("interval" == newData.status) {
+								//dataType = '<span class="label label-info">'+"정상"+'</span>';
+								dataType = "";
 							} else {
-								dataType = '<span class="label label-info">'+"정상"+'</span>';
+								dataType = '<span class="label label-danger">'+"알람발생"+'</span>';
 							}
 							newData.alarmName = $sce.trustAsHtml(dataType);
 							dataList.push(newData);			

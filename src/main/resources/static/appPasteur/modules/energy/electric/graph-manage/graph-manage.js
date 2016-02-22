@@ -18,7 +18,8 @@
 		$scope.baseUiUrl = config.settings.network.ui;
 		$scope.baseRestUrl = config.settings.network.rest;
 		$scope.baseXdUrl = config.settings.network.xd;
-		$scope.chartUrl = $scope.baseXdUrl+"chart/"+$scope.categoryName+"/";
+		$scope.chartUrl = $scope.baseXdUrl+"recordChart/"+$scope.categoryName+"/";
+		$scope.logUrl = $scope.baseXdUrl+"record/"+$scope.categoryName+"/";
 		$scope.tagCsvUrl = $scope.baseUiUrl + $scope.resources_base_point + $scope.categoryName + ".csv";
 		$scope.listUrlForPoint = config.settings.network.rest+$scope.entityNameForPoint;
 		$scope.listUrl = config.settings.network.rest+$scope.entityName;
@@ -26,6 +27,8 @@
 		$scope.xdListUrl = $scope.baseXdUrl+"current/"+$scope.categoryName+"/";
 				
 		//console.log("listUrl : " + $scope.listUrl);		
+		
+$scope.logList = new HashMap();
 		
 		$scope.dataList = null;
 		$scope.page = {
@@ -209,17 +212,22 @@
 			$http(
 					{
 						method : 'GET',
-						url : $scope.xdListUrl + '?size=2000'
+						url : $scope.xdListUrl + '?size=2000&status=interval'
 					}).success(function(data) {
+						
+						$scope.dataList = data.content;
+						/*
 						$scope.dataList = [];
 						for (var key in data.content) {							
 							var tagID = data.content[key].id;
 							var interval = data.content[key].interval;
-							var tagName = data.content[key].name;							
+							var tagName = data.content[key].name;			
+							
 							if (interval > 0) {
 								$scope.dataList.push(data.content[key]);
 							}
 						}
+						*/
 						$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
 			}).error(function(error) {
 				// $scope.widgetsError = error;
@@ -444,6 +452,121 @@
 			}, 500);
 		}
 		
+		$scope.viewAction = function(point) {
+			console.log("--> viewAction ");
+			
+			usSpinnerService.spin("app-spinner");
+			$scope.template = $scope.template_base + "graph-manage-view.html";
+			
+			$scope.logList = new HashMap();
+			$scope.currentPoint = point;
+			$scope.chartEnable = true;
+			$scope.chartData = [];
+			
+			var subTitle = $scope.getPointDate($scope.currentPoint.dateType, $scope.currentPoint.dateTime);
+			
+			var datetime = $scope.currentPoint.dateTime;
+			if ($scope.currentPoint.dateType == "c") {
+				datetime = $scope.getCurrentDate();
+			}
+			
+			//console.log("datetime : " + datetime);
+			
+			$scope.chartOptions.title.text = $scope.currentPoint.subject;
+			$scope.chartOptions.caption.html = 
+				'<small class="fw-bold">시간 단위 : '+$scope.currentPoint.interval
+				+'<br /> Value 측정 : '+$scope.currentPoint.valueType+'</small>';
+			$scope.chartOptions.subtitle.html = '<small>기준 시간 : '+subTitle+'</small>';
+			
+			var urlQurey = "?interval="+$scope.currentPoint.interval
+							+"&calculation="+$scope.currentPoint.valueType
+							+"&datetime="+datetime;
+			var tagIDs = $scope.currentPoint.tagIDs.split(",");
+			
+			
+			angular.forEach(tagIDs, function(value, key) {
+				
+				var splitValue = value.split(":");
+				var tagName = splitValue[0];
+				var tagID = splitValue[1];
+				//console.log("tagName : " + tagName);
+				//console.log("tagID : " + tagID);
+				tagID = tagID.replace("TAG_","");
+				tagID = tagID.replace("_clone","");	
+				$scope.fetchData(tagName, tagID, urlQurey);
+				
+				$scope.logList.set(tagID,{
+					"tagName" : tagName,
+					"tagID" : tagID,
+					"page" : {
+						"size" : 10,
+						"totalPage" : 0,
+						"totalElements" : 0,
+						"number" : 0
+					},
+					"sort" : {
+						"sortAttr" : "id",
+						"sortOder" : "desc",	
+					},
+					"content" : null
+				});
+				
+			});
+			
+			
+			var logListKeys = $scope.logList.keys();			
+			for (var key in logListKeys) {
+				//console.log($scope.logList.get(logListKeys[key]));
+				$scope.getLogData(0,logListKeys[key]);
+			} 
+			
+			$timeout(function(){				
+				usSpinnerService.stop('app-spinner');
+			}, 2000);
+			
+		}
+		
+		
+		$scope.getLogData = function(pageNumber, tagIDReplace) {
+			
+			var sort = $scope.logList.get(tagIDReplace).sort.sortAttr + "," + $scope.logList.get(tagIDReplace).sort.sortOder;
+			var size = $scope.logList.get(tagIDReplace).page.size;
+			var interval = $scope.currentPoint.interval;
+			var datetime = $scope.currentPoint.dateTime;
+			if ($scope.currentPoint.dateType == "c") {
+				datetime = $scope.getCurrentDate();
+			}
+			
+			var listUrl = $scope.logUrl + tagIDReplace + '?page=' + pageNumber + '&size=' + size +"&sort="+sort
+						+ '&interval='+interval + '&datetime='+datetime 
+			
+			//console.log("getLogData listUrl : " + listUrl);
+						
+			$http(
+					{
+						method : 'GET',
+						url : listUrl
+					}).success(function(data) {
+						
+						$scope.logList.get(tagIDReplace).content = data.content;
+						console.log(data.content);
+						
+						var page = {
+								"size" : 10,
+								"totalPage" : data.totalPages,
+								"totalElements" : data.totalElements,
+								"number" : data.number+1
+						}
+						$scope.logList.get(tagIDReplace).page = page;
+						//console.log($scope.logList.get(tagIDReplace).content);
+						//$scope.logList = data.content;
+				
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+						
+		}
+		
 		
 		$scope.cancelAction = function() {			
 			console.log("--> cancelAction ");
@@ -464,6 +587,155 @@
 				$scope.listAction(num - 1, $scope.page.size);
 			}
 		}
+		
+		$scope.logPageChangeHandler = function(num, tagID) {
+			console.log(tagID);
+			console.log(num);
+			// $scope.pageNumber = num;
+			if ($scope.logList.get(tagID).page != undefined) {
+				$scope.logList.get(tagID).page.number = num;
+				$scope.getLogData(num - 1, tagID);
+			}
+		}
+		
+		$scope.chageLogSectionClass = function (isFirst, li_id) {			
+			if (isFirst) {				
+				return "active";
+			}
+		}		
+		
+		$scope.logGetSortClass = function(attr,tagID) {			
+			if ($scope.logList.get(tagID).sort.sortAttr != attr) {
+				return "sorting";
+			}
+			if ($scope.logList.get(tagID).sort.sortOder == "desc") {
+				return "sorting_desc";
+			} else {
+				return "sorting_asc";
+			}			
+		}
+		
+		$scope.logSortAction = function(attr,tagID) {
+			
+			if ($scope.logList.get(tagID).sort.sortAttr != attr) {
+				$scope.logList.get(tagID).sort.sortOder = "desc"
+				$scope.logList.get(tagID).sort.sortAttr = attr;
+			} else {
+				if ($scope.logList.get(tagID).sort.sortOder == "desc") {
+					$scope.logList.get(tagID).sort.sortOder = "asc"
+				} else {
+					$scope.logList.get(tagID).sort.sortOder = "desc"
+				}
+			}
+			var num = $scope.logList.get(tagID).page.number
+			$scope.getLogData(num - 1, tagID);
+		}
+		
+		
+		$scope.fetchData = function(tagID, tagIDReplace, urlQurey) {
+			
+			//console.log("fetchData tagIDReplace:" +tagIDReplace);
+			console.log("$scope.chartUrl+tagID+urlQurey : " + $scope.chartUrl+tagIDReplace+urlQurey);
+			$http(
+					{
+						method : 'GET',
+						url : $scope.chartUrl+tagIDReplace+urlQurey
+					}).success(function(data) {	
+						
+						//console.log("fetch data.data : " + data.data);
+						//console.log("fetch data.dataCount : " + data.dataCount);
+						
+						$scope.chartOptions.chart.xAxis.ticks = data.dataCount;
+						
+						var dataList = data.data;
+						var dataValues = [];		
+						var cnt = 0;
+						for (var key in dataList) {							
+							cnt = cnt+1;
+							//console.log("cnt : " + cnt);
+							//console.log("key : " + key);	
+							//console.log("dataList[key] : " + dataList[key]);
+							dataValues.push({x: cnt, y: dataList[key]});
+						}	
+						
+						function randomString() {
+							var chars = "0123456789ABCDEF";
+							var string_length = 6;
+							var randomstring = '';
+							for (var i=0; i<string_length; i++) {
+							var rnum = Math.floor(Math.random() * chars.length);
+								randomstring += chars.substring(rnum,rnum+1);
+							}							
+							return randomstring;
+						}						
+						
+						var chartDataSub = {
+				        	color: "#"+randomString(),
+			    		    key: tagID,
+			    		    values: dataValues};
+						
+						$scope.chartData.push(chartDataSub);
+						
+			}).error(function(error) {
+				// $scope.widgetsError = error;
+			});
+		}
+		
+
+		
+		$scope.chartOptions = {
+	            chart: {
+	                type: 'lineChart',
+	                height: 450,
+	                margin : {
+	                    top: 20,
+	                    right: 20,
+	                    bottom: 40,
+	                    left: 70
+	                },
+	                x: function(d){ return d.x; },
+	                y: function(d){ return d.y; },
+	                useInteractiveGuideline: true,
+	                dispatch: {
+	                    stateChange: function(e){ console.log("stateChange"); },
+	                    changeState: function(e){ console.log("changeState"); },
+	                    tooltipShow: function(e){ console.log("tooltipShow"); },
+	                    tooltipHide: function(e){ console.log("tooltipHide"); }
+	                },
+	                xAxis: {
+	                    axisLabel: 'Time',
+	                    ticks:24
+	                },
+	                yAxis: {
+	                    axisLabel: 'Value',	                    
+	                    tickFormat: function(d){
+	                        return d3.format('.01f')(d);
+	                    },	                    
+	                    axisLabelDistance: -10
+	                },
+	                callback: function(chart){
+	                    //console.log("!!! lineChart callback !!!");
+	                }
+	            },
+	            title: {
+	                enable: true,
+	                text: '',
+	                css:{ 'font-weight' : '700'}
+	            },
+	            caption: {   
+	            	enable: true,
+	            	html: '',
+	            	css:{ 'textAlign' : 'center',
+						  'text-align' : 'justify',
+					 	  'margin' :'0px 0px 0px 10px'}
+	            },
+	            subtitle: {   
+	            	enable: true,
+	            	html: '',
+	            	css:{ 'textAlign' : 'center',
+					 	  'margin' :'0px 0px 0px 10px'}
+	            }
+	        }
 		
     }
     

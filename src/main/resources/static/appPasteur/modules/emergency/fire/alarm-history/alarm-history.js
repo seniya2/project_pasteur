@@ -18,7 +18,7 @@
 		$scope.baseXdUrl = config.settings.network.xd;
 		$scope.alarmUrl = $scope.baseRestUrl + $scope.alarmEntity;
 		$scope.listUrl = config.settings.network.rest+$scope.alarmEntity;
-		$scope.listUrlXd = $scope.baseXdUrl+"record/"+$scope.categoryName+"/";
+		$scope.listUrlXd = $scope.baseXdUrl+"record/"+$scope.categoryName+"/alarm";
 		$scope.csvFileUrl = $scope.baseUiUrl + $scope.resources_base + $scope.categoryName + ".csv";
 		
 		//console.log("listUrl : " + $scope.listUrl);		
@@ -73,44 +73,6 @@
 		});
 		
 		
-		$scope.csvConfig = {
-				delimiter: ",",	// auto-detect
-				newline: "",	// auto-detect
-				header: true,
-				dynamicTyping: false,
-				preview: 0,
-				encoding: "",
-				worker: false,
-				comments: false,
-				step: undefined,
-				complete: function(results, file) {				
-					
-					for (var key in results.data) {
-						
-						var tagID = results.data[key].tagID;
-						var interval = results.data[key].interval;
-						var tagName = results.data[key].name;
-						
-						if (interval == 0) {
-							$scope.alarmList.set(tagID,
-									{"tagID" : tagID, 
-									"tagName" : tagName,
-									"interval" : interval}
-							);
-						}
-					}
-					//console.log("$scope.alarmList : " + $scope.alarmList);
-					$timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);
-				},
-				error: undefined,
-				download: true,
-				skipEmptyLines: false,
-				chunk: undefined,
-				fastMode: undefined,
-				beforeFirstChunk: undefined,
-				withCredentials: undefined
-		};
-		
 		
 	    $scope.prepareAction = function() {
 	    	
@@ -122,7 +84,6 @@
 			$scope.alarmEventLog = "";
 			
 			usSpinnerService.spin('app-spinner-hah');
-			Papa.parse($scope.csvFileUrl, $scope.csvConfig);
 			
 			$("#searchDate1").on("dp.change", function (e) {
 	            $('#searchDate2').data("DateTimePicker").minDate(e.date);
@@ -131,6 +92,7 @@
 	            $('#searchDate1').data("DateTimePicker").maxDate(e.date);
 	        });
 			
+	        $timeout(function(){usSpinnerService.stop('app-spinner-hah')}, 1000);
 		}
 		
 	    
@@ -162,10 +124,9 @@
 		
 		
 	    $scope.listAction = function(pageNumber) {
-
-			var tagID = String($scope.searchNo).replace("TAG_", "");	
+	
 			var sort = $scope.sortAttr + "," + $scope.sortOder;
-			var listUrl = $scope.listUrlXd + tagID + '?page=' + pageNumber + '&size=' + s_size +"&sort="+sort;
+			var listUrl = $scope.listUrlXd  + '?page=' + pageNumber + '&size=' + s_size +"&sort="+sort;
 			if (!(angular.isUndefined($scope.searchDate1) || $scope.searchDate1 == "") && !(angular.isUndefined($scope.searchDate2) || $scope.searchDate2 == "")){
 				listUrl = listUrl + '&min='+$scope.searchDate1 + '&max='+$scope.searchDate2 ;
 			}
@@ -189,10 +150,11 @@
 						for (var key in data.content) {
 							newData = data.content[key];
 							var dataType = "";
-							if ("Active" == newData.value) {
-								dataType = '<span class="label label-danger">'+"알람발생"+'</span>';
+							if ("interval" == newData.status) {
+								//dataType = '<span class="label label-info">'+"정상"+'</span>';
+								dataType = "";
 							} else {
-								dataType = '<span class="label label-info">'+"정상"+'</span>';
+								dataType = '<span class="label label-danger">'+"알람발생"+'</span>';
 							}
 							newData.alarmName = $sce.trustAsHtml(dataType);
 							dataList.push(newData);			

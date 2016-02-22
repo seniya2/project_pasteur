@@ -44,11 +44,11 @@
     	} else if ($scope.currentPath == "/app/hvac-monitor") {
     		$scope.menu = { main : "설비시스템", sub : "상태감시"}
     	} else if ($scope.currentPath == "/app/hvac-history") {
-    		$scope.menu = { main : "설비시스템", sub : "알람이력 보기"}
+    		$scope.menu = { main : "설비시스템", sub : "알람 및 이력 보기"}
     	} else if ($scope.currentPath == "/app/hvac-alarm") {
     		$scope.menu = { main : "설비시스템", sub : "알람이력 설정"}
     	} else if ($scope.currentPath == "/app/hvac-graph-manage") {
-    		$scope.menu = { main : "설비시스템", sub : "이력그래프 설정"}
+    		$scope.menu = { main : "설비시스템", sub : "경향그래프"}
     	} else if ($scope.currentPath == "/app/hvac-graph-view") {
     		$scope.menu = { main : "설비시스템", sub : "이력그래프 보기"}
     	} else if ($scope.currentPath == "/app/energy-electric-point-manage") {
@@ -56,11 +56,11 @@
     	} else if ($scope.currentPath == "/app/electric-monitor") {
     		$scope.menu = { main : "전력시스템", sub : "상태감시"}
     	} else if ($scope.currentPath == "/app/electric-history") {
-    		$scope.menu = { main : "전력시스템", sub : "알람이력 보기"}
+    		$scope.menu = { main : "전력시스템", sub : "알람 및 이력 보기"}
     	} else if ($scope.currentPath == "/app/electric-alarm") {
     		$scope.menu = { main : "전력시스템", sub : "알람이력 설정"}
     	} else if ($scope.currentPath == "/app/electric-graph-manage") {
-    		$scope.menu = { main : "전력시스템", sub : "경향그래프 설정"}
+    		$scope.menu = { main : "전력시스템", sub : "경향그래프"}
     	} else if ($scope.currentPath == "/app/electric-graph-view") {
     		$scope.menu = { main : "전력시스템", sub : "경향그래프 보기"}
     	} else if ($scope.currentPath == "/app/cctv-point-manage") {
@@ -68,7 +68,7 @@
     	} else if ($scope.currentPath == "/app/cctv-monitor") {
     		$scope.menu = { main : "CCTV시스템", sub : "실시간영상"}
     	} else if ($scope.currentPath == "/app/fire-history") {
-    		$scope.menu = { main : "화재시스템", sub : "알람이력 보기"}
+    		$scope.menu = { main : "화재시스템", sub : "알람 및 이력 보기"}
     	} else if ($scope.currentPath == "/app/fire-alarm") {
     		$scope.menu = { main : "화재시스템", sub : "알람이력 설정"}
     	} else if ($scope.currentPath == "/app/lighting-point-manage") {
@@ -82,7 +82,7 @@
     	} else if ($scope.currentPath == "/app/ev-alarm") {
     		$scope.menu = { main : "E/V시스템", sub : "알람관리"}
     	} else if ($scope.currentPath == "/app/ev-history") {
-    		$scope.menu = { main : "E/V시스템", sub : "알람이력"}
+    		$scope.menu = { main : "E/V시스템", sub : "알람 및 이력 보기"}
     	} else {
     		$scope.menu = { main : "", sub : ""}
     	}

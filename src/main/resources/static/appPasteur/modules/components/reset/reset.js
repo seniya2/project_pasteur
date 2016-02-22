@@ -56,12 +56,15 @@
 						var tagID = results.data[key].tagID;
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
+						var criteria = results.data[key].criteria;
 						
 						$scope.alarmList.set(tagID,
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
-								"category" : "electric"});					
+								"criteria" : criteria,
+								"category" : "electric"});	
+						
 					}
 					//console.log("$scope.alarmList : " + $scope.alarmList);
 					$timeout(function(){
@@ -94,12 +97,14 @@
 						var tagID = results.data[key].tagID;
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
+						var criteria = results.data[key].criteria;
 						
 						$scope.alarmList.set(tagID,
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
-								"category" : "hvac"});						
+								"criteria" : criteria,
+								"category" : "hvac"});							
 					}
 					//console.log($scope.alarmList);
 					$timeout(function(){
@@ -133,11 +138,13 @@
 						var tagID = results.data[key].tagID;
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
+						var criteria = results.data[key].criteria;
 						
 						$scope.alarmList.set(tagID,
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
+								"criteria" : criteria,
 								"category" : "lighting"});						
 					}
 					$timeout(function(){
@@ -170,11 +177,13 @@
 						var tagID = results.data[key].tagID;
 						var interval = results.data[key].interval;
 						var tagName = results.data[key].name;
+						var criteria = results.data[key].criteria;
 						
 						$scope.alarmList.set(tagID,
 								{"tagID" : tagID, 
 								"tagName" : tagName,
 								"interval" : interval,
+								"criteria" : criteria,
 								"category" : "elevator"});						
 					}
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 500);
@@ -208,32 +217,40 @@
 	    	var tagUrlArray = new Array();
 	    	var intervalArray = new Array();
 	    	var nameArray = new Array();
+	    	var criteriaArray = new Array();
+	    	
 	    	
 	    	$scope.alarmList.forEach(function(value, key) {
 	    		//console.log("value : key" + value + " : " + key);
+	    		//console.log(value);
 	    		
 	    		var alarmList_category = value.category;
 	    		var alarmList_tagID = value.tagID;
 	    		var alarmList_interval = value.interval;
 	    		var alarmList_name = value.tagName;
+	    		var alarmList_criteria = value.criteria;
 	    		
 	    		alarmList_tagID = alarmList_tagID.replace("TAG_","");
 	    		var tagUrl = $scope.resetUrl + category + "/" + alarmList_tagID;
 	    		
 	    		if (category == alarmList_category) {
+	    			//console.log("criteria : "+ value.criteria);
 		    		//console.log("tagUrl : " + tagUrl);
 		    		//console.log("alarmList_interval : " + alarmList_interval);		    		
 	    			tagUrlArray.push(tagUrl);
 		    		intervalArray.push(alarmList_interval);
 		    		nameArray.push(alarmList_name);
+		    		criteriaArray.push(alarmList_criteria);
 	    		}
 	    		
 			});
 	    	
-	    	console.log(tagUrlArray.length);
-    		console.log(intervalArray.length);
-    		console.log(nameArray.length);
+	    	//console.log(tagUrlArray.length);
+    		//console.log(intervalArray.length);
+    		//console.log(nameArray.length);
+    		//console.log(criteriaArray.length);
     		
+    		//console.log(criteriaArray);
     		//console.log(tagUrlArray);
     		//console.log(intervalArray);
     		//console.log(nameArray);
@@ -243,11 +260,11 @@
     		//console.log(nameArray[3]);
 	    	
 	    	$scope.disableScreen(true);
-	    	$scope.xdResetAction(-1,tagUrlArray, intervalArray, nameArray);
+	    	$scope.xdResetAction(-1,tagUrlArray, intervalArray, nameArray, criteriaArray);
 	    	
 	    }
 		
-		$scope.xdResetAction = function(key, tagUrlArray, intervalArray, nameArray) {
+		$scope.xdResetAction = function(key, tagUrlArray, intervalArray, nameArray, criteriaArray) {
 			
 			var key = key+1;
 			
@@ -257,12 +274,21 @@
 				var tagUrl = tagUrlArray[key];
 				var intervalValue = intervalArray[key];
 				var nameValue = nameArray[key];
+				var criteriaValue = criteriaArray[key];
 				
-				var postData = "name="+nameValue+"&interval="+intervalValue;
+				var postData = "name="+nameValue+"&interval=-1";
+				/*
 				if (intervalValue == "NULL") {
-					postData = "name="+nameValue+"&interval=";
+					postData = postData + "&interval=";
+				}else {
+					postData = postData + "&interval="+intervalValue;
+				}				
+				if (criteriaValue == "NULL") {
+					postData = postData + "&criteria=";
+				}else {
+					postData = postData + "&criteria="+criteriaValue;
 				}
-				
+				*/
 				console.log("postData : " + postData);
 				
 				
@@ -279,14 +305,14 @@
 							console.log(key + " : tagUrl success : "+ tagUrl + " : " + intervalValue);
 							
 							$timeout(function(){
-								$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray);
+								$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray, criteriaArray);
 							}, 200);
 							
 				}).error(function(error) {
 					console.log("tagUrl error : "+ tagUrl);
 					
 					$timeout(function(){
-						$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray);
+						$scope.xdResetAction(key, tagUrlArray, intervalArray, nameArray, criteriaArray);
 					}, 200);
 				});
 					

@@ -5,7 +5,7 @@
 			<form name="searchForm" ng-submit="searchClickFn(searchForm.$valid)">
 			<div class="clearfix form-group">
 				<div class="pull-left">
-					<h5 class="fw-bold">관제점</h5>
+					<h5 class="fw-bold">아이디 또는 관제점</h5>
 				</div>			
 				<div class="pull-left margin_left_20">
 					<input type="search"
@@ -14,9 +14,28 @@
 					style="width:250px"
 					placeholder="  관제점 검색어를 입력하세요.">
 				</div>
-				<span class="input-group-btn">
+				<span class="input-group-btn pull-left">
                   <button type="submit" class="btn btn-default">Search</button>
                 </span>
+                <!-- 
+                <div class="pull-right col-sm-4">
+					<div class="fileinput fileinput-new input-group" data-ui-jq="fileinput" data-ui-options="{'name': 'jasnyf1'}">
+						<div class="form-control" data-trigger="fileinput">
+							<i class="glyphicon glyphicon-file fileinput-exists"></i>
+							<span class="fileinput-filename"></span>
+						</div>
+						<span class="input-group-addon btn btn-default btn-file">
+							<span class="fileinput-new">Select file</span>
+							<span class="fileinput-exists">Change</span>
+							<input id="fileupload1" type="file" onchange="angular.element(this).scope().fileNameChanged(this)">
+						</span>
+						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+					</div>
+				</div>
+                <div class="pull-right">
+					<h5 class="fw-bold">엑셀업로드</h5>
+				</div>
+				 -->
                 <!-- 
                 <code>searchText : {{searchText}}</code>
                  -->
@@ -31,32 +50,24 @@
 					<tr>										
 						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">아이디</th>
 						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
-						<th class="text-center col-md-2">값</th>
-						<th class="text-center" ng-class="getSortClass('status')" ng-click="sortAction('status')">상태</th>						
-						<th class="hidden-xs text-center" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
-						<th class="text-center">편집</th>
+						<th class="hidden-xs text-center col-md-2" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
+						<th class="text-center col-md-3">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
 						total-items="page.totalElements" current-page="page.number">						
-						<td class="text-center">{{point.id}}</td>
+						<td class="text-center"><a ng-click="editAction(point)">{{point.id}}</a></td>
 						<td class="text-center">{{point.name}}</td>
+						<td class="hidden-xs"><div class="padding_left_10" ng-bind-html="point.dataType"></div></td>
 						<td class="text-center">
-							<div class="pull-left text-center padding_left_10">{{point.value}}</div>
+							<div class="pull-left text-center padding_left_10">{{getDateTime(point.datetime)}}</div>
+							<div class="pull-left text-center padding_left_10"><span class="custom-point-value">{{point.value}}</span></div>
 							 <div class="pull-right text-center padding_right_10">
 								 <button
 									class="btn btn-xs btn-primary"
-									ng-click="updateValue(point.id, $index)">Last Value</button>
-							</div>							
-						</td>
-						<td class="text-center">{{point.status}}</td>						
-						<td class="hidden-xs text-center"><div ng-bind-html="point.dataType"></div></td>
-						<td class="text-center">
-								<button
-									class="btn btn-xs btn-primary"
-									ng-click="editAction(point)">
-									Edit</button>									
+									ng-click="updateValue(point.id, $index)">Refresh</button>
+							</div>
 						</td>
 					</tr>
 				</tbody>				

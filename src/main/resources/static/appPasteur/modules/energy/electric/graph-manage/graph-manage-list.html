@@ -27,6 +27,7 @@
 			</div>
 			</form>
 			
+			
 			<span ng-show="page.totalElements">총 {{page.totalElements}}개의 그래프 설정이 있습니다.</span>
 			<span ng-show="!page.totalElements">총 {{graphList.length}}개의 그래프 설정이 있습니다.</span>
 			
@@ -50,7 +51,7 @@
 						total-items="page.totalElements" current-page="page.number">
 							
 						<td class="text-center">{{point.no}}</td>
-						<td class="text-center">{{point.subject}}</td>
+						<td class="text-center"><a ng-click="viewAction(point)">{{point.subject}}</a></td>
 						<td class="text-center">{{getPointNames(point.tagIDs)}}</td>
 						<td class="text-center">{{point.interval}}</td>
 						<td class="hidden-xs text-center">{{getPointDate(point.dateType, point.dateTime)}}</td>

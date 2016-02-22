@@ -31,7 +31,22 @@
 					</select>
 					<ul ng-show="searchNo_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 				</div>
-				<div class="pull-left">
+				<div class="pull-left margin_left_10">
+					<h5 class="fw-bold">옵션</h5>
+				</div>
+				<div class="pull-left margin_left_10">
+					<div class="radio">
+						<input type="radio" name="searchStatus" id="searchStatus1" ng-model="searchStatus" value="criteria">
+						<label for="searchStatus1"><span class="custom-option-title">알람만 보기</span></label>
+					</div>
+				</div>
+				<div class="pull-left margin_left_10">
+					<div class="radio">
+						<input type="radio" name="searchStatus" id="searchStatus2" ng-model="searchStatus" value="" checked>
+						<label for="searchStatus2"><span class="custom-option-title">전체 보기</span></label>
+					</div>
+				</div>
+				<div class="pull-left margin_left_20">
 					<h5 class="fw-bold">기간</h5>
 				</div>
 				<div class="pull-left">
@@ -40,7 +55,6 @@
 							data-ui-options="{viewMode: 'days', format: 'YYYY-MM-DD'}" type="text" 
 							id="searchDate1" name="searchDate1" ng-model="searchDate1"/>
 					</div>
-					<ul ng-show="searchDate1_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 				</div>
 				<div class="pull-left">
 					<h5 class="fw-bold">&nbsp; ~ </h5>
@@ -51,7 +65,6 @@
 							data-ui-options="{viewMode: 'days', format: 'YYYY-MM-DD', useCurrent: false}" type="text" 
 							id="searchDate2" name="searchDate2" ng-model="searchDate2"/>
 					</div>
-					<ul ng-show="searchDate2_error" class="parsley-errors-list filled"><li class="parsley-required">필수 입력사항입니다.</li></ul>
 				</div>
 				<div class="pull-left margin_left_10">
 					<button type="submit" class="btn btn-default">Search</button>
@@ -70,15 +83,15 @@
 			</div>
 			 -->
 			<div class="margin_top_30" ng-show="dataList.length > 0">
-			<span>총 {{dataList.length}}개의 알람이 있습니다.</span>
+			<span>총 {{page.totalElements}}개의 알람이 있습니다.</span>
 			<table
 				class="table table-hover table-lg mt-lg mb-0">
 				<thead>
 					<tr>
 					<tr>
 						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">변경 시간</th>
-						<th class="text-center" ng-class="getSortClass('value')" ng-click="sortAction('value')">태그 값</th>
-						<th class="text-center" >알람 내역</th>
+						<th class="text-center" ng-class="getSortClass('value')" ng-click="sortAction('value')">값</th>
+						<th class="text-center" >알람 내역 (알람조건)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -86,7 +99,10 @@
 						total-items="page.totalElements" current-page="pagination.current">
 						<td class="text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
 						<td class="text-center">{{point.value}} </td>
-						<td class="text-center"><div ng-bind-html="point.alarmName"></div></td>
+						<td class="text-center">
+							<span ng-bind-html="point.alarmName"></span> 
+							<span ng-show="point.criteria">({{point.criteria}})</span>
+						</td>
 					</tr>
 				</tbody>
 			</table>	
@@ -104,8 +120,8 @@
 					<tr>
 					<tr>
 						<th class="text-center">변경 시간</th>
-						<th class="text-center">태그 값</th>
-						<th class="text-center">알람 내역</th>
+						<th class="text-center">값</th>
+						<th class="text-center">알람 내역 (알람조건)</th>
 					</tr>
 				</thead>
 				<tbody>

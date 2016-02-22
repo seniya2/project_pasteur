@@ -44,11 +44,21 @@
 		$scope.searchDate = "";
 		
 		$scope.getCurrentDate = function() {
+			var nowDate = new Date();
+			var nowDateStr = nowDate.toISOString();
+			nowDateStr = nowDateStr.substr(0,10);
+			return nowDateStr;			
+		}
+		
+		$scope.editable = function() {
 			var nowDate = new Date();			
 			var nowDateStr = nowDate.toISOString();
-			nowDateStr = nowDateStr.substr(0,19);
-			nowDateStr = nowDateStr.replace("T"," ");
-			return nowDateStr;			
+			nowDateStr = nowDateStr.substr(0,10);
+			if (nowDateStr == $scope.reportEntity.daily) {
+				return true;
+			} else { 
+				return false;
+			}
 		}
 		
 		$scope.setCurrentDate = function() {
@@ -70,19 +80,36 @@
 			
 			var searchDate = document.getElementById("searchDate");
 			$scope.searchDate = searchDate.value;
+			/*
+			var selectedDate = new Date($scope.searchDate);
+			var currentDateStr = $scope.getCurrentDate();
+			
+			var selectedDateStr = selectedDate.toISOString();
+			selectedDateStr = selectedDateStr.substr(0,10);
+			
+			console.log("currentDateStr : " + currentDateStr);
+			console.log("selectedDateStr : " + selectedDateStr);
+			
+			*/
 			
 			var errCnt = 0;
 			if (angular.isUndefined($scope.searchDate) || $scope.searchDate == "") {
 				$scope.searchDate_error=true;
 				errCnt++;
 			}
-			
+			/*
+			if (selectedDate > currentDateStr) {
+				$scope.searchDate_next_error=true;
+				errCnt++;
+			}
+			*/
 			if (errCnt>0) {
 				return;
 			}
 			
 			$scope.disableScreen(true);
 			$scope.searchDate_error=false;
+			$scope.searchDate_next_error=false;
 			$scope.searchAction($scope.searchDate);
 			
 		}
@@ -95,6 +122,20 @@
 			if (!valid) {
 				return;
 			}
+			
+			var selectedDate = new Date($scope.searchDate);
+			var currentDateStr = $scope.getCurrentDate();
+			
+			var selectedDateStr = selectedDate.toISOString();
+			selectedDateStr = selectedDateStr.substr(0,10);
+			
+			if (currentDateStr != selectedDateStr) {
+				window.alert("현재 날짜만 작성 가능합니다.");
+				return;
+			}
+			
+			
+			
 			$scope.disableScreen(true);
 			
 			if ($scope.reportEntity.no == undefined) {
@@ -302,6 +343,17 @@
 			if (reportEntity == null) {
 				$scope.reportEntity = new Object();
 				$scope.reportEntity.daily = $scope.searchDate;
+			} else {
+				var selectedDate = new Date($scope.searchDate);
+				var currentDateStr = $scope.getCurrentDate();
+				
+				var selectedDateStr = selectedDate.toISOString();
+				selectedDateStr = selectedDateStr.substr(0,10);
+				
+				if (currentDateStr != selectedDateStr) {
+					window.alert("현재 날짜만 작성 가능합니다.");
+					return;
+				}
 			}
 			
 			$scope.template = $scope.template_base + "report-edit.html";

@@ -44,12 +44,25 @@
 			console.log("--> searchClickFn ------------- ");
 			var searchName = document.getElementById("searchName");
 			$scope.searchText = searchName.value;
-			/*
-			if (angular.isUndefined($scope.searchName) || $scope.searchName == "") {
-				$scope.searchText = "";
-				return;
-			}
-			*/
+			$scope.listAction($scope.page.number-1);
+		}
+		
+		$scope.getDateTime = function(dateTime){
+			var newDateItme = "";
+			newDateItme = dateTime.substr(0,19);
+			newDateItme = newDateItme.replace("T"," ");
+			return newDateItme;
+		}
+		
+		$scope.fileNameChanged = function(changeEvent) {
+			console.log("select file");
+			console.log(changeEvent);
+			var reader = new FileReader();
+			reader.onload = function(){
+				var dataURL = reader.result;
+				console.log("select file dataURL : " + dataURL);
+			};
+			reader.readAsDataURL(changeEvent.files[0]);
 		}
 		
 		$scope.disableScreen = function(enable) {			
@@ -107,7 +120,8 @@
 					{
 						method : 'GET',
 						url : $scope.xdListUrl+id
-					}).success(function(data) {						
+					}).success(function(data) {			
+						$scope.dataList[idx].datetime = data.datetime;
 						$scope.dataList[idx].value = data.value;
 						//console.log("idx : " + idx);
 						$timeout(function(){usSpinnerService.stop('app-spinner')}, 500);
@@ -130,22 +144,34 @@
 		}
 		$scope.listAction = function(pageNumber) {
 			console.log("--> listAction");
+			
 			var sort = $scope.sortAttr + "," + $scope.sortOder;
+			
+			var listUrl = $scope.xdListUrl + '?page=' + pageNumber + '&size=' + $scope.page.size + '&sort='+sort;
+			if ($scope.searchText != null) {
+				listUrl = $scope.xdListUrl + '?page=' + pageNumber + '&size=' + $scope.page.size + '&sort='+sort+'&name='+$scope.searchText;
+			}
+			
 			$http(
 					{
 						method : 'GET',
-						url : $scope.xdListUrl + '?page=' + pageNumber + '&size=' + $scope.page.size + '&sort='+sort
+						url : listUrl
 					}).success(function(data) {
 						$scope.dataList = data.content;
-						
+												
 						var dataType = "";
 						for (var key in $scope.dataList) {
-							if ($scope.dataList[key].interval == 0) {
-								dataType = '<span class="label label-warning">'+"알람포인트"+'</span>';
-							} else if ($scope.dataList[key].interval > 0) {
+							if ($scope.dataList[key].interval != null) {
 								dataType = '<span class="label label-info">'+"이력포인트"+'</span>';
+								if ($scope.dataList[key].criteria != null && $scope.dataList[key].criteria != "") {
+									dataType += '&nbsp; <span class="label label-warning">'+"알람포인트"+'</span>';
+								}
 							} else {
-								dataType = '<span class="label label-default">'+"일반포인트"+'</span>';
+								if ($scope.dataList[key].criteria != null && $scope.dataList[key].criteria != "") {
+									dataType = '<span class="label label-warning">'+"알람포인트"+'</span>';
+								} else {
+									dataType = '<span class="label label-default">'+"일반포인트"+'</span>';
+								}
 							}
 							$scope.dataList[key].dataType = $sce.trustAsHtml(dataType);
 						}
@@ -189,8 +215,10 @@
 			} else {
 				postData += "&criteria="
 			}			
-			postData = encodeURI(postData);
+			//postData = encodeURI(postData);
 			//postData = encodeURIComponent(postData);
+			//postData = escape(postData);
+			
 			
 			$http({
 				method : 'POST',
@@ -263,7 +291,7 @@
 				$scope.page.number = num;
 				$scope.listAction(num - 1);
 			}
-		}		
+		}
     }
 
   angular.module('singApp.lighting-point-manage').controller('lightingPMModelController', lightingPMModelController);

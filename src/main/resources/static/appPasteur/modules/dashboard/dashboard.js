@@ -19,13 +19,14 @@
 		$scope.baseRestUrl = config.settings.network.rest;
 		$scope.baseXdUrl = config.settings.network.xd;
 		
-		$scope.chartUrlHvac = $scope.baseXdUrl+"chart/"+$scope.categoryNameHvac+"/";
-		$scope.chartUrlElec = $scope.baseXdUrl+"chart/"+$scope.categoryNameElec+"/";	
+		$scope.chartUrlHvac = $scope.baseXdUrl+"recordChart/"+$scope.categoryNameHvac+"/";
+		$scope.chartUrlElec = $scope.baseXdUrl+"recordChart/"+$scope.categoryNameElec+"/";	
 		
 		$scope.listUrlHvac = config.settings.network.rest+$scope.entityNameHvac;
 		$scope.listUrlElec = config.settings.network.rest+$scope.entityNameElec;
 		
 		$scope.csvFileUrl = $scope.baseUiUrl + $scope.resources_base + $scope.categoryName + ".csv";
+		$scope.xdListUrl = $scope.baseXdUrl+"current/"+$scope.categoryNameHvac+"/";
 		
 		$scope.dataList = null;
 		$scope.sortAttr = 'no';
@@ -72,8 +73,22 @@
 	  
 		$scope.prepareAction = function() {
 			usSpinnerService.spin('app-spinner-main');
-			Papa.parse($scope.csvFileUrl, $scope.csvConfig);
+			//Papa.parse($scope.csvFileUrl, $scope.csvConfig);
+			$scope.getHvacPoinitList();
 			$scope.loadChartHvac();
+		}
+		
+		$scope.getHvacPoinitList = function() {
+			$http({
+				method : 'GET',
+				url : $scope.xdListUrl + '?page=0&size=2000'
+			}).success(function(data) {
+				$scope.dataList = data.content;
+				$timeout(function(){usSpinnerService.stop('app-spinner-main')}, 1000);
+			}).error(function(error) {
+				$timeout(function(){usSpinnerService.stop('app-spinner-main')}, 1000);
+				// $scope.widgetsError = error;
+			});
 		}
 		
 		$scope.getPointDate = function(dateType, dateTime) {

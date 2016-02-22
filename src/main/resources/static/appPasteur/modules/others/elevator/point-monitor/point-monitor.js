@@ -258,13 +258,13 @@
 					//console.log(d3.select(this));
 					imageObject.push(d3.select(this));					
 				});
-				if (tagValue == 0) {	// 정지
+				if (tagValue == "STOP") {	// 정지
 					imageObject[0].style("visibility", "hidden");
 					imageObject[1].style("visibility", "hidden");
-				} else if (tagValue == 1){	// UP					
+				} else if (tagValue == "UP"){	// UP					
 					imageObject[0].style("visibility", "hidden");
 					imageObject[1].style("visibility", "visible");
-				} else if (tagValue == 2){	// DN			
+				} else if (tagValue == "DOWN"){	// DN			
 					imageObject[0].style("visibility", "visible");
 					imageObject[1].style("visibility", "hidden");
 				}
@@ -307,11 +307,11 @@
 				}
 				
 				
-				if (tagValue == 1) {	// 열림
+				if (tagValue == "OPEN") {	// 열림
 					targetFloorNumber = parseInt(floor) - 1;
 					//console.log("targetFloorNumber : " + targetFloorNumber);
 					imageObject[targetFloorNumber].style("visibility", "visible");
-				} else if (tagValue == 0) {	// 닫힘
+				} else if (tagValue == "CLOSE") {	// 닫힘
 					targetFloorNumber = parseInt(floor) + fullFloor;
 					//console.log("targetFloorNumber : " + targetFloorNumber);
 					imageObject[targetFloorNumber].style("visibility", "visible");
@@ -321,7 +321,8 @@
 			},
 			changeTextEvMode : function(selectedObject, tagValue, tagID) {
 				//console.log("changeTextEvMode : " + tagValue);
-				selectedObject.text($scope.animateTag.evModeValues[tagValue]);
+				//selectedObject.text($scope.animateTag.evModeValues[tagValue]);
+				selectedObject.text(tagValue);
 				return;
 			},
 							

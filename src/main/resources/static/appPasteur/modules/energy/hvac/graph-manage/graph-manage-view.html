@@ -1,0 +1,52 @@
+<div class="row">
+<div class="col-md-12">
+	<section class="widget">
+		<div class="widget-body">
+			<div class="pull-left">
+				<span class="btn btn-default btn-inverse" ng-click="cancelAction()">List</span>
+			</div>
+			<div ng-show="chartEnable" class="margin_top_30">
+				<nvd3 options="chartOptions" data="chartData" config="{refreshDataOnly: false}" api="api" objectequality="true"></nvd3>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="clearfix">
+			<ul id="tabs1" class="nav nav-tabs pull-left" >
+				<li ng-repeat="logEntity in logList.values()" id="li_{{logEntity.tagID}}" class="{{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}">
+				<a data-target="#{{logEntity.tagID}}" data-toggle="tab">{{logEntity.tagName}}</a>
+				</li>	
+			</ul>
+		</div>
+		<div id="tabs1c" class="tab-content mb-lg">
+			<div class="tab-pane clearfix {{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}" id="{{logEntity.tagID}}" ng-repeat="logEntity in logList.values()">
+				<div>
+					<span>총 {{logEntity.page.totalElements}}개의 이력이 있습니다.</span>
+					<table class="table table-hover table-lg mt-lg mb-0">
+						<thead>
+							<tr>
+							<tr>
+								<th class="text-center" ng-class="logGetSortClass('id',logEntity.tagID)" ng-click="logSortAction('id',logEntity.tagID)">변경 시간</th>
+								<th class="text-center" ng-class="logGetSortClass('value',logEntity.tagID)" ng-click="logSortAction('value',logEntity.tagID)">값</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr dir-paginate="point in logEntity.content | itemsPerPage: logEntity.page.size" pagination-id="logEntity.tagID"
+								total-items="logEntity.page.totalElements" current-page="logEntity.page.number">
+								<td class="hidden-xs text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								<td class="text-center">{{point.value}} </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="clearfix text-center">
+					<dir-pagination-controls pagination-id="logEntity.tagID" on-page-change="logPageChangeHandler(newPageNumber,logEntity.tagID)"></dir-pagination-controls>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

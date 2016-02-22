@@ -17,7 +17,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-3" for="name"><strong>관제점</strong></label>
 							<div class="col-sm-9">
-								<input type="text" id="name" name="name" class="form-control" ng-model="currentData.name">
+								<input type="text" id="name" name="name" class="form-control" ng-model="currentData.name" disabled="disabled">
 							</div>
 						</div>
 						<div class="form-group">
@@ -28,7 +28,7 @@
 									ng-model="currentData.interval" 
 									string-to-number
 									min="0"
-									style="width:100px">
+									style="width:100px" disabled="disabled">
 								</div>
 								<div class="pull-left padding_top_10 margin_left_10"> ms</div>
 							</div>
@@ -43,7 +43,7 @@
 						<div class="form-group">
 							<label class="control-label col-sm-3" for="name"></label>
 							<div class="col-sm-9">
-								<pre><code>알람조건식 예시<br>1) value == "Active"<br>2) value > 570 <br>3) value > 100 && value < 200</code></pre>
+								<pre><code>알람조건식 예시<br>1) value == "Active"<br>2) value > 570</code></pre>
 							</div>
 						</div>						
 					</fieldset>

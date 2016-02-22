@@ -5,7 +5,7 @@
 			<form name="searchForm" ng-submit="searchClickFn(searchForm.$valid)">
 			<div class="clearfix form-group">
 				<div class="pull-left">
-					<h5 class="fw-bold">관제점</h5>
+					<h5 class="fw-bold">아이디 또는 관제점</h5>
 				</div>			
 				<div class="pull-left margin_left_20">
 					<input type="search"
@@ -28,21 +28,18 @@
 				class="table table-hover table-lg mt-lg mb-0">
 				<thead>
 					<tr>
-					<tr>
-						<th class="text-center" ng-class="getSortClass('no')" ng-click="sortAction('no')">SEQ</th>					
+					<tr>			
 						<th class="text-center" ng-class="getSortClass('tagID')" ng-click="sortAction('tagID')">아이디</th>
 						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
-						<th class="hidden-xs text-center" ng-class="getSortClass('tagAddr')" ng-click="sortAction('tagAddr')">주소</th>
-						<th class="hidden-xs text-center">유형</th>
+						<th class="hidden-xs text-center col-md-2">유형</th>
+						
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="point in filtered = (dataList | filter:searchText | orderBy:sortAttr:sortOder)">
 					<!-- <tr ng-repeat="point in dataList | filter:searchText"> -->
-						<td class="text-center">{{point.no}}</td>		
 						<td class="text-center">{{point.tagID}}</td>
 						<td class="text-center">{{point.name}}</td>
-						<td class="hidden-xs text-center">{{point.tagAddr | limitTo:55}}</td>
 						<td class="hidden-xs text-center"><span class="label label-default">일반포인트</span></td>
 					</tr>
 				</tbody>

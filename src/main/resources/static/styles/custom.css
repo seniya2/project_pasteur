@@ -219,3 +219,13 @@ table thead .sorting_desc_disabled {
   margin: -20px -20px;
   border-radius: 3px;
 }
+
+.custom-point-value {
+	color:red;
+	font-weight: 400;
+}
+
+.custom-option-title {
+	color:#aaaaaa;
+	font-weight: 300;
+}
