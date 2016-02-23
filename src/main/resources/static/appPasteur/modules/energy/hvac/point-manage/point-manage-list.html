@@ -49,9 +49,9 @@
 					<tr>
 					<tr>										
 						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">아이디</th>
-						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
+						<th class="text-center col-md-2" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
 						<th class="hidden-xs text-center col-md-2" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
-						<th class="text-center col-md-3">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
+						<th class="text-center">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -63,7 +63,7 @@
 						<td class="text-center">
 							<div class="pull-left text-center padding_left_10">{{getDateTime(point.datetime)}}</div>
 							<div class="pull-left text-center padding_left_10"><span class="custom-point-value">{{point.value}}</span></div>
-							 <div class="pull-right text-center padding_right_10">
+							 <div class="pull-left text-center padding_right_10">
 								 <button
 									class="btn btn-xs btn-primary"
 									ng-click="updateValue(point.id, $index)">Refresh</button>
