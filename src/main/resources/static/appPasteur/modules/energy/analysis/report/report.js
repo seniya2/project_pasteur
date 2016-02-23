@@ -1,8 +1,15 @@
 (function() {
   'use strict';
 
-	energyReportController.$inject = ['config', '$scope', '$resource', '$http', '$location', '$timeout', 'usSpinnerService' ];
-	function energyReportController (config, $scope, $resource, $http, $location, $timeout, usSpinnerService) {
+  	ModalInstanceCtrl.$inject = ['$scope', '$modalInstance'];
+	function ModalInstanceCtrl ($scope, $modalInstance) {
+		$scope.cancel = function () {
+			$modalInstance.dismiss('cancel');
+		};
+	}
+	
+	energyReportController.$inject = ['config', '$scope', '$resource', '$http', '$location', '$timeout', 'usSpinnerService', '$modal'];
+	function energyReportController (config, $scope, $resource, $http, $location, $timeout, usSpinnerService, $modal) {
 		
 		var search = $location.search();
 		$scope.entityName = "energyReport";
@@ -65,6 +72,27 @@
 			$scope.currentDate = $scope.getCurrentDate();
 		}
 		
+		
+		$scope.entryModalOpen = function (entry) {
+
+		      $scope.modalInstance = $modal.open({
+					animation : true,
+					templateUrl: 'report-confirm-content.html',
+			        controller: 'ModalInstanceCtrl',
+					resolve : {
+						item : function() {
+							return entry;
+						}
+					}
+				});
+
+				$scope.modalInstance.result.then(function(result) {
+					console.log(result);					
+					$scope.disableScreen(false);					
+				}, function() {					
+					$scope.modalInstance = null;
+				});
+		};
 		
 		$scope.prepareAction = function() {
 			
@@ -130,7 +158,8 @@
 			selectedDateStr = selectedDateStr.substr(0,10);
 			
 			if (currentDateStr != selectedDateStr) {
-				window.alert("현재 날짜만 작성 가능합니다.");
+				//window.alert("현재 날짜만 작성 가능합니다.");
+				$scope.entryModalOpen(null);
 				return;
 			}
 			
@@ -351,7 +380,8 @@
 				selectedDateStr = selectedDateStr.substr(0,10);
 				
 				if (currentDateStr != selectedDateStr) {
-					window.alert("현재 날짜만 작성 가능합니다.");
+					$scope.entryModalOpen(null);
+					//window.alert("현재 날짜만 작성 가능합니다.");
 					return;
 				}
 			}
