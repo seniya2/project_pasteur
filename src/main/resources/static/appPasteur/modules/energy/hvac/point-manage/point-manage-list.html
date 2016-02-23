@@ -7,16 +7,23 @@
 				<div class="pull-left">
 					<h5 class="fw-bold">아이디 또는 관제점</h5>
 				</div>			
+				
 				<div class="pull-left margin_left_20">
-					<input type="search"
-					id="searchName"
-					class="form-control" 
-					style="width:250px"
-					placeholder="  관제점 검색어를 입력하세요.">
+					 <input type="search" 
+							 name="searchName"
+							 id="searchName"
+							 ng-model="searchName" 
+							 typeahead="point for point in pointInfo | filter:$viewValue" 
+							 class="form-control"
+							 style="width:250px"
+							 placeholder="  관제점 검색어를 입력하세요."
+							 autocomplete="off">
 				</div>
+				
 				<span class="input-group-btn pull-left">
                   <button type="submit" class="btn btn-default">Search</button>
                 </span>
+               
                 <!-- 
                 <div class="pull-right col-sm-4">
 					<div class="fileinput fileinput-new input-group" data-ui-jq="fileinput" data-ui-options="{'name': 'jasnyf1'}">
@@ -49,9 +56,9 @@
 					<tr>
 					<tr>										
 						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">아이디</th>
-						<th class="text-center col-md-2" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
-						<th class="hidden-xs text-center col-md-2" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
-						<th class="text-center">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
+						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
+						<th class="hidden-xs text-center" style="width: 350px;">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
+						<th class="hidden-xs text-center" style="width: 180px;" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -59,16 +66,16 @@
 						total-items="page.totalElements" current-page="page.number">						
 						<td class="text-center"><a ng-click="editAction(point)">{{point.id}}</a></td>
 						<td class="text-center">{{point.name}}</td>
-						<td class="hidden-xs"><div class="padding_left_10" ng-bind-html="point.dataType"></div></td>
-						<td class="text-center">
+						<td class="hidden-xs text-center">
 							<div class="pull-left text-center padding_left_10">{{getDateTime(point.datetime)}}</div>
 							<div class="pull-left text-center padding_left_10"><span class="custom-point-value">{{point.value}}</span></div>
-							 <div class="pull-left text-center padding_right_10">
+							 <div class="pull-right text-center padding_right_10">
 								 <button
 									class="btn btn-xs btn-primary"
 									ng-click="updateValue(point.id, $index)">Refresh</button>
 							</div>
 						</td>
+						<td class="hidden-xs"><div class="padding_left_10" ng-bind-html="point.dataType"></div></td>	
 					</tr>
 				</tbody>		
 			</table>

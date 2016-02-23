@@ -109,8 +109,37 @@
 		$scope.prepareAction = function() {
 			usSpinnerService.spin('app-spinner');
 			//Papa.parse($scope.csvFileUrl, $scope.csvConfig);
+			$scope.getPointInfo();
 			$scope.listAction(0);
 		}	
+		
+		
+		$scope.getPointInfo = function() {
+			
+			var listUrl = $scope.xdListUrl + '?page=0&size=2000';
+			
+			$http(
+					{
+						method : 'GET',
+						url : listUrl
+					}).success(function(data) {
+						
+						var pointInfoArray = [];
+						for (var key in data.content) {
+							pointInfoArray.push(data.content[key].id);
+							pointInfoArray.push(data.content[key].name);
+						}
+						
+						$scope.pointInfo = pointInfoArray;
+						
+						$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
+						//console.log($scope.dataList);
+				
+					}).error(function(error) {
+						// $scope.widgetsError = error;
+					});
+			
+		}
 		
 		$scope.updateValue = function(id, idx) {
 			usSpinnerService.spin('app-spinner');

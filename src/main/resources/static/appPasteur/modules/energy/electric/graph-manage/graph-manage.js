@@ -28,7 +28,7 @@
 				
 		//console.log("listUrl : " + $scope.listUrl);		
 		
-$scope.logList = new HashMap();
+		$scope.logList = new HashMap();
 		
 		$scope.dataList = null;
 		$scope.page = {
@@ -132,7 +132,7 @@ $scope.logList = new HashMap();
 			if (dateType == "c") {
 				return "현재시간";
 			} else {
-				return dateTime;
+				return String(dateTime).substr(0,10);
 			}
 		}
 		
@@ -185,7 +185,102 @@ $scope.logList = new HashMap();
 			
 			usSpinnerService.spin("app-spinner");			
 			$scope.xdListAction();
+			$scope.getPointInfo();
 			$scope.page = null;
+		}
+		
+		
+		$scope.getPointInfo = function() {
+			var listUrl = $scope.listUrl + '?page=0&size=2000';			
+			$http(
+					{
+						method : 'GET',
+						url : listUrl
+					}).success(function(data) {						
+						var pointInfoArray = [];
+						var dataList = null;
+						eval("dataList = data._embedded."+$scope.entityName);						
+						for (var key in dataList) {
+							var pointInfo = ((dataList[key].tagIDs).split(":"))[0];
+							pointInfoArray.push(pointInfo);
+						}						
+						$scope.pointInfo = pointInfoArray;						
+						$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
+					}).error(function(error) {
+						// $scope.widgetsError = error;
+					});
+		}
+		
+		$scope.previewAction = function() {
+			console.log("--> previewAction");
+			
+			var errCnt = 0;
+			
+			var subject = document.getElementById("subject");
+			$scope.currentData.subject = subject.value;
+			
+			if ($scope.currentData.subject == undefined || $scope.currentData.subject == ""){
+				//console.log("$scope.currentData.subject : " + $scope.currentData.subject);
+				//angular.element("#subject").addClass("custom_input_text_error");
+				$scope.subject_error = true;
+				errCnt++;
+			}
+			
+			if ($scope.currentData.tagIDs == undefined || $scope.currentData.tagIDs == "" || $scope.currentData.tagIDs.length == 0){
+				console.log("$scope.currentData.tagIDs : " + $scope.currentData.tagIDs);
+				//angular.element("#s2id_autogen1").parent().addClass("custom_input_text_error");
+				$scope.tagIDs_error = true;
+				errCnt++;
+			}	
+						
+			if (errCnt>0) {
+				return;
+			}
+			
+			$scope.chartEnable = true;
+			$scope.chartData = [];
+			$scope.chartOptions.chart.xAxis.axisLabel = 'Time ('+$scope.currentData.interval+')';
+			$scope.chartOptions.title.text = $scope.currentData.subject;
+			
+			var dateTime = $scope.getCurrentDate();
+			console.log("currentData.dateType : " +$scope.currentData.dateType);
+			console.log("currentData.interval : " +$scope.currentData.interval);
+			if ($scope.currentData.dateType == "s") {
+				
+				if ($scope.currentData.interval == "HOUR") {
+					dateTime = angular.element("#datetimepicker1").val() + " " + "01:00:00"
+				} else if ($scope.currentData.interval == "DAY") {
+					dateTime = angular.element("#datetimepicker2").val() + "-01" + " " + "01:00:00"
+				} else if ($scope.currentData.interval == "MONTH") {
+					dateTime = angular.element("#datetimepicker3").val() + "-01-01"+" " + "01:00:00"
+				}
+				
+			}
+			$scope.currentData.dateTime = dateTime;
+			
+			$scope.chartOptions.title.text = $scope.currentData.subject;
+			$scope.chartOptions.caption.html = 
+				'<small class="fw-bold">시간 단위 : '+$scope.currentData.interval
+				+'<br /> Value 측정 : '+$scope.currentData.valueType+'</small>';
+			$scope.chartOptions.subtitle.html = '<small>기준 시간 : '+$scope.currentData.dateTime+'</small>';
+			
+			var urlQurey = "?interval="+$scope.currentData.interval
+							+"&calculation="+$scope.currentData.valueType
+							+"&datetime="+$scope.currentData.dateTime;
+			
+			angular.forEach($scope.currentData.tagIDs, function(value, key) {
+				
+				var splitValue = value.split(":");
+				var tagName = splitValue[0];
+				var tagID = splitValue[1];
+				//console.log("tagName : " + tagName);
+				//console.log("tagID : " + tagID);
+				tagID = tagID.replace("TAG_","");
+				tagID = tagID.replace("_clone","");	
+				//console.log(value);	
+				$scope.fetchData(tagName, tagID, urlQurey);
+			});
+			
 		}
 		
 		
@@ -327,7 +422,7 @@ $scope.logList = new HashMap();
 		
 		$scope.createAction = function(point) {
 			console.log("--> createAction");
-			console.log(point);
+			//console.log(point);
 			$http({
 				method : 'POST',
 				url : $scope.baseRestUrl + $scope.entityName,
@@ -399,7 +494,10 @@ $scope.logList = new HashMap();
 		
 		$scope.editAction = function(selectData) {
 			console.log("--> editAction");
-			usSpinnerService.spin('app-spinner');			
+			usSpinnerService.spin('app-spinner');		
+			
+			$scope.chartEnable = false;
+			$scope.chartData = [];
 		
 			if (selectData == null) {
 				$scope.currentData = {
@@ -588,9 +686,40 @@ $scope.logList = new HashMap();
 			}
 		}
 		
+		$scope.getSortClass = function(attr) {
+			if ($scope.sortAttr != attr) {
+				return "sorting";
+			}
+			if ($scope.sortOder == false) {
+				return "sorting_desc";
+			} else {
+				return "sorting_asc";
+			}
+		}
+		
+		$scope.sortAction = function(attr) {
+			
+			if ($scope.sortAttr != attr) {
+				$scope.sortOder = "desc";
+				$scope.sortAttr = attr;
+			} else {
+				if ($scope.sortOder == "desc") {
+					$scope.sortOder = "asc";
+				} else {
+					$scope.sortOder = "desc";
+				}
+			}
+			try {
+				var num = $scope.page.number;
+				$scope.listAction(num-1, 12);
+			}catch (e) {
+				console.log(e)
+			}
+		}
+		
 		$scope.logPageChangeHandler = function(num, tagID) {
-			console.log(tagID);
-			console.log(num);
+			//console.log(tagID);
+			//console.log(num);
 			// $scope.pageNumber = num;
 			if ($scope.logList.get(tagID).page != undefined) {
 				$scope.logList.get(tagID).page.number = num;
