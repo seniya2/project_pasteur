@@ -20,6 +20,7 @@
 		$scope.reportUrl = config.settings.network.rest+$scope.entityName+"/";
 		$scope.searchUrl = config.settings.network.rest+$scope.entityName+"/search/findByDaily";
 		$scope.searchMonthUrl = config.settings.network.rest+$scope.entityName+"/search/findByDailyContains";
+		$scope.excelDownUrl = $scope.baseRestUrl + "download/energyReport";
 		
 		
 		$scope.reportEntity = new Object();
@@ -103,6 +104,12 @@
 			
 		}
 		
+		$scope.downAction = function(daliy) {
+			var downUrl = $scope.excelDownUrl + "?daliy="+daliy;
+			window.open(downUrl, "report_"+daliy, "", "");
+			
+		}
+		
 		$scope.searchDayFormSubmit = function() {
 			console.log("searchDayFormSubmit -->");			
 			
@@ -159,8 +166,8 @@
 			
 			if (currentDateStr != selectedDateStr) {
 				//window.alert("현재 날짜만 작성 가능합니다.");
-				$scope.entryModalOpen(null);
-				return;
+				//$scope.entryModalOpen(null);
+				//return;
 			}
 			
 			
@@ -215,18 +222,18 @@
 					if (day <= energyReportArray[key].daily) {
 						break;
 					} else {
-						waterSum = waterSum + energyReportArray[key].waterToday;
-						boiler1Sum = boiler1Sum + energyReportArray[key].boiler1Today;
-						boiler2Sum = boiler2Sum + energyReportArray[key].boiler2Today;
-						wastesSum = wastesSum + energyReportArray[key].wastesToday;
-						heat1Sum = heat1Sum + energyReportArray[key].heat1Today;
-						heat2Sum = heat2Sum + energyReportArray[key].heat2Today;
-						oilSum = oilSum + energyReportArray[key].oilToday;
-						freeze1Sum = freeze1Sum + energyReportArray[key].freeze1Today;
-						freeze2Sum = freeze2Sum + energyReportArray[key].freeze2Today;
-						wattSum = wattSum + energyReportArray[key].wattToday;					
-						item1Sum = item1Sum + energyReportArray[key].item1Today;
-						item2Sum = item2Sum + energyReportArray[key].item2Today;
+						waterSum = waterSum + parseFloat(energyReportArray[key].waterToday);
+						boiler1Sum = boiler1Sum + parseFloat(energyReportArray[key].boiler1Today);
+						boiler2Sum = boiler2Sum + parseFloat(energyReportArray[key].boiler2Today);
+						wastesSum = wastesSum + parseFloat(energyReportArray[key].wastesToday);
+						heat1Sum = heat1Sum + parseFloat(energyReportArray[key].heat1Today);
+						heat2Sum = heat2Sum + parseFloat(energyReportArray[key].heat2Today);
+						oilSum = oilSum + parseFloat(energyReportArray[key].oilToday);
+						freeze1Sum = freeze1Sum + parseFloat(energyReportArray[key].freeze1Today);
+						freeze2Sum = freeze2Sum + parseFloat(energyReportArray[key].freeze2Today);
+						wattSum = wattSum + parseFloat(energyReportArray[key].wattToday);		
+						item1Sum = item1Sum + parseFloat(energyReportArray[key].item1Today);
+						item2Sum = item2Sum + parseFloat(energyReportArray[key].item2Today);
 						//console.log("energyReportArray[key].daily : " + energyReportArray[key].daily);
 					}
 				}				
@@ -380,9 +387,9 @@
 				selectedDateStr = selectedDateStr.substr(0,10);
 				
 				if (currentDateStr != selectedDateStr) {
-					$scope.entryModalOpen(null);
+					//$scope.entryModalOpen(null);
 					//window.alert("현재 날짜만 작성 가능합니다.");
-					return;
+					//return;
 				}
 			}
 			
