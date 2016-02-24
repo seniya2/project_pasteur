@@ -61,6 +61,11 @@
 			*/
 		}
 		
+		$scope.excelDownAction = function() {
+			console.log("--> excelDownAction ------------- ");
+			window.open($scope.csvFileUrl, "excelDown", "", "");
+		}
+		
 		$scope.prepareAction = function() {
 			usSpinnerService.spin('app-spinner-ecpm');
 			Papa.parse($scope.csvFileUrl, $scope.csvConfig);			

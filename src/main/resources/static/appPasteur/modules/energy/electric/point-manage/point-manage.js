@@ -38,6 +38,12 @@
 			});
 		}					
 		
+		$scope.excelDownAction = function() {
+			console.log("--> excelDownAction ------------- ");
+			var openUrl = $scope.baseXdUrl+"setting/"+$scope.categoryName;
+			window.open(openUrl, "excelDown", "", "");
+		}
+		
 		$scope.searchClickFn = function(){			
 			console.log("--> searchClickFn ------------- ");
 			var searchName = document.getElementById("searchName");
@@ -52,15 +58,43 @@
 			return newDateItme;
 		}
 		
-		$scope.fileNameChanged = function(changeEvent) {
+		$scope.fileNameChanged = function(target) {
 			console.log("select file");
-			console.log(changeEvent);
+			console.log(target.files[0]);
+			
+			var formdata = new FormData();
+			formdata.append('file', target.files[0]);
+			
+			console.log(formdata);
+			/*
 			var reader = new FileReader();
 			reader.onload = function(){
 				var dataURL = reader.result;
 				console.log("select file dataURL : " + dataURL);
 			};
-			reader.readAsDataURL(changeEvent.files[0]);
+			reader.readAsDataURL(target.files[0]);
+			*/
+			
+			var postUrl = $scope.baseXdUrl+"setting/"+$scope.categoryName;
+			
+			$http(
+					{
+						method : 'POST',
+						url : postUrl,
+						data: formdata,
+						headers : {
+							'Content-Type': 'multipart/form-data'
+						}
+					}).success(function(data) {						
+						
+						console.log(data);
+						
+					}).error(function(error) {
+						console.log(error);
+					});
+			
+			
+			
 		}
 		
 		$scope.disableScreen = function(enable) {			
@@ -114,31 +148,23 @@
 		}	
 		
 		
-		$scope.getPointInfo = function() {
-			
-			var listUrl = $scope.xdListUrl + '?page=0&size=2000';
-			
+		$scope.getPointInfo = function() {			
+			var listUrl = $scope.xdListUrl + '?page=0&size=2000';			
 			$http(
 					{
 						method : 'GET',
 						url : listUrl
-					}).success(function(data) {
-						
+					}).success(function(data) {						
 						var pointInfoArray = [];
 						for (var key in data.content) {
 							pointInfoArray.push(data.content[key].id);
 							pointInfoArray.push(data.content[key].name);
-						}
-						
-						$scope.pointInfo = pointInfoArray;
-						
+						}						
+						$scope.pointInfo = pointInfoArray;						
 						$timeout(function(){usSpinnerService.stop('app-spinner')}, 1000);
-						//console.log($scope.dataList);
-				
 					}).error(function(error) {
 						// $scope.widgetsError = error;
 					});
-			
 		}
 		
 		$scope.updateValue = function(id, idx) {
@@ -224,28 +250,29 @@
 			
 			var postData = "";
 			if (point.name != null) {
-				postData += "&name="+point.name
+				postData += "&name="+encodeURIComponent(point.name)
 			} else {
-				postData += "&name="
+				//postData += "&name=null"
 			}
 			if (point.interval != null) {
 				if (!isNaN(point.interval)){
 					postData += "&interval="+point.interval
 				} else {
-					postData += "&interval="
+					postData += "&interval=-1"
 				}
 			} else {
 				postData += "&interval="
 			}
-			if (point.criteria != null) {
-				postData += "&criteria="+point.criteria
+			if (point.criteria != null && point.criteria != "") {
+				postData += "&criteria="+encodeURIComponent(point.criteria)
 			} else {
-				postData += "&criteria="
-			}			
+				//postData += "&criteria="
+			}
+			
+			//console.log("postData : " + postData);
 			//postData = encodeURI(postData);
 			//postData = encodeURIComponent(postData);
 			//postData = escape(postData);
-			
 			
 			$http({
 				method : 'POST',
