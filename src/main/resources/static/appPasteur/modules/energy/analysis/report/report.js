@@ -238,29 +238,29 @@
 					}
 				}				
 				
-				$scope.reportEntity.waterSum = waterSum;
-				$scope.reportEntity.boiler1Sum = boiler1Sum;
-				$scope.reportEntity.boiler2Sum = boiler2Sum;
-				$scope.reportEntity.wastesSum = wastesSum;
-				$scope.reportEntity.heat1Sum = heat1Sum;
-				$scope.reportEntity.heat2Sum = heat2Sum;
-				$scope.reportEntity.oilSum = oilSum;
-				$scope.reportEntity.freeze1Sum = freeze1Sum;
-				$scope.reportEntity.freeze2Sum = freeze2Sum;
-				$scope.reportEntity.wattSum = wattSum;
+				$scope.reportEntity.waterSum = waterSum.toFixed(1);
+				$scope.reportEntity.boiler1Sum = boiler1Sum.toFixed(1);
+				$scope.reportEntity.boiler2Sum = boiler2Sum.toFixed(1);
+				$scope.reportEntity.wastesSum = wastesSum.toFixed(1);
+				$scope.reportEntity.heat1Sum = heat1Sum.toFixed(1);
+				$scope.reportEntity.heat2Sum = heat2Sum.toFixed(1);
+				$scope.reportEntity.oilSum = oilSum.toFixed(1);
+				$scope.reportEntity.freeze1Sum = freeze1Sum.toFixed(1);
+				$scope.reportEntity.freeze2Sum = freeze2Sum.toFixed(1);
+				$scope.reportEntity.wattSum = wattSum.toFixed(1);
 				$scope.reportEntity.item1Sum = item1Sum;
-				$scope.reportEntity.item2Sum = item2Sum;				
+				$scope.reportEntity.item2Sum = item2Sum;	
 				
-				$scope.reportEntity.waterTotal = waterSum;
-				$scope.reportEntity.boiler1Total = boiler1Sum;
-				$scope.reportEntity.boiler2Total = boiler2Sum;
-				$scope.reportEntity.wastesTotal = wastesSum;
-				$scope.reportEntity.heat1Total = heat1Sum;
-				$scope.reportEntity.heat2Total = heat2Sum;
-				$scope.reportEntity.oilTotal = oilSum;
-				$scope.reportEntity.freeze1Total = freeze1Sum;
-				$scope.reportEntity.freeze2Total = freeze2Sum;
-				$scope.reportEntity.wattTotal = wattSum;
+				$scope.reportEntity.waterTotal = waterSum.toFixed(1);
+				$scope.reportEntity.boiler1Total = boiler1Sum.toFixed(1);
+				$scope.reportEntity.boiler2Total = boiler2Sum.toFixed(1);
+				$scope.reportEntity.wastesTotal = wastesSum.toFixed(1);
+				$scope.reportEntity.heat1Total = heat1Sum.toFixed(1);
+				$scope.reportEntity.heat2Total = heat2Sum.toFixed(1);
+				$scope.reportEntity.oilTotal = oilSum.toFixed(1);
+				$scope.reportEntity.freeze1Total = freeze1Sum.toFixed(1);
+				$scope.reportEntity.freeze2Total = freeze2Sum.toFixed(1);
+				$scope.reportEntity.wattTotal = wattSum.toFixed(1);
 				$scope.reportEntity.item1Total = item1Sum;
 				$scope.reportEntity.item2Total = item2Sum;
 				
@@ -308,15 +308,16 @@
 				var preDataArray = new Array();
 				var powerMonth = 0.0;
 				for (var key in energyReportArray) {
-					powerMonth = powerMonth + energyReportArray[key].wattToday;					
+					powerMonth = powerMonth + parseFloat(energyReportArray[key].wattToday);					
 					//console.log("energyReportArray[key].daily : " + energyReportArray[key].daily);
 				}
-				$scope.reportEntity.powerMonth = powerMonth;
+				$scope.reportEntity.powerMonth = powerMonth.toFixed(1);
 				$scope.functionInit();
 				
 				console.log("$scope.reportEntity.no : " + $scope.reportEntity.no);
+				$scope.disableScreen(false);
 				if ($scope.reportEntity.no != undefined) {
-					$scope.viewAndUpdateAction();
+					//$scope.viewAndUpdateAction();
 				} else {
 					$scope.disableScreen(false);
 				}
@@ -326,6 +327,28 @@
 			});
 			
 		}
+		
+		
+		$scope.customFn	= function(title, data, digit) {
+			
+			
+			try {
+					var val = 0;
+					
+					for (var key in data)	{
+						
+					}
+					
+					console.log(title + " " + val);
+				
+			}catch (e) {
+				console.log(title + " " + e);
+			}
+			
+			
+			
+		}
+		
 		
 		$scope.searchAction = function(day) {
 			
@@ -453,7 +476,8 @@
 		
 		$scope.viewAndUpdateAction = function() {
 			console.log("viewAndUpdateAction -->");
-			//console.log($scope.reportEntity);
+			console.log($scope.reportEntity);
+			console.log("viewAndUpdateAction ----------");
 
 			$http({
 				method : 'PUT',
@@ -478,39 +502,39 @@
 		$scope.functionInit = function() {
 			
 			$scope.$watch('reportEntity.waterToday', function() {			
-				$scope.reportEntity.waterTotal = parseFloat($scope.reportEntity.waterToday) + parseFloat($scope.reportEntity.waterSum);
+				$scope.reportEntity.waterTotal = (parseFloat($scope.reportEntity.waterToday) + parseFloat($scope.reportEntity.waterSum)).toFixed(1);
 			});
 			$scope.$watch('reportEntity.boiler1Today', function() {	
-				$scope.reportEntity.boiler1Total = parseFloat($scope.reportEntity.boiler1Today) + parseFloat($scope.reportEntity.boiler1Sum);
+				$scope.reportEntity.boiler1Total = (parseFloat($scope.reportEntity.boiler1Today) + parseFloat($scope.reportEntity.boiler1Sum)).toFixed(1);
 				$scope.reportEntity.co21Today = ((parseFloat($scope.reportEntity.boiler1Today) + parseFloat($scope.reportEntity.boiler2Today)) * 0.001043).toFixed(6);
 			});
 			$scope.$watch('reportEntity.boiler2Today', function() {	
-				$scope.reportEntity.boiler2Total = parseFloat($scope.reportEntity.boiler2Today) + parseFloat($scope.reportEntity.boiler2Sum);
+				$scope.reportEntity.boiler2Total = (parseFloat($scope.reportEntity.boiler2Today) + parseFloat($scope.reportEntity.boiler2Sum)).toFixed(1);
 				$scope.reportEntity.co21Today = ((parseFloat($scope.reportEntity.boiler1Today) + parseFloat($scope.reportEntity.boiler2Today)) * 0.001043).toFixed(6);
 			});
 			$scope.$watch('reportEntity.wastesToday', function() {			
-				$scope.reportEntity.wastesTotal = parseFloat($scope.reportEntity.wastesToday) + parseFloat($scope.reportEntity.wastesSum);
+				$scope.reportEntity.wastesTotal = (parseFloat($scope.reportEntity.wastesToday) + parseFloat($scope.reportEntity.wastesSum)).toFixed(1);
 			});
 			$scope.$watch('reportEntity.heat1Today', function() {			
-				$scope.reportEntity.heat1Total = parseFloat($scope.reportEntity.heat1Today) + parseFloat($scope.reportEntity.heat1Sum);
+				$scope.reportEntity.heat1Total = (parseFloat($scope.reportEntity.heat1Today) + parseFloat($scope.reportEntity.heat1Sum)).toFixed(1);
 				$scope.reportEntity.co22Today = ((parseFloat($scope.reportEntity.heat1Today) + parseFloat($scope.reportEntity.heat2Today)) * 0.1).toFixed(6);
 			});
 			$scope.$watch('reportEntity.heat2Today', function() {			
-				$scope.reportEntity.heat2Total = parseFloat($scope.reportEntity.heat2Today) + parseFloat($scope.reportEntity.heat2Sum);
+				$scope.reportEntity.heat2Total = (parseFloat($scope.reportEntity.heat2Today) + parseFloat($scope.reportEntity.heat2Sum)).toFixed(1);;
 				$scope.reportEntity.co22Today = ((parseFloat($scope.reportEntity.heat1Today) + parseFloat($scope.reportEntity.heat2Today)) * 0.1).toFixed(6);
 			});
 			$scope.$watch('reportEntity.oilToday', function() {			
-				$scope.reportEntity.oilTotal = parseFloat($scope.reportEntity.oilToday) + parseFloat($scope.reportEntity.oilSum);
+				$scope.reportEntity.oilTotal = (parseFloat($scope.reportEntity.oilToday) + parseFloat($scope.reportEntity.oilSum)).toFixed(1);;
 				$scope.reportEntity.co23Today = (parseFloat($scope.reportEntity.oilToday) * 0.000901).toFixed(6);
 			});
 			$scope.$watch('reportEntity.freeze1Today', function() {			
-				$scope.reportEntity.freeze1Total = parseFloat($scope.reportEntity.freeze1Today) + parseFloat($scope.reportEntity.freeze1Sum);
+				$scope.reportEntity.freeze1Total = (parseFloat($scope.reportEntity.freeze1Today) + parseFloat($scope.reportEntity.freeze1Sum)).toFixed(1);
 			});
 			$scope.$watch('reportEntity.freeze2Today', function() {			
-				$scope.reportEntity.freeze2Total = parseFloat($scope.reportEntity.freeze2Today) + parseFloat($scope.reportEntity.freeze2Sum);
+				$scope.reportEntity.freeze2Total = (parseFloat($scope.reportEntity.freeze2Today) + parseFloat($scope.reportEntity.freeze2Sum)).toFixed(1);
 			});
 			$scope.$watch('reportEntity.wattToday', function() {			
-				$scope.reportEntity.wattTotal = parseFloat($scope.reportEntity.wattToday) + parseFloat($scope.reportEntity.wattSum);
+				$scope.reportEntity.wattTotal = (parseFloat($scope.reportEntity.wattToday) + parseFloat($scope.reportEntity.wattSum)).toFixed(1);
 				$scope.reportEntity.co24Today = (parseFloat($scope.reportEntity.wattToday) * 0.00023).toFixed(6);
 			});		
 			$scope.$watch('reportEntity.item1Today', function() {			

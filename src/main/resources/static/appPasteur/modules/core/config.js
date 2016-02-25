@@ -12,7 +12,7 @@
     /**
      * Whether to print and alert some log information
      */
-    debug: true,
+    debug: false,
     /**
      * In-app constants
      */
@@ -44,8 +44,8 @@
       navCollapseTimeout: 2500,
       
       network : {
-		'ui' : 'http://localhost:8090/',
-		'rest' : 'http://localhost:8091/',
+		'ui' : 'http://192.168.245.3:8090/',
+		'rest' : 'http://192.168.245.3:8091/',
 		'xd' : 'http://192.168.245.3:9898/'
       },
       
