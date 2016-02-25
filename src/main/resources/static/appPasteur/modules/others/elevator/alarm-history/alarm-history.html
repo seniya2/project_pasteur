@@ -101,7 +101,7 @@
 						<td class="text-center">{{point.value}} </td>
 						<td class="text-center">
 							<span ng-bind-html="point.alarmName"></span> 
-							<span ng-show="point.criteria">({{point.criteria}})</span>
+							<span ng-show="point.status == 'criteria'">({{point.criteria}})</span>
 						</td>
 					</tr>
 				</tbody>

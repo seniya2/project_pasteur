@@ -93,7 +93,11 @@
 						total-items="page.totalElements" current-page="pagination.current">						
 						<td class="text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>	
 						<td class="text-center">{{point.value}} </td>
-						<td class="text-center"><div ng-bind-html="point.alarmName"></div></td>
+						<td class="text-center">
+						<span ng-bind-html="point.alarmName"></span>
+						<span ng-show="point.status == 'criteria'">({{point.criteria}})</span>
+						</td>
+						
 					</tr>
 				</tbody>
 			</table>		
