@@ -94,194 +94,69 @@
     
     $scope.baseXdUrl = config.settings.network.xd;
     $scope.baseRestUrl = config.settings.network.rest;
-    $scope.alarmEntity = ['alarmElectric','alarmHvac','alarmElevator','alarmFire'];
+   
     
-    $scope.prepareAction = function() {
-    	
-    	for (var key in $scope.alarmEntity) {
-    		var entity = $scope.alarmEntity[key];
-    		//$scope.getGlobalAlarm(entity, key);
-    	}
-    }
+   
     
-    $scope.getGlobalAlarm = function(entityName, idx) {
-    	
-    	var listUrl = $scope.baseRestUrl+entityName;    	
-    	//console.log("entityName : "+ entityName);
-		//console.log("idx : "+ idx);
-		//console.log("listUrl : "+ listUrl);
-		var dataList = null;
-		
-    	$http(
-				{
-					method : 'GET',
-					url : listUrl + '?page=0&size=1000&sort=id,desc'
-				}).success(function(data) {
-					
-					eval("dataList = data._embedded."+entityName);					
-					var tagID = "";
-					var tagName = "";
-					var alarmName = "";
-					var condition = "";
-					var global = "";
-					var tagEntity = "";
-					
-					if (entityName == "alarmElevator"){
-						tagEntity = "elevator";
-					} else if (entityName == "alarmFire"){
-						tagEntity = "fire";
-					} else if (entityName == "alarmElectric"){
-						tagEntity = "electric";
-					} else if (entityName == "alarmHvac"){
-						tagEntity = "hvac";
-					}
-					
-					
-					for (var key in dataList) {
-						//console.log(dataList[key]);
-						tagName=dataList[key].tagID.split(":")[0];
-						tagID=dataList[key].tagID.split(":")[1];
-						alarmName=dataList[key].condition.split(":")[0];
-						condition=dataList[key].condition.split(":")[1];
-						
-						console.log(alarmName);
-						
-						//global=dataList[key].global;
-						
-						//if (global == "Y") {
-							if ($scope.globalAlarmList.get(tagID) != undefined) {
-								//console.log("!undefined : " + tagID);
-								var alarmNameAdd = $scope.globalAlarmList.get(tagID).alarmName + "," + alarmName;
-								var conditionAdd = $scope.globalAlarmList.get(tagID).condition + "," + condition;
-								
-								$scope.globalAlarmList.set(tagID, {
-									"tagName" : tagName,
-									"alarmName" :alarmNameAdd,
-									"condition" :conditionAdd,
-									"global" : global,
-									'tagEntity' : tagEntity
-								}); 
-							} else {
-								//console.log("undefined : " +tagID);
-								$scope.globalAlarmList.set(tagID, {
-									"tagName" : tagName,
-									"alarmName" :alarmName,
-									"condition" :condition,
-									"global" : global,
-									'tagEntity' : tagEntity
-								}); 
-							}
-							//console.log($scope.globalAlarmList.get(tagID));
-						//}
-						
-						$scope.point[tagID] = {
-								"tagID" : tagID,
-								"value" : null, 
-								"old_val" : null
-						};
-						
-					}
-					
-					if (idx == 1) {
-						$timeout(function(){
-							$scope.callAtInterval(); 
-							$scope.asyncStartAction();
-						}, 5000);
-					}
-					
-		}).error(function(error) {
-			console.log(error);
-			// $scope.widgetsError = error;
-		});
-    }
-    
-    $scope.asyncStartAction = function() {
-		$scope.intervalJob = $interval(function(){ $scope.callAtInterval(); }, 10000);
-	}
-	
-	$scope.asyncStopAction = function() {
-		 $interval.cancel($scope.intervalJob);
-	}
-	
-	$scope.callAtInterval = function() {
-		//console.log($scope.globalAlarmList);
-		var tagList = $scope.globalAlarmList.keys();
-		for (var key in tagList) {
-			try {
-				var tagID = tagList[key];
-				var tagEntity = $scope.globalAlarmList.get(tagID).tagEntity;				
-				//console.log("tagID : " + tagList[key]);
-				//console.log("tagEntity : " + tagEntity);
-				$scope.fetchTagData(tagID, tagEntity);
-			}
-			catch(err) {
-			   console.log(err);
-			}
-    	}
-    }
-	
-	$scope.fetchTagData = function(tagID, tagEntity) {
-		
-		var newTagID = "";
-		newTagID = tagID.replace("TAG_","");
-		newTagID = newTagID.replace("_clone","");
-		
-		var tagAddr = $scope.baseXdUrl+"monitor/"+tagEntity+"/"+newTagID;
-		
+    $scope.requestAction = function(dataUrl) {
+
 		$http({
 			method : 'GET',
-			url : tagAddr,
-			headers: {'Content-type': 'application/json'}
-				
-		}).success(function(data) {
+			url : dataUrl,
+			headers: {'Content-type': 'application/json'},
+			cache: false,
+			timeout:20000
+		}).success(function(data) {			
+			var contents = data.content;			
+			for (var key in contents) {				
+				var entity = contents[key];
+				$scope.alarmMessage(entity);				
+			}
 			
-			$scope.point[tagID].value = data.value;
-			$scope.alarmFilter(tagID, $scope.point[tagID].old_val, data.value);
-			$scope.point[tagID].old_val = data.value;
+			$timeout(function(){
+				$scope.requestAction(dataUrl)
+			}, 5000);
 			
 		}).error(function(error) {
-			// $scope.widgetsError = error;
+			console.log($scope.svgFile + " ! " + error);
+			
 		});
+
 	}
-	
-	
-	$scope.alarmFilter = function(tagID, old_val, val) {
+    
+    
+    
+    $scope.alarmMessage = function(entity) {
 		
-		//console.log("tagID : " + tagID);
-		//console.log("old_val : " + old_val);
-		//console.log("new val : " + val);
-				
-		if (old_val == null || old_val == undefined) {
-			return;
-		}			
-		var alarmInfo = $scope.globalAlarmList.get(tagID);
-		//console.log("alarmInfo.condition : " + alarmInfo.condition);
-		
-		if (alarmInfo != undefined) {
-			var conditions = alarmInfo.condition.split(",");
-			var alarmNames = alarmInfo.alarmName.split(",");
-			for (var i=0; i<conditions.length; i++ ) {
-				//console.log("conditions[i] : " + conditions[i]);
-				eval("if ("+conditions[i]+") {console.log(conditions[i]);$scope.alarmMessage(tagID, alarmNames[i], i, val);}");
-			}
-		}
-		
-	}
-	
-	$scope.alarmMessage = function(tagID, alarmName, number, val) {
-		
+		var name = entity.name;
+		var datetime = entity.datetime;
+		var criteria = entity.criteria;
+
+    	var message = name + "알람발생<br /> "+ datetime  +"<br />아래 조건에 의하여 알람이 발생하였습니다. <br />" + criteria;
 		Messenger({
 		    extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
 		    theme: 'future'
 		}).post({			
-			message:alarmName + "<br/>현재값 : " + val,
+			message:message,
 			type: 'error',
 			hideAfter:36000,
-		    showCloseButton: true,
-		    id: tagID+"_"+number+"_"+val,
-		    singleton: true		    
+		    showCloseButton: true 
 		});
 	}
+    
+    
+    
+    $scope.prepareAction = function() {    	
+    	console.log("core.js $scope.prepareAction------>");
+    	 //$scope.alarmEntity = ['electric','hvac','elevator','fire'];
+    	$scope.requestAction("http://192.168.245.3:9898/current/electric?status=status");
+    	$scope.requestAction("http://192.168.245.3:9898/current/hvac?status=status");
+    	$scope.requestAction("http://192.168.245.3:9898/current/elevator?status=status");
+    	$scope.requestAction("http://192.168.245.3:9898/current/fire?status=status");
+    }
+    
+    
+    
     
   }
 
