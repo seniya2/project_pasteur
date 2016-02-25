@@ -166,8 +166,8 @@
 			
 			if (currentDateStr != selectedDateStr) {
 				//window.alert("현재 날짜만 작성 가능합니다.");
-				//$scope.entryModalOpen(null);
-				//return;
+				$scope.entryModalOpen(null);
+				return;
 			}
 			
 			
@@ -410,9 +410,9 @@
 				selectedDateStr = selectedDateStr.substr(0,10);
 				
 				if (currentDateStr != selectedDateStr) {
-					//$scope.entryModalOpen(null);
 					//window.alert("현재 날짜만 작성 가능합니다.");
-					//return;
+					$scope.entryModalOpen(null);
+					return;
 				}
 			}
 			
