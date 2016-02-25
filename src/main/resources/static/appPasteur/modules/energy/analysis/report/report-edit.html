@@ -576,6 +576,6 @@
 <div class="form-actions">
 	<button type="submit" class="btn btn-primary btn-rounded pull-right">Save</button>
 	<span class="btn btn-default btn-inverse" ng-show="reportEntity.no > 0" ng-click="viewAction(reportEntity)">Cancel</span>
-	<span class="btn btn-default btn-inverse" ng-show="reportEntity.no == undefined" ng-click="cancelAction()">Cancel</span>
+	<span ng-show="reportEntity.no == undefined">&nbsp;</span>
 </div>
 </form>

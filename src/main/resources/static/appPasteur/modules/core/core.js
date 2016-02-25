@@ -36,7 +36,7 @@
     	if ($scope.currentPath == "/app/pasteur-dashboard") {
     		$scope.menu = { main : "Institut Pasteur Korea", sub : ""}
     	} else if ($scope.currentPath == "/app/energy-report") {
-    		$scope.menu = { main : "사용량분석", sub : "사용량일지"}
+    		$scope.menu = { main : "사용량일지", sub : ""}
     	} else if ($scope.currentPath == "/app/energy-graph") {
     		$scope.menu = { main : "사용량분석", sub : "경향그래프"}
     	} else if ($scope.currentPath == "/app/energy-hvac-point-manage") {
