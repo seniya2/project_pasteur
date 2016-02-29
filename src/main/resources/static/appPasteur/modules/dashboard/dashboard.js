@@ -110,6 +110,9 @@
 							data._embedded.graphHvac.chartEnable = false;
 							data._embedded.graphHvac.categoryEntity ="hvac";
 							
+							data._embedded.graphHvac[key].dateType = "c"
+							data._embedded.graphHvac[key].valueType = "LAST"
+							data._embedded.graphHvac[key].interval = "HOUR"
 							$scope.graphList.push(data._embedded.graphHvac[key]);
 						}
 						for (var key in $scope.graphList) {
@@ -132,6 +135,10 @@
 							data._embedded.graphElectric.chartData = "";
 							data._embedded.graphElectric.chartEnable = false;
 							data._embedded.graphElectric.categoryEntity ="electric";
+							
+							data._embedded.graphElectric[key].dateType = "c"
+							data._embedded.graphElectric[key].valueType = "LAST"
+							data._embedded.graphElectric[key].interval = "DAY"
 							$scope.graphList.push(data._embedded.graphElectric[key]);
 						}
 						for (var key in $scope.graphList) {

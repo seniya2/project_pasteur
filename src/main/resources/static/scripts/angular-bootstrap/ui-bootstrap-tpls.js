@@ -5097,6 +5097,7 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position'])
               if (matches && matches.length > 0) {
 
                 scope.activeIdx = focusFirst ? 0 : -1;
+                scope.activeIdx = -1;
                 isNoResultsSetter(originalScope, false);
                 scope.matches.length = 0;
 

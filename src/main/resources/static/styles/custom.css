@@ -109,6 +109,10 @@ table thead .sorting_desc_disabled {
 	margin-left: 30px;
 }
 
+.margin_left_50 {
+	margin-left: 50px;
+}
+
 .view_div_height_30 {
 	height : 30px;
 	padding-top: 7px;

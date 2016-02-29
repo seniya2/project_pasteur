@@ -3,7 +3,8 @@
 
 	var module = angular.module('singApp.energy-hvac-point-manage', [ 
 	                                                      'ui.router',
-	                                                      'angularUtils.directives.dirPagination']);
+	                                                      'angularUtils.directives.dirPagination',
+	                                                      'LiveSearch']);
 
 	module.config(appConfig);
 

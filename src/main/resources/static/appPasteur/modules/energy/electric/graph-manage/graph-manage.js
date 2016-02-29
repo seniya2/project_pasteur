@@ -9,6 +9,8 @@
 		var s_size = search.size || 12;
 		var s_sort = search.sort || 'id,desc';
 		
+		$scope.currentPath = $location.path();
+		
 		$scope.template_base = "appPasteur/modules/energy/electric/graph-manage/";
 		$scope.template = $scope.template_base + "graph-manage-list.html";
 		$scope.entityNameForPoint = "pointHvac";
@@ -57,20 +59,7 @@
 			}
 		};
 		
-		$scope.massagePopup = function(msg, type) {		
-			/*
-			Messenger({
-				extraClasses: 'messenger-fixed messenger-on-top',
-    		    theme: 'air'
-			}).post({
-				  message: msg,
-				  type: type,
-				  showCloseButton: false
-			});
-			*/
-		}
-		
-		$scope.currentDate = "";
+		//$scope.interval = "HOUR";
 		
 		$scope.getCurrentDate = function() {
 			var nowDate = new Date();			
@@ -78,6 +67,13 @@
 			nowDateStr = nowDateStr.substr(0,19);
 			nowDateStr = nowDateStr.replace("T"," ");
 			return nowDateStr;			
+		}
+		
+		$scope.getCurrentTime = function() {
+			var nowDate = new Date();			
+			var nowTimeStr = nowDate.toTimeString();
+			nowTimeStr = nowTimeStr.substr(0,8);
+			return nowTimeStr;			
 		}
 		
 		$scope.setCurrentDate = function() {
@@ -175,9 +171,14 @@
 					$scope.datetimepickerView1=false;
 					$scope.datetimepickerView2=false;
 					$scope.datetimepickerView3=true;
+				} else if (type == "REALTIME") {
+					$scope.datetimepickerView1=false;
+					$scope.datetimepickerView2=false;
+					$scope.datetimepickerView3=false;
+					$scope.currentData.dateType="c";
 				}
 
-			}, 300 , true );
+			}, 100 , true );
 			
 			
 		}; 
@@ -211,78 +212,6 @@
 					}).error(function(error) {
 						// $scope.widgetsError = error;
 					});
-		}
-		
-		$scope.previewAction = function() {
-			console.log("--> previewAction");
-			
-			var errCnt = 0;
-			
-			var subject = document.getElementById("subject");
-			$scope.currentData.subject = subject.value;
-			
-			if ($scope.currentData.subject == undefined || $scope.currentData.subject == ""){
-				//console.log("$scope.currentData.subject : " + $scope.currentData.subject);
-				//angular.element("#subject").addClass("custom_input_text_error");
-				$scope.subject_error = true;
-				errCnt++;
-			}
-			
-			if ($scope.currentData.tagIDs == undefined || $scope.currentData.tagIDs == "" || $scope.currentData.tagIDs.length == 0){
-				console.log("$scope.currentData.tagIDs : " + $scope.currentData.tagIDs);
-				//angular.element("#s2id_autogen1").parent().addClass("custom_input_text_error");
-				$scope.tagIDs_error = true;
-				errCnt++;
-			}	
-						
-			if (errCnt>0) {
-				return;
-			}
-			
-			$scope.chartEnable = true;
-			$scope.chartData = [];
-			$scope.chartOptions.chart.xAxis.axisLabel = 'Time ('+$scope.currentData.interval+')';
-			$scope.chartOptions.title.text = $scope.currentData.subject;
-			
-			var dateTime = $scope.getCurrentDate();
-			console.log("currentData.dateType : " +$scope.currentData.dateType);
-			console.log("currentData.interval : " +$scope.currentData.interval);
-			if ($scope.currentData.dateType == "s") {
-				
-				if ($scope.currentData.interval == "HOUR") {
-					dateTime = angular.element("#datetimepicker1").val() + " " + "01:00:00"
-				} else if ($scope.currentData.interval == "DAY") {
-					dateTime = angular.element("#datetimepicker2").val() + "-01" + " " + "01:00:00"
-				} else if ($scope.currentData.interval == "MONTH") {
-					dateTime = angular.element("#datetimepicker3").val() + "-01-01"+" " + "01:00:00"
-				}
-				
-			}
-			$scope.currentData.dateTime = dateTime;
-			
-			$scope.chartOptions.title.text = $scope.currentData.subject;
-			$scope.chartOptions.caption.html = 
-				'<small class="fw-bold">시간 단위 : '+$scope.currentData.interval
-				+'<br /> Value 측정 : '+$scope.currentData.valueType+'</small>';
-			$scope.chartOptions.subtitle.html = '<small>기준 시간 : '+$scope.currentData.dateTime+'</small>';
-			
-			var urlQurey = "?interval="+$scope.currentData.interval
-							+"&calculation="+$scope.currentData.valueType
-							+"&datetime="+$scope.currentData.dateTime;
-			
-			angular.forEach($scope.currentData.tagIDs, function(value, key) {
-				
-				var splitValue = value.split(":");
-				var tagName = splitValue[0];
-				var tagID = splitValue[1];
-				//console.log("tagName : " + tagName);
-				//console.log("tagID : " + tagID);
-				tagID = tagID.replace("TAG_","");
-				tagID = tagID.replace("_clone","");	
-				//console.log(value);	
-				$scope.fetchData(tagName, tagID, urlQurey);
-			});
-			
 		}
 		
 		
@@ -382,21 +311,6 @@
 				return;
 			}
 			
-			var dateTime = $scope.getCurrentDate();
-			console.log("currentData.dateType : " +$scope.currentData.dateType);
-			console.log("currentData.interval : " +$scope.currentData.interval);
-			if ($scope.currentData.dateType == "s") {				
-				if ($scope.currentData.interval == "HOUR") {
-					dateTime = angular.element("#datetimepicker1").val() + " " + "00:00:01"
-				} else if ($scope.currentData.interval == "DAY") {
-					dateTime = angular.element("#datetimepicker2").val() + "-01" + " " + "00:00:01"
-				} else if ($scope.currentData.interval == "MONTH") {
-					dateTime = angular.element("#datetimepicker3").val() + "-01-01"+" " + "00:00:01"
-				}				
-			}
-			$scope.currentData.dateTime = dateTime;
-			
-			
 			var newData = $scope.currentData;
 			
 			//console.log("newData.tagIDs1 : " + newData.tagIDs);
@@ -416,10 +330,7 @@
 			}else {
 				//$scope.resetXdRequest(newTagIDS, "createAction", newData);
 				$scope.createAction(newData);
-			}
-			//$scope.createAction($scope.currentData);
-			
-			
+			}			
 		}
 		
 		$scope.createAction = function(point) {
@@ -438,14 +349,12 @@
 				//$scope.displayMode = "list";				
 				$scope.template = $scope.template_base + "graph-manage-list.html";				
 				$scope.listAction(0, 12);
-				$scope.massagePopup("저장 되었습니다.", "success");
 				
 			}).error(function(error) {
 				$scope.disableScreen(false);
 				$scope.template = $scope.template_base + "graph-manage-list.html";	
 				$scope.listAction(0, 12);
-				$scope.massagePopup("저장 실패", "error");
-				// $scope.widgetsError = error;
+				
 			});
 		}
 		
@@ -463,13 +372,11 @@
 				$scope.disableScreen(false);
 				//console.log(data);
 				$scope.template = $scope.template_base + "graph-manage-list.html";				
-				$scope.listAction(0, 12);
-				$scope.massagePopup("변경 되었습니다.", "success");
+				$scope.listAction(0, 12);				
 			}).error(function(error) {
 				$scope.disableScreen(false);
 				$scope.template = $scope.template_base + "graph-manage-list.html";	
 				$scope.listAction(0, 12);
-				$scope.massagePopup("변경 실패", "error");
 				// $scope.widgetsError = error;
 			});
 		}
@@ -484,12 +391,10 @@
 				$scope.disableScreen(false);
 				$scope.template = $scope.template_base + "graph-manage-list.html";
 				$scope.listAction(0, 12);
-				$scope.massagePopup("삭제 되었습니다.", "success");
 			}).error(function(error) {
 				$scope.disableScreen(false);
 				$scope.template = $scope.template_base + "graph-manage-list.html";
 				$scope.listAction(0, 12);
-				$scope.massagePopup("삭제 실패", "error");
 			});
 		}
 		
@@ -502,20 +407,15 @@
 			$scope.chartData = [];
 		
 			if (selectData == null) {
+				
 				$scope.currentData = {
-						subject : "",
-						interval : "HOUR",
-						dateType : "c",
-						valueType : "LAST",
-						dateTime : $scope.currentDate,
-						datetimepicker : $scope.currentDate,
+						subject : "",						
 						tagIDs : []
 				};
 				
 			} else {
 				
-				//console.log(selectData);		
-				
+				//console.log(selectData);
 				var tagIds=new Array();				
 				var tagIDSArray = selectData.tagIDs.split(",");
 				for (var key in tagIDSArray) {
@@ -524,21 +424,11 @@
 					tagIds.push(tagIDOne);
 				}
 				
-				console.log(tagIds);
-				
 				$scope.currentData = {
 						no : selectData.no,
-						subject : selectData.subject,
-						interval : selectData.interval,
-						dateType : selectData.dateType,
-						valueType : selectData.valueType,
-						dateTime : selectData.dateTime,
-						datetimepicker : selectData.dateTime,
+						subject : selectData.subject,						
 						tagIDs : tagIds
 				};
-				
-				$scope.datetimepickerChange(selectData.interval);
-				
 			}
 			
 			$timeout(function(){				
@@ -550,6 +440,34 @@
 				$scope.subject_error = false;
 				$scope.tagIDs_error = false;
 			}, 500);
+			
+		}
+		
+		$scope.previewAction = function() {
+			console.log("--> previewAction");
+						
+			$scope.logList = new HashMap();
+			$scope.chartDataHash = new HashMap();
+			$scope.chartEnable = true;
+			$scope.chartData = [];
+			$scope.chartOptions.chart.xAxis.axisLabel = 'Time ('+$scope.currentData.interval+')';
+			$scope.chartOptions.title.text = $scope.currentData.subject;
+			
+			var dateTime = $scope.getCurrentDate();
+			//console.log("currentData.dateType : " +$scope.currentData.dateType);
+			//console.log("currentData.interval : " +$scope.currentData.interval);
+			if ($scope.currentData.dateType == "s") {				
+				if ($scope.currentData.interval == "HOUR") {
+					dateTime = angular.element("#datetimepicker1").val() + " " + "00:00:01"
+				} else if ($scope.currentData.interval == "DAY") {
+					dateTime = angular.element("#datetimepicker2").val() + "-01" + " " + "00:00:01"
+				} else if ($scope.currentData.interval == "MONTH") {
+					dateTime = angular.element("#datetimepicker3").val() + "-01-01"+" " + "00:00:01"
+				}
+			}
+			$scope.currentData.dateTime = dateTime;			
+			//console.log($scope.currentData.tagIDs);	
+			$scope.renderGraph();
 		}
 		
 		$scope.viewAction = function(point) {
@@ -559,29 +477,37 @@
 			$scope.template = $scope.template_base + "graph-manage-view.html";
 			
 			$scope.logList = new HashMap();
-			$scope.currentPoint = point;
+			$scope.chartDataHash = new HashMap();
+			$scope.currentData = point;
 			$scope.chartEnable = true;
 			$scope.chartData = [];
+						
+			$scope.currentData.interval = "HOUR";
+			$scope.currentData.dateType = "c";
+			$scope.currentData.valueType = "LAST";
+			$scope.currentData.dateTime = $scope.getCurrentDate();
 			
-			var subTitle = $scope.getPointDate($scope.currentPoint.dateType, $scope.currentPoint.dateTime);
+			$scope.renderGraph();
+		}
+		
+		
+		$scope.renderGraph = function() {
 			
-			var datetime = $scope.currentPoint.dateTime;
-			if ($scope.currentPoint.dateType == "c") {
-				datetime = $scope.getCurrentDate();
-			}
+			var subTitle = $scope.getPointDate($scope.currentData.dateType, $scope.currentData.dateTime);			
+			var datetime = $scope.currentData.dateTime;
 			
 			//console.log("datetime : " + datetime);
 			
-			$scope.chartOptions.title.text = $scope.currentPoint.subject;
+			$scope.chartOptions.title.text = $scope.currentData.subject;
 			$scope.chartOptions.caption.html = 
-				'<small class="fw-bold">시간 단위 : '+$scope.currentPoint.interval
-				+'<br /> Value 측정 : '+$scope.currentPoint.valueType+'</small>';
+				'<small class="fw-bold">시간 단위 : '+$scope.currentData.interval
+				+'<br /> Value 측정 : '+$scope.currentData.valueType+'</small>';
 			$scope.chartOptions.subtitle.html = '<small>기준 시간 : '+subTitle+'</small>';
 			
-			var urlQurey = "?interval="+$scope.currentPoint.interval
-							+"&calculation="+$scope.currentPoint.valueType
+			var urlQurey = "?interval="+$scope.currentData.interval
+							+"&calculation="+$scope.currentData.valueType
 							+"&datetime="+datetime;
-			var tagIDs = $scope.currentPoint.tagIDs.split(",");
+			var tagIDs = $scope.currentData.tagIDs.split(",");
 			
 			
 			angular.forEach(tagIDs, function(value, key) {
@@ -589,10 +515,7 @@
 				var splitValue = value.split(":");
 				var tagName = splitValue[0];
 				var tagID = splitValue[1];
-				//console.log("tagName : " + tagName);
-				//console.log("tagID : " + tagID);
-				tagID = tagID.replace("TAG_","");
-				tagID = tagID.replace("_clone","");	
+				
 				$scope.fetchData(tagName, tagID, urlQurey);
 				
 				$scope.logList.set(tagID,{
@@ -613,13 +536,6 @@
 				
 			});
 			
-			
-			var logListKeys = $scope.logList.keys();			
-			for (var key in logListKeys) {
-				//console.log($scope.logList.get(logListKeys[key]));
-				$scope.getLogData(0,logListKeys[key]);
-			} 
-			
 			$timeout(function(){				
 				usSpinnerService.stop('app-spinner');
 			}, 2000);
@@ -631,10 +547,13 @@
 			
 			var sort = $scope.logList.get(tagIDReplace).sort.sortAttr + "," + $scope.logList.get(tagIDReplace).sort.sortOder;
 			var size = $scope.logList.get(tagIDReplace).page.size;
-			var interval = $scope.currentPoint.interval;
-			var datetime = $scope.currentPoint.dateTime;
-			if ($scope.currentPoint.dateType == "c") {
+			var interval = $scope.currentData.interval;
+			var datetime = $scope.currentData.dateTime;
+			if ($scope.currentData.dateType == "c") {
 				datetime = $scope.getCurrentDate();
+			}
+			if ($scope.currentData.interval == "REALTIME") {
+				interval = "HOUR";
 			}
 			
 			var listUrl = $scope.logUrl + tagIDReplace + '?page=' + pageNumber + '&size=' + size +"&sort="+sort
@@ -649,7 +568,7 @@
 					}).success(function(data) {
 						
 						$scope.logList.get(tagIDReplace).content = data.content;
-						console.log(data.content);
+						//console.log(data.content);
 						
 						var page = {
 								"size" : 10,
@@ -758,59 +677,123 @@
 					$scope.logList.get(tagID).sort.sortOder = "desc"
 				}
 			}
-			var num = $scope.logList.get(tagID).page.number
+			var num = $scope.logList.get(tagID).page.number;
 			$scope.getLogData(num - 1, tagID);
 		}
 		
 		
-		$scope.fetchData = function(tagID, tagIDReplace, urlQurey) {
-			
+		$scope.fetchData = function(tagID, tagIDReplace, urlQurey) {			
 			//console.log("fetchData tagIDReplace:" +tagIDReplace);
-			console.log("$scope.chartUrl+tagID+urlQurey : " + $scope.chartUrl+tagIDReplace+urlQurey);
+			//console.log("$scope.chartUrl+tagID+urlQurey : " + $scope.chartUrl+tagIDReplace+urlQurey);			
+			var dataURL = "";			
+			if ($scope.currentData.interval == "REALTIME") {
+				dataURL = $scope.xdListUrl+tagIDReplace
+				$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d3.time.format('%H:%M:%S')(new Date(d)) };
+				//$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d };
+			} else {		
+				dataURL = $scope.chartUrl+tagIDReplace+urlQurey;
+				$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d };
+			}
+			
+			var cnt = 0;
+			var dataValues = new Array();
+			
+			var chartDataSub = {
+		        	color: "#"+randomString(),
+	    		    key: tagID,
+	    		    values: dataValues};
+				
+			$scope.chartDataHash.set(tagIDReplace, chartDataSub);
+						
+			function randomString() {
+				var chars = "0123456789ABCDEF";
+				var string_length = 6;
+				var randomstring = '';
+				for (var i=0; i<string_length; i++) {
+				var rnum = Math.floor(Math.random() * chars.length);
+					randomstring += chars.substring(rnum,rnum+1);
+				}							
+				return randomstring;
+			}	
+			
+			$scope.requestChartDataAction(dataURL, tagID, tagIDReplace);
+			
+		}
+		
+		
+		
+		$scope.requestChartDataAction = function(dataURL, tagID, tagIDReplace) {
+			
+			console.log("--> requestChartDataAction");
+			
+			if ($location.path() != $scope.currentPath){									
+				return;
+			}
+			if ($scope.template != $scope.template_base+"graph-manage-view.html") {
+				return;
+			}			
+			
 			$http(
 					{
 						method : 'GET',
-						url : $scope.chartUrl+tagIDReplace+urlQurey
+						url : dataURL
 					}).success(function(data) {	
 						
 						//console.log("fetch data.data : " + data.data);
 						//console.log("fetch data.dataCount : " + data.dataCount);
 						
-						$scope.chartOptions.chart.xAxis.ticks = data.dataCount;
+						if ($scope.currentData.interval == "REALTIME") {
+							
+							var dataValue = data.value;		
+							var xValue = (Math.round(new Date().getTime() / 5000))*5000;
+							$scope.chartDataHash.get(tagIDReplace).values.push({x: xValue, y: dataValue});							
+							if ($scope.chartDataHash.get(tagIDReplace).values.length > 10) {
+								$scope.chartDataHash.get(tagIDReplace).values.shift();
+							}
+							$scope.chartOptions.chart.xAxis.ticks = $scope.chartDataHash.get(tagIDReplace).values.length;
+
+						} else {
+																				
+							var dataList = data.data;
+							var dataCnt = 0;
+							for (var key in dataList) {							
+								dataCnt = dataCnt+1;
+								//console.log("dataCnt : " + dataCnt);
+								//console.log("key : " + key);	
+								//console.log("dataList[key] : " + dataList[key]);
+								$scope.chartDataHash.get(tagIDReplace).values.push({x: dataCnt, y: dataList[key]});
+							}
+							
+							$scope.chartOptions.chart.xAxis.ticks = data.dataCount;	
+							
+						}
+												
+						$scope.getLogData(0,tagIDReplace);						
+						$scope.chartData = $scope.chartDataHash.values();
+						$scope.nvd3Api.refresh();
 						
-						var dataList = data.data;
-						var dataValues = [];		
-						var cnt = 0;
-						for (var key in dataList) {							
-							cnt = cnt+1;
-							//console.log("cnt : " + cnt);
-							//console.log("key : " + key);	
-							//console.log("dataList[key] : " + dataList[key]);
-							dataValues.push({x: cnt, y: dataList[key]});
-						}	
+						var interval = 5000;
+						if ($scope.currentData.interval == "HOUR") {
+							interval = 3600000;
+						} else if ($scope.currentData.interval == "DAY") {
+							interval = 86400000;
+						} else if ($scope.currentData.interval == "MONTH") {
+							interval = 2419200000;
+						} else if ($scope.currentData.interval == "REALTIME") {
+							interval = 5000;
+						}
 						
-						function randomString() {
-							var chars = "0123456789ABCDEF";
-							var string_length = 6;
-							var randomstring = '';
-							for (var i=0; i<string_length; i++) {
-							var rnum = Math.floor(Math.random() * chars.length);
-								randomstring += chars.substring(rnum,rnum+1);
-							}							
-							return randomstring;
-						}						
-						
-						var chartDataSub = {
-				        	color: "#"+randomString(),
-			    		    key: tagID,
-			    		    values: dataValues};
-						
-						$scope.chartData.push(chartDataSub);
-						
+						$timeout(function(){				
+							$scope.requestChartDataAction(dataURL, tagID, tagIDReplace);
+						}, interval);
+												
 			}).error(function(error) {
 				// $scope.widgetsError = error;
 			});
 		}
+		
+		
+		
 		
 
 		
@@ -820,13 +803,14 @@
 	                height: 450,
 	                margin : {
 	                    top: 20,
-	                    right: 20,
+	                    right: 30,
 	                    bottom: 40,
 	                    left: 70
 	                },
 	                x: function(d){ return d.x; },
 	                y: function(d){ return d.y; },
 	                useInteractiveGuideline: true,
+	                transitionDuration:500,
 	                dispatch: {
 	                    stateChange: function(e){ console.log("stateChange"); },
 	                    changeState: function(e){ console.log("changeState"); },

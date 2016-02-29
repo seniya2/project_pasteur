@@ -77,9 +77,9 @@
    <image id="TAG_svg_91" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_on.gif" height="20" width="20" y="534.5" x="658.5"/>
    <image id="TAG_svg_92" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_noti_off.png" height="20" width="20" y="534.5" x="658.5"/>
   </g>
-  <g id="TAG_2008_5_3">
-   <image id="svg_6" x="232.5" y="750" width="68" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_off.png"/>
+  <g id="TAG_2001_5_4">
    <image id="svg_5" x="232.5" y="750" width="68" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_on.png"/>
+   <image id="svg_6" x="232.5" y="750" width="68" height="20" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_panel_level_off.png"/>
   </g>
   <g id="TAG_2010_4_5">
    <image id="svg_14" xlink:href="appPasteur/modules/energy/hvac/point-monitor/svg/icon/icon_hvac_normal_on.png" height="25" width="45" y="31" x="126.5"/>

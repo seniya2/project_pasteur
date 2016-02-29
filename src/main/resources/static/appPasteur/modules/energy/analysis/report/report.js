@@ -37,7 +37,8 @@
 			}
 		};
 		
-		$scope.massagePopup = function(msg, type) {			
+		$scope.massagePopup = function(msg, type) {
+			/*
 			Messenger({
 				extraClasses: 'messenger-fixed messenger-on-top',
     		    theme: 'air'
@@ -46,6 +47,7 @@
 				  type: type,
 				  showCloseButton: false
 			});
+			*/
 		}
 		
 		$scope.currentDate = "";

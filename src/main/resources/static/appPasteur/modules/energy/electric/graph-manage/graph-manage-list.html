@@ -40,10 +40,7 @@
 					<tr>
 						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">SEQ</th>
 						<th class="text-center" ng-class="getSortClass('subject')" ng-click="sortAction('subject')">그래프 제목</th>
-						<th class="text-center" ng-class="getSortClass('tagIDs')" ng-click="sortAction('tagIDs')">관제점</th>
-						<th class="hidden-xs text-center">인터벌 기준</th>
-						<th class="hidden-xs text-center">날짜 기준</th>
-						<th class="hidden-xs text-center">옵션</th>
+						<th class="text-center" ng-class="getSortClass('tagIDs')" ng-click="sortAction('tagIDs')">관제점</th>						
 						<th class="hidden-xs text-center">편집</th>
 					</tr>
 
@@ -54,10 +51,7 @@
 							
 						<td class="text-center">{{point.no}}</td>
 						<td class="text-center"><a ng-click="viewAction(point)">{{point.subject}}</a></td>
-						<td class="text-center">{{getPointNames(point.tagIDs)}}</td>
-						<td class="text-center">{{point.interval}}</td>
-						<td class="hidden-xs text-center">{{getPointDate(point.dateType, point.dateTime)}}</td>
-						<td class="hidden-xs text-center">{{point.valueType}}</td>			
+						<td class="text-center">{{getPointNames(point.tagIDs)}}</td>								
 						<td class="hidden-xs text-center">
 								<button
 									class="btn btn-xs btn-primary"
@@ -102,10 +96,7 @@
 					<tr>
 						<th class="text-center">SEQ</th>
 						<th class="text-center">그래프 제목</th>
-						<th class="text-center">관제점</th>
-						<th class="hidden-xs text-center">인터벌 기준</th>
-						<th class="hidden-xs text-center">날짜 기준</th>
-						<th class="hidden-xs text-center">옵션</th>
+						<th class="text-center">관제점</th>						
 						<th class="hidden-xs text-center">편집</th>
 					</tr>
 

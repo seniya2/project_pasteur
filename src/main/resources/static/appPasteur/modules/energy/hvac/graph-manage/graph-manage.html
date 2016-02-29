@@ -1,3 +1,126 @@
 <div ng-init="prepareAction()"></div>
 <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="app-spinner" spinner-start-active="true"></span>
 <ng-include src="template"></ng-include>
+
+<div class="row" ng-show="template==template_base+'graph-manage-view.html'">
+<div class="col-md-12">
+	<section class="widget">
+		<div class="widget-body">
+			<form name="editForm" class="form-horizontal board_basic">
+			<div class="pull-left">
+				<span class="btn btn-default btn-inverse" ng-click="cancelAction()">List</span>
+			</div>			
+			<div class="pull-left margin_left_30">
+				<h5 class="fw-bold">인터벌 기준</h5>
+			</div>
+			<div class="pull-left margin_left_10" style="width: 100px;">
+				<select data-ui-jq="select2" data-ui-options="{minimumResultsForSearch: 10}" tabindex="-1" 
+					class="select2 form-control" id="interval" name="interval" 
+					ng-model="currentData.interval"	ng-change="datetimepickerChange(currentData.interval)">
+					<option value="HOUR">시간별</option>
+					<option value="DAY">일별</option>
+					<option value="MONTH">월별</option>
+					<option value="REALTIME">실시간</option>
+				</select>
+			</div>
+			<div class="pull-left margin_left_30">
+				<h5 class="fw-bold">날짜 기준</h5>
+			</div>
+			<div class="pull-left margin_left_10">
+				<div class="radio">
+					<input type="radio" name="dateType" id="dateType1" ng-model="currentData.dateType" value="c" checked="checked">
+					<label for="dateType1"><span class="custom-option-title">현재</span></label>
+				</div>
+			</div>
+			<div class="pull-left margin_left_10">
+				<div class="radio">
+					<input type="radio" name="dateType" id="dateType2" ng-change="datetimepickerChange(currentData.interval)" ng-model="currentData.dateType" value="s">
+					<label for="dateType2"><span class="custom-option-title">특정일</span></label>
+				</div>
+			</div>
+			<div class="pull-left margin_left_10">
+				<div ng-show="currentData.dateType == 's'" class="pull-left margin_left_10">
+					<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+						ng-show="datetimepickerView1"
+						data-ui-options="{viewMode: 'days', format: 'YYYY-MM-DD'}" type="text" 
+						id="datetimepicker1" name="input1" ng-model="currentData.datetimepicker" 
+						/> 
+					<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+						ng-show="datetimepickerView2"
+						data-ui-options="{viewMode: 'months', format: 'YYYY-MM'}" type="text" 
+						id="datetimepicker2" name="input2" ng-model="currentData.datetimepicker" 
+						/> 
+					<input class="custom_datetimepicker pull-left" data-ui-jq="datetimepicker"
+						ng-show="datetimepickerView3"
+						data-ui-options="{viewMode: 'years', format: 'YYYY'}" type="text" 
+						id="datetimepicker3" name="input3" ng-model="currentData.datetimepicker" 
+						/>								
+					<!-- <code>currentData.datetimepicker : {{currentData.datetimepicker}}</code> -->
+				</div>
+			</div>
+			<div class="pull-left margin_left_30">
+				<h5 class="fw-bold">Value 옵션</h5>
+			</div>
+			<div class="pull-left margin_left_10" style="width: 100px;">
+				<select data-ui-jq="select2" 
+				data-ui-options="{minimumResultsForSearch: 10}"
+				tabindex="-1" class="select2 form-control" id="valueType" ng-model="currentData.valueType" >
+					<option value="LAST" selected="selected">Last</option>
+					<option value="MIN">Min</option>
+					<option value="MAX">Max</option>
+					<option value="AVG">Average</option>
+				</select>
+			</div>
+			
+			<div class="pull-left margin_left_50">
+				<span class="btn btn-default btn-rounded pull-right" ng-click="previewAction()">그래프 보기</span>
+			</div>
+			</form>
+			
+			<div class="clearfix" >
+				<div class="margin_top_30 col-sm-12">
+					<nvd3 options="chartOptions" data="chartData" config="{refreshDataOnly: false}" api="nvd3Api" objectequality="true"></nvd3>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
+
+<div class="row" ng-show="template==template_base+'graph-manage-view.html'">
+	<div class="col-md-12">
+		<div class="clearfix">
+			<ul id="tabs1" class="nav nav-tabs pull-left" >
+				<li ng-repeat="logEntity in logList.values()" id="li_{{logEntity.tagID}}" class="{{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}">
+				<a data-target="#{{logEntity.tagID}}" data-toggle="tab">{{logEntity.tagName}}</a>
+				</li>	
+			</ul>
+		</div>
+		<div id="tabs1c" class="tab-content mb-lg">
+			<div class="tab-pane clearfix {{chageLogSectionClass($first, 'li_'+logEntity.tagID)}}" id="{{logEntity.tagID}}" ng-repeat="logEntity in logList.values()">
+				<div>
+					<span>총 {{logEntity.page.totalElements}}개의 이력이 있습니다.</span>
+					<table class="table table-hover table-lg mt-lg mb-0">
+						<thead>
+							<tr>
+							<tr>
+								<th class="text-center" ng-class="logGetSortClass('id',logEntity.tagID)" ng-click="logSortAction('id',logEntity.tagID)">변경 시간</th>
+								<th class="text-center" ng-class="logGetSortClass('value',logEntity.tagID)" ng-click="logSortAction('value',logEntity.tagID)">값</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr dir-paginate="point in logEntity.content | itemsPerPage: logEntity.page.size" pagination-id="logEntity.tagID"
+								total-items="logEntity.page.totalElements" current-page="logEntity.page.number">
+								<td class="hidden-xs text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								<td class="text-center">{{point.value}} </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="clearfix text-center">
+					<dir-pagination-controls pagination-id="logEntity.tagID" on-page-change="logPageChangeHandler(newPageNumber,logEntity.tagID)"></dir-pagination-controls>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 

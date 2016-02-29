@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  	hvacPMModelController.$inject = ['config', '$scope', '$resource', '$filter', 'usSpinnerService', '$timeout', '$compile','$sce', '$location', '$http'];
-    function hvacPMModelController (config, $scope, $resource, $filter, usSpinnerService, $timeout, $compile, $sce, $location, $http) {
+  	hvacPMModelController.$inject = ['config', '$scope', '$resource', '$filter', 'usSpinnerService', '$timeout', '$compile','$sce', '$location', '$http','$q'];
+    function hvacPMModelController (config, $scope, $resource, $filter, usSpinnerService, $timeout, $compile, $sce, $location, $http, $q) {
     	
     	var search = $location.search();
     	
@@ -28,6 +28,21 @@
 		$scope.sortOder = "desc";
 		$scope.currentData = null;
 		
+		
+		$scope.mySearch = "";
+	    
+	    $scope.mySearchCallback = function(params) {
+	      var defer = $q.defer();
+	      //console.log(params);
+
+	      var returnList = $filter('filter')($scope.pointInfo, params);
+	      console.log(returnList);
+	    	  
+	      defer.resolve(returnList);
+	       
+	        
+	      return defer.promise;
+	    };
 		
 		$scope.massagePopup = function(msg, type) {	
 			/*
