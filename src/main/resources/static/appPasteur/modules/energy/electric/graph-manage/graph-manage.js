@@ -30,7 +30,7 @@
 				
 		//console.log("listUrl : " + $scope.listUrl);		
 		
-$scope.logList = new HashMap();
+		$scope.logList = new HashMap();
 		
 		$scope.dataList = null;
 		$scope.page = {
@@ -538,18 +538,20 @@ $scope.logList = new HashMap();
 			
 		}
 		
-		$scope.getLogDataSucess = function(data, tagIDReplace) {
+		$scope.getLogDataSucess = function(data, pageData, tagIDReplace) {
 			
 			$scope.logList.get(tagIDReplace).content = data.content;
-			//console.log(data.content);
-			
-			var page = {
-					"size" : 10,
-					"totalPage" : data.totalPages,
-					"totalElements" : data.totalElements,
-					"number" : data.number+1
+			console.log(data.content);
+			if (pageData == null) {
+				pageData = {
+						"size" : 10,
+						"totalPage" : data.totalPages,
+						"totalElements" : data.totalElements,
+						"number" : data.number+1
+				}
 			}
-			$scope.logList.get(tagIDReplace).page = page;
+			
+			$scope.logList.get(tagIDReplace).page = pageData;
 			
 		}
 		
@@ -578,7 +580,7 @@ $scope.logList = new HashMap();
 						url : listUrl
 					}).success(function(data) {
 						
-						$scope.getLogDataSucess(data, tagIDReplace);
+						$scope.getLogDataSucess(data, null, tagIDReplace);
 						//console.log($scope.logList.get(tagIDReplace).content);
 						//$scope.logList = data.content;
 				
@@ -641,6 +643,11 @@ $scope.logList = new HashMap();
 		}
 		
 		$scope.logPageChangeHandler = function(num, tagID) {
+			console.log("--> $scope.logPageChangeHandler");
+			
+			if ($scope.currentData.interval == "REALTIME") {
+				return;
+			}
 			//console.log(tagID);
 			//console.log(num);
 			// $scope.pageNumber = num;
@@ -788,28 +795,32 @@ $scope.logList = new HashMap();
 								}
 							}
 							
-							
-						
 							$scope.addChartDataHash(arrayObj, newObj);
-							
-							
-							for (var i=0; i<arrayObj.length; i++) {
-								console.log(i + " " + arrayObj[i].x + " " + arrayObj[i].y);
-							}
-							
-							
-						
-							/*
-							var contents = new Array();
+														
+							var contents = new Array();						
 							for(var i=0; i<maxLength; i++) {
-								
+								var datetime = $scope.chartDataHash.get(tagIDReplace).values[i].x;
+								var value = $scope.chartDataHash.get(tagIDReplace).values[i].y;
+								if (value == null) {
+									break;
+								}
+								contents.push({
+									"id" : datetime,
+									"datetime" : datetime,
+									"value" : value
+								});
+							}
+							var data = {};
+							data.content = contents;
+							var page = {
+									"size" : contents.length,
+									"totalPage" : 1,
+									"totalElements" : contents.length,
+									"number" : 1
 							}
 							
-							var data = {};
-							data.content = 
+							$scope.getLogDataSucess(data, page, tagIDReplace);
 							
-							$scope.getLogDataSucess(data, tagIDReplace);
-							*/
 							
 
 						} else {
@@ -826,10 +837,10 @@ $scope.logList = new HashMap();
 							
 							$scope.chartOptions.chart.xAxis.ticks = data.dataCount;	
 							
-							
+							$scope.getLogData(0,tagIDReplace);	
 						}
 												
-						$scope.getLogData(0,tagIDReplace);	
+						
 						$scope.chartData = $scope.chartDataHash.values();
 						$scope.nvd3Api.refresh();
 						

@@ -34,7 +34,8 @@
 			</div>
 			<div class="pull-left margin_left_10">
 				<div class="radio">
-					<input type="radio" name="dateType" id="dateType2" ng-change="datetimepickerChange(currentData.interval)" ng-model="currentData.dateType" value="s">
+					<input type="radio" name="dateType" id="dateType2" ng-change="datetimepickerChange(currentData.interval)" 
+					ng-model="currentData.dateType" ng-disabled="currentData.interval=='REALTIME'" value="s">
 					<label for="dateType2"><span class="custom-option-title">특정일</span></label>
 				</div>
 			</div>
@@ -64,7 +65,8 @@
 			<div class="pull-left margin_left_10" style="width: 100px;">
 				<select data-ui-jq="select2" 
 				data-ui-options="{minimumResultsForSearch: 10}"
-				tabindex="-1" class="select2 form-control" id="valueType" ng-model="currentData.valueType" >
+				tabindex="-1" class="select2 form-control" id="valueType" 
+				ng-model="currentData.valueType" ng-disabled="currentData.interval=='REALTIME'">
 					<option value="LAST" selected="selected">Last</option>
 					<option value="MIN">Min</option>
 					<option value="MAX">Max</option>
