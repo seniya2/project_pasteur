@@ -368,7 +368,7 @@
 				$scope.disableScreen(false);
 				//console.log(data);
 				$scope.template = $scope.template_base + "graph-manage-list.html";				
-				$scope.listAction(0, 12);				
+				$scope.listAction(0, 12);
 			}).error(function(error) {
 				$scope.disableScreen(false);
 				$scope.template = $scope.template_base + "graph-manage-list.html";	
@@ -477,7 +477,7 @@
 			$scope.currentData = point;
 			$scope.chartEnable = true;
 			$scope.chartData = [];
-						
+
 			$scope.currentData.interval = "HOUR";
 			$scope.currentData.dateType = "c";
 			$scope.currentData.valueType = "LAST";
@@ -538,6 +538,21 @@
 			
 		}
 		
+		$scope.getLogDataSucess = function(data, tagIDReplace) {
+			
+			$scope.logList.get(tagIDReplace).content = data.content;
+			//console.log(data.content);
+			
+			var page = {
+					"size" : 10,
+					"totalPage" : data.totalPages,
+					"totalElements" : data.totalElements,
+					"number" : data.number+1
+			}
+			$scope.logList.get(tagIDReplace).page = page;
+			
+		}
+		
 		
 		$scope.getLogData = function(pageNumber, tagIDReplace) {
 			
@@ -563,16 +578,7 @@
 						url : listUrl
 					}).success(function(data) {
 						
-						$scope.logList.get(tagIDReplace).content = data.content;
-						//console.log(data.content);
-						
-						var page = {
-								"size" : 10,
-								"totalPage" : data.totalPages,
-								"totalElements" : data.totalElements,
-								"number" : data.number+1
-						}
-						$scope.logList.get(tagIDReplace).page = page;
+						$scope.getLogDataSucess(data, tagIDReplace);
 						//console.log($scope.logList.get(tagIDReplace).content);
 						//$scope.logList = data.content;
 				
@@ -683,9 +689,8 @@
 			//console.log("$scope.chartUrl+tagID+urlQurey : " + $scope.chartUrl+tagIDReplace+urlQurey);			
 			var dataURL = "";			
 			if ($scope.currentData.interval == "REALTIME") {
-				dataURL = $scope.xdListUrl+tagIDReplace
+				dataURL = $scope.xdListUrl+tagIDReplace;
 				$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d3.time.format('%H:%M:%S')(new Date(d)) };
-				//$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d };
 			} else {		
 				dataURL = $scope.chartUrl+tagIDReplace+urlQurey;
 				$scope.chartOptions.chart.xAxis.tickFormat = function(d) { return d };
@@ -718,7 +723,27 @@
 		
 		
 		
-		$scope.requestChartDataAction = function(dataURL, tagID, tagIDReplace) {
+		$scope.addChartDataHash = function(arrayData, newObject) {
+			var currentIdx = -1;
+			for (var i=0; i<arrayData.length; i++) {
+				//console.log(i + "========>" + arrayData[i].y + " " +  (arrayData[i].y == null));
+				if (arrayData[i].y == null) {
+					currentIdx = i;
+					break;
+				}
+			}
+			
+			if (currentIdx != -1) {
+				arrayData[currentIdx] = newObject;
+			} else {
+				arrayData.shift();
+				arrayData.push(newObject);
+			}
+			
+		}
+		
+		
+		$scope.requestChartDataAction = function(dataURL, tagID, tagIDReplace, currentIdx) {
 			
 			console.log("--> requestChartDataAction");
 			
@@ -728,6 +753,8 @@
 			if ($scope.template != $scope.template_base+"graph-manage-view.html") {
 				return;
 			}			
+		
+			
 			
 			$http(
 					{
@@ -735,18 +762,55 @@
 						url : dataURL
 					}).success(function(data) {	
 						
-						//console.log("fetch data.data : " + data.data);
 						//console.log("fetch data.dataCount : " + data.dataCount);
 						
 						if ($scope.currentData.interval == "REALTIME") {
 							
-							var dataValue = data.value;		
-							var xValue = (Math.round(new Date().getTime() / 5000))*5000;
-							$scope.chartDataHash.get(tagIDReplace).values.push({x: xValue, y: dataValue});							
-							if ($scope.chartDataHash.get(tagIDReplace).values.length > 10) {
-								$scope.chartDataHash.get(tagIDReplace).values.shift();
+							var maxLength = 12;
+							var yValue =  null;
+							var xValue =  (Math.round(new Date().getTime() / 5000))*5000;	
+							
+							
+							//var xValue =  new Date().getTime();
+							
+							var arrayObj = $scope.chartDataHash.get(tagIDReplace).values;
+							var newObj = {x: xValue, y: data.value};
+							
+							if ( $scope.chartDataHash.get(tagIDReplace).values.length == 0) {
+								
+								$scope.chartOptions.chart.xAxis.ticks = maxLength;
+								
+								for(var i = 0; i < maxLength ; i++){
+									yValue = null;
+									xValue = xValue+5000;
+									//console.log(xValue + " " + yValue + " " + i);
+									$scope.chartDataHash.get(tagIDReplace).values.push({x: xValue, y: yValue});
+								}
 							}
-							$scope.chartOptions.chart.xAxis.ticks = $scope.chartDataHash.get(tagIDReplace).values.length;
+							
+							
+						
+							$scope.addChartDataHash(arrayObj, newObj);
+							
+							
+							for (var i=0; i<arrayObj.length; i++) {
+								console.log(i + " " + arrayObj[i].x + " " + arrayObj[i].y);
+							}
+							
+							
+						
+							/*
+							var contents = new Array();
+							for(var i=0; i<maxLength; i++) {
+								
+							}
+							
+							var data = {};
+							data.content = 
+							
+							$scope.getLogDataSucess(data, tagIDReplace);
+							*/
+							
 
 						} else {
 																				
@@ -762,9 +826,10 @@
 							
 							$scope.chartOptions.chart.xAxis.ticks = data.dataCount;	
 							
+							
 						}
 												
-						$scope.getLogData(0,tagIDReplace);						
+						$scope.getLogData(0,tagIDReplace);	
 						$scope.chartData = $scope.chartDataHash.values();
 						$scope.nvd3Api.refresh();
 						
@@ -782,7 +847,7 @@
 						$timeout(function(){				
 							$scope.requestChartDataAction(dataURL, tagID, tagIDReplace);
 						}, interval);
-												
+										
 			}).error(function(error) {
 				// $scope.widgetsError = error;
 			});
