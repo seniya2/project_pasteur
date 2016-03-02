@@ -138,7 +138,7 @@
 							
 							data._embedded.graphElectric[key].dateType = "c"
 							data._embedded.graphElectric[key].valueType = "LAST"
-							data._embedded.graphElectric[key].interval = "DAY"
+							data._embedded.graphElectric[key].interval = "HOUR"
 							$scope.graphList.push(data._embedded.graphElectric[key]);
 						}
 						for (var key in $scope.graphList) {
