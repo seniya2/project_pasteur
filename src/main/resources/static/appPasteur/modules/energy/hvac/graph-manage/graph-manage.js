@@ -541,7 +541,7 @@
 		$scope.getLogDataSucess = function(data, pageData, tagIDReplace) {
 			
 			$scope.logList.get(tagIDReplace).content = data.content;
-			console.log(data.content);
+			//console.log(data.content);
 			if (pageData == null) {
 				pageData = {
 						"size" : 10,
@@ -643,7 +643,7 @@
 		}
 		
 		$scope.logPageChangeHandler = function(num, tagID) {
-			console.log("--> $scope.logPageChangeHandler");
+			//console.log("--> $scope.logPageChangeHandler");
 			
 			if ($scope.currentData.interval == "REALTIME") {
 				return;
@@ -676,18 +676,29 @@
 		
 		$scope.logSortAction = function(attr,tagID) {
 			
+			//console.log("--> logSortAction");
+			
+			$scope.reverse = false;			
 			if ($scope.logList.get(tagID).sort.sortAttr != attr) {
-				$scope.logList.get(tagID).sort.sortOder = "desc"
+				$scope.logList.get(tagID).sort.sortOder = "desc";
 				$scope.logList.get(tagID).sort.sortAttr = attr;
+				$scope.reverse = true;
 			} else {
 				if ($scope.logList.get(tagID).sort.sortOder == "desc") {
-					$scope.logList.get(tagID).sort.sortOder = "asc"
+					$scope.logList.get(tagID).sort.sortOder = "asc";
+					$scope.reverse = false;
 				} else {
-					$scope.logList.get(tagID).sort.sortOder = "desc"
+					$scope.logList.get(tagID).sort.sortOder = "desc";
+					$scope.reverse = true;
 				}
 			}
+			
 			var num = $scope.logList.get(tagID).page.number;
-			$scope.getLogData(num - 1, tagID);
+			if ($scope.currentData.interval == "REALTIME") {
+				$scope.logList.get(tagID).content = $filter('orderBy')($scope.logList.get(tagID).content, attr, $scope.reverse);				
+			} else {
+				$scope.getLogData(num - 1, tagID);
+			}
 		}
 		
 		
@@ -752,7 +763,7 @@
 		
 		$scope.requestChartDataAction = function(dataURL, tagID, tagIDReplace, currentIdx) {
 			
-			console.log("--> requestChartDataAction");
+			//console.log("--> requestChartDataAction");
 			
 			if ($location.path() != $scope.currentPath){									
 				return;
@@ -760,8 +771,6 @@
 			if ($scope.template != $scope.template_base+"graph-manage-view.html") {
 				return;
 			}			
-		
-			
 			
 			$http(
 					{
@@ -811,7 +820,7 @@
 								});
 							}
 							var data = {};
-							data.content = contents;
+							data.content = contents.reverse();
 							var page = {
 									"size" : contents.length,
 									"totalPage" : 1,
