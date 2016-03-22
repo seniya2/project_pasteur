@@ -1,0 +1,93 @@
+<div class="col-md-12">
+	<section class="widget">
+		<div class="widget-body">
+		
+			<form name="searchForm" ng-submit="searchClickFn(searchForm.$valid)">
+			<div class="clearfix form-group">
+				<div class="pull-left">
+					<h5 class="fw-bold">아이디 또는 관제점</h5>
+				</div>
+				
+				<div class="pull-left margin_left_20">
+					 <input type="search" 
+							 name="searchName"
+							 id="searchName"
+							 ng-model="searchName" 
+							 typeahead="point for point in pointInfo | filter:$viewValue" 
+							 class="form-control"
+							 style="width:250px"
+							 placeholder="  관제점 검색어를 입력하세요."
+							 autocomplete="off">
+				</div>
+				
+				<span class="input-group-btn pull-left">
+                  <button type="submit" class="btn btn-default">Search</button>
+                </span>
+                <!-- 
+                <br />
+                <br />
+                <br />
+                <live-search id="search1" type="text"
+          		live-search-callback="mySearchCallback" style="width:300px;"
+          		ng-model="searchName" class="form-control" autocomplete="off"></live-search>
+           		-->
+                <!-- 
+                <div class="pull-right">
+					<span class="btn btn-primary btn-rounded pull-right" ng-click="excelDownAction()">엑셀다운로드</span>
+				</div>
+                <div class="pull-right col-sm-4">
+					<div class="fileinput fileinput-new input-group" data-ui-jq="fileinput" data-ui-options="{'name': 'jasnyf1'}">
+						<div class="form-control" data-trigger="fileinput">
+							<i class="glyphicon glyphicon-file fileinput-exists"></i>
+							<span class="fileinput-filename"></span>
+						</div>
+						<span class="input-group-addon btn btn-default btn-file">
+							<span class="fileinput-new">Select file</span>
+							<span class="fileinput-exists">Change</span>
+							<input name="file" id="fileupload1" type="file" onchange="angular.element(this).scope().fileNameChanged(this.files)">
+						</span>
+						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+					</div>
+				</div>
+                <div class="pull-right">
+					<h5 class="fw-bold">엑셀업로드</h5>
+				</div>
+				 -->
+                <!-- 
+                <code>searchText : {{searchText}}</code>
+                 -->
+			</div>
+			</form>
+	
+			<span>총 {{page.totalElements}}개의 관제점이 있습니다.</span>
+			<table
+				class="table table-hover table-lg mt-lg mb-0">
+				<thead>
+					<tr>
+					<tr>										
+						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">아이디</th>
+						<th class="text-center" ng-class="getSortClass('name')" ng-click="sortAction('name')">관제점</th>
+						<th class="hidden-xs text-center" style="width: 280px;">통신 상태 (시간 <span class="custom-point-value">현재값</span>)</th>
+						<th class="hidden-xs text-center" style="width: 180px;" ng-class="getSortClass('interval')" ng-click="sortAction('interval')">유형</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="page.number">						
+						<td class="text-center"><a ng-click="editAction(point)">{{point.id}}</a></td>
+						<td class="text-center">{{point.name}}</td>
+						<td class="hidden-xs text-center">
+							<div class="pull-left text-center padding_left_10">{{getDateTime(point.datetime)}}</div>
+							<div class="pull-left text-center padding_left_10"><span class="custom-point-value">{{point.value}}</span></div>
+							<div class="pull-left text-center padding_left_10"><a ng-click="updateValue(point.id, $index)"><i class="fa fa-refresh"></i></a></div>
+						</td>
+						<td class="hidden-xs text-center"><div class="padding_left_10" ng-bind-html="point.dataType"></div></td>	
+					</tr>
+				</tbody>		
+			</table>
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+		</div>
+	</section>
+</div>

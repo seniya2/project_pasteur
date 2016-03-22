@@ -124,15 +124,30 @@
 
 	}
     
-    
+    var savedMsg = "";
     
     $scope.alarmMessage = function(entity) {
 		
+    	var id = entity.id;
 		var name = entity.name;
 		var datetime = entity.datetime;
 		var criteria = entity.criteria;
-
-    	var message = name + "알람발생<br /> "+ datetime  +"<br />아래 조건에 의하여 알람이 발생하였습니다. <br />" + criteria;
+		var value = entity.value;
+		var message = "";
+		
+		
+		if (id == "alarm") {
+			message = name + "알람발생<br /> "+ value;
+		}else {
+			message = name + "알람발생<br /> "+ datetime  +"<br />아래 조건에 의하여 알람이 발생하였습니다. <br />" + criteria;
+		}
+		
+    	if (message == savedMsg) {
+    		return;
+    	}
+    	savedMsg = message;
+    	
+    	
 		Messenger({
 		    extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
 		    theme: 'future'
@@ -153,7 +168,9 @@
     	$scope.requestAction("http://192.168.245.3:9898/current/electric?status=status");
     	$scope.requestAction("http://192.168.245.3:9898/current/hvac?status=status");
     	$scope.requestAction("http://192.168.245.3:9898/current/elevator?status=status");
-    	$scope.requestAction("http://192.168.245.3:9898/current/fire?status=status");
+    	$scope.requestAction("http://192.168.245.3:9898/current/fire");
+    	//$scope.requestAction("http://192.168.245.3:9898/current/fire?status=status");
+    	
     	
     }
     

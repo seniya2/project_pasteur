@@ -207,7 +207,7 @@
 				}
 			}
 			
-			$scope.listAction($scope.page.number, $scope.page.size);
+			$scope.listAction($scope.page.number-1, $scope.page.size);
 			
 		}
 		

@@ -77,25 +77,23 @@
 			</div>
 			 -->
 			<div class="margin_top_30" ng-show="dataList.length > 0">
-			<span>총 {{dataList.length}}개의 알람이 있습니다.</span>
+			<span>총 {{page.totalElements}}개의 알람이 있습니다.</span>
 			<table
 				class="table table-hover table-lg mt-lg mb-0">
 				<thead>
 					<tr>
 					<tr>
-						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">변경 시간</th>
-						<th class="text-center" ng-class="getSortClass('value')" ng-click="sortAction('value')">값</th>
-						<th class="text-center" >알람 내역 (알람조건)</th>
+						
+						<th class="text-center" ng-class="getSortClass('value')" ng-click="sortAction('id')">화재 메세지</th>
+						<th class="text-center" >알람 여부</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr dir-paginate="point in dataList | itemsPerPage: page.size"
-						total-items="page.totalElements" current-page="pagination.current">						
-						<td class="text-center">{{point.datetime | date:'yyyy-MM-dd HH:mm:ss'}}</td>	
-						<td class="text-center">{{point.value}} </td>
+						total-items="page.totalElements" current-page="pagination.current">	
+						<td class="">{{point.value}} </td>
 						<td class="text-center">
-						<span ng-bind-html="point.alarmName"></span>
-						<span ng-show="point.status == 'criteria'">({{point.criteria}})</span>
+						<span ng-show="(point.value).indexOf('ALM') > 0"><span class="label label-danger">알람발생</span></span>
 						</td>
 						
 					</tr>

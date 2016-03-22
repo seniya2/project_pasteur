@@ -70,7 +70,7 @@
     
 	angular.module('singApp').run(function(confirmationPopoverDefaults) {
 		confirmationPopoverDefaults.templateUrl='scripts/angular-bootstrap-confirm-master/src/angular-bootstrap-confirm.html';
-		console.log(confirmationPopoverDefaults); // View all the defaults you can change
+		//console.log(confirmationPopoverDefaults); // View all the defaults you can change
 	});
     
 })();
