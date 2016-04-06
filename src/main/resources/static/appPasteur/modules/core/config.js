@@ -49,8 +49,7 @@
 		'xd' : 'http://192.168.245.3:9898/'
       },
       
-      globalDisable : false
-      
+      globalDisable : false      
       
     },
     
@@ -65,8 +64,6 @@
        */
       'nav-static': false
     }
-    
-    
     
   };
 
