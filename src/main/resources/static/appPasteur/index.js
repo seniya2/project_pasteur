@@ -25,6 +25,10 @@
 		'singApp.hvac-graph-view',
 		'singApp.hvac-alarm',
 		
+		'singApp.ups-point-manage',
+		'singApp.ups-graph-manage',
+		'singApp.ups-history',
+		
 		'singApp.cctv-point-manage',
 		'singApp.cctv-monitor',
 		

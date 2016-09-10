@@ -1,0 +1,112 @@
+<div class="col-md-12" ng-init="listAction(0,12)">
+	<section class="widget">
+		<div class="widget-body">
+			
+			<form name="searchForm" ng-submit="searchClickFn(searchForm.$valid)">
+			<div class="clearfix form-group" >
+				<div class="pull-left form-group">
+					<div class="pull-left">
+					<h5 class="fw-bold">관제점</h5>
+				</div>
+				<div class="pull-left margin_left_20">
+					 <input type="search" 
+							 name="searchName"
+							 id="searchName"
+							 ng-model="searchName" 
+							 typeahead="point for point in pointInfo | filter:$viewValue" 
+							 class="form-control"
+							 style="width:250px"
+							 placeholder="  관제점 검색어를 입력하세요."
+							 autocomplete="off">
+				</div>
+				<span class="input-group-btn pull-left">
+					<button type="submit" class="btn btn-default">Search</button>
+                </span>
+				</div>
+				<div class="pull-right">								
+					<span class="btn btn-primary btn-rounded" ng-click="editAction(null)">NEW</span>
+				</div>
+			</div>
+			</form>
+			
+			
+			<span ng-show="page.totalElements">총 {{page.totalElements}}개의 그래프 설정이 있습니다.</span>
+			<span ng-show="!page.totalElements">총 {{graphList.length}}개의 그래프 설정이 있습니다.</span>
+			
+			<table
+				class="table table-hover table-lg mt-lg mb-0 margin_top_30" ng-show="graphList.length>0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center" ng-class="getSortClass('id')" ng-click="sortAction('id')">SEQ</th>
+						<th class="text-center" ng-class="getSortClass('subject')" ng-click="sortAction('subject')">그래프 제목</th>
+						<th class="text-center" ng-class="getSortClass('tagIDs')" ng-click="sortAction('tagIDs')">관제점</th>						
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr dir-paginate="point in graphList | itemsPerPage: page.size"
+						total-items="page.totalElements" current-page="page.number">
+							
+						<td class="text-center">{{point.no}}</td>
+						<td class="text-center"><a ng-click="viewAction(point)">{{point.subject}}</a></td>
+						<td class="text-center">{{getPointNames(point.tagIDs)}}</td>								
+						<td class="hidden-xs text-center">
+								<button
+									class="btn btn-xs btn-primary"
+									ng-click="editAction(point)">
+									Edit</button>
+   								 <button
+									class="btn btn-xs btn-primary"
+									mwl-confirm
+									title="삭제 확인"
+									message="삭제하시겠습니까?"
+									confirm-text="예"
+									cancel-text="아니오"
+									placement="top"
+									on-confirm="deleteAction(point.no)"
+									on-cancel=""
+									confirm-button-type="primary"
+									cancel-button-type="inverse">
+									Delete
+								</button>
+						<!-- <code>{{point.tagIDs}}</code> -->
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+			<!-- 
+			<div>
+				<code>page.size : {{page.size}}</code>
+				<code>page.totalElements : {{page.totalElements}}</code>
+				<code>page.number : {{page.number}}</code>
+				<code>paginationDisplay : {{paginationDisplay}}</code>
+			</div>
+			 -->
+			<div class="clearfix text-center" ng-show="paginationDisplay">
+				<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+			</div>
+			
+			<table
+				class="table table-hover table-lg mt-lg mb-0 margin_top_30" ng-show="graphList.length==0">
+				<thead>
+					<tr>
+					<tr>
+						<th class="text-center">SEQ</th>
+						<th class="text-center">그래프 제목</th>
+						<th class="text-center">관제점</th>						
+						<th class="hidden-xs text-center">편집</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-center" colspan="7">해당 데이터가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</div>
