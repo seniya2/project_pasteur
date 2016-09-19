@@ -168,6 +168,7 @@
     	$scope.requestAction("http://192.168.245.3:9898/current/electric?status=status");
     	$scope.requestAction("http://192.168.245.3:9898/current/hvac?status=status");
     	$scope.requestAction("http://192.168.245.3:9898/current/elevator?status=status");
+    	$scope.requestAction("http://192.168.245.3:9898/current/ups?status=status");
     	$scope.requestAction("http://192.168.245.3:9898/current/fire");
     	//$scope.requestAction("http://192.168.245.3:9898/current/fire?status=status");
     	

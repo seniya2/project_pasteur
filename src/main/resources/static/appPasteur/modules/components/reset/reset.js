@@ -10,6 +10,7 @@
 		$scope.resources_base_hvac = "appPasteur/modules/energy/hvac/point-manage/resources/";		
 		$scope.resources_base_lighting = "appPasteur/modules/others/lighting/point-manage/resources/";
 		$scope.resources_base_elevator = "appPasteur/modules/others/elevator/point-manage/resources/";
+		$scope.resources_base_ups = "appPasteur/modules/energy/ups/point-manage/resources/";
 		$scope.baseUiUrl = config.settings.network.ui;	
 		$scope.baseXdUrl = config.settings.network.xd;
 		$scope.resetUrl = $scope.baseXdUrl+"setting/";
@@ -17,7 +18,7 @@
 		$scope.csvFileUrl_hvac = $scope.baseUiUrl + $scope.resources_base_hvac + "hvac.csv";
 		$scope.csvFileUrl_lighting = $scope.baseUiUrl + $scope.resources_base_lighting + "lighting.csv";
 		$scope.csvFileUrl_elevator = $scope.baseUiUrl + $scope.resources_base_elevator + "elevator.csv";
-		
+		$scope.csvFileUrl_ups = $scope.baseUiUrl + $scope.resources_base_ups + "ups.csv";
 		
 		
 		$scope.xdResetRunning = false;
@@ -186,6 +187,48 @@
 								"criteria" : criteria,
 								"category" : "elevator"});						
 					}
+					
+					$timeout(function(){
+						Papa.parse($scope.csvFileUrl_ups, $scope.csvConfig_ups);
+					}, 500);
+					
+				},
+				error: undefined,
+				download: true,
+				skipEmptyLines: false,
+				chunk: undefined,
+				fastMode: undefined,
+				beforeFirstChunk: undefined,
+				withCredentials: undefined
+		};
+		
+		
+		$scope.csvConfig_ups = {
+				delimiter: ",",	// auto-detect
+				newline: "",	// auto-detect
+				header: true,
+				dynamicTyping: false,
+				preview: 0,
+				encoding: "",
+				worker: false,
+				comments: false,
+				step: undefined,
+				complete: function(results, file) {				
+					
+					for (var key in results.data) {
+						
+						var tagID = results.data[key].tagID;
+						var interval = results.data[key].interval;
+						var tagName = results.data[key].name;
+						var criteria = results.data[key].criteria;
+						
+						$scope.alarmList.set(tagID,
+								{"tagID" : tagID, 
+								"tagName" : tagName,
+								"interval" : interval,
+								"criteria" : criteria,
+								"category" : "ups"});						
+					}
 					$timeout(function(){usSpinnerService.stop('app-spinner')}, 500);
 				},
 				error: undefined,
@@ -276,8 +319,9 @@
 				var nameValue = nameArray[key];
 				var criteriaValue = criteriaArray[key];
 				
-				var postData = "name="+nameValue+"&interval=-1";
-				/*
+				//var postData = "name="+nameValue+"&interval=-1";
+				var postData = "name="+nameValue;
+				
 				if (intervalValue == "NULL") {
 					postData = postData + "&interval=";
 				}else {
@@ -288,7 +332,7 @@
 				}else {
 					postData = postData + "&criteria="+criteriaValue;
 				}
-				*/
+				
 				console.log("postData : " + postData);
 				
 				
